@@ -1,0 +1,1090 @@
+
+  <!DOCTYPE html>
+<html lang="it">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modello Dati - Scheda P1_10 - Scheda di pubblicazione avviso per un bando di gara sopra la soglia europea e sotto soglia con invio al TED dell'eform10.</title>
+    <style>
+      /* css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Stile delle tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+td {
+    overflow-wrap: break-word; /* Forza il testo a spezzarsi su più righe */
+    word-wrap: break-word; /* Compatibilità aggiuntiva */
+    hyphens: auto; /* Aggiunge trattini per la spezzatura, se supportato */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Larghezza delle colonne */
+th:nth-child(1), td:nth-child(1) {
+    width: 25%; /* Larghezza della prima colonna */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Larghezza della seconda colonna */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%; /* Larghezza della terza colonna */
+}
+
+
+table.reference th{
+    background-color: #28a745; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.rule th{
+    background-color: #343a40; /* Colore di sfondo nero per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.fluxcards th{
+    background-color: #6f42c1 ; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Colore di sfondo alternato per le righe */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Colore di sfondo quando si passa sopra una riga */
+}
+
+footer {
+    margin-top: 2rem; /* Spazio sopra il footer usando rem */
+    font-size: small;
+    text-align: center;
+    color: #777;
+}
+
+.smalltype {
+    font-size: small;
+}
+
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 40px 0;
+}
+
+/* Sezioni di messaggi */
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+.message-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+
+.message-divider.reference {
+    background-color: #28a745;
+}
+
+.message-divider.rule {
+    background-color: #343a40;
+}
+
+.message-divider.fluxcards{
+    background-color: #6f42c1 ;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Modello Dati - Scheda P1_10 - Scheda di pubblicazione avviso per un bando di gara sopra la soglia europea e sotto soglia con invio al TED dell'eform10.</h1>
+<div class="message">
+        <div class="message-divider"></div>
+        <p>Elementi della scheda.</p>
+        <div class="message-divider"></div>
+    </div>
+  
+  <h2 id="SchedaP1_10Type">SchedaP1_10Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#AnacFormP1_10Type">AnacFormP1_10Type</a></td>
+  </tr>
+
+  <tr>
+    <td>eform (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#EformType">EformType</a></td>
+  </tr>
+
+  <tr>
+    <td>espd (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#EspdRequestType">EspdRequestType</a></td>
+  </tr>
+</table>
+  <h2 id="AnacFormP1_10Type">AnacFormP1_10Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>stazioniAppaltanti (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Dati relativi alle stazioni appaltanti</td>
+    <td>array di <a href="#StazioneAppaltanteType">StazioneAppaltanteType</a></td>
+  </tr>
+
+  <tr>
+    <td>appalto (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#AppaltoP_10Type">AppaltoP_10Type</a></td>
+  </tr>
+
+  <tr>
+    <td>lotti (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Dati relativi ai lotti</td>
+    <td>array di <a href="#LottoP_10Type">LottoP_10Type</a></td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider reference"></div>
+        <p>Lista delle reference della scheda.</p>
+        <div class="message-divider reference"></div>
+    </div>
+    
+  <h2 id="AppaltoP_10Type">AppaltoP_10Type</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione sopra soglia e sotto soglia</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceAppalto (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Identificativo univoco dell'appalto definito dalla Stazione Appaltante</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>categorieMerceologiche (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>array di <a href="#CategorieMerceologicheEnum">CategorieMerceologicheEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>motivazioneCIG (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#MotivazioneCIGEnum">MotivazioneCIGEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>strumentiSvolgimentoProcedure (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#StrumentiSvolgimentoProcedureEnum">StrumentiSvolgimentoProcedureEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>idPianificazione (<span class="smalltype">opzionale</span>)</td>
+    <td>ID pianificazione</td>
+    <td>uuid</td>
+  </tr>
+
+  <tr>
+    <td>termineRidottoAvvisoPreinformazione (<span class="smalltype">opzionale</span>)</td>
+    <td>E' stato utilizzato un termine ridotto con avviso di preinformazione?</td>
+    <td>boolean</td>
+  </tr>
+</table>
+  <h2 id="EformType">EformType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Eform codificato Base64 nel formato XML definito da TED</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>Eform codificato Base64 nel formato XML definito da TED (<span class="smalltype">opzionale</span>)</td>
+    <td>Eform codificato Base64 nel formato XML definito da TED</td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="EspdRequestType">EspdRequestType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request) (<span class="smalltype">opzionale</span>)</td>
+    <td>Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)</td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="LottoP_10Type">LottoP_10Type</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta i dati del lotto all'interno della fase di pubblicazione sopra soglia e sotto soglia</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>lotIdentifier (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>categorieMerceologiche (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>array di <a href="#CategorieMerceologicheEnum">CategorieMerceologicheEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>condizioniNegoziata (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#CondizioniNegoziataEnum">CondizioniNegoziataEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>contrattiDisposizioniParticolari (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#ContrattiDisposizioniParticolariEnum">ContrattiDisposizioniParticolariEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>codIstat (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#CodIstatEnum">CodIstatEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>afferenteInvestimentiPNRR (<span class="smalltype">obbligatorio</span>)</td>
+    <td>L’appalto o concessione è afferente gli investimenti pubblici finanziati, in tutto o in parte, con le risorse previste dal PNRR (Piano Nazionale di Ripresa e Resilienza) e/o dal PNC (Piano nazionale per gli investimenti complementari)?</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>acquisizioneCup (<span class="smalltype">opzionale</span>)</td>
+    <td>Il contratto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.? (E' necessario acquisire e comunicare il CUP per interventi finanziati, anche in parte, con risorse Comunitarie) (Si/No)</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>cupLotto (<span class="smalltype">opzionale</span>)</td>
+    <td>Cup associati al lotto</td>
+    <td>array di string</td>
+  </tr>
+
+  <tr>
+    <td>finanziamenti (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Dati relativi ai finanziamenti</td>
+    <td>array di <a href="#FinanziamentoType">FinanziamentoType</a></td>
+  </tr>
+
+  <tr>
+    <td>derogaQualificazione (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#MotivoDerogaQlfEnum">MotivoDerogaQlfEnum</a></td>
+  </tr>
+</table>
+  <h2 id="StazioneAppaltanteType">StazioneAppaltanteType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Stazione Appaltante e ruoli ricoperti nell'appalto</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice fiscale della S.A.</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codiceAusa (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice Ausa della S.A.</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codiceCentroCosto (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice del centro di costo</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>funzioniSvolte (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#FunzioniDelegateEnum">FunzioniDelegateEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>saTitolare (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Stazione appaltante titolare</td>
+    <td>boolean</td>
+  </tr>
+</table>
+  <h2 id="CategorieMerceologicheEnum">CategorieMerceologicheEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Categorie merceologiche oggetto della fornitura di cui al DPCM soggetti aggregatori - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/categorieMerceologiche.json">categorieMerceologiche.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="MotivazioneCIGEnum">MotivazioneCIGEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Motivazione richiesta CIG - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivazioneCIG.json">motivazioneCIG.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="StrumentiSvolgimentoProcedureEnum">StrumentiSvolgimentoProcedureEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Deprecato - Strumenti per lo svolgimento delle procedure - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/strumentiSvolgimentoProcedure.json">strumentiSvolgimentoProcedure.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CondizioniNegoziataEnum">CondizioniNegoziataEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Condizioni che giustificano il ricorso alla procedura negoziata senza previa pubblicazione di un bando oppure senza previa indizione di una gara - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/condizioniNegoziata.json">condizioniNegoziata.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="ContrattiDisposizioniParticolariEnum">ContrattiDisposizioniParticolariEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Contratti nei settori ordinari assoggettati a disposizioni particolari - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/contrattiDisposizioniParticolari.json">contrattiDisposizioniParticolari.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CodIstatEnum">CodIstatEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Codice ISTAT - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codIstat.json">codIstat.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="FinanziamentoType">FinanziamentoType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta tutti i dati del finanziamento</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>tipoFinanziamento (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#TipoFinanziamentoEnum">TipoFinanziamentoEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>importo (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#ImportoType">ImportoType</a></td>
+  </tr>
+</table>
+  <h2 id="MotivoDerogaQlfEnum">MotivoDerogaQlfEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Motivo deroga qualificazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoDerogaQlf.json">motivoDerogaQlf.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="FunzioniDelegateEnum">FunzioniDelegateEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniSvolte.json">funzioniSvolte.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="TipoFinanziamentoEnum">TipoFinanziamentoEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipo di finanziamento - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoFinanziamento.json">tipoFinanziamento.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="ImportoType">ImportoType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Importo</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>Importo (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo</td>
+    <td>double</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider rule"></div>
+        <p>Lista delle regole applicate alla scheda.</p>
+        <div class="message-divider rule"></div>
+    </div>
+    
+  <h2 id="Regole">Regole</h2>
+  
+  
+    <table class="rule">
+      <tr>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>  
+        <th scope="col">Test</th>  
+      </tr>
+  
+
+  <tr>
+    <td>REG1</td>
+    <td> categoria merceologica: controllo di coerenza tra quelle indicate nei lotti e quelle indicate nell'appalto</td>
+    <td>some lotto in lotti
+satisfies (some categoria in lotto.categorieMerceologiche
+satisfies not(list contains(appalto.categorieMerceologiche, categoria)))</td>
+  </tr>
+
+  <tr>
+    <td>REG2</td>
+    <td> E' stata indicata la funzione ma non è stato indicato il codice fiscale della stazione appaltante</td>
+    <td>some stazioneAppaltante in stazioniAppaltanti
+satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.codiceFiscale=null</td>
+  </tr>
+
+  <tr>
+    <td>REG3</td>
+    <td> i codici fiscali nella lista delle stazioni appaltanti devono essere diversi</td>
+    <td>count(stazioniAppaltanti.codiceFiscale) > count(distinct values(stazioniAppaltanti.codiceFiscale))</td>
+  </tr>
+
+  <tr>
+    <td>REG4_1</td>
+    <td> Tipologica motivazioneCIG: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</td>
+    <td>is defined(appalto.motivazioneCIG) and ((appalto.motivazioneCIG.codice = null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999"))</td>
+  </tr>
+
+  <tr>
+    <td>REG4_2</td>
+    <td> Tipologica motivazioneCIG: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</td>
+    <td>is defined(appalto.motivazioneCIG) and ((appalto.motivazioneCIG.codice != null) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice = "999"))</td>
+  </tr>
+
+  <tr>
+    <td>REG5</td>
+    <td> Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'ggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 5.382.000.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = "works" and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) > 5382000</td>
+  </tr>
+
+  <tr>
+    <td>REG6_1</td>
+    <td> Condizioni Negoziata: se il valore del tipo di procedura è "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata deve essere valorizzato.</td>
+    <td>appalto.datiBaseProcedura.tipoProcedura.codice = "neg-wo-call"some lotto in lotti
+satisfies lotto.condizioniNegoziata=null</td>
+  </tr>
+
+  <tr>
+    <td>REG6_2</td>
+    <td> Condizioni Negoziata: se il valore del tipo di procedura (scelta contraente) è diverso da "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata non deve essere valorizzato.</td>
+    <td>appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call"some lotto in lotti
+satisfies lotto.condizioniNegoziata != null</td>
+  </tr>
+
+  <tr>
+    <td>REG7</td>
+    <td> E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</td>
+    <td>appalto.motivoUrgenza.codice = "2" and (appalto.linkDocumenti = null or appalto.linkDocumenti ="")</td>
+  </tr>
+
+  <tr>
+    <td>REG8</td>
+    <td> Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile: deve essere una url valida e quindi iniziare con http o https.</td>
+    <td>appalto.linkDocumenti != null and appalto.linkDocumenti != "" and starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</td>
+  </tr>
+
+  <tr>
+    <td>REG8_1</td>
+    <td> L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</td>
+    <td>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != "" and starts with(lotto.datiBaseDocumenti.url,"http:") = false and starts with(lotto.datiBaseDocumenti.url,"https:") = false</td>
+  </tr>
+
+  <tr>
+    <td>REG10</td>
+    <td> Servizio Pubblico Locale: il campo è obbligatorio solo se l'oggetto del contratto = servizi</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = "services" and lotto.servizioPubblicoLocale = null</td>
+  </tr>
+
+  <tr>
+    <td>REG14</td>
+    <td> Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </td>
+    <td>some lotto in lotti
+satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.motivoCollegamento.codice != "10"</td>
+  </tr>
+
+  <tr>
+    <td>REG15</td>
+    <td> Cig collegato: è obbligatorio se Motivo collegamento CIG e' valorizzato oppure se Ripetizione di precedente contratto e' valorizzato a SI</td>
+    <td>some lotto in lotti
+satisfies lotto.ipotesiCollegamento.motivoCollegamento.codice != "10" and lotto.ipotesiCollegamento.cigCollegato = null</td>
+  </tr>
+
+  <tr>
+    <td>REG16</td>
+    <td> Cig collegato: se Motivo di collegamento CIG è valorizzato a '1: Ripetizione di lavori o servizi analoghi' il cig collegato deve prevedere ripetizioni.</td>
+    <td>some lotto in lotti
+satisfies lotto.ipotesiCollegamento.motivoCollegamento.codice = "1"
+and count(lotto.ipotesiCollegamento.cigCollegato) <2</td>
+  </tr>
+
+  <tr>
+    <td>REG18</td>
+    <td> E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
+’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</td>
+    <td>((is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</td>
+  </tr>
+
+  <tr>
+    <td>REG19</td>
+    <td> E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI</td>
+    <td>some lotto in lotti satisfies is defined(lotto.acquisizioneCup) and lotto.acquisizioneCup and (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG20</td>
+    <td> Cup associati al lotto: il campo non è obbligatorio se:
+- lotto.acquisizionecup=’N’ e oggettoContratto="services" o ‘supplies’
+- lotto.acquisizionecup=’N’ e oggettoContratto="works" e lotto.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
+E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</td>
+    <td>some lotto in lotti
+satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != "12")</td>
+  </tr>
+
+  <tr>
+    <td>REG20_1</td>
+    <td> Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</td>
+    <td>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")(some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) > 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG21</td>
+    <td> Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: La sezione è obbligatoria se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</td>
+    <td>some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR and lotto.paritaDiGenereGenerazionale = null</td>
+  </tr>
+
+  <tr>
+    <td>REG22</td>
+    <td> Previsione nel bando di gara, nell’avviso o nell’invito, dell’obbligo di assicurare, in caso di aggiudicazione del contratto, una quota pari almeno al 30 per cento, delle assunzioni necessarie per l'esecuzione del contratto o per la realizzazione di attività ad esso connesse o strumentali, sia all'occupazione giovanile sia all'occupazione femminile (articolo 47, comma 4, D.L. 77/2021)?: il campo è obbligatorio se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</td>
+    <td>some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR and lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento = null</td>
+  </tr>
+
+  <tr>
+    <td>REG23</td>
+    <td> Previsione di una quota
+inferiore con riferimento all’occupazione femminile o giovanile: se è stato indicato il valore 'SI_QUOTA_INFERIORE' nel campo quota30PerCento allora il valore della Previsione di una quota inferiore con riferimento all’occupazione giovanile e il valore della Previsione di una quota inferiore con riferimento all’occupazione femminile non possono essere entrambi 0%.</td>
+    <td>some lotto in lotti
+satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI_QUOTA_INFERIORE" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= 0 and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile=0</td>
+  </tr>
+
+  <tr>
+    <td>REG24</td>
+    <td> Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: almeno una quota, tra occupazione femminile e
+occupazione giovanile, deve essere inferiore al 30%</td>
+    <td>some lotto in lotti
+satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile >= 30 and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile >= 30</td>
+  </tr>
+
+  <tr>
+    <td>REG27</td>
+    <td> Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: se il campo quota30PerCento contiene il valore 'SI_QUOTA_INFERIORE' o 'NO', deve essere indicato il motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile</td>
+    <td>some lotto in lotti
+satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI_QUOTA_INFERIORE" or lotto.paritaDiGenereGenerazionale.quota30PerCento ="NO") and lotto.paritaDiGenereGenerazionale.motivoDeroga = null</td>
+  </tr>
+
+  <tr>
+    <td>REG28</td>
+    <td> Misure Premiali: il campo è obbligatorio se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</td>
+    <td>some lotto in lotti
+satisfies lotto.paritaDiGenereGenerazionale != null and lotto.afferenteInvestimentiPNRR and lotto.paritaDiGenereGenerazionale.misurePremiali= null</td>
+  </tr>
+
+  <tr>
+    <td>REG30</td>
+    <td> Prestazioni Comprese: il campo è obbligatorio se l'oggetto del contratto è "Lavori".</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = "works" and lotto.prestazioniComprese = null</td>
+  </tr>
+
+  <tr>
+    <td>REG32</td>
+    <td> Accessibilita: Se contratto PNRR o PNC il valore del campo di accessibilità deve essere "Sono compresi criteri di accessibilità per le persone con disabilità"</td>
+    <td>some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR and lotto.datiBaseAccessibilita.accessibilita.codice != "inc"</td>
+  </tr>
+
+  <tr>
+    <td>REG33</td>
+    <td> Giustificazione: se come accessibilità si indica "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente" occorre indicare anche il campo con la giustificazione.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (lotto.datiBaseAccessibilita.giustificazione = null or lotto.datiBaseAccessibilita.giustificazione="")</td>
+  </tr>
+
+  <tr>
+    <td>REG34</td>
+    <td> Importo Lavori: se l'oggetto del contratto è "Lavori" deve essere indicato un importo maggiore di 0.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = "works" and (lotto.quadroEconomicoStandard.impLavori = null or lotto.quadroEconomicoStandard.impLavori = 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG35</td>
+    <td> Importo Servizi: se l'oggetto del contratto è "Servizi" deve essere indicato un importo maggiore di 0.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = "services" and (lotto.quadroEconomicoStandard.impServizi = null or lotto.quadroEconomicoStandard.impServizi = 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG36</td>
+    <td> Importo Forniture: se l'oggetto del contratto è "Forniture" deve essere indicato un importo maggiore di 0.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = "supplies" and (lotto.quadroEconomicoStandard.impForniture = null or lotto.quadroEconomicoStandard.impForniture = 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG37</td>
+    <td> Somme opzioni e rinnovi: se l’appalto prevede opzioni/rinnovi deve essere indicato un importo maggiore di 0.</td>
+    <td>some lotto in lotti
+satisfies lotto.opzioniRinnovi and (lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = null or lotto.quadroEconomicoStandard.sommeOpzioniRinnovi = 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG38</td>
+    <td> Somme ripetizione: se l’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari deve essere indicato un importo maggiore di 0.</td>
+    <td>some lotto in lotti
+satisfies lotto.ripetizioniEConsegneComplementari and (lotto.quadroEconomicoStandard.sommeRipetizioni = null or lotto.quadroEconomicoStandard.sommeRipetizioni = 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG65</td>
+    <td> CPV Secondarie: l'elenco delle cpv secondarie non deve contenere il valore indicato come cpv prevalente.</td>
+    <td>some lotto in lotti
+satisfies list contains(lotto.datiBaseCPV.cpvSecondarie.codice, lotto.datiBaseCPV.cpvPrevalente.codice)</td>
+  </tr>
+
+  <tr>
+    <td>REG66</td>
+    <td> CPV Secondarie: l'elenco delle cpv secondarie non deve contenere valori replicati.</td>
+    <td>some lotto in lotti
+satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) > count(distinct values(lotto.datiBaseCPV.cpvSecondarie.codice))</td>
+  </tr>
+
+  <tr>
+    <td>REG98</td>
+    <td> L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0.</td>
+    <td>appalto.datiBase.importo = null or appalto.datiBase.importo <= 0</td>
+  </tr>
+
+  <tr>
+    <td>REG99</td>
+    <td> L'importo indicato nell'oggetto lotto.datiBase.importo deve essere > 0.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
+  </tr>
+
+  <tr>
+    <td>REG106</td>
+    <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+  </tr>
+
+  <tr>
+    <td>REG110</td>
+    <td> La somma degli importi indicati nei lotti deve essere compresa tra l'80% e il 100% dell'importo indicato nell'appalto. In presenza di eForm verificare gli importi inseriti nei campi EstimatedOverallContractAmount (BT-27).</td>
+    <td>(sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) < (appalto.datiBase.importo * 0.8)) or (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) > appalto.datiBase.importo)</td>
+  </tr>
+
+  <tr>
+    <td>REG118</td>
+    <td> Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</td>
+    <td>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice = "works" or lotto.datiBase.importo > 215000) and lotto.derogaQualificazione.codice = "1")</td>
+  </tr>
+
+  <tr>
+    <td>REG119</td>
+    <td> Non è possibile inserire il codice 2 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 431000 €.</td>
+    <td>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice = "works" or lotto.datiBase.importo > 431000) and lotto.derogaQualificazione.codice = "2")
+</td>
+  </tr>
+
+  <tr>
+    <td>REG120</td>
+    <td> Non è possibile inserire il codice 3 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da lavori o l'importo è superiore a 1 milione di euro.</td>
+    <td>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice != "works" or lotto.datiBase.importo > 1000000) and lotto.derogaQualificazione.codice = "3")</td>
+  </tr>
+
+  <tr>
+    <td>REG121</td>
+    <td> Non è possibile inserire il codice 4 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 750000 €.</td>
+    <td>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo > 750000) and lotto.derogaQualificazione.codice = "4")</td>
+  </tr>
+
+  <tr>
+    <td>REG122</td>
+    <td> Non è possibile inserire il codice 5 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 1 milione di euro.</td>
+    <td>some lotto in lotti
+satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo > 1000000) and lotto.derogaQualificazione.codice = "5")</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider fluxcards"></div>
+        <p>Relazioni con altre schede e Flussi ammissibili.</p>
+        <div class="message-divider fluxcards"></div>
+    </div>
+    
+  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  
+  
+    <table class="fluxcards">
+      <tr>
+        <th scope="col">Schede Precedenti</th>
+        <th scope="col">Schede Successive</th>
+        <th scope="col">Flussi ammissibili</th>  
+      </tr>
+  
+
+      <tr>
+        <td></td>
+        <td>A1_29, S1</td>
+        <td>110</td>
+      </tr>
+    </table>
+  <footer>
+    Generato il 13/12/2024 alle ore 16:42:47
+  </footer>
+  </body>
+  </html>

@@ -1,0 +1,443 @@
+
+  <!DOCTYPE html>
+<html lang="it">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modello Dati - Scheda S4 - Scheda relativa alla Variazione Aggiudicatari/Costituzione della società di scopo</title>
+    <style>
+      /* css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Stile delle tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+td {
+    overflow-wrap: break-word; /* Forza il testo a spezzarsi su più righe */
+    word-wrap: break-word; /* Compatibilità aggiuntiva */
+    hyphens: auto; /* Aggiunge trattini per la spezzatura, se supportato */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Larghezza delle colonne */
+th:nth-child(1), td:nth-child(1) {
+    width: 25%; /* Larghezza della prima colonna */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Larghezza della seconda colonna */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%; /* Larghezza della terza colonna */
+}
+
+
+table.reference th{
+    background-color: #28a745; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.rule th{
+    background-color: #343a40; /* Colore di sfondo nero per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.fluxcards th{
+    background-color: #6f42c1 ; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Colore di sfondo alternato per le righe */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Colore di sfondo quando si passa sopra una riga */
+}
+
+footer {
+    margin-top: 2rem; /* Spazio sopra il footer usando rem */
+    font-size: small;
+    text-align: center;
+    color: #777;
+}
+
+.smalltype {
+    font-size: small;
+}
+
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 40px 0;
+}
+
+/* Sezioni di messaggi */
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+.message-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+
+.message-divider.reference {
+    background-color: #28a745;
+}
+
+.message-divider.rule {
+    background-color: #343a40;
+}
+
+.message-divider.fluxcards{
+    background-color: #6f42c1 ;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Modello Dati - Scheda S4 - Scheda relativa alla Variazione Aggiudicatari/Costituzione della società di scopo</h1>
+<div class="message">
+        <div class="message-divider"></div>
+        <p>Elementi della scheda.</p>
+        <div class="message-divider"></div>
+    </div>
+  
+  <h2 id="SchedaS4Type">SchedaS4Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#AnacFormS4Type">AnacFormS4Type</a></td>
+  </tr>
+</table>
+  <h2 id="AnacFormS4Type">AnacFormS4Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>cig (<span class="smalltype">obbligatorio</span>)</td>
+    <td>codice identificativo lotto</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>partecipante (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#PartecipanteType">PartecipanteType</a></td>
+  </tr>
+
+  <tr>
+    <td>motivoVariazione (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#MotiviVariazioneAnagraficaEnum">MotiviVariazioneAnagraficaEnum</a></td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider reference"></div>
+        <p>Lista delle reference della scheda.</p>
+        <div class="message-divider reference"></div>
+    </div>
+    
+  <h2 id="MotiviVariazioneAnagraficaEnum">MotiviVariazioneAnagraficaEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Motivi di variazione anagrafica - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoVariazione.json">motivoVariazione.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="PartecipanteType">PartecipanteType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dati del partecipante</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice fiscale del soggetto interessato</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>denominazione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Denominazione del soggetto interessato</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>ruoloOE (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#RuoloOEEnum">RuoloOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>tipoOE (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#TipoOEEnum">TipoOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>idPartecipante (<span class="smalltype">obbligatorio</span>)</td>
+    <td>id partecipante</td>
+    <td>uuid</td>
+  </tr>
+
+  <tr>
+    <td>paeseOperatoreEconomico (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Paese Operatore Economico</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>paeseOperatoreEconomicoMl (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#MultilinguaType">MultilinguaType</a></td>
+  </tr>
+
+  <tr>
+    <td>avvalimento (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Flag avvalimento</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>tipologiaAvvalimento (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#TipologiaAvvalimentoEnum">TipologiaAvvalimentoEnum</a></td>
+  </tr>
+</table>
+  <h2 id="RuoloOEEnum">RuoloOEEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Ruolo del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ruoloOE.json">ruoloOE.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="TipoOEEnum">TipoOEEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipo soggetto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOE.json">tipoOE.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="MultilinguaType">MultilinguaType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto utilizzato per la comunicazione dei dati in multilingua</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>de (<span class="smalltype">opzionale</span>)</td>
+    <td>Deutsch</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>en (<span class="smalltype">opzionale</span>)</td>
+    <td>English</td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="TipologiaAvvalimentoEnum">TipologiaAvvalimentoEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipologia di avvalimento - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipologiaAvvalimento.json">tipologiaAvvalimento.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider fluxcards"></div>
+        <p>Relazioni con altre schede e Flussi ammissibili.</p>
+        <div class="message-divider fluxcards"></div>
+    </div>
+    
+  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  
+  
+    <table class="fluxcards">
+      <tr>
+        <th scope="col">Schede Precedenti</th>
+        <th scope="col">Schede Successive</th>
+        <th scope="col">Flussi ammissibili</th>  
+      </tr>
+  
+
+      <tr>
+        <td>A1_29, A1_30, A1_31, A1_32, A1_33, A1_34, A1_35, A1_36, A1_37, A2_29, A2_30, A2_31, A2_32, A2_33, A2_34, A2_35, A2_36, A2_37, A3_1, A3_2, A3_3, A3_4, A3_5, A3_6, A4_1, A4_2, A4_3, A4_4, A4_5, A4_6, A7_1_1, A7_1_2, AC1, CL1, CS1, ES1, I1, IR1, M1, M1_40, M2, M2_40, RI1, RSU1, S3, SA1, SC1, SO1, SQ1</td>
+        <td>CO1, SC1</td>
+        <td>Tutti</td>
+      </tr>
+    </table>
+  <footer>
+    Generato il 13/12/2024 alle ore 16:44:23
+  </footer>
+  </body>
+  </html>

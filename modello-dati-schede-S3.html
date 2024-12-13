@@ -1,0 +1,683 @@
+
+  <!DOCTYPE html>
+<html lang="it">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modello Dati - Scheda S3 - Scheda relativa agli incarichi tecnici e alle prestazioni progettuali.</title>
+    <style>
+      /* css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Stile delle tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+td {
+    overflow-wrap: break-word; /* Forza il testo a spezzarsi su più righe */
+    word-wrap: break-word; /* Compatibilità aggiuntiva */
+    hyphens: auto; /* Aggiunge trattini per la spezzatura, se supportato */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Larghezza delle colonne */
+th:nth-child(1), td:nth-child(1) {
+    width: 25%; /* Larghezza della prima colonna */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Larghezza della seconda colonna */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%; /* Larghezza della terza colonna */
+}
+
+
+table.reference th{
+    background-color: #28a745; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.rule th{
+    background-color: #343a40; /* Colore di sfondo nero per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.fluxcards th{
+    background-color: #6f42c1 ; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Colore di sfondo alternato per le righe */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Colore di sfondo quando si passa sopra una riga */
+}
+
+footer {
+    margin-top: 2rem; /* Spazio sopra il footer usando rem */
+    font-size: small;
+    text-align: center;
+    color: #777;
+}
+
+.smalltype {
+    font-size: small;
+}
+
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 40px 0;
+}
+
+/* Sezioni di messaggi */
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+.message-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+
+.message-divider.reference {
+    background-color: #28a745;
+}
+
+.message-divider.rule {
+    background-color: #343a40;
+}
+
+.message-divider.fluxcards{
+    background-color: #6f42c1 ;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Modello Dati - Scheda S3 - Scheda relativa agli incarichi tecnici e alle prestazioni progettuali.</h1>
+<div class="message">
+        <div class="message-divider"></div>
+        <p>Elementi della scheda.</p>
+        <div class="message-divider"></div>
+    </div>
+  
+  <h2 id="SchedaS3Type">SchedaS3Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#AnacFormS3Type">AnacFormS3Type</a></td>
+  </tr>
+</table>
+  <h2 id="AnacFormS3Type">AnacFormS3Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>elencoIncarichi (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>array di <a href="#ElencoIncarichiType">ElencoIncarichiType</a></td>
+  </tr>
+</table>
+  <h2 id="ElencoIncarichiType">ElencoIncarichiType</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>cig (<span class="smalltype">obbligatorio</span>)</td>
+    <td>codice identificativo lotto</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>prestazioni (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#PrestazioneType">PrestazioneType</a></td>
+  </tr>
+
+  <tr>
+    <td>incarichi (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#IncaricoType">IncaricoType</a></td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider reference"></div>
+        <p>Lista delle reference della scheda.</p>
+        <div class="message-divider reference"></div>
+    </div>
+    
+  <h2 id="IncaricoType">IncaricoType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dati relativi agli incarichi tecnici</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>tipoIncarico (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#TipoIncaricoEnum">TipoIncaricoEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>datiPersonaFisica (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiPersonaFisicaType">DatiPersonaFisicaType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiPersonaGiuridica (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#DatiPersonaGiuridicaType">DatiPersonaGiuridicaType</a></td>
+  </tr>
+</table>
+  <h2 id="PrestazioneType">PrestazioneType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dati relativi alle prestazioni progettuali</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>progettazioneInternaEsterna (<span class="smalltype">opzionale</span>)</td>
+    <td>La progettazione è interna o esterna?</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>tipoSoggetto (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#TipoSoggettoEnum">TipoSoggettoEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>datiPersonaFisica (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiPersonaFisicaType">DatiPersonaFisicaType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiPersonaGiuridica (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#DatiPersonaGiuridicaType">DatiPersonaGiuridicaType</a></td>
+  </tr>
+
+  <tr>
+    <td>tipoProgettazione (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#TipoProgettazioneEnum">TipoProgettazioneEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>cig (<span class="smalltype">opzionale</span>)</td>
+    <td>CIG affidamento incarico esterno di progettazione (in caso di progettista esterno)</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>dataAffidamentoIncarico (<span class="smalltype">opzionale</span>)</td>
+    <td>Data di affidamento incarico (per progettazione esterna)</td>
+    <td>date-time</td>
+  </tr>
+
+  <tr>
+    <td>dataConsegna (<span class="smalltype">opzionale</span>)</td>
+    <td>Data di consegna progetto (per progettazione esterna)</td>
+    <td>date-time</td>
+  </tr>
+</table>
+  <h2 id="TipoIncaricoEnum">TipoIncaricoEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipologia dell'incarico - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoIncarico.json">tipoIncarico.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="DatiPersonaFisicaType">DatiPersonaFisicaType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dati relativi alla persona fisica</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">opzionale</span>)</td>
+    <td>Codice fiscale</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>cognome (<span class="smalltype">opzionale</span>)</td>
+    <td>Cognome</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>nome (<span class="smalltype">opzionale</span>)</td>
+    <td>Nome</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>telefono (<span class="smalltype">opzionale</span>)</td>
+    <td>Telefono</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>fax (<span class="smalltype">opzionale</span>)</td>
+    <td>Fax</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>email (<span class="smalltype">opzionale</span>)</td>
+    <td>E-mail</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>indirizzo (<span class="smalltype">opzionale</span>)</td>
+    <td>Indirizzo</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>cap (<span class="smalltype">opzionale</span>)</td>
+    <td>CAP</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codIstat (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#CodIstatEnum">CodIstatEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>incaricatoEstero (<span class="smalltype">opzionale</span>)</td>
+    <td>Incaricato Estero</td>
+    <td>boolean</td>
+  </tr>
+</table>
+  <h2 id="DatiPersonaGiuridicaType">DatiPersonaGiuridicaType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dati relativi alla persona giuridica</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">opzionale</span>)</td>
+    <td>Codice fiscale</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>denominazione (<span class="smalltype">opzionale</span>)</td>
+    <td>Denominazione</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>ruoloOE (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#RuoloOEEnum">RuoloOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>tipoOE (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#TipoOEEnum">TipoOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>idPartecipante (<span class="smalltype">opzionale</span>)</td>
+    <td>id partecipante</td>
+    <td>uuid</td>
+  </tr>
+</table>
+  <h2 id="TipoSoggettoEnum">TipoSoggettoEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipologia del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoSoggetto.json">tipoSoggetto.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="TipoProgettazioneEnum">TipoProgettazioneEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipologia di progettazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoProgettazione.json">tipoProgettazione.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CodIstatEnum">CodIstatEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Codice ISTAT - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codIstat.json">codIstat.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="RuoloOEEnum">RuoloOEEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Ruolo del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ruoloOE.json">ruoloOE.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="TipoOEEnum">TipoOEEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipo soggetto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOE.json">tipoOE.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider rule"></div>
+        <p>Lista delle regole applicate alla scheda.</p>
+        <div class="message-divider rule"></div>
+    </div>
+    
+  <h2 id="Regole">Regole</h2>
+  
+  
+    <table class="rule">
+      <tr>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>  
+        <th scope="col">Test</th>  
+      </tr>
+  
+
+  <tr>
+    <td>REG40</td>
+    <td> Assenza CIG dell’affidamento di incarico esterno di progettazione</td>
+    <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
+satisfies prestazione.tipoSoggetto.codice="2" and (prestazione.cig = null or prestazione.cig = ""))</td>
+  </tr>
+
+  <tr>
+    <td>REG41</td>
+    <td> Indicare la data dell’affidamento di incarico esterno di progettazione</td>
+    <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
+satisfies prestazione.tipoSoggetto.codice="2" and (prestazione.dataAffidamentoIncarico = null or prestazione.dataAffidamentoIncarico =""))</td>
+  </tr>
+
+  <tr>
+    <td>REG42</td>
+    <td> Indicare la data di consegna del progetto </td>
+    <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
+satisfies prestazione.tipoSoggetto.codice="2" and (prestazione.dataConsegna = null or prestazione.dataConsegna=""))</td>
+  </tr>
+
+  <tr>
+    <td>REG43</td>
+    <td> Indicare il tipo di progettazione</td>
+    <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
+satisfies prestazione.tipoSoggetto.codice="1" and (prestazione.tipoProgettazione = null or prestazione.tipoProgettazione = "" or prestazione.tipoProgettazione.codice = null or prestazione.tipoProgettazione.codice = ""))</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider fluxcards"></div>
+        <p>Relazioni con altre schede e Flussi ammissibili.</p>
+        <div class="message-divider fluxcards"></div>
+    </div>
+    
+  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  
+  
+    <table class="fluxcards">
+      <tr>
+        <th scope="col">Schede Precedenti</th>
+        <th scope="col">Schede Successive</th>
+        <th scope="col">Flussi ammissibili</th>  
+      </tr>
+  
+
+      <tr>
+        <td>A1_29, A1_30, A1_31, A1_32, A1_33, A1_34, A1_35, A1_36, A1_37, A2_29, A2_30, A2_31, A2_32, A2_33, A2_34, A2_35, A2_36, A2_37, A3_1, A3_2, A3_3, A3_4, A3_5, A4_1, A4_2, A4_3, A4_4, A4_5, A4_6, A7_1_1, A7_1_2, AC1, AD1_25, AD1_26, AD1_27, AD1_28, AD2_25, AD2_26, AD2_27, AD2_28, AD3, AD4, CL1, CM1, CO1, CS1, ES1, I1, IR1, M1, M1_40, M2, M2_40, RI1, RSU1, S2, S2R, S3, SA1, SC1, SO1, SQ1</td>
+        <td>A1_29, A1_30, A1_31, A1_32, A1_33, A1_34, A1_35, A1_36, A1_37, A2_29, A2_30, A2_31, A2_32, A2_33, A2_34, A2_35, A2_36, A2_37, A3_1, A3_2, A3_3, A3_4, A3_5, A4_1, A4_2, A4_3, A4_4, A4_5, A4_6, A7_1_1, A7_1_2, AC1, CL1, CO1, CO2, CS1, ES1, I1, IR1, M1, M1_40, M2, M2_40, NAG, RI1, RSU1, S3, S4, SA1, SC1, SO1, SQ1</td>
+        <td>Tutti</td>
+      </tr>
+    </table>
+  <footer>
+    Generato il 13/12/2024 alle ore 16:44:23
+  </footer>
+  </body>
+  </html>

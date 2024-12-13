@@ -1,0 +1,515 @@
+
+  <!DOCTYPE html>
+<html lang="it">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modello Dati - Scheda M2 - Scheda di modifica contrattuale senza invio al TED.</title>
+    <style>
+      /* css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Stile delle tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+td {
+    overflow-wrap: break-word; /* Forza il testo a spezzarsi su più righe */
+    word-wrap: break-word; /* Compatibilità aggiuntiva */
+    hyphens: auto; /* Aggiunge trattini per la spezzatura, se supportato */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Larghezza delle colonne */
+th:nth-child(1), td:nth-child(1) {
+    width: 25%; /* Larghezza della prima colonna */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Larghezza della seconda colonna */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%; /* Larghezza della terza colonna */
+}
+
+
+table.reference th{
+    background-color: #28a745; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.rule th{
+    background-color: #343a40; /* Colore di sfondo nero per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.fluxcards th{
+    background-color: #6f42c1 ; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Colore di sfondo alternato per le righe */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Colore di sfondo quando si passa sopra una riga */
+}
+
+footer {
+    margin-top: 2rem; /* Spazio sopra il footer usando rem */
+    font-size: small;
+    text-align: center;
+    color: #777;
+}
+
+.smalltype {
+    font-size: small;
+}
+
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 40px 0;
+}
+
+/* Sezioni di messaggi */
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+.message-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+
+.message-divider.reference {
+    background-color: #28a745;
+}
+
+.message-divider.rule {
+    background-color: #343a40;
+}
+
+.message-divider.fluxcards{
+    background-color: #6f42c1 ;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Modello Dati - Scheda M2 - Scheda di modifica contrattuale senza invio al TED.</h1>
+<div class="message">
+        <div class="message-divider"></div>
+        <p>Elementi della scheda.</p>
+        <div class="message-divider"></div>
+    </div>
+  
+  <h2 id="SchedaM2Type">SchedaM2Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#AnacFormM2Type">AnacFormM2Type</a></td>
+  </tr>
+</table>
+  <h2 id="AnacFormM2Type">AnacFormM2Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idContratto (<span class="smalltype">obbligatorio</span>)</td>
+    <td>identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>modificaContrattuale (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#ModificaContrattualeType">ModificaContrattualeType</a></td>
+  </tr>
+</table>
+  <h2 id="ModificaContrattualeType">ModificaContrattualeType</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>dataApprovazione (<span class="smalltype">opzionale</span>)</td>
+    <td>Data di approvazione della modifica contrattuale</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>urlDocumentazione (<span class="smalltype">opzionale</span>)</td>
+    <td>URL documentazione varianti in corso d’opera</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>motivoRevisionePrezzi (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#MotiviRevisionePrezziEnum">MotiviRevisionePrezziEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>cigNuovaProcedura (<span class="smalltype">opzionale</span>)</td>
+    <td>CIG della nuova procedura avviata</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>quadroEconomicoStandardRideterminato (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#QuadroEconomicoModificaContrattualeType">QuadroEconomicoModificaContrattualeType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBaseModificaContrattuale (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseModificaContrattualeType">DatiBaseModificaContrattualeType</a></td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider reference"></div>
+        <p>Lista delle reference della scheda.</p>
+        <div class="message-divider reference"></div>
+    </div>
+    
+  <h2 id="DatiBaseModificaContrattualeType">DatiBaseModificaContrattualeType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con i Business Group Contract e Modification delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>dataSottoscrizione (<span class="smalltype">opzionale</span>)</td>
+    <td>Data sottoscrizione eventuale atto aggiuntivo/ sottomissione - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-145 - Contract Conclusion Date del TED</td>
+    <td>date-time</td>
+  </tr>
+
+  <tr>
+    <td>motiviModifica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#MotiviModificaContrattualeEnum">MotiviModificaContrattualeEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>causaModifica (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Cause della modifica contrattuale</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>causaModificaMl (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#MultilinguaType">MultilinguaType</a></td>
+  </tr>
+</table>
+  <h2 id="MotiviRevisionePrezziEnum">MotiviRevisionePrezziEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Motivo di revisione dei prezzi - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoRevisionePrezzi.json">motivoRevisionePrezzi.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="QuadroEconomicoModificaContrattualeType">QuadroEconomicoModificaContrattualeType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta tutti i dati del quadro economico standard per la modifica contrattuale</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>impLavori (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Importo contrattuale componente lavori in € (al netto dell’IVA e degli oneri di sicurezza)</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impServizi (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Importo contrattuale componente servizi in € (al netto dell’IVA e degli oneri di sicurezza)</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impForniture (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Importo contrattuale componente forniture in € (al netto dell’IVA e degli oneri di sicurezza)</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impTotaleSicurezza (<span class="smalltype">opzionale</span>)</td>
+    <td>Nuovo importo totale per l’attuazione della sicurezza (non soggetto a ribasso)</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impProgettazione (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo progettazione</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>ulterioriSommeNoRibasso (<span class="smalltype">opzionale</span>)</td>
+    <td>Ulteriori somme non soggette a ribasso</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeADisposizione (<span class="smalltype">opzionale</span>)</td>
+    <td>Nuovo importo totale somme a disposizione</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>numGiorniProroga (<span class="smalltype">opzionale</span>)</td>
+    <td>Numero di giorni di proroga concessi/tempo aggiuntivo rispetto ai termini contrattuali</td>
+    <td>integer</td>
+  </tr>
+</table>
+  <h2 id="MotiviModificaContrattualeEnum">MotiviModificaContrattualeEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Motivi modifica contrattuale - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-200 - Modification Reason Code del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motiviModifica.json">motiviModifica.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="MultilinguaType">MultilinguaType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto utilizzato per la comunicazione dei dati in multilingua</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>de (<span class="smalltype">opzionale</span>)</td>
+    <td>Deutsch</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>en (<span class="smalltype">opzionale</span>)</td>
+    <td>English</td>
+    <td>string</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider rule"></div>
+        <p>Lista delle regole applicate alla scheda.</p>
+        <div class="message-divider rule"></div>
+    </div>
+    
+  <h2 id="Regole">Regole</h2>
+  
+  
+    <table class="rule">
+      <tr>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>  
+        <th scope="col">Test</th>  
+      </tr>
+  
+
+  <tr>
+    <td>REG61</td>
+    <td> Per i contratti pubblici di importo superiore alla soglia comunitaria, se la variante in corso d’opera eccede il 10% dell’importo originario del contratto, è necessario fornire il link URL documentazione varianti in corso d’opera</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.urlDocumentazione = null or modificaContrattuale.urlDocumentazione = "")</td>
+  </tr>
+
+  <tr>
+    <td>REG54</td>
+    <td> Selezionare un motivo di revisione prezzi</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-rev" and (modificaContrattuale.motivoRevisionePrezzi = null or modificaContrattuale.motivoRevisionePrezzi = "" or modificaContrattuale.motivoRevisionePrezzi.codice = null or modificaContrattuale.motivoRevisionePrezzi.codice = "")</td>
+  </tr>
+
+  <tr>
+    <td>REG56</td>
+    <td> CIG della nuova procedura avviata: campo non previsto</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice != "other" and modificaContrattuale.cigNuovaProcedura != null and modificaContrattuale.cigNuovaProcedura != ""</td>
+  </tr>
+
+  <tr>
+    <td>REG55</td>
+    <td> in caso di proroga tecnica Indicare il CIG della nuova procedura avviata ovvero indicare le motivazioni della proroga nel campo Cause della modifica contrattuale</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.cigNuovaProcedura = null or modificaContrattuale.cigNuovaProcedura = "") and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = "")</td>
+  </tr>
+
+  <tr>
+    <td>REG62</td>
+    <td> in caso di ‘Altre cause impreviste ed imprevedibili’ indicare una motivazione nel campo ‘Cause della modifica contrattuale’</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = "")</td>
+  </tr>
+
+  <tr>
+    <td>REG63</td>
+    <td> Non è stato valorizzato il numero di giorni di proroga concessi/tempo aggiuntivo rispetto ai termini contrattuali</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.quadroEconomicoStandardRideterminato = null or modificaContrattuale.quadroEconomicoStandardRideterminato = "" or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = null or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = 0)</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider fluxcards"></div>
+        <p>Relazioni con altre schede e Flussi ammissibili.</p>
+        <div class="message-divider fluxcards"></div>
+    </div>
+    
+  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  
+  
+    <table class="fluxcards">
+      <tr>
+        <th scope="col">Schede Precedenti</th>
+        <th scope="col">Schede Successive</th>
+        <th scope="col">Flussi ammissibili</th>  
+      </tr>
+  
+
+      <tr>
+        <td>AC1, CS1, ES1, I1, IR1, M2, RI1, RSU1, S3, SA1, SC1, SO1, SQ1</td>
+        <td>AC1, CL1, CO1, CS1, ES1, IR1, M2, RI1, RSU1, S3, S4, SA1, SO1</td>
+        <td>30, 61, 62, 210, 212, 213, 216, 220</td>
+      </tr>
+    </table>
+  <footer>
+    Generato il 13/12/2024 alle ore 16:42:46
+  </footer>
+  </body>
+  </html>

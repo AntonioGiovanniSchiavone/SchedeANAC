@@ -1,0 +1,607 @@
+
+  <!DOCTYPE html>
+<html lang="it">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modello Dati - Scheda CL1 - Scheda di collaudo.</title>
+    <style>
+      /* css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Stile delle tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+td {
+    overflow-wrap: break-word; /* Forza il testo a spezzarsi su più righe */
+    word-wrap: break-word; /* Compatibilità aggiuntiva */
+    hyphens: auto; /* Aggiunge trattini per la spezzatura, se supportato */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Larghezza delle colonne */
+th:nth-child(1), td:nth-child(1) {
+    width: 25%; /* Larghezza della prima colonna */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Larghezza della seconda colonna */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%; /* Larghezza della terza colonna */
+}
+
+
+table.reference th{
+    background-color: #28a745; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.rule th{
+    background-color: #343a40; /* Colore di sfondo nero per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.fluxcards th{
+    background-color: #6f42c1 ; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Colore di sfondo alternato per le righe */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Colore di sfondo quando si passa sopra una riga */
+}
+
+footer {
+    margin-top: 2rem; /* Spazio sopra il footer usando rem */
+    font-size: small;
+    text-align: center;
+    color: #777;
+}
+
+.smalltype {
+    font-size: small;
+}
+
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 40px 0;
+}
+
+/* Sezioni di messaggi */
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+.message-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+
+.message-divider.reference {
+    background-color: #28a745;
+}
+
+.message-divider.rule {
+    background-color: #343a40;
+}
+
+.message-divider.fluxcards{
+    background-color: #6f42c1 ;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Modello Dati - Scheda CL1 - Scheda di collaudo.</h1>
+<div class="message">
+        <div class="message-divider"></div>
+        <p>Elementi della scheda.</p>
+        <div class="message-divider"></div>
+    </div>
+  
+  <h2 id="SchedaCL1Type">SchedaCL1Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#AnacFormCL1Type">AnacFormCL1Type</a></td>
+  </tr>
+</table>
+  <h2 id="AnacFormCL1Type">AnacFormCL1Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idContratto (<span class="smalltype">obbligatorio</span>)</td>
+    <td>identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>collaudo (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#CollaudoType">CollaudoType</a></td>
+  </tr>
+</table>
+  <h2 id="CollaudoType">CollaudoType</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>dataCollaudo (<span class="smalltype">opzionale</span>)</td>
+    <td>Data del collaudo statico (ove ricorra)</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>dataCertificato (<span class="smalltype">opzionale</span>)</td>
+    <td>Data del certificato di regolare esecuzione</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>modoCollaudo (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#ModoCollaudoEnum">ModoCollaudoEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>dataNomina (<span class="smalltype">opzionale</span>)</td>
+    <td>Data nomina collaudatore/Commissione</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>dataInizio (<span class="smalltype">opzionale</span>)</td>
+    <td>Data inizio operazioni di collaudo</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>dataRedazioneCertificato (<span class="smalltype">opzionale</span>)</td>
+    <td>Data redazione certificato di collaudo/ verifica di conformità</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>dataDeliberaAmmissibilita (<span class="smalltype">opzionale</span>)</td>
+    <td>Data delibera di ammissibilità del collaudo (ove prevista)</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>esito (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Esito del collaudo/ verifica di conformità</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>quadroEconomicoStandard (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#QuadroEconomicoType">QuadroEconomicoType</a></td>
+  </tr>
+
+  <tr>
+    <td>quadroEconomicoConcessioni (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#QuadroEconomicoConcessioniType">QuadroEconomicoConcessioniType</a></td>
+  </tr>
+
+  <tr>
+    <td>numeroTotaleRiserve (<span class="smalltype">opzionale</span>)</td>
+    <td>Numero totale riserve definite con accordo bonario</td>
+    <td>number</td>
+  </tr>
+
+  <tr>
+    <td>oneri (<span class="smalltype">opzionale</span>)</td>
+    <td>Oneri complessivi derivanti</td>
+    <td>number</td>
+  </tr>
+
+  <tr>
+    <td>modalitaDefinizione (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#DefinizioneType">DefinizioneType</a></td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider reference"></div>
+        <p>Lista delle reference della scheda.</p>
+        <div class="message-divider reference"></div>
+    </div>
+    
+  <h2 id="DefinizioneType">DefinizioneType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dati delle modalità di definizione</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>ulterioriRiserve (<span class="smalltype">opzionale</span>)</td>
+    <td>Ulteriori riserve definite o da definire con diversa modalità</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>numeroRiserveDefinite (<span class="smalltype">opzionale</span>)</td>
+    <td>Numero riserve definite</td>
+    <td>integer</td>
+  </tr>
+
+  <tr>
+    <td>numeroRiserveDaDefinire (<span class="smalltype">opzionale</span>)</td>
+    <td>Numero riserve da definire</td>
+    <td>integer</td>
+  </tr>
+
+  <tr>
+    <td>impTotaleRichiesto (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo totale richiesto</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impTotaleDefinizione (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo totale eventuale definizione</td>
+    <td>double</td>
+  </tr>
+</table>
+  <h2 id="ModoCollaudoEnum">ModoCollaudoEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Modalità del collaudo tecnico/amministrativo/ verifica di conformità - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modoCollaudo.json">modoCollaudo.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="QuadroEconomicoConcessioniType">QuadroEconomicoConcessioniType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta tutti i dati del quadro economico per le concessioni.</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>impLavori (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente lavori in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impServizi (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente servizi in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impForniture (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente forniture in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>finanziamentiCanoniPA (<span class="smalltype">opzionale</span>)</td>
+    <td>Finanziamnenti o canoni della PA</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>entrateUtenza (<span class="smalltype">opzionale</span>)</td>
+    <td>Entrate derivanti dall’utenza</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>introitoAttivo (<span class="smalltype">opzionale</span>)</td>
+    <td>Introito attivo per la PA</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impTotaleSicurezza (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo totale per l'attuazione della sicurezza</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>ulterioriSommeNoRibasso (<span class="smalltype">opzionale</span>)</td>
+    <td>Ulteriori somme non soggette a ribasso</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeOpzioniRinnovi (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme per opzioni/rinnovi</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeADisposizione (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme a disposizione - Iva e altre Imposte e tasse</td>
+    <td>double</td>
+  </tr>
+</table>
+  <h2 id="QuadroEconomicoType">QuadroEconomicoType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta tutti i dati del quadro economico standard</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>impLavori (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente lavori in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impServizi (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente servizi in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impForniture (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente forniture in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impTotaleSicurezza (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo totale per l'attuazione della sicurezza</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>ulterioriSommeNoRibasso (<span class="smalltype">opzionale</span>)</td>
+    <td>Ulteriori somme non soggette a ribasso</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impProgettazione (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo della progettazione in caso di appalto integrato</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeOpzioniRinnovi (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme per opzioni/rinnovi</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeRipetizioni (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeADisposizione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Somme a disposizione - Iva e altre Imposte e tasse</td>
+    <td>double</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider rule"></div>
+        <p>Lista delle regole applicate alla scheda.</p>
+        <div class="message-divider rule"></div>
+    </div>
+    
+  <h2 id="Regole">Regole</h2>
+  
+  
+    <table class="rule">
+      <tr>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>  
+        <th scope="col">Test</th>  
+      </tr>
+  
+
+  <tr>
+    <td>REG86</td>
+    <td> Certificato di regolare esecuzione non previsto in caso di collaudo tecnico/amministrativo</td>
+    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != "" and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != "" and collaudo.dataCertificato != null and collaudo.dataCertificato != ""</td>
+  </tr>
+
+  <tr>
+    <td>REG87</td>
+    <td> Specificare data del certificato di regolare esecuzione o le modalità del collaudo tecnico amministrativo</td>
+    <td>(collaudo.modoCollaudo = null or collaudo.modoCollaudo = "" or collaudo.modoCollaudo.codice = null or collaudo.modoCollaudo.codice = "") and (collaudo.dataCertificato = null or collaudo.dataCertificato = "")</td>
+  </tr>
+
+  <tr>
+    <td>REG88</td>
+    <td> Non è stata indicata la data di nomina del collaudatore / Commissione</td>
+    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != "" and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != "" and (collaudo.dataNomina = null or collaudo.dataNomina = "")</td>
+  </tr>
+
+  <tr>
+    <td>REG89</td>
+    <td> Non è stata indicata la data di inizio delle operazioni di collaudo</td>
+    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != "" and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != "" and (collaudo.dataInizio = null or collaudo.dataInizio = "")</td>
+  </tr>
+
+  <tr>
+    <td>REG90</td>
+    <td> Data inizio operazioni di collaudo antecedente la data  di nomina della commissione di collaudo/collaudatore </td>
+    <td>collaudo.dataInizio != null and collaudo.dataInizio != "" and collaudo.dataNomina != null and collaudo.dataNomina != "" and collaudo.dataInizio < collaudo.dataNomina</td>
+  </tr>
+
+  <tr>
+    <td>REG91</td>
+    <td> Non è stata indicata la data di redazione del certificato di collaudo</td>
+    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != "" and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != "" and (collaudo.dataRedazioneCertificato = null or collaudo.dataRedazioneCertificato = "")</td>
+  </tr>
+
+  <tr>
+    <td>REG92</td>
+    <td> Data redazione certificato antecedente la data di inizio operazioni di collaudo</td>
+    <td>collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != "" and collaudo.dataInizio != null and collaudo.dataInizio != "" and collaudo.dataRedazioneCertificato < collaudo.dataInizio</td>
+  </tr>
+
+  <tr>
+    <td>REG93</td>
+    <td> Data delibera di ammissibilità antecedente la data di redazione del certificato di collaudo</td>
+    <td>collaudo.dataDeliberaAmmissibilita != null and collaudo.dataDeliberaAmmissibilita != "" and collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != "" and collaudo.dataDeliberaAmmissibilita < collaudo.dataRedazioneCertificato</td>
+  </tr>
+
+  <tr>
+    <td>REG94</td>
+    <td> Oneri complessivi derivanti è obbligatorio se il numero totale riserve è maggiore di zero.</td>
+    <td>collaudo.numeroTotaleRiserve != null and collaudo.numeroTotaleRiserve > 0 and collaudo.oneri != null and collaudo.oneri = 0</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider fluxcards"></div>
+        <p>Relazioni con altre schede e Flussi ammissibili.</p>
+        <div class="message-divider fluxcards"></div>
+    </div>
+    
+  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  
+  
+    <table class="fluxcards">
+      <tr>
+        <th scope="col">Schede Precedenti</th>
+        <th scope="col">Schede Successive</th>
+        <th scope="col">Flussi ammissibili</th>  
+      </tr>
+  
+
+      <tr>
+        <td>CO1, CS1, ES1, I1, M1, M1_40, M2, M2_40, RI1, RSU1, S3, SA1, SO1, SQ1</td>
+        <td>AC1, CO1, CS1, ES1, IR1, RI1, RSU1, S3, S4, SA1, SC1, SO1</td>
+        <td>Tutti</td>
+      </tr>
+    </table>
+  <footer>
+    Generato il 13/12/2024 alle ore 16:42:37
+  </footer>
+  </body>
+  </html>

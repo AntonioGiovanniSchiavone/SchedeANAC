@@ -1,0 +1,988 @@
+
+  <!DOCTYPE html>
+<html lang="it">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modello Dati - Scheda PL2_2 - Scheda di pubblicazione per appalti settori speciali sotto soglia, senza invio al TED.</title>
+    <style>
+      /* css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Stile delle tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+td {
+    overflow-wrap: break-word; /* Forza il testo a spezzarsi su più righe */
+    word-wrap: break-word; /* Compatibilità aggiuntiva */
+    hyphens: auto; /* Aggiunge trattini per la spezzatura, se supportato */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Larghezza delle colonne */
+th:nth-child(1), td:nth-child(1) {
+    width: 25%; /* Larghezza della prima colonna */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Larghezza della seconda colonna */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%; /* Larghezza della terza colonna */
+}
+
+
+table.reference th{
+    background-color: #28a745; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.rule th{
+    background-color: #343a40; /* Colore di sfondo nero per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.fluxcards th{
+    background-color: #6f42c1 ; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Colore di sfondo alternato per le righe */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Colore di sfondo quando si passa sopra una riga */
+}
+
+footer {
+    margin-top: 2rem; /* Spazio sopra il footer usando rem */
+    font-size: small;
+    text-align: center;
+    color: #777;
+}
+
+.smalltype {
+    font-size: small;
+}
+
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 40px 0;
+}
+
+/* Sezioni di messaggi */
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+.message-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+
+.message-divider.reference {
+    background-color: #28a745;
+}
+
+.message-divider.rule {
+    background-color: #343a40;
+}
+
+.message-divider.fluxcards{
+    background-color: #6f42c1 ;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Modello Dati - Scheda PL2_2 - Scheda di pubblicazione per appalti settori speciali sotto soglia, senza invio al TED.</h1>
+<div class="message">
+        <div class="message-divider"></div>
+        <p>Elementi della scheda.</p>
+        <div class="message-divider"></div>
+    </div>
+  
+  <h2 id="SchedaPL2_2Type">SchedaPL2_2Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#AnacFormPLBaseType">AnacFormPLBaseType</a></td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider reference"></div>
+        <p>Lista delle reference della scheda.</p>
+        <div class="message-divider reference"></div>
+    </div>
+    
+  <h2 id="AnacFormPLBaseType">AnacFormPLBaseType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Contiene i dati comuni per le schede relative alle pianificazioni</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>stazioniAppaltanti (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Dati relativi alle stazioni appaltanti</td>
+    <td>array di <a href="#StazioneAppaltanteType">StazioneAppaltanteType</a></td>
+  </tr>
+
+  <tr>
+    <td>appalto (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#AppaltoPLBaseType">AppaltoPLBaseType</a></td>
+  </tr>
+
+  <tr>
+    <td>lotti (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Dati relativi ai lotti</td>
+    <td>array di <a href="#LottoPLBaseType">LottoPLBaseType</a></td>
+  </tr>
+</table>
+  <h2 id="StazioneAppaltanteType">StazioneAppaltanteType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Stazione Appaltante e ruoli ricoperti nell'appalto</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice fiscale della S.A.</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codiceAusa (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice Ausa della S.A.</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codiceCentroCosto (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice del centro di costo</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>funzioniSvolte (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#FunzioniDelegateEnum">FunzioniDelegateEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>saTitolare (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Stazione appaltante titolare</td>
+    <td>boolean</td>
+  </tr>
+</table>
+  <h2 id="AppaltoPLBaseType">AppaltoPLBaseType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta i dati dell'appalto all'interno della fase di pubblicazione</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>datiBase (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseAppaltoType">DatiBaseAppaltoType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBaseStrumentiProcedura (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseStrumentiProceduraCompletoType">DatiBaseStrumentiProceduraCompletoType</a></td>
+  </tr>
+</table>
+  <h2 id="LottoPLBaseType">LottoPLBaseType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta i dati del lotto all'interno della fase di pianificazione</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>lotIdentifier (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Id univoco del lotto generato dalla stazione appaltante</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>datiBase (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseLottoType">DatiBaseLottoType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBaseCPV (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseCPVPLType">DatiBaseCPVPLType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBaseAggiudicazione (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseAggiudicazioneOptionalType">DatiBaseAggiudicazioneOptionalType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBaseAggiuntivi (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseAggiuntiviOptionalType">DatiBaseAggiuntiviOptionalType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBaseAccessibilita (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseAccessibilitaType">DatiBaseAccessibilitaType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBaseImporto (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseImportoOptionalType">DatiBaseImportoOptionalType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBaseComunicazione (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseComunicazioneType">DatiBaseComunicazioneType</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBaseDocumenti (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseDocumentiOptionalType">DatiBaseDocumentiOptionalType</a></td>
+  </tr>
+</table>
+  <h2 id="FunzioniDelegateEnum">FunzioniDelegateEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniSvolte.json">funzioniSvolte.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="DatiBaseAppaltoType">DatiBaseAppaltoType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Purpose delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>oggetto (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Oggetto gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>oggettoMl (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#MultilinguaType">MultilinguaType</a></td>
+  </tr>
+
+  <tr>
+    <td>importo (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Importo gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-27 - Estimated Value del TED</td>
+    <td>double</td>
+  </tr>
+</table>
+  <h2 id="DatiBaseStrumentiProceduraCompletoType">DatiBaseStrumentiProceduraCompletoType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Techniques delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>accordoQuadro (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#AccordoQuadroEnum">AccordoQuadroEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>sistemaDinamicoAcquisizione (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#SistemaDinamicoAcquisizioneEnum">SistemaDinamicoAcquisizioneEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>astaElettronica (<span class="smalltype">opzionale</span>)</td>
+    <td>Strumenti per lo svolgimento delle procedure. Ricorso all'asta elettronica - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-767 - Electronic Auction del TED</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>fineSistemaDinamicoAcquisizione (<span class="smalltype">opzionale</span>)</td>
+    <td>È stato posto termine al sistema dinamico di acquisizione. Non saranno aggiudicati altri appalti, oltre a quelli pubblicizzati nel presente avviso o bando, mediante il sistema dinamico di acquisizione. Questo campo può essere utilizzato anche se l'avviso di aggiudicazione non pubblica l'aggiudicazione di alcun appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-119 -  Dynamic Purchasing System Termination del TED</td>
+    <td>boolean</td>
+  </tr>
+</table>
+  <h2 id="DatiBaseLottoType">DatiBaseLottoType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Purpose delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>oggettoContratto (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#OggettoContrattoEnum">OggettoContrattoEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>oggetto (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Oggetto lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-24 - Description del TED</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>oggettoMl (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#MultilinguaType">MultilinguaType</a></td>
+  </tr>
+
+  <tr>
+    <td>importo (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Importo lotto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-27 - Estimated Value del TED</td>
+    <td>double</td>
+  </tr>
+</table>
+  <h2 id="DatiBaseCPVPLType">DatiBaseCPVPLType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Classification delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>tipoClassificazione (<span class="smalltype">opzionale</span>)</td>
+    <td>Il tipo di classificazione che descrive l'appalto (ad es. CPV).</td>
+    <td><a href="#TipoClassificazioneEnum">TipoClassificazioneEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>cpvPrevalente (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Il codice della classificazione che caratterizza meglio l'appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-262 - Main Classification Code del TED</td>
+    <td><a href="#CPVEnum">CPVEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>cpvSecondarie (<span class="smalltype">opzionale</span>)</td>
+    <td>Codice classificazione supplementare che caratterizza anch'esso l'appalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-263 - Additional Classification Codes del TED</td>
+    <td>array di <a href="#CPVEnum">CPVEnum</a></td>
+  </tr>
+</table>
+  <h2 id="DatiBaseAggiudicazioneOptionalType">DatiBaseAggiudicazioneOptionalType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Award Criterion delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>criteriAggiudicazione (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#CriteriAggiudicazioneEnum">CriteriAggiudicazioneEnum</a></td>
+  </tr>
+</table>
+  <h2 id="DatiBaseAggiuntiviOptionalType">DatiBaseAggiuntiviOptionalType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Other Requirements delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>affidamentiRiservati (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#AffidamentiRiservatiEnum">AffidamentiRiservatiEnum</a></td>
+  </tr>
+</table>
+  <h2 id="DatiBaseAccessibilitaType">DatiBaseAccessibilitaType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Strategic Procurement delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>accessibilita (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#AccessibilitaEnum">AccessibilitaEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>giustificazione (<span class="smalltype">opzionale</span>)</td>
+    <td>giustificazione</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>giustificazioneMl (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#MultilinguaType">MultilinguaType</a></td>
+  </tr>
+</table>
+  <h2 id="DatiBaseImportoOptionalType">DatiBaseImportoOptionalType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Prize delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>contrattiSuccessivi (<span class="smalltype">opzionale</span>)</td>
+    <td>contratti successivi - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-41 - Following Contract del TED</td>
+    <td>boolean</td>
+  </tr>
+</table>
+  <h2 id="DatiBaseComunicazioneType">DatiBaseComunicazioneType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Communication delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>dataInvioInviti (<span class="smalltype">opzionale</span>)</td>
+    <td>Data stimata dell'invio degli inviti a presentare le offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-130  - Dispatch Invitation Tender del TED</td>
+    <td>date-time</td>
+  </tr>
+</table>
+  <h2 id="DatiBaseDocumentiOptionalType">DatiBaseDocumentiOptionalType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Procurement Documents delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>url (<span class="smalltype">opzionale</span>)</td>
+    <td>Indirizzo dei documenti di gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-15 - Documents Lot Identifier del TED</td>
+    <td>url</td>
+  </tr>
+
+  <tr>
+    <td>lingue (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#LingueEnum">LingueEnum</a></td>
+  </tr>
+</table>
+  <h2 id="MultilinguaType">MultilinguaType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto utilizzato per la comunicazione dei dati in multilingua</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>de (<span class="smalltype">opzionale</span>)</td>
+    <td>Deutsch</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>en (<span class="smalltype">opzionale</span>)</td>
+    <td>English</td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="AccordoQuadroEnum">AccordoQuadroEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Accordo quadro - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-765 - Framework agreement del TED  - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/accordoQuadro.json">accordoQuadro.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="SistemaDinamicoAcquisizioneEnum">SistemaDinamicoAcquisizioneEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Sistema dinamico di acquisizione - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-766 - Dynamic Purchasing System del TED  - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/sistemaDinamicoAcquisizione.json">sistemaDinamicoAcquisizione.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="OggettoContrattoEnum">OggettoContrattoEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto del contratto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-23 - Main Nature del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/oggettoContratto.json">oggettoContratto.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="TipoClassificazioneEnum">TipoClassificazioneEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Il tipo di classificazione che descrive l'appalto (ad es. CPV) - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoClassificazione.json">tipoClassificazione.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CPVEnum">CPVEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Classificazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/CPV.json">CPV.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CriteriAggiudicazioneEnum">CriteriAggiudicazioneEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>criteri di aggiudicazione - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-539 - Award Criterion Type del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/criteriAggiudicazione.json">criteriAggiudicazione.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="AffidamentiRiservatiEnum">AffidamentiRiservatiEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Indicare se la partecipazione è riservata a specifiche organizzazioni (ad es. laboratori protetti, organizzazioni con missione di servizio pubblico) - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-71 - Reserved Participation del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/affidamentiRiservati.json">affidamentiRiservati.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="AccessibilitaEnum">AccessibilitaEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Richiamo nel bando di gara, nell’avviso o nell’invito alla necessità da parte del concorrente o dell’offerente di aver assolto, al momento della presentazione dell'offerta, agli obblighi in materia di lavoro delle persone con disabilità di cui alla legge 12 marzo 1999, n. 68 - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-754 - Accessibility del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/accessibilita.json">accessibilita.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="LingueEnum">LingueEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Lingue in cui i documenti di gara sono ufficialmente disponibili - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-708 - Documents Official Language del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/lingue.json">lingue.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider fluxcards"></div>
+        <p>Relazioni con altre schede e Flussi ammissibili.</p>
+        <div class="message-divider fluxcards"></div>
+    </div>
+    
+  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  
+  
+    <table class="fluxcards">
+      <tr>
+        <th scope="col">Schede Precedenti</th>
+        <th scope="col">Schede Successive</th>
+        <th scope="col">Flussi ammissibili</th>  
+      </tr>
+  
+
+      <tr>
+        <td></td>
+        <td>STATO FINALE</td>
+        <td>22</td>
+      </tr>
+    </table>
+  <footer>
+    Generato il 13/12/2024 alle ore 16:44:13
+  </footer>
+  </body>
+  </html>

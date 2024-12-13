@@ -1,0 +1,382 @@
+
+  <!DOCTYPE html>
+<html lang="it">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modello Dati - Scheda PL1_7 - Scheda di programmazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7.</title>
+    <style>
+      /* css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Stile delle tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+td {
+    overflow-wrap: break-word; /* Forza il testo a spezzarsi su più righe */
+    word-wrap: break-word; /* Compatibilità aggiuntiva */
+    hyphens: auto; /* Aggiunge trattini per la spezzatura, se supportato */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    
+    
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Larghezza delle colonne */
+th:nth-child(1), td:nth-child(1) {
+    width: 25%; /* Larghezza della prima colonna */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Larghezza della seconda colonna */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%; /* Larghezza della terza colonna */
+}
+
+
+table.reference th{
+    background-color: #28a745; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.rule th{
+    background-color: #343a40; /* Colore di sfondo nero per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.fluxcards th{
+    background-color: #6f42c1 ; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Colore di sfondo alternato per le righe */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Colore di sfondo quando si passa sopra una riga */
+}
+
+footer {
+    margin-top: 2rem; /* Spazio sopra il footer usando rem */
+    font-size: small;
+    text-align: center;
+    color: #777;
+}
+
+.smalltype {
+    font-size: small;
+}
+
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 40px 0;
+}
+
+/* Sezioni di messaggi */
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+.message-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+
+.message-divider.reference {
+    background-color: #28a745;
+}
+
+.message-divider.rule {
+    background-color: #343a40;
+}
+
+.message-divider.fluxcards{
+    background-color: #6f42c1 ;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Modello Dati - Scheda PL1_7 - Scheda di programmazione per appalti settori ordinari pari /sopra soglia con invio al TED dell'eform7.</h1>
+<div class="message">
+        <div class="message-divider"></div>
+        <p>Elementi della scheda.</p>
+        <div class="message-divider"></div>
+    </div>
+  
+  <h2 id="SchedaPL1_7Type">SchedaPL1_7Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#AnacFormBaseType">AnacFormBaseType</a></td>
+  </tr>
+
+  <tr>
+    <td>eform (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#EformType">EformType</a></td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider reference"></div>
+        <p>Lista delle reference della scheda.</p>
+        <div class="message-divider reference"></div>
+    </div>
+    
+  <h2 id="AnacFormBaseType">AnacFormBaseType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Contiene i dati necessari per la pubblicazione nazionale di un bando di gara soprasoglia e sottosoglia con pubblicazione europea</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>stazioniAppaltanti (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Dati relativi alle stazioni appaltanti</td>
+    <td>array di <a href="#StazioneAppaltanteType">StazioneAppaltanteType</a></td>
+  </tr>
+</table>
+  <h2 id="EformType">EformType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Eform codificato Base64 nel formato XML definito da TED</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>Eform codificato Base64 nel formato XML definito da TED (<span class="smalltype">opzionale</span>)</td>
+    <td>Eform codificato Base64 nel formato XML definito da TED</td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="StazioneAppaltanteType">StazioneAppaltanteType</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Stazione Appaltante e ruoli ricoperti nell'appalto</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice fiscale della S.A.</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codiceAusa (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice Ausa della S.A.</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codiceCentroCosto (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice del centro di costo</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>funzioniSvolte (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#FunzioniDelegateEnum">FunzioniDelegateEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>saTitolare (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Stazione appaltante titolare</td>
+    <td>boolean</td>
+  </tr>
+</table>
+  <h2 id="FunzioniDelegateEnum">FunzioniDelegateEnum</h2>
+  
+    <details open="true">
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniSvolte.json">funzioniSvolte.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider rule"></div>
+        <p>Lista delle regole applicate alla scheda.</p>
+        <div class="message-divider rule"></div>
+    </div>
+    
+  <h2 id="Regole">Regole</h2>
+  
+  
+    <table class="rule">
+      <tr>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>  
+        <th scope="col">Test</th>  
+      </tr>
+  
+
+  <tr>
+    <td>REG97</td>
+    <td> Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
+    <td>some lotto in lotti
+satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</td>
+  </tr>
+
+  <tr>
+    <td>REG98</td>
+    <td> L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0.</td>
+    <td>appalto.datiBase.importo = null or appalto.datiBase.importo = 0</td>
+  </tr>
+
+  <tr>
+    <td>REG99</td>
+    <td> L'importo indicato nell'oggetto lotto.datiBase.importo deve essere > 0.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</td>
+  </tr>
+
+  <tr>
+    <td>REG105</td>
+    <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+  </tr>
+
+  <tr>
+    <td>REG106</td>
+    <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider fluxcards"></div>
+        <p>Relazioni con altre schede e Flussi ammissibili.</p>
+        <div class="message-divider fluxcards"></div>
+    </div>
+    
+  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  
+  
+    <table class="fluxcards">
+      <tr>
+        <th scope="col">Schede Precedenti</th>
+        <th scope="col">Schede Successive</th>
+        <th scope="col">Flussi ammissibili</th>  
+      </tr>
+  
+
+      <tr>
+        <td></td>
+        <td>P1_16</td>
+        <td></td>
+      </tr>
+    </table>
+  <footer>
+    Generato il 13/12/2024 alle ore 16:44:09
+  </footer>
+  </body>
+  </html>
