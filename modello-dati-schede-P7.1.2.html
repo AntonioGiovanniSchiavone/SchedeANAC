@@ -2078,6 +2078,49 @@ footer {
   </tr>
 
   <tr>
+    <td>REG14</td>
+    <td> Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </td>
+    <td>some lotto in lotti
+satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.motivoCollegamento.codice != "10"</td>
+  </tr>
+
+  <tr>
+    <td>REG15</td>
+    <td> Cig collegato: è obbligatorio se Motivo collegamento CIG e' valorizzato</td>
+    <td>some lotto in lotti satisfies (lotto.ipotesiCollegamento.motivoCollegamento.codice != "10" and (lotto.ipotesiCollegamento.cigCollegato = null or count(lotto.ipotesiCollegamento.cigCollegato) = 0 or lotto.ipotesiCollegamento.cigCollegato[1]= ""))</td>
+  </tr>
+
+  <tr>
+    <td>REG18</td>
+    <td> E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
+’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</td>
+    <td>((is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</td>
+  </tr>
+
+  <tr>
+    <td>REG19</td>
+    <td> E’ obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup è valorizzato a SI</td>
+    <td>some lotto in lotti satisfies is defined(lotto.acquisizioneCup) and lotto.acquisizioneCup and (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG20</td>
+    <td> Cup associati al lotto: il campo non è obbligatorio se:
+- lotto.acquisizionecup=’N’ e oggettoContratto="services" o ‘supplies’
+- lotto.acquisizionecup=’N’ e oggettoContratto="works" e lotto.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
+E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</td>
+    <td>some lotto in lotti
+satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != "12")</td>
+  </tr>
+
+  <tr>
+    <td>REG20_1</td>
+    <td> Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</td>
+    <td>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")(some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) > 0)</td>
+  </tr>
+
+  <tr>
     <td>REG98</td>
     <td> L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0.</td>
     <td>appalto.datiBase.importo = null or appalto.datiBase.importo <= 0</td>
@@ -2164,7 +2207,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
       </tr>
     </table>
   <footer>
-    Generato il 16/12/2024 alle ore 14:04:07
+    Generato il 18/02/2025 alle ore 17:29:52
   </footer>
   </body>
   </html>

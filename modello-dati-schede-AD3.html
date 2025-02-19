@@ -1513,6 +1513,18 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR = true and (aggiudicazione.ac
   </tr>
 
   <tr>
+    <td>REG31</td>
+    <td> Le sezioni del quadro economico standard e quadro economico concessioni devono essere mutuamente esclusive</td>
+    <td>some aggiudicazione in aggiudicazioni satisfies (is defined(aggiudicazione.quadroEconomicoStandard) and is defined(aggiudicazione.quadroEconomicoConcessioni)) </td>
+  </tr>
+
+  <tr>
+    <td>REG31_1</td>
+    <td> Almeno una delle due sezioni quadro economico standard e quadro economico concessioni deve essere compilata</td>
+    <td>some aggiudicazione in aggiudicazioni satisfies (is defined(aggiudicazione.quadroEconomicoStandard)=false and is defined(aggiudicazione.quadroEconomicoConcessioni)=false) </td>
+  </tr>
+
+  <tr>
     <td>REG32</td>
     <td> Accessibilita: Se contratto PNRR o PNC il valore del campo di accessibilità deve essere "Sono compresi criteri di accessibilità per le persone con disabilità"</td>
     <td>some aggiudicazione in aggiudicazioni
@@ -1527,24 +1539,24 @@ satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-jus
   </tr>
 
   <tr>
-    <td>REG34</td>
-    <td> Importo Lavori: se l'oggetto del contratto è "works" deve essere indicato un importo maggiore di 0.</td>
+    <td>REG34_1</td>
+    <td> Importo Lavori: se l'oggetto del contratto è "works" deve essere indicato un importo maggiore di 0 nel quadro economico compilato</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori = 0)</td>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori <= 0) and (aggiudicazione.quadroEconomicoConcessioni.impLavori = null or aggiudicazione.quadroEconomicoConcessioni.impLavori <= 0)</td>
   </tr>
 
   <tr>
-    <td>REG35</td>
-    <td> Importo Servizi: se l'oggetto del contratto è "services" deve essere indicato un importo maggiore di 0.</td>
+    <td>REG35_1</td>
+    <td> Importo Servizi: se l'oggetto del contratto è "services" deve essere indicato un importo maggiore di 0 nel quadro economico compilato.</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.datiBase.oggettoContratto.codice = "services" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0)</td>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "services" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0) and (aggiudicazione.quadroEconomicoConcessioni.impServizi = null or aggiudicazione.quadroEconomicoConcessioni.impServizi = 0)</td>
   </tr>
 
   <tr>
-    <td>REG36</td>
-    <td> Importo Forniture: se l'oggetto del contratto è "supplies" deve essere indicato un importo maggiore di 0.</td>
+    <td>REG36_1</td>
+    <td> Importo Forniture: se l'oggetto del contratto è "supplies" deve essere indicato un importo maggiore di 0 nel quadro economico compilato.</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.datiBase.oggettoContratto.codice = "supplies" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0)</td>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "supplies" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0) and (aggiudicazione.quadroEconomicoConcessioni.impForniture = null or aggiudicazione.quadroEconomicoConcessioni.impForniture = 0)</td>
   </tr>
 
   <tr>
@@ -1571,7 +1583,7 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
   <tr>
     <td>REG100</td>
     <td> Negli affidamenti diretti è consentito inserire un solo idPartecipante, se non è un accordo quadro</td>
-    <td>(appalto.accordoQuadro =false)(some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))>1)</td>
+    <td>(is defined(appalto.accordoQuadro) and appalto.accordoQuadro = false)(some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))>1)</td>
   </tr>
 
   <tr>
@@ -1604,7 +1616,7 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
       </tr>
     </table>
   <footer>
-    Generato il 16/12/2024 alle ore 14:02:43
+    Generato il 18/02/2025 alle ore 17:28:21
   </footer>
   </body>
   </html>

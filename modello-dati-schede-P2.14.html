@@ -1428,17 +1428,8 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
 
   <tr>
     <td>REG15</td>
-    <td> Cig collegato: è obbligatorio se Motivo collegamento CIG e' valorizzato oppure se Ripetizione di precedente contratto e' valorizzato a SI</td>
-    <td>some lotto in lotti
-satisfies lotto.ipotesiCollegamento.motivoCollegamento.codice != "10" and lotto.ipotesiCollegamento.cigCollegato = null</td>
-  </tr>
-
-  <tr>
-    <td>REG16</td>
-    <td> Cig collegato: se Motivo di collegamento CIG è valorizzato a '1: Ripetizione di lavori o servizi analoghi' il cig collegato deve prevedere ripetizioni.</td>
-    <td>some lotto in lotti
-satisfies lotto.ipotesiCollegamento.motivoCollegamento.codice = "1"
-and count(lotto.ipotesiCollegamento.cigCollegato) <2</td>
+    <td> Cig collegato: è obbligatorio se Motivo collegamento CIG e' valorizzato</td>
+    <td>some lotto in lotti satisfies (lotto.ipotesiCollegamento.motivoCollegamento.codice != "10" and (lotto.ipotesiCollegamento.cigCollegato = null or count(lotto.ipotesiCollegamento.cigCollegato) = 0 or lotto.ipotesiCollegamento.cigCollegato[1]= ""))</td>
   </tr>
 
   <tr>
@@ -1630,7 +1621,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
       </tr>
     </table>
   <footer>
-    Generato il 16/12/2024 alle ore 14:03:21
+    Generato il 18/02/2025 alle ore 17:29:02
   </footer>
   </body>
   </html>
