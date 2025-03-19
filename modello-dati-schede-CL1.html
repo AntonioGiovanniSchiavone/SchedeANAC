@@ -288,7 +288,7 @@ footer {
     
   <h2 id="DefinizioneType">DefinizioneType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dati delle modalità di definizione</p>
     </details>
@@ -334,7 +334,7 @@ footer {
 </table>
   <h2 id="ModoCollaudoEnum">ModoCollaudoEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Modalità del collaudo tecnico/amministrativo/ verifica di conformità - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modoCollaudo.json">modoCollaudo.json</a></p>
     </details>
@@ -362,7 +362,7 @@ footer {
 </table>
   <h2 id="QuadroEconomicoConcessioniType">QuadroEconomicoConcessioniType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto che riporta tutti i dati del quadro economico per le concessioni.</p>
     </details>
@@ -438,7 +438,7 @@ footer {
 </table>
   <h2 id="QuadroEconomicoType">QuadroEconomicoType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto che riporta tutti i dati del quadro economico standard</p>
     </details>
@@ -526,55 +526,55 @@ footer {
   <tr>
     <td>REG86</td>
     <td> Certificato di regolare esecuzione non previsto in caso di collaudo tecnico/amministrativo</td>
-    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != "" and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != "" and collaudo.dataCertificato != null and collaudo.dataCertificato != ""</td>
+    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != &quot;&quot; and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != &quot;&quot; and collaudo.dataCertificato != null and collaudo.dataCertificato != &quot;&quot;</td>
   </tr>
 
   <tr>
     <td>REG87</td>
     <td> Specificare data del certificato di regolare esecuzione o le modalità del collaudo tecnico amministrativo</td>
-    <td>(collaudo.modoCollaudo = null or collaudo.modoCollaudo = "" or collaudo.modoCollaudo.codice = null or collaudo.modoCollaudo.codice = "") and (collaudo.dataCertificato = null or collaudo.dataCertificato = "")</td>
+    <td>(collaudo.modoCollaudo = null or collaudo.modoCollaudo = &quot;&quot; or collaudo.modoCollaudo.codice = null or collaudo.modoCollaudo.codice = &quot;&quot;) and (collaudo.dataCertificato = null or collaudo.dataCertificato = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG88</td>
     <td> Non è stata indicata la data di nomina del collaudatore / Commissione</td>
-    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != "" and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != "" and (collaudo.dataNomina = null or collaudo.dataNomina = "")</td>
+    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != &quot;&quot; and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != &quot;&quot; and (collaudo.dataNomina = null or collaudo.dataNomina = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG89</td>
     <td> Non è stata indicata la data di inizio delle operazioni di collaudo</td>
-    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != "" and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != "" and (collaudo.dataInizio = null or collaudo.dataInizio = "")</td>
+    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != &quot;&quot; and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != &quot;&quot; and (collaudo.dataInizio = null or collaudo.dataInizio = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG90</td>
     <td> Data inizio operazioni di collaudo antecedente la data  di nomina della commissione di collaudo/collaudatore </td>
-    <td>collaudo.dataInizio != null and collaudo.dataInizio != "" and collaudo.dataNomina != null and collaudo.dataNomina != "" and collaudo.dataInizio < collaudo.dataNomina</td>
+    <td>collaudo.dataInizio != null and collaudo.dataInizio != &quot;&quot; and collaudo.dataNomina != null and collaudo.dataNomina != &quot;&quot; and collaudo.dataInizio &lt; collaudo.dataNomina</td>
   </tr>
 
   <tr>
     <td>REG91</td>
     <td> Non è stata indicata la data di redazione del certificato di collaudo</td>
-    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != "" and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != "" and (collaudo.dataRedazioneCertificato = null or collaudo.dataRedazioneCertificato = "")</td>
+    <td>collaudo.modoCollaudo != null and collaudo.modoCollaudo != &quot;&quot; and collaudo.modoCollaudo.codice != null and collaudo.modoCollaudo.codice != &quot;&quot; and (collaudo.dataRedazioneCertificato = null or collaudo.dataRedazioneCertificato = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG92</td>
     <td> Data redazione certificato antecedente la data di inizio operazioni di collaudo</td>
-    <td>collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != "" and collaudo.dataInizio != null and collaudo.dataInizio != "" and collaudo.dataRedazioneCertificato < collaudo.dataInizio</td>
+    <td>collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != &quot;&quot; and collaudo.dataInizio != null and collaudo.dataInizio != &quot;&quot; and collaudo.dataRedazioneCertificato &lt; collaudo.dataInizio</td>
   </tr>
 
   <tr>
     <td>REG93</td>
     <td> Data delibera di ammissibilità antecedente la data di redazione del certificato di collaudo</td>
-    <td>collaudo.dataDeliberaAmmissibilita != null and collaudo.dataDeliberaAmmissibilita != "" and collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != "" and collaudo.dataDeliberaAmmissibilita < collaudo.dataRedazioneCertificato</td>
+    <td>collaudo.dataDeliberaAmmissibilita != null and collaudo.dataDeliberaAmmissibilita != &quot;&quot; and collaudo.dataRedazioneCertificato != null and collaudo.dataRedazioneCertificato != &quot;&quot; and collaudo.dataDeliberaAmmissibilita &lt; collaudo.dataRedazioneCertificato</td>
   </tr>
 
   <tr>
     <td>REG94</td>
     <td> Oneri complessivi derivanti è obbligatorio se il numero totale riserve è maggiore di zero.</td>
-    <td>collaudo.numeroTotaleRiserve != null and collaudo.numeroTotaleRiserve > 0 and collaudo.oneri != null and collaudo.oneri = 0</td>
+    <td>collaudo.numeroTotaleRiserve != null and collaudo.numeroTotaleRiserve &gt; 0 and collaudo.oneri != null and collaudo.oneri = 0</td>
   </tr>
 </table>
     <div class="message">
@@ -583,7 +583,7 @@ footer {
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -601,7 +601,7 @@ footer {
       </tr>
     </table>
   <footer>
-    Generato il 21/02/2025 alle ore 10:02:29
+    Generato il 19/03/2025 alle ore 11:52:18
   </footer>
   </body>
   </html>

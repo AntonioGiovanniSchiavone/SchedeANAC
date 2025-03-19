@@ -281,7 +281,7 @@ footer {
     
   <h2 id="DatiBaseAggiudicazioneAppaltoType">DatiBaseAggiudicazioneAppaltoType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dato in comune con il Business Group Contract delle eforms</p>
     </details>
@@ -303,7 +303,7 @@ footer {
 </table>
   <h2 id="DatiBaseEsitoRisultatoProceduraType">DatiBaseEsitoRisultatoProceduraType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dato in comune con il Business Group Procedure Lot Result delle eforms</p>
     </details>
@@ -325,7 +325,7 @@ footer {
 </table>
   <h2 id="DatiBaseSottomissioniRicevuteType">DatiBaseSottomissioniRicevuteType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dato in comune con il Business Group Received Submissions delle eforms</p>
     </details>
@@ -353,7 +353,7 @@ footer {
 </table>
   <h2 id="DatiBaseSubappaltiType">DatiBaseSubappaltiType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dato in comune con il Business Group Subcontracting delle eforms</p>
     </details>
@@ -375,7 +375,7 @@ footer {
 </table>
   <h2 id="ModalitaRiaggiudicazioneAffidamentoEnum">ModalitaRiaggiudicazioneAffidamentoEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Modalità di riaggiudicazione/affidamento dell'appalto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modalitaRiaggiudicazioneAffidamento.json">modalitaRiaggiudicazioneAffidamento.json</a></p>
     </details>
@@ -403,7 +403,7 @@ footer {
 </table>
   <h2 id="OfferteType">OfferteType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dati delle offerte</p>
     </details>
@@ -485,7 +485,7 @@ footer {
 </table>
   <h2 id="QuadroEconomicoP7Type">QuadroEconomicoP7Type</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto che riporta tutti i dati del quadro economico standard</p>
     </details>
@@ -555,7 +555,7 @@ footer {
 </table>
   <h2 id="EsitoProceduraEnum">EsitoProceduraEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Esito procedura - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-142 - Winner Chosen del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esitoProcedura.json">esitoProcedura.json</a></p>
     </details>
@@ -583,7 +583,7 @@ footer {
 </table>
   <h2 id="SubappaltoEnum">SubappaltoEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Subappalto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-773 - Subcontracting del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/subappalto.json">subappalto.json</a></p>
     </details>
@@ -630,7 +630,7 @@ footer {
     <td>REG47</td>
     <td> Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies (count(aggiudicazione.offertePresentate) > aggiudicazione.numeroOfferteAmmesse)</td>
+satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOfferteAmmesse)</td>
   </tr>
 
   <tr>
@@ -638,7 +638,7 @@ satisfies (count(aggiudicazione.offertePresentate) > aggiudicazione.numeroOffert
     <td> Il valore del campo “offertaEconomica” non è coerente</td>
     <td>some aggiudicazione in aggiudicazioni
 satisfies (some offerta in aggiudicazione.offertePresentate 
-satisfies offerta.offertaEconomica < 0 or offerta.offertaEconomica > 100) </td>
+satisfies offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100) </td>
   </tr>
 
   <tr>
@@ -651,13 +651,13 @@ satisfies offerta.offertaEconomica < 0 or offerta.offertaEconomica > 100) </td>
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)>1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo <= 0))</td>
+satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</td>
   </tr>
 
   <tr>
     <td>REG112</td>
     <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
-    <td>count(aggiudicazioni) <= 0</td>
+    <td>count(aggiudicazioni) &lt;= 0</td>
   </tr>
 </table>
     <div class="message">
@@ -666,7 +666,7 @@ satisfies count(aggiudicazione.offertePresentate)>1 and (every offerta in aggiud
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -684,7 +684,7 @@ satisfies count(aggiudicazione.offertePresentate)>1 and (every offerta in aggiud
       </tr>
     </table>
   <footer>
-    Generato il 21/02/2025 alle ore 10:01:59
+    Generato il 19/03/2025 alle ore 11:51:37
   </footer>
   </body>
   </html>

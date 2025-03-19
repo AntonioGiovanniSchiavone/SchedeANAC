@@ -288,7 +288,7 @@ footer {
     
   <h2 id="MotiviInterruzioneEnum">MotiviInterruzioneEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Motivi dell'interruzione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/causaInterruzioneAnticipata.json">causaInterruzioneAnticipata.json</a></p>
     </details>
@@ -316,7 +316,7 @@ footer {
 </table>
   <h2 id="MotiviRisoluzioneEnum">MotiviRisoluzioneEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Motivi di risoluzione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motiviRisoluzione.json">motiviRisoluzione.json</a></p>
     </details>
@@ -344,7 +344,7 @@ footer {
 </table>
   <h2 id="OneriEconomiciRisoluzioneRecessoEnum">OneriEconomiciRisoluzioneRecessoEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oneri economici derivanti dalla risoluzione-recesso - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/oneriEconomiciRisoluzioneRecesso.json">oneriEconomiciRisoluzioneRecesso.json</a></p>
     </details>
@@ -390,55 +390,55 @@ footer {
   <tr>
     <td>REG75</td>
     <td> Il campo motivi di risoluzione è obbligatorio in caso di interruzione anticipata per risoluzione contrattuale.</td>
-    <td>conclusione.causaInterruzioneAnticipata != null and conclusione.causaInterruzioneAnticipata != "" and conclusione.causaInterruzioneAnticipata.codice != null and conclusione.causaInterruzioneAnticipata.codice = "2" and (conclusione.motiviRisoluzione = null or conclusione.motiviRisoluzione = "" or conclusione.motiviRisoluzione.codice = null or conclusione.motiviRisoluzione.codice = "")</td>
+    <td>conclusione.causaInterruzioneAnticipata != null and conclusione.causaInterruzioneAnticipata != &quot;&quot; and conclusione.causaInterruzioneAnticipata.codice != null and conclusione.causaInterruzioneAnticipata.codice = &quot;2&quot; and (conclusione.motiviRisoluzione = null or conclusione.motiviRisoluzione = &quot;&quot; or conclusione.motiviRisoluzione.codice = null or conclusione.motiviRisoluzione.codice = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG76</td>
     <td> Il campo oneri economici derivanti dalla risoluzione-recesso è obbligatorio in caso di: interruzione anticipata per risoluzione contrattuale, recesso della stazione appaltante, recesso dell'appaltatore </td>
-    <td>conclusione.causaInterruzioneAnticipata != null and conclusione.causaInterruzioneAnticipata != "" and conclusione.causaInterruzioneAnticipata.codice != null and (conclusione.causaInterruzioneAnticipata.codice = "2" or conclusione.causaInterruzioneAnticipata.codice = "4" or conclusione.causaInterruzioneAnticipata.codice = "5") and (conclusione.oneriEconomiciRisoluzioneRecesso = null or conclusione.oneriEconomiciRisoluzioneRecesso = "" or conclusione.oneriEconomiciRisoluzioneRecesso.codice = null or conclusione.oneriEconomiciRisoluzioneRecesso.codice = "")</td>
+    <td>conclusione.causaInterruzioneAnticipata != null and conclusione.causaInterruzioneAnticipata != &quot;&quot; and conclusione.causaInterruzioneAnticipata.codice != null and (conclusione.causaInterruzioneAnticipata.codice = &quot;2&quot; or conclusione.causaInterruzioneAnticipata.codice = &quot;4&quot; or conclusione.causaInterruzioneAnticipata.codice = &quot;5&quot;) and (conclusione.oneriEconomiciRisoluzioneRecesso = null or conclusione.oneriEconomiciRisoluzioneRecesso = &quot;&quot; or conclusione.oneriEconomiciRisoluzioneRecesso.codice = null or conclusione.oneriEconomiciRisoluzioneRecesso.codice = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG79</td>
     <td> L'importo è obbligatorio se è valorizzato il campo oneri economici derivanti dalla risoluzione-recesso</td>
-    <td>conclusione.oneriEconomiciRisoluzioneRecesso != null and conclusione.oneriEconomiciRisoluzioneRecesso != "" and conclusione.oneriEconomiciRisoluzioneRecesso.codice != null and conclusione.oneriEconomiciRisoluzioneRecesso.codice != "" and (conclusione.importo = null or conclusione.importo = 0)</td>
+    <td>conclusione.oneriEconomiciRisoluzioneRecesso != null and conclusione.oneriEconomiciRisoluzioneRecesso != &quot;&quot; and conclusione.oneriEconomiciRisoluzioneRecesso.codice != null and conclusione.oneriEconomiciRisoluzioneRecesso.codice != &quot;&quot; and (conclusione.importo = null or conclusione.importo = 0)</td>
   </tr>
 
   <tr>
     <td>REG80</td>
     <td> Risoluzione/rescissione senza oneri, dunque non va indicato l'importo. Verificare.</td>
-    <td>conclusione.oneriEconomiciRisoluzioneRecesso != null and conclusione.oneriEconomiciRisoluzioneRecesso != "" and conclusione.oneriEconomiciRisoluzioneRecesso.codice != null and conclusione.oneriEconomiciRisoluzioneRecesso.codice = "0" and conclusione.importo != null and conclusione.importo > 0</td>
+    <td>conclusione.oneriEconomiciRisoluzioneRecesso != null and conclusione.oneriEconomiciRisoluzioneRecesso != &quot;&quot; and conclusione.oneriEconomiciRisoluzioneRecesso.codice != null and conclusione.oneriEconomiciRisoluzioneRecesso.codice = &quot;0&quot; and conclusione.importo != null and conclusione.importo &gt; 0</td>
   </tr>
 
   <tr>
     <td>REG81</td>
     <td> Non è stata indicata la data di ultimazione </td>
-    <td>(conclusione.dataInterruzioneAnticipata = null or conclusione.dataInterruzioneAnticipata = "" ) and (conclusione.dataUltimazione = null or conclusione.dataUltimazione = "")</td>
+    <td>(conclusione.dataInterruzioneAnticipata = null or conclusione.dataInterruzioneAnticipata = &quot;&quot; ) and (conclusione.dataUltimazione = null or conclusione.dataUltimazione = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG82</td>
     <td> Numero totale degli infortuni incoerente rispetto al numero degli infortuni mortali e con postumi permanenti</td>
-    <td>conclusione.numeroInfortuni != null and conclusione.numeroInfortuni < (conclusione.diCuiPostumiPermanenti + conclusione.diCuiMortali)</td>
+    <td>conclusione.numeroInfortuni != null and conclusione.numeroInfortuni &lt; (conclusione.diCuiPostumiPermanenti + conclusione.diCuiMortali)</td>
   </tr>
 
   <tr>
     <td>REG83</td>
     <td> Il campo incamerata polizza è obbligatorio in caso di interruzione anticipata.</td>
-    <td>conclusione.causaInterruzioneAnticipata != null and conclusione.causaInterruzioneAnticipata != "" and conclusione.causaInterruzioneAnticipata.codice != null and conclusione.causaInterruzioneAnticipata.codice != "" and conclusione.incamerataPolizza = null</td>
+    <td>conclusione.causaInterruzioneAnticipata != null and conclusione.causaInterruzioneAnticipata != &quot;&quot; and conclusione.causaInterruzioneAnticipata.codice != null and conclusione.causaInterruzioneAnticipata.codice != &quot;&quot; and conclusione.incamerataPolizza = null</td>
   </tr>
 
   <tr>
     <td>REG84</td>
     <td> il campo di cui postumi permanenti deve essere >=0</td>
-    <td>conclusione.diCuiPostumiPermanenti != null and conclusione.diCuiPostumiPermanenti < 0</td>
+    <td>conclusione.diCuiPostumiPermanenti != null and conclusione.diCuiPostumiPermanenti &lt; 0</td>
   </tr>
 
   <tr>
     <td>REG85</td>
     <td> il campo di cui mortali deve essere >= 0</td>
-    <td>conclusione.diCuiMortali != null and conclusione.diCuiMortali < 0</td>
+    <td>conclusione.diCuiMortali != null and conclusione.diCuiMortali &lt; 0</td>
   </tr>
 </table>
     <div class="message">
@@ -447,7 +447,7 @@ footer {
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -465,7 +465,7 @@ footer {
       </tr>
     </table>
   <footer>
-    Generato il 21/02/2025 alle ore 10:02:31
+    Generato il 19/03/2025 alle ore 11:52:20
   </footer>
   </body>
   </html>

@@ -205,7 +205,7 @@ footer {
     
   <h2 id="EformType">EformType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Eform codificato Base64 nel formato XML definito da TED</p>
     </details>
@@ -227,7 +227,7 @@ footer {
 </table>
   <h2 id="ModificaContrattualeType">ModificaContrattualeType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto che riporta tutti i dati della modifica contrattuale</p>
     </details>
@@ -273,7 +273,7 @@ footer {
 </table>
   <h2 id="MotiviRevisionePrezziEnum">MotiviRevisionePrezziEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Motivo di revisione dei prezzi - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoRevisionePrezzi.json">motivoRevisionePrezzi.json</a></p>
     </details>
@@ -301,7 +301,7 @@ footer {
 </table>
   <h2 id="QuadroEconomicoModificaContrattualeType">QuadroEconomicoModificaContrattualeType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto che riporta tutti i dati del quadro economico standard per la modifica contrattuale</p>
     </details>
@@ -383,37 +383,37 @@ footer {
   <tr>
     <td>REG61</td>
     <td> Per i contratti pubblici di importo superiore alla soglia comunitaria, se la variante in corso d’opera eccede il 10% dell’importo originario del contratto, è necessario fornire il link URL documentazione varianti in corso d’opera</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.urlDocumentazione = null or modificaContrattuale.urlDocumentazione = "")</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;mod-cir&quot; and (modificaContrattuale.urlDocumentazione = null or modificaContrattuale.urlDocumentazione = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG54</td>
     <td> Selezionare un motivo di revisione prezzi</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-rev" and (modificaContrattuale.motivoRevisionePrezzi = null or modificaContrattuale.motivoRevisionePrezzi = "" or modificaContrattuale.motivoRevisionePrezzi.codice = null or modificaContrattuale.motivoRevisionePrezzi.codice = "")</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;mod-rev&quot; and (modificaContrattuale.motivoRevisionePrezzi = null or modificaContrattuale.motivoRevisionePrezzi = &quot;&quot; or modificaContrattuale.motivoRevisionePrezzi.codice = null or modificaContrattuale.motivoRevisionePrezzi.codice = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG56</td>
     <td> CIG della nuova procedura avviata: campo non previsto</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice != "other" and modificaContrattuale.cigNuovaProcedura != null and modificaContrattuale.cigNuovaProcedura != ""</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice != &quot;other&quot; and modificaContrattuale.cigNuovaProcedura != null and modificaContrattuale.cigNuovaProcedura != &quot;&quot;</td>
   </tr>
 
   <tr>
     <td>REG55</td>
     <td> in caso di proroga tecnica Indicare il CIG della nuova procedura avviata ovvero indicare le motivazioni della proroga nel campo Cause della modifica contrattuale</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.cigNuovaProcedura = null or modificaContrattuale.cigNuovaProcedura = "") and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = "")</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;other&quot; and (modificaContrattuale.cigNuovaProcedura = null or modificaContrattuale.cigNuovaProcedura = &quot;&quot;) and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG62</td>
     <td> in caso di ‘Altre cause impreviste ed imprevedibili’ indicare una motivazione nel campo ‘Cause della modifica contrattuale’</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = "")</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;mod-cir&quot; and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG63</td>
     <td> Non è stato valorizzato il numero di giorni di proroga concessi/tempo aggiuntivo rispetto ai termini contrattuali</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.quadroEconomicoStandardRideterminato = null or modificaContrattuale.quadroEconomicoStandardRideterminato = "" or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = null or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = 0)</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;other&quot; and (modificaContrattuale.quadroEconomicoStandardRideterminato = null or modificaContrattuale.quadroEconomicoStandardRideterminato = &quot;&quot; or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = null or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = 0)</td>
   </tr>
 </table>
     <div class="message">
@@ -422,7 +422,7 @@ footer {
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -440,7 +440,7 @@ footer {
       </tr>
     </table>
   <footer>
-    Generato il 21/02/2025 alle ore 10:02:37
+    Generato il 19/03/2025 alle ore 11:52:27
   </footer>
   </body>
   </html>

@@ -222,7 +222,7 @@ footer {
     
   <h2 id="IncaricoType">IncaricoType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dati relativi agli incarichi tecnici</p>
     </details>
@@ -256,7 +256,7 @@ footer {
 </table>
   <h2 id="PrestazioneType">PrestazioneType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dati relativi alle prestazioni progettuali</p>
     </details>
@@ -320,7 +320,7 @@ footer {
 </table>
   <h2 id="TipoIncaricoEnum">TipoIncaricoEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Tipologia dell'incarico - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoIncarico.json">tipoIncarico.json</a></p>
     </details>
@@ -348,7 +348,7 @@ footer {
 </table>
   <h2 id="DatiPersonaFisicaType">DatiPersonaFisicaType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dati relativi alla persona fisica</p>
     </details>
@@ -424,7 +424,7 @@ footer {
 </table>
   <h2 id="DatiPersonaGiuridicaType">DatiPersonaGiuridicaType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dati relativi alla persona giuridica</p>
     </details>
@@ -470,7 +470,7 @@ footer {
 </table>
   <h2 id="TipoSoggettoEnum">TipoSoggettoEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Tipologia del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoSoggetto.json">tipoSoggetto.json</a></p>
     </details>
@@ -498,7 +498,7 @@ footer {
 </table>
   <h2 id="TipoProgettazioneEnum">TipoProgettazioneEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Tipologia di progettazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoProgettazione.json">tipoProgettazione.json</a></p>
     </details>
@@ -526,7 +526,7 @@ footer {
 </table>
   <h2 id="CodIstatEnum">CodIstatEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Codice ISTAT - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codIstat.json">codIstat.json</a></p>
     </details>
@@ -554,7 +554,7 @@ footer {
 </table>
   <h2 id="RuoloOEEnum">RuoloOEEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Ruolo del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ruoloOE.json">ruoloOE.json</a></p>
     </details>
@@ -582,7 +582,7 @@ footer {
 </table>
   <h2 id="TipoOEEnum">TipoOEEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Tipo soggetto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOE.json">tipoOE.json</a></p>
     </details>
@@ -629,28 +629,28 @@ footer {
     <td>REG40</td>
     <td> Assenza CIG dell’affidamento di incarico esterno di progettazione</td>
     <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
-satisfies prestazione.tipoSoggetto.codice="2" and (prestazione.cig = null or prestazione.cig = ""))</td>
+satisfies prestazione.tipoSoggetto.codice=&quot;2&quot; and (prestazione.cig = null or prestazione.cig = &quot;&quot;))</td>
   </tr>
 
   <tr>
     <td>REG41</td>
     <td> Indicare la data dell’affidamento di incarico esterno di progettazione</td>
     <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
-satisfies prestazione.tipoSoggetto.codice="2" and (prestazione.dataAffidamentoIncarico = null or prestazione.dataAffidamentoIncarico =""))</td>
+satisfies prestazione.tipoSoggetto.codice=&quot;2&quot; and (prestazione.dataAffidamentoIncarico = null or prestazione.dataAffidamentoIncarico =&quot;&quot;))</td>
   </tr>
 
   <tr>
     <td>REG42</td>
     <td> Indicare la data di consegna del progetto </td>
     <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
-satisfies prestazione.tipoSoggetto.codice="2" and (prestazione.dataConsegna = null or prestazione.dataConsegna=""))</td>
+satisfies prestazione.tipoSoggetto.codice=&quot;2&quot; and (prestazione.dataConsegna = null or prestazione.dataConsegna=&quot;&quot;))</td>
   </tr>
 
   <tr>
     <td>REG43</td>
     <td> Indicare il tipo di progettazione</td>
     <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
-satisfies prestazione.tipoSoggetto.codice="1" and (prestazione.tipoProgettazione = null or prestazione.tipoProgettazione = "" or prestazione.tipoProgettazione.codice = null or prestazione.tipoProgettazione.codice = ""))</td>
+satisfies prestazione.tipoSoggetto.codice=&quot;1&quot; and (prestazione.tipoProgettazione = null or prestazione.tipoProgettazione = &quot;&quot; or prestazione.tipoProgettazione.codice = null or prestazione.tipoProgettazione.codice = &quot;&quot;))</td>
   </tr>
 </table>
     <div class="message">
@@ -659,7 +659,7 @@ satisfies prestazione.tipoSoggetto.codice="1" and (prestazione.tipoProgettazione
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -677,7 +677,7 @@ satisfies prestazione.tipoSoggetto.codice="1" and (prestazione.tipoProgettazione
       </tr>
     </table>
   <footer>
-    Generato il 21/02/2025 alle ore 10:04:00
+    Generato il 19/03/2025 alle ore 11:54:27
   </footer>
   </body>
   </html>

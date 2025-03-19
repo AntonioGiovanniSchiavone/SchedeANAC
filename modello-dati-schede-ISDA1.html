@@ -211,7 +211,7 @@ footer {
     
   <h2 id="AppaltoISDABaseType">AppaltoISDABaseType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto che riporta i dati dell'appalto per istituzione dello SDA</p>
     </details>
@@ -239,7 +239,7 @@ footer {
 </table>
   <h2 id="EformType">EformType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Eform codificato Base64 nel formato XML definito da TED</p>
     </details>
@@ -261,7 +261,7 @@ footer {
 </table>
   <h2 id="LottoISDABaseType">LottoISDABaseType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto che riporta i dati del lotto per istituzione dello SDA</p>
     </details>
@@ -283,7 +283,7 @@ footer {
 </table>
   <h2 id="StazioneAppaltanteType">StazioneAppaltanteType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Stazione Appaltante e ruoli ricoperti nell'appalto</p>
     </details>
@@ -329,7 +329,7 @@ footer {
 </table>
   <h2 id="SettoreEnum">SettoreEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Settore attività della SA - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/settore.json">settore.json</a></p>
     </details>
@@ -357,7 +357,7 @@ footer {
 </table>
   <h2 id="FunzioniDelegateEnum">FunzioniDelegateEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniSvolte.json">funzioniSvolte.json</a></p>
     </details>
@@ -403,20 +403,20 @@ footer {
   <tr>
     <td>REG111</td>
     <td> Indicare il tipo di sistema dinamico di acquisizione</td>
-    <td>appalto.datiBaseStrumentiProcedura.sistemaDinamicoAcquisizione.codice = "" or appalto.datiBaseStrumentiProcedura.sistemaDinamicoAcquisizione.codice = "none"</td>
+    <td>appalto.datiBaseStrumentiProcedura.sistemaDinamicoAcquisizione.codice = &quot;&quot; or appalto.datiBaseStrumentiProcedura.sistemaDinamicoAcquisizione.codice = &quot;none&quot;</td>
   </tr>
 
   <tr>
     <td>REG98</td>
     <td> L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0.</td>
-    <td>appalto.datiBase.importo = null or appalto.datiBase.importo <= 0</td>
+    <td>appalto.datiBase.importo = null or appalto.datiBase.importo &lt;= 0</td>
   </tr>
 
   <tr>
     <td>REG99</td>
     <td> L'importo indicato nell'oggetto lotto.datiBase.importo deve essere > 0.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</td>
   </tr>
 </table>
     <div class="message">
@@ -425,7 +425,7 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -443,7 +443,7 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
       </tr>
     </table>
   <footer>
-    Generato il 21/02/2025 alle ore 10:02:35
+    Generato il 19/03/2025 alle ore 11:52:25
   </footer>
   </body>
   </html>

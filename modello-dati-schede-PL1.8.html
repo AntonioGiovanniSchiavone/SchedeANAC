@@ -182,7 +182,7 @@ footer {
     
   <h2 id="AnacFormBaseType">AnacFormBaseType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Contiene i dati necessari per la pubblicazione nazionale di un bando di gara soprasoglia e sottosoglia con pubblicazione europea</p>
     </details>
@@ -204,7 +204,7 @@ footer {
 </table>
   <h2 id="EformType">EformType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Eform codificato Base64 nel formato XML definito da TED</p>
     </details>
@@ -226,7 +226,7 @@ footer {
 </table>
   <h2 id="StazioneAppaltanteType">StazioneAppaltanteType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Stazione Appaltante e ruoli ricoperti nell'appalto</p>
     </details>
@@ -272,7 +272,7 @@ footer {
 </table>
   <h2 id="FunzioniDelegateEnum">FunzioniDelegateEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniSvolte.json">funzioniSvolte.json</a></p>
     </details>
@@ -319,8 +319,8 @@ footer {
     <td>REG105</td>
     <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != &quot;&quot; and
+ date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, &quot;Z&quot;)) &lt;= date and time(string(today()) + &quot;T&quot; + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 </table>
     <div class="message">
@@ -329,7 +329,7 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -347,7 +347,7 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
       </tr>
     </table>
   <footer>
-    Generato il 21/02/2025 alle ore 10:03:49
+    Generato il 19/03/2025 alle ore 11:54:10
   </footer>
   </body>
   </html>

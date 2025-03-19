@@ -199,7 +199,7 @@ footer {
     
   <h2 id="ComunicazioneType">ComunicazioneType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto utilizzato per modificare i dati di una procedura</p>
     </details>
@@ -233,7 +233,7 @@ footer {
 </table>
   <h2 id="MotivoRichiestaModificaEnum">MotivoRichiestaModificaEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Motivo di richiesta di modifica - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoRichiestaModifica.json">motivoRichiestaModifica.json</a></p>
     </details>
@@ -279,7 +279,7 @@ footer {
   <tr>
     <td>REG101</td>
     <td> indicare almeno uno dei campi di cui si richiede la modifica</td>
-    <td>(comunicazione.importo = null or comunicazione.importo = 0) and (count(comunicazione.cup)>1 and (every c in comunicazione.cup satisfies (c = null or c = "")))</td>
+    <td>(is defined(comunicazione.importo) = false or comunicazione.importo = null or comunicazione.importo = 0) and (is defined(comunicazione.cup) = false or count(comunicazione.cup)=0 or  (count(comunicazione.cup)&gt;0 and (every c in comunicazione.cup satisfies (c = null or c = &quot;&quot;))))</td>
   </tr>
 </table>
     <div class="message">
@@ -288,7 +288,7 @@ footer {
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -306,7 +306,7 @@ footer {
       </tr>
     </table>
   <footer>
-    Generato il 21/02/2025 alle ore 10:02:30
+    Generato il 19/03/2025 alle ore 11:52:19
   </footer>
   </body>
   </html>

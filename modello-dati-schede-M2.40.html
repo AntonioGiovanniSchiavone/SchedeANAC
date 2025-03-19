@@ -246,7 +246,7 @@ footer {
     
   <h2 id="DatiBaseModificaContrattualeType">DatiBaseModificaContrattualeType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Dato in comune con i Business Group Contract e Modification delle eforms</p>
     </details>
@@ -286,7 +286,7 @@ footer {
 </table>
   <h2 id="MotiviRevisionePrezziEnum">MotiviRevisionePrezziEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Motivo di revisione dei prezzi - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoRevisionePrezzi.json">motivoRevisionePrezzi.json</a></p>
     </details>
@@ -314,7 +314,7 @@ footer {
 </table>
   <h2 id="QuadroEconomicoConcessioniType">QuadroEconomicoConcessioniType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto che riporta tutti i dati del quadro economico per le concessioni.</p>
     </details>
@@ -390,7 +390,7 @@ footer {
 </table>
   <h2 id="MotiviModificaContrattualeEnum">MotiviModificaContrattualeEnum</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Motivi modifica contrattuale - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-200 - Modification Reason Code del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motiviModifica.json">motiviModifica.json</a></p>
     </details>
@@ -418,7 +418,7 @@ footer {
 </table>
   <h2 id="MultilinguaType">MultilinguaType</h2>
   
-    <details open="true">
+    <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Oggetto utilizzato per la comunicazione dei dati in multilingua</p>
     </details>
@@ -464,31 +464,31 @@ footer {
   <tr>
     <td>REG61</td>
     <td> Per i contratti pubblici di importo superiore alla soglia comunitaria, se la variante in corso d’opera eccede il 10% dell’importo originario del contratto, è necessario fornire il link URL documentazione varianti in corso d’opera</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.urlDocumentazione = null or modificaContrattuale.urlDocumentazione = "")</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;mod-cir&quot; and (modificaContrattuale.urlDocumentazione = null or modificaContrattuale.urlDocumentazione = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG54</td>
     <td> Selezionare un motivo di revisione prezzi</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-rev" and (modificaContrattuale.motivoRevisionePrezzi = null or modificaContrattuale.motivoRevisionePrezzi = "" or modificaContrattuale.motivoRevisionePrezzi.codice = null or modificaContrattuale.motivoRevisionePrezzi.codice = "")</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;mod-rev&quot; and (modificaContrattuale.motivoRevisionePrezzi = null or modificaContrattuale.motivoRevisionePrezzi = &quot;&quot; or modificaContrattuale.motivoRevisionePrezzi.codice = null or modificaContrattuale.motivoRevisionePrezzi.codice = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG56</td>
     <td> CIG della nuova procedura avviata: campo non previsto</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice != "other" and modificaContrattuale.cigNuovaProcedura != null and modificaContrattuale.cigNuovaProcedura != ""</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice != &quot;other&quot; and modificaContrattuale.cigNuovaProcedura != null and modificaContrattuale.cigNuovaProcedura != &quot;&quot;</td>
   </tr>
 
   <tr>
     <td>REG55</td>
     <td> in caso di proroga tecnica Indicare il CIG della nuova procedura avviata ovvero indicare le motivazioni della proroga nel campo Cause della modifica contrattuale</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.cigNuovaProcedura = null or modificaContrattuale.cigNuovaProcedura = "") and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = "")</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;other&quot; and (modificaContrattuale.cigNuovaProcedura = null or modificaContrattuale.cigNuovaProcedura = &quot;&quot;) and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG62</td>
     <td> in caso di ‘Altre cause impreviste ed imprevedibili’ indicare una motivazione nel campo ‘Cause della modifica contrattuale’</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "mod-cir" and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = "")</td>
+    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;mod-cir&quot; and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = &quot;&quot;)</td>
   </tr>
 </table>
     <div class="message">
@@ -497,7 +497,7 @@ footer {
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni con altre schede e Flussi ammissibili">Relazioni con altre schede e Flussi ammissibili</h2>
+  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -515,7 +515,7 @@ footer {
       </tr>
     </table>
   <footer>
-    Generato il 21/02/2025 alle ore 10:02:37
+    Generato il 19/03/2025 alle ore 11:52:28
   </footer>
   </body>
   </html>
