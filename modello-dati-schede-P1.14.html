@@ -774,20 +774,6 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
   </tr>
 
   <tr>
-    <td>REG6_1</td>
-    <td> Condizioni Negoziata: se il valore del tipo di procedura è "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata deve essere valorizzato.</td>
-    <td>appalto.datiBaseProcedura.tipoProcedura.codice = &quot;neg-wo-call&quot;some lotto in lotti
-satisfies lotto.condizioniNegoziata=null</td>
-  </tr>
-
-  <tr>
-    <td>REG6_2</td>
-    <td> Condizioni Negoziata: se il valore del tipo di procedura (scelta contraente) è diverso da "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata non deve essere valorizzato.</td>
-    <td>appalto.datiBaseProcedura.tipoProcedura.codice != &quot;neg-wo-call&quot;some lotto in lotti
-satisfies lotto.condizioniNegoziata != null</td>
-  </tr>
-
-  <tr>
     <td>REG8_1</td>
     <td> L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</td>
     <td>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != &quot;&quot; and starts with(lotto.datiBaseDocumenti.url,&quot;http:&quot;) = false and starts with(lotto.datiBaseDocumenti.url,&quot;https:&quot;) = false</td>
@@ -1002,7 +988,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table>
   <footer>
-    Generato il 19/03/2025 alle ore 11:52:36
+    Generato il 27/03/2025 alle ore 15:43:18
   </footer>
   </body>
   </html>

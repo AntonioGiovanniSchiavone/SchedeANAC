@@ -1528,6 +1528,50 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR = true and is defined(aggiudi
   </tr>
 
   <tr>
+    <td>REG21</td>
+    <td> Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: La sezione è obbligatoria se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.paritaDiGenereGenerazionale = null</td>
+  </tr>
+
+  <tr>
+    <td>REG22</td>
+    <td> Previsione nel bando di gara, nell’avviso o nell’invito, dell’obbligo di assicurare, in caso di aggiudicazione del contratto, una quota pari almeno al 30 per cento, delle assunzioni necessarie per l'esecuzione del contratto o per la realizzazione di attività ad esso connesse o strumentali, sia all'occupazione giovanile sia all'occupazione femminile (articolo 47, comma 4, D.L. 77/2021)?: il campo è obbligatorio se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.paritaDiGenereGenerazionale != null and aggiudicazione.paritaDiGenereGenerazionale.quota30PerCento = null</td>
+  </tr>
+
+  <tr>
+    <td>REG23</td>
+    <td> Previsione di una quota
+inferiore con riferimento all’occupazione femminile o giovanile: se è stato indicato il valore 'SI_QUOTA_INFERIORE' nel campo quota30PerCento allora il valore della Previsione di una quota inferiore con riferimento all’occupazione giovanile e il valore della Previsione di una quota inferiore con riferimento all’occupazione femminile non possono essere entrambi 0%.</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.paritaDiGenereGenerazionale != null and aggiudicazione.paritaDiGenereGenerazionale.quota30PerCento =&quot;SI_QUOTA_INFERIORE&quot; and aggiudicazione.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= 0 and aggiudicazione.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile=0</td>
+  </tr>
+
+  <tr>
+    <td>REG24</td>
+    <td> Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: almeno una quota, tra occupazione femminile e
+occupazione giovanile, deve essere inferiore al 30%</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.paritaDiGenereGenerazionale != null and aggiudicazione.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile &gt;= 30 and aggiudicazione.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile &gt;= 30</td>
+  </tr>
+
+  <tr>
+    <td>REG27</td>
+    <td> Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: se il campo quota30PerCento contiene il valore 'SI_QUOTA_INFERIORE' o 'NO', deve essere indicato il motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.paritaDiGenereGenerazionale != null and (aggiudicazione.paritaDiGenereGenerazionale.quota30PerCento =&quot;SI_QUOTA_INFERIORE&quot; or aggiudicazione.paritaDiGenereGenerazionale.quota30PerCento =&quot;NO&quot;) and aggiudicazione.paritaDiGenereGenerazionale.motivoDeroga = null</td>
+  </tr>
+
+  <tr>
+    <td>REG28</td>
+    <td> Misure Premiali: il campo è obbligatorio se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.paritaDiGenereGenerazionale != null and aggiudicazione.afferenteInvestimentiPNRR and aggiudicazione.paritaDiGenereGenerazionale.misurePremiali= null</td>
+  </tr>
+
+  <tr>
     <td>REG31</td>
     <td> Le sezioni del quadro economico standard e quadro economico concessioni devono essere mutuamente esclusive</td>
     <td>some aggiudicazione in aggiudicazioni satisfies (is defined(aggiudicazione.quadroEconomicoStandard) and is defined(aggiudicazione.quadroEconomicoConcessioni)) </td>
@@ -1631,7 +1675,7 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
       </tr>
     </table>
   <footer>
-    Generato il 19/03/2025 alle ore 11:52:12
+    Generato il 27/03/2025 alle ore 15:42:11
   </footer>
   </body>
   </html>
