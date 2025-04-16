@@ -215,7 +215,8 @@ footer {
 
   <tr>
     <td>Normativa</td>
-    <td>Appalti settori speciali pari /sopra soglia</td>
+    <td>Articolo 3 bis della direttiva 89/665/CEE
+Articolo 86 decreto legislativo 36/2023</td>
   </tr>
 
   <tr>
@@ -421,6 +422,12 @@ footer {
     <td></td>
     <td><a href="#MotivoDerogaQlfEnum">MotivoDerogaQlfEnum</a></td>
   </tr>
+
+  <tr>
+    <td>strumentiElettroniciSpecifici (<span class="smalltype">opzionale</span>)</td>
+    <td>Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche</td>
+    <td>boolean</td>
+  </tr>
 </table>
   <h2 id="AppaltoAD1_26Type">AppaltoAD1_26Type</h2>
   
@@ -442,6 +449,12 @@ footer {
     <td>codiceAppalto (<span class="smalltype">obbligatorio</span>)</td>
     <td>Identificativo univoco dell'appalto definito dalla Stazione Appaltante</td>
     <td>string</td>
+  </tr>
+
+  <tr>
+    <td>idSchedaAvr (<span class="smalltype">opzionale</span>)</td>
+    <td>identificativo restituito dal servizio all’invio della scheda AVR.</td>
+    <td>uuid</td>
   </tr>
 
   <tr>
@@ -1166,6 +1179,13 @@ footer {
   
 
   <tr>
+    <td>REG5</td>
+    <td> Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 1.000.000.</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = &quot;works&quot; and aggiudicazione.strumentiElettroniciSpecifici=null and (aggiudicazione.quadroEconomicoStandard.impLavori + aggiudicazione.quadroEconomicoStandard.impServizi + aggiudicazione.quadroEconomicoStandard.impForniture + aggiudicazione.quadroEconomicoStandard.impTotaleSicurezza + aggiudicazione.quadroEconomicoStandard.ulterioriSommeNoRibasso + aggiudicazione.quadroEconomicoStandard.impProgettazione + aggiudicazione.quadroEconomicoStandard.sommeOpzioniRinnovi + aggiudicazione.quadroEconomicoStandard.sommeRipetizioni) &gt; 1000000</td>
+  </tr>
+
+  <tr>
     <td>REG7</td>
     <td> E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</td>
     <td>appalto.motivoUrgenza.codice = &quot;2&quot; and (appalto.linkDocumenti = null or appalto.linkDocumenti =&quot;&quot;)</td>
@@ -1326,13 +1346,13 @@ satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != &quot;services&qu
   
 
       <tr>
-        <td>Nessuna</td>
+        <td><a href="./modello-dati-schede-AVR.html">AVR</a></td>
         <td><a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SC1.html">SC1</a></td>
-        <td>126</td>
+        <td>126, 300</td>
       </tr>
     </table>
   <footer>
-    Generato il 14/04/2025 alle ore 11:33:49
+    Generato il 16/04/2025 alle ore 16:44:06
   </footer>
   </body>
   </html>

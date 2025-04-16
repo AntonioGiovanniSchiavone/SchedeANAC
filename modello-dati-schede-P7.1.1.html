@@ -185,7 +185,7 @@ footer {
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Appalti e concessioni tutti i regimi, tutti i settori </td>
+    <td>Appalti e concessioni tutti i regimi, tutti i settori</td>
   </tr>
 
   <tr>
@@ -215,7 +215,12 @@ footer {
 
   <tr>
     <td>Normativa</td>
-    <td>Appalti e concessioni tutti i regimi, tutti i settori </td>
+    <td>Articolo  76 decreto legislativo 36/2023
+Articolo  158 decreto legislativo 36/2023
+Articolo 18 decreto legislativo 208/2011
+Articolo 127 decreto legislativo 36/2023
+Articolo 128 decreto legislativo 36/2023
+Artcolo 182 commi 7,8,9 decreto legislativo 36//2023</td>
   </tr>
 
   <tr>
@@ -2173,6 +2178,13 @@ footer {
   
 
   <tr>
+    <td>REG5</td>
+    <td> Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 1.000.000.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = &quot;works&quot; and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 1000000</td>
+  </tr>
+
+  <tr>
     <td>REG8_1</td>
     <td> L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</td>
     <td>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != &quot;&quot; and starts with(lotto.datiBaseDocumenti.url,&quot;http:&quot;) = false and starts with(lotto.datiBaseDocumenti.url,&quot;https:&quot;) = false</td>
@@ -2308,7 +2320,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table>
   <footer>
-    Generato il 14/04/2025 alle ore 11:36:44
+    Generato il 16/04/2025 alle ore 16:46:40
   </footer>
   </body>
   </html>

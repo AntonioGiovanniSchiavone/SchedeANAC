@@ -215,7 +215,9 @@ footer {
 
   <tr>
     <td>Normativa</td>
-    <td>Concessioni sopra e sotto soglia - tutti i regimi</td>
+    <td>Articolo 31, paragrafo 1, della direttiva 2014/23/UE 
+Articolo 174 comma 3 decreto legislativo 36/2023 
+Articolo 182 comma 11 primo periodo e comma 12 decreto legislativo 36/2023</td>
   </tr>
 
   <tr>
@@ -499,6 +501,12 @@ footer {
     <td>datiBaseDocumenti (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
     <td><a href="#DatiBaseDocumentiType">DatiBaseDocumentiType</a></td>
+  </tr>
+
+  <tr>
+    <td>strumentiElettroniciSpecifici (<span class="smalltype">opzionale</span>)</td>
+    <td>Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche</td>
+    <td>boolean</td>
   </tr>
 
   <tr>
@@ -1826,6 +1834,13 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
   </tr>
 
   <tr>
+    <td>REG5</td>
+    <td> Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma degli importi dei lotti, è maggiore della soglia europea 1.000.000.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice=&quot;works&quot; and lotto.strumentiElettroniciSpecifici=null and (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo)) &gt; 1000000</td>
+  </tr>
+
+  <tr>
     <td>REG6_1</td>
     <td> Condizioni Negoziata: se il valore del tipo di procedura è "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata deve essere valorizzato.</td>
     <td>appalto.datiBaseProcedura.tipoProcedura.codice = &quot;neg-wo-call&quot;some lotto in lotti
@@ -2072,7 +2087,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table>
   <footer>
-    Generato il 14/04/2025 alle ore 11:36:16
+    Generato il 16/04/2025 alle ore 16:46:18
   </footer>
   </body>
   </html>

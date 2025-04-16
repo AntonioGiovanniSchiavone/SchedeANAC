@@ -216,7 +216,14 @@ Procedura per appalti specifici in uno SDA</td>
 
   <tr>
     <td>Normativa</td>
-    <td>Appalti e concessioni sopra e sottosoglia - tutti i regimi - tutti i settori</td>
+    <td>Articolo 76 decreto legislativo 36/2023; 
+Articolo 32 comma 2 decreto legislativo 36/2023
+Articolo 50 comma 1 lettere c) d) e) decreto legislativo 36/2023
+Articolo 2 Allegato II.1
+Articolo 50 comma 5 decreto legislativo 36/2023 e Libro III decreto legislativo 36/2023
+Articolo 31 decreto legislativo  208/2011
+Articolo 127 decreto legislativo 36/2023
+Articolo 128 comma 8 decreto legislativo 36/2023</td>
   </tr>
 
   <tr>
@@ -641,6 +648,12 @@ Procedura per appalti specifici in uno SDA</td>
     <td>codiceAppalto (<span class="smalltype">obbligatorio</span>)</td>
     <td>Identificativo univoco dell'appalto definito dalla Stazione Appaltante</td>
     <td>string</td>
+  </tr>
+
+  <tr>
+    <td>idSchedaAvr (<span class="smalltype">opzionale</span>)</td>
+    <td>identificativo restituito dal servizio all’invio della scheda AVR.</td>
+    <td>uuid</td>
   </tr>
 
   <tr>
@@ -2135,6 +2148,13 @@ Procedura per appalti specifici in uno SDA</td>
   
 
   <tr>
+    <td>REG5</td>
+    <td> Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 1.000.000.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = &quot;works&quot; and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 1000000</td>
+  </tr>
+
+  <tr>
     <td>REG8_1</td>
     <td> L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</td>
     <td>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != &quot;&quot; and starts with(lotto.datiBaseDocumenti.url,&quot;http:&quot;) = false and starts with(lotto.datiBaseDocumenti.url,&quot;https:&quot;) = false</td>
@@ -2278,13 +2298,13 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
   
 
       <tr>
-        <td>Nessuna</td>
+        <td><a href="./modello-dati-schede-AVR.html">AVR</a></td>
         <td><a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-NAG.html">NAG</a>, <a href="./modello-dati-schede-S2.html">S2</a></td>
-        <td>72</td>
+        <td>72, 300</td>
       </tr>
     </table>
   <footer>
-    Generato il 14/04/2025 alle ore 11:37:01
+    Generato il 16/04/2025 alle ore 16:46:52
   </footer>
   </body>
   </html>

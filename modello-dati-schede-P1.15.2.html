@@ -195,7 +195,7 @@ footer {
 
   <tr>
     <td>Evento</td>
-    <td>Preinformazione </td>
+    <td>Preinformazione</td>
   </tr>
 
   <tr>
@@ -215,7 +215,10 @@ footer {
 
   <tr>
     <td>Normativa</td>
-    <td>Appalti settori speciali pari /sopra soglia -  tutti i regimi</td>
+    <td>Articolo 68 della direttiva 2014/25/UE, articolo 92, paragrafo 1, lettera c), della direttiva 2014/25/UE
+Articolo 155 comma 3 lettera b)  decreto legislativo 36/2023
+Articolo 162 comma 2 decreto legislativo 36/2023
+Articolo 164 decreto legislativo 36/2023</td>
   </tr>
 
   <tr>
@@ -245,7 +248,7 @@ footer {
 
   <tr>
     <td>Scheda Preinformazione</td>
-    <td>undefined</td>
+    <td>Non Definito/Non Rilevante</td>
   </tr>
 
   <tr>
@@ -1103,6 +1106,30 @@ footer {
   </tr>
 </table>
     <div class="message">
+        <div class="message-divider rule"></div>
+        <p>Lista delle regole applicate alla scheda.</p>
+        <div class="message-divider rule"></div>
+    </div>
+    
+  <h2 id="Regole">Regole</h2>
+  
+  
+    <table class="rule">
+      <tr>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>  
+        <th scope="col">Test</th>  
+      </tr>
+  
+
+  <tr>
+    <td>REG5</td>
+    <td> Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 1.000.000.</td>
+    <td>some lotto in lotti
+satisfies lotto.datiBase.oggettoContratto.codice = &quot;works&quot; and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 1000000</td>
+  </tr>
+</table>
+    <div class="message">
         <div class="message-divider fluxcards"></div>
         <p>Relazioni con altre schede e Flussi ammissibili.</p>
         <div class="message-divider fluxcards"></div>
@@ -1126,7 +1153,7 @@ footer {
       </tr>
     </table>
   <footer>
-    Generato il 14/04/2025 alle ore 11:34:47
+    Generato il 16/04/2025 alle ore 16:44:59
   </footer>
   </body>
   </html>
