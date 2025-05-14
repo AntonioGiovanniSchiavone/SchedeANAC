@@ -512,7 +512,7 @@ footer {
   <tr>
     <td>REG128</td>
     <td> indicare almeno un soggetto.</td>
-    <td>count(elencoSoggetti) &lt;= 0</td>
+    <td>count(partecipantiAVR) &lt;= 0</td>
   </tr>
 
   <tr>
@@ -531,21 +531,21 @@ footer {
   <tr>
     <td>REG2</td>
     <td> indicare il codice fiscale del soggetto.</td>
-    <td>some soggetto in elencoSoggetti
-satisfies soggetto.codiceFiscale =&quot;&quot; </td>
+    <td>some partecipante in partecipantiAVR
+satisfies partecipante.codiceFiscale =&quot;&quot; </td>
   </tr>
 
   <tr>
     <td>REG129</td>
     <td> indicare la denominazione del soggetto.</td>
-    <td>some soggetto in elencoSoggetti
-satisfies soggetto.denominazione =&quot;&quot; </td>
+    <td>some partecipante in partecipantiAVR
+satisfies partecipante.denominazione =&quot;&quot; </td>
   </tr>
 
   <tr>
     <td>REG130</td>
     <td> i codici fiscali nella lista dei soggetti devono essere diversi.</td>
-    <td>count(elencoSoggetti.codiceFiscale) &gt; count(distinct values(elencoSoggetti.codiceFiscale))</td>
+    <td>count(partecipantiAVR.codiceFiscale) &gt; count(distinct values(partecipantiAVR.codiceFiscale))</td>
   </tr>
 
   <tr>
@@ -578,7 +578,7 @@ satisfies soggetto.denominazione =&quot;&quot; </td>
       </tr>
     </table>
   <footer>
-    Generato il 09/05/2025 alle ore 17:59:16
+    Generato il 14/05/2025 alle ore 18:00:22
   </footer>
   </body>
   </html>
