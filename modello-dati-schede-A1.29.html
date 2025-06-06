@@ -599,14 +599,7 @@ satisfies (offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100)
   <tr>
     <td>REG51</td>
     <td> Richiesto almeno un valore tra offertaEconomica e offertaInAumento</td>
-    <td>some aggiudicazione in aggiudicazioni satisfies (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = true and is defined(offerta.offertaEconomica) = true ) or (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = false and is defined(offerta.offertaEconomica) = false )))</td>
-  </tr>
-
-  <tr>
-    <td>REG52</td>
-    <td> Non è stato inserito l’importo dell’aggiudicatario</td>
-    <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</td>
+    <td>some aggiudicazione in aggiudicazioni satisfies (some offerta in aggiudicazione.offertePresentate satisfies (offerta.aggiudicatario) and ((is defined (offerta.offertaInAumento) = true and is defined(offerta.offertaEconomica) = true ) or (some offerta in aggiudicazione.offertePresentate satisfies (is defined (offerta.offertaInAumento) = false and is defined(offerta.offertaEconomica) = false ))))</td>
   </tr>
 
   <tr>
@@ -641,11 +634,11 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in agg
       <tr>
         <td><a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-P1.10.html">P1_10</a>, <a href="./modello-dati-schede-P1.16.html">P1_16</a>, <a href="./modello-dati-schede-S2.html">S2</a>, <a href="./modello-dati-schede-S2R.html">S2R</a>, <a href="./modello-dati-schede-S3.html">S3</a></td>
         <td><a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SC1.html">SC1</a></td>
-        <td>110116</td>
+        <td>110, 116</td>
       </tr>
     </table>
   <footer>
-    Generato il 05/06/2025 alle ore 11:54:16
+    Generato il 06/06/2025 alle ore 16:57:37
   </footer>
   </body>
   </html>

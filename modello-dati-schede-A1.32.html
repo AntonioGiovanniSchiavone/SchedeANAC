@@ -531,13 +531,6 @@ satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOff
   </tr>
 
   <tr>
-    <td>REG52</td>
-    <td> Non è stato inserito l’importo dell’aggiudicatario</td>
-    <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</td>
-  </tr>
-
-  <tr>
     <td>REG112</td>
     <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
     <td>count(aggiudicazioni) &lt;= 0</td>
@@ -567,7 +560,7 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in agg
       </tr>
     </table>
   <footer>
-    Generato il 05/06/2025 alle ore 11:54:21
+    Generato il 06/06/2025 alle ore 16:57:40
   </footer>
   </body>
   </html>

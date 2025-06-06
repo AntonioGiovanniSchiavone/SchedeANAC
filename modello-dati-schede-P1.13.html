@@ -889,8 +889,14 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
   </tr>
 
   <tr>
+    <td>REG4_1</td>
+    <td> Tipologica motivazioneCig: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</td>
+    <td>(is defined(appalto.motivazioneCig) = false or ((appalto.motivazioneCig.codice = &quot;&quot;)) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != &quot;999&quot;))</td>
+  </tr>
+
+  <tr>
     <td>REG5</td>
-    <td> Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore della soglia europea 1.000.000.</td>
+    <td> Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore di 1.000.000.</td>
     <td>some lotto in lotti
 satisfies lotto.datiBase.oggettoContratto.codice = &quot;works&quot; and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 1000000</td>
   </tr>
@@ -1178,7 +1184,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table>
   <footer>
-    Generato il 05/06/2025 alle ore 11:55:40
+    Generato il 06/06/2025 alle ore 16:58:59
   </footer>
   </body>
   </html>

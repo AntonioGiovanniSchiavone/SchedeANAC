@@ -888,6 +888,12 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
   </tr>
 
   <tr>
+    <td>REG4_1</td>
+    <td> Tipologica motivazioneCig: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</td>
+    <td>(is defined(appalto.motivazioneCig) = false or ((appalto.motivazioneCig.codice = &quot;&quot;)) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != &quot;999&quot;))</td>
+  </tr>
+
+  <tr>
     <td>REG6_1</td>
     <td> Condizioni Negoziata: se il valore del tipo di procedura è "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata deve essere valorizzato.</td>
     <td>appalto.datiBaseProcedura.tipoProcedura.codice = &quot;neg-wo-call&quot;some lotto in lotti
@@ -1201,7 +1207,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table>
   <footer>
-    Generato il 05/06/2025 alle ore 11:55:50
+    Generato il 06/06/2025 alle ore 16:59:10
   </footer>
   </body>
   </html>

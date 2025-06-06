@@ -502,13 +502,6 @@ satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = &quot;n-in
   </tr>
 
   <tr>
-    <td>REG52</td>
-    <td> Non è stato inserito l’importo dell’aggiudicatario</td>
-    <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</td>
-  </tr>
-
-  <tr>
     <td>REG68</td>
     <td> il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non è Negoziata senza previa indizione di gara</td>
     <td>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != &quot;neg-wo-call&quot; and appalto.datiBaseProcedura.tipoProcedura.codice != &quot;&quot; ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&gt;0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice != &quot;&quot;))</td>
@@ -544,7 +537,7 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in agg
       </tr>
     </table>
   <footer>
-    Generato il 05/06/2025 alle ore 11:54:20
+    Generato il 06/06/2025 alle ore 16:57:39
   </footer>
   </body>
   </html>
