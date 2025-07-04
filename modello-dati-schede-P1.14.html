@@ -901,6 +901,13 @@ satisfies lotto.datiBase.oggettoContratto.codice=&quot;works&quot; and lotto.str
   </tr>
 
   <tr>
+    <td>REG5_1</td>
+    <td> il campo docFaP è obbligatorio in caso venga valorizzato il campo strumentiElettroniciSpecifici</td>
+    <td>some lotto in lotti
+satisfies is defined(lotto.strumentiElettroniciSpecifici) and is defined (lotto.docFAP) = false</td>
+  </tr>
+
+  <tr>
     <td>REG8_1</td>
     <td> L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</td>
     <td>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != &quot;&quot; and starts with(lotto.datiBaseDocumenti.url,&quot;http:&quot;) = false and starts with(lotto.datiBaseDocumenti.url,&quot;https:&quot;) = false</td>
@@ -1115,7 +1122,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table>
   <footer>
-    Generato il 06/06/2025 alle ore 16:59:01
+    Generato il 04/07/2025 alle ore 12:29:38
   </footer>
   </body>
   </html>

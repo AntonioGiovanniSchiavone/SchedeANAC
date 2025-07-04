@@ -942,14 +942,15 @@ footer {
   <tr>
     <td>ERR100</td>
     <td> Importo totale non consentito per l'Affidamento diretto < 5k €. Articolo 49 c. 6 e 50 decreto legislativo 36/2023.</td>
-    <td>appalto.datiBase.importo != null and appalto.datiBase.importo &gt;= 5000</td>
+    <td>some aggiudicazione in aggiudicazioni 
+satisfies aggiudicazione.importoAggiudicazione &gt;= 5000 </td>
   </tr>
 
   <tr>
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0))</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!=&quot;10&quot; or partecipante.ruoloOE.codice!=&quot;12&quot;) and (partecipante.importo &lt;= 0)</td>
   </tr>
 
   <tr>
@@ -996,13 +997,13 @@ satisfies count(aggiudicazione.cup)&gt;1 and (every c in aggiudicazione.cup sati
   
 
       <tr>
-        <td>Nessuna</td>
+        <td><a href="./modello-dati-schede-AVR.html">AVR</a></td>
         <td><a href="./modello-dati-schede-ANN.html">ANN</a>, <a href="./modello-dati-schede-CM2.html">CM2</a>, <a href="./modello-dati-schede-CO2.html">CO2</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S4.html">S4</a></td>
-        <td>50</td>
+        <td>50, 300</td>
       </tr>
     </table>
   <footer>
-    Generato il 06/06/2025 alle ore 16:58:36
+    Generato il 04/07/2025 alle ore 12:29:06
   </footer>
   </body>
   </html>

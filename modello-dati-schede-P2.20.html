@@ -361,8 +361,8 @@ Articolo 128 comma 8 decreto legislativo 36/2023</td>
 
   <tr>
     <td>ccnl (<span class="smalltype">obbligatorio</span>)</td>
-    <td>indicare il codice CNEL o non applicabile</td>
-    <td>string</td>
+    <td></td>
+    <td><a href="#CcnlEnum">CcnlEnum</a></td>
   </tr>
 
   <tr>
@@ -404,6 +404,12 @@ Articolo 128 comma 8 decreto legislativo 36/2023</td>
   <tr>
     <td>strumentiElettroniciSpecifici (<span class="smalltype">opzionale</span>)</td>
     <td>Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>docFAP (<span class="smalltype">opzionale</span>)</td>
+    <td>è stato realizzato e autorizzato entro i termini lo studio di fattibilità che esenta dall'uso del BIM</td>
     <td>boolean</td>
   </tr>
 
@@ -507,6 +513,34 @@ Articolo 128 comma 8 decreto legislativo 36/2023</td>
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Categoria - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/categoria.json">categoria.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CcnlEnum">CcnlEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>CCNL - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ccnl.json">ccnl.json</a></p>
     </details>
   
   
@@ -1936,7 +1970,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table>
   <footer>
-    Generato il 06/06/2025 alle ore 16:59:38
+    Generato il 04/07/2025 alle ore 12:30:32
   </footer>
   </body>
   </html>

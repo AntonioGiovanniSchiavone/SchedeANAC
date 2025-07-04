@@ -371,8 +371,8 @@ Articolo 86 decreto legislativo 36/2023</td>
 
   <tr>
     <td>ccnl (<span class="smalltype">obbligatorio</span>)</td>
-    <td>indicare il codice CNEL o non applicabile</td>
-    <td>string</td>
+    <td></td>
+    <td><a href="#CcnlEnum">CcnlEnum</a></td>
   </tr>
 
   <tr>
@@ -426,6 +426,12 @@ Articolo 86 decreto legislativo 36/2023</td>
   <tr>
     <td>strumentiElettroniciSpecifici (<span class="smalltype">opzionale</span>)</td>
     <td>Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>docFAP (<span class="smalltype">opzionale</span>)</td>
+    <td>è stato realizzato e autorizzato entro i termini lo studio di fattibilità che esenta dall'uso del BIM</td>
     <td>boolean</td>
   </tr>
 </table>
@@ -569,6 +575,34 @@ Articolo 86 decreto legislativo 36/2023</td>
     <td>saTitolare (<span class="smalltype">obbligatorio</span>)</td>
     <td>Stazione appaltante titolare</td>
     <td>boolean</td>
+  </tr>
+</table>
+  <h2 id="CcnlEnum">CcnlEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>CCNL - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ccnl.json">ccnl.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 </table>
   <h2 id="CategoriaEnum">CategoriaEnum</h2>
@@ -1220,6 +1254,13 @@ satisfies aggiudicazione.datiBase.oggettoContratto.codice = &quot;works&quot; an
   </tr>
 
   <tr>
+    <td>REG5_1</td>
+    <td> il campo docFaP è obbligatorio in caso venga valorizzato il campo strumentiElettroniciSpecifici</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies is defined(aggiudicazione.strumentiElettroniciSpecifici) and is defined (aggiudicazione.docFAP) = false</td>
+  </tr>
+
+  <tr>
     <td>REG7</td>
     <td> E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</td>
     <td>appalto.motivoUrgenza.codice = &quot;2&quot; and (appalto.linkDocumenti = null or appalto.linkDocumenti =&quot;&quot;)</td>
@@ -1307,14 +1348,14 @@ satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = &quot;n-in
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0))</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!=&quot;10&quot; or partecipante.ruoloOE.codice!=&quot;12&quot;) and (partecipante.importo &lt;= 0)</td>
   </tr>
 
   <tr>
     <td>REG53</td>
     <td> In caso di ditta mandante l’importo non è previsto</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruoloOE.codice=&quot;2&quot; and (partecipante.importo != null or partecipante.importo &gt; 0)</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice=&quot;10&quot; or partecipante.ruoloOE.codice=&quot;12&quot;) and (partecipante.importo &gt; 0)</td>
   </tr>
 
   <tr>
@@ -1417,13 +1458,13 @@ satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != &quot;services&qu
   
 
       <tr>
-        <td>Nessuna</td>
+        <td><a href="./modello-dati-schede-AVR.html">AVR</a></td>
         <td><a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SC1.html">SC1</a></td>
-        <td>128</td>
+        <td>128, 300</td>
       </tr>
     </table>
   <footer>
-    Generato il 06/06/2025 alle ore 16:58:19
+    Generato il 04/07/2025 alle ore 12:28:42
   </footer>
   </body>
   </html>

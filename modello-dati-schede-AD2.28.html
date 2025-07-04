@@ -419,8 +419,8 @@ Articolo 187 decreto legislativo 36/2023</td>
 
   <tr>
     <td>ccnl (<span class="smalltype">obbligatorio</span>)</td>
-    <td>indicare il codice CNEL o non applicabile</td>
-    <td>string</td>
+    <td></td>
+    <td><a href="#CcnlEnum">CcnlEnum</a></td>
   </tr>
 
   <tr>
@@ -478,6 +478,12 @@ Articolo 187 decreto legislativo 36/2023</td>
   </tr>
 
   <tr>
+    <td>docFAP (<span class="smalltype">opzionale</span>)</td>
+    <td>è stato realizzato e autorizzato entro i termini lo studio di fattibilità che esenta dall'uso del BIM</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
     <td>datiBase (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
     <td><a href="#DatiBaseLottoADType">DatiBaseLottoADType</a></td>
@@ -524,6 +530,34 @@ Articolo 187 decreto legislativo 36/2023</td>
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Categoria - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/categoria.json">categoria.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CcnlEnum">CcnlEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>CCNL - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ccnl.json">ccnl.json</a></p>
     </details>
   
   
@@ -1820,14 +1854,14 @@ satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = &quot;n-in
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.partecipanti)&gt;1 and (every partecipante in aggiudicazione.partecipanti satisfies (partecipante.importo = null or partecipante.importo &lt;= 0))</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!=&quot;10&quot; or partecipante.ruoloOE.codice!=&quot;12&quot;) and (partecipante.importo &lt;= 0)</td>
   </tr>
 
   <tr>
     <td>REG53</td>
     <td> In caso di ditta mandante l’importo non è previsto</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies partecipante.ruoloOE.codice=&quot;2&quot; and (partecipante.importo != null or partecipante.importo &gt; 0)</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice=&quot;10&quot; or partecipante.ruoloOE.codice=&quot;12&quot;) and (partecipante.importo &gt; 0)</td>
   </tr>
 
   <tr>
@@ -1930,13 +1964,13 @@ satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != &quot;services&qu
   
 
       <tr>
-        <td>Nessuna</td>
+        <td><a href="./modello-dati-schede-AVR.html">AVR</a></td>
         <td><a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SC1.html">SC1</a></td>
-        <td>228</td>
+        <td>228, 300</td>
       </tr>
     </table>
   <footer>
-    Generato il 06/06/2025 alle ore 16:58:29
+    Generato il 04/07/2025 alle ore 12:28:58
   </footer>
   </body>
   </html>

@@ -442,8 +442,8 @@ footer {
 
   <tr>
     <td>ccnl (<span class="smalltype">obbligatorio</span>)</td>
-    <td>indicare il codice CNEL o non applicabile</td>
-    <td>string</td>
+    <td></td>
+    <td><a href="#CcnlEnum">CcnlEnum</a></td>
   </tr>
 
   <tr>
@@ -517,6 +517,34 @@ footer {
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Categoria - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/categoria.json">categoria.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CcnlEnum">CcnlEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>CCNL - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ccnl.json">ccnl.json</a></p>
     </details>
   
   
@@ -1787,7 +1815,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
       </tr>
     </table>
   <footer>
-    Generato il 06/06/2025 alle ore 16:59:51
+    Generato il 04/07/2025 alle ore 12:30:48
   </footer>
   </body>
   </html>

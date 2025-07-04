@@ -4,7 +4,7 @@
   <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modello Dati - Scheda P7_3 - Scheda relativa alla costituzione elenco fornitori.</title>
+    <title>Modello Dati - Scheda AD6 - Scheda relativa all'affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.</title>
     <style>
       /* css/styles.css */
 
@@ -155,7 +155,7 @@ footer {
     </style>
   </head>
   <body>
-    <h1>Modello Dati - Scheda P7_3 - Scheda relativa alla costituzione elenco fornitori.</h1>
+    <h1>Modello Dati - Scheda AD6 - Scheda relativa all'affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.</h1>
   
     <div class="message">
         <div class="message-divider info"></div>
@@ -175,32 +175,32 @@ footer {
 
   <tr>
     <td>Area Funzionale</td>
-    <td>A_1</td>
+    <td>A_2</td>
   </tr>
 
   <tr>
     <td>Famiglia funzionalità</td>
-    <td>P7</td>
+    <td>AD6</td>
   </tr>
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Settori ordinari; settore difesa e sicurezza - regime ordinario e alleggerito</td>
+    <td>Appalti &amp;lt; soglia europea</td>
   </tr>
 
   <tr>
     <td>Fase</td>
-    <td>Pianificazione</td>
+    <td>Affidamento</td>
   </tr>
 
   <tr>
     <td>Evento</td>
-    <td>Costituzione elenco fornitori</td>
+    <td>Affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce &amp;amp;lt; soglia europea</td>
   </tr>
 
   <tr>
     <td>Scheda</td>
-    <td>P7_3</td>
+    <td>AD6</td>
   </tr>
 
   <tr>
@@ -210,14 +210,12 @@ footer {
 
   <tr>
     <td>Descrizione</td>
-    <td>Avviso per la costituzione elenco</td>
+    <td>Affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce</td>
   </tr>
 
   <tr>
     <td>Normativa</td>
-    <td>Articolo 50 comma 1 lettere c) d) e)  decreto legislativo 36/2023
-Articolo 3 Allegato II.1
-Articolo 31 decreto legislativo  208/2011</td>
+    <td>N/A</td>
   </tr>
 
   <tr>
@@ -232,7 +230,7 @@ Articolo 31 decreto legislativo  208/2011</td>
 
   <tr>
     <td>Include ESPD?</td>
-    <td>NO</td>
+    <td>SI, NO</td>
   </tr>
 
   <tr>
@@ -242,22 +240,22 @@ Articolo 31 decreto legislativo  208/2011</td>
 
   <tr>
     <td>Pubblicazione Nazionale</td>
-    <td>SI</td>
+    <td>NO</td>
   </tr>
 
   <tr>
     <td>Scheda Preinformazione</td>
-    <td>SI</td>
+    <td>NO</td>
   </tr>
 
   <tr>
     <td>Scheda Indizione</td>
-    <td>NO</td>
+    <td>SI</td>
   </tr>
 
   <tr>
     <td>Attribuisce CIG?</td>
-    <td>NO</td>
+    <td>SI</td>
   </tr>
 </table>
     <div class="message">
@@ -266,7 +264,7 @@ Articolo 31 decreto legislativo  208/2011</td>
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaP7_3Type">SchedaP7_3Type</h2>
+  <h2 id="SchedaAD6Type">SchedaAD6Type</h2>
   
   
     <table class="main">
@@ -280,10 +278,16 @@ Articolo 31 decreto legislativo  208/2011</td>
   <tr>
     <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#AnacFormP7_3Type">AnacFormP7_3Type</a></td>
+    <td><a href="#AnacFormAD6Type">AnacFormAD6Type</a></td>
+  </tr>
+
+  <tr>
+    <td>espd (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#EspdRequestType">EspdRequestType</a></td>
   </tr>
 </table>
-  <h2 id="AnacFormP7_3Type">AnacFormP7_3Type</h2>
+  <h2 id="AnacFormAD6Type">AnacFormAD6Type</h2>
   
   
     <table class="main">
@@ -303,16 +307,45 @@ Articolo 31 decreto legislativo  208/2011</td>
   <tr>
     <td>appalto (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#AppaltoP7_3Type">AppaltoP7_3Type</a></td>
+    <td><a href="#AppaltoAD6Type">AppaltoAD6Type</a></td>
   </tr>
 
   <tr>
-    <td>lotti (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Dati relativi ai lotti</td>
-    <td>array di <a href="#LottoP7_3Type">LottoP7_3Type</a></td>
+    <td>aggiudicazioni (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Dati relativi alle aggiudicazioni</td>
+    <td>array di <a href="#AggiudicazioneAD6Type">AggiudicazioneAD6Type</a></td>
   </tr>
 </table>
-  <h2 id="LottoP7_3Type">LottoP7_3Type</h2>
+  <h2 id="AppaltoAD6Type">AppaltoAD6Type</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceAppalto (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Identificativo univoco dell'appalto definito dalla Stazione Appaltante</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>settore (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#SettoreEnum">SettoreEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>datiBase (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseAppaltoADType">DatiBaseAppaltoADType</a></td>
+  </tr>
+</table>
+  <h2 id="AggiudicazioneAD6Type">AggiudicazioneAD6Type</h2>
   
   
     <table class="main">
@@ -325,14 +358,32 @@ Articolo 31 decreto legislativo  208/2011</td>
 
   <tr>
     <td>lotIdentifier (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Id univoco del lotto generato dalla stazione appaltante</td>
+    <td>Id univoco del lotto generato dalla stazione appaltante - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-137 - Purpose Lot Identifier del TED</td>
     <td>string</td>
+  </tr>
+
+  <tr>
+    <td>cup (<span class="smalltype">opzionale</span>)</td>
+    <td>Cup</td>
+    <td>array di string</td>
+  </tr>
+
+  <tr>
+    <td>partecipanti (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>array di <a href="#AggiudicatarioAD5Type">AggiudicatarioAD5Type</a></td>
+  </tr>
+
+  <tr>
+    <td>codIstat (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#CodIstatEnum">CodIstatEnum</a></td>
   </tr>
 
   <tr>
     <td>datiBase (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#DatiBaseLottoPLType">DatiBaseLottoPLType</a></td>
+    <td><a href="#DatiBaseLottoADType">DatiBaseLottoADType</a></td>
   </tr>
 
   <tr>
@@ -342,44 +393,15 @@ Articolo 31 decreto legislativo  208/2011</td>
   </tr>
 
   <tr>
-    <td>datiBaseDocumenti (<span class="smalltype">obbligatorio</span>)</td>
+    <td>datiBaseContratto (<span class="smalltype">opzionale</span>)</td>
     <td></td>
-    <td><a href="#DatiBaseDocumentiType">DatiBaseDocumentiType</a></td>
+    <td><a href="#DatiBaseContrattoType">DatiBaseContrattoType</a></td>
   </tr>
 
   <tr>
-    <td>datiBaseDurata (<span class="smalltype">obbligatorio</span>)</td>
+    <td>datiBaseDocumenti (<span class="smalltype">opzionale</span>)</td>
     <td></td>
-    <td><a href="#DatiBaseDurataType">DatiBaseDurataType</a></td>
-  </tr>
-</table>
-  <h2 id="AppaltoP7_3Type">AppaltoP7_3Type</h2>
-  
-  
-    <table class="main">
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Descrizione</th>
-        <th scope="col">Tipo</th>
-      </tr>
-  
-
-  <tr>
-    <td>contrattoDifesa (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Contratto Difesa</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>settore (<span class="smalltype">obbligatorio</span>)</td>
-    <td></td>
-    <td><a href="#SettoreEnum">SettoreEnum</a></td>
-  </tr>
-
-  <tr>
-    <td>datiBase (<span class="smalltype">obbligatorio</span>)</td>
-    <td></td>
-    <td><a href="#DatiBaseAppaltoPLType">DatiBaseAppaltoPLType</a></td>
+    <td><a href="#DatiBaseDocumentiOptionalType">DatiBaseDocumentiOptionalType</a></td>
   </tr>
 </table>
     <div class="message">
@@ -388,7 +410,75 @@ Articolo 31 decreto legislativo  208/2011</td>
         <div class="message-divider reference"></div>
     </div>
     
-  <h2 id="DatiBaseAppaltoPLType">DatiBaseAppaltoPLType</h2>
+  <h2 id="AggiudicatarioAD5Type">AggiudicatarioAD5Type</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dati dell'aggiudicatario</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idPartecipante (<span class="smalltype">obbligatorio</span>)</td>
+    <td>id partecipante</td>
+    <td>uuid</td>
+  </tr>
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">obbligatorio</span>)</td>
+    <td>codice fiscale del soggetto interessato</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>denominazione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>denominazione del soggetto interessato</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>importo (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Importo di aggiudicazione/affidamento/adesione AQ/premio erogato al netto di opzioni e rinnovi</td>
+    <td>double</td>
+  </tr>
+</table>
+  <h2 id="CodIstatEnum">CodIstatEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Codice ISTAT - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/tipologiche/codIstat.json">codIstat.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="DatiBaseAppaltoADType">DatiBaseAppaltoADType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -450,7 +540,29 @@ Articolo 31 decreto legislativo  208/2011</td>
     <td>array di <a href="#CPVEnum">CPVEnum</a></td>
   </tr>
 </table>
-  <h2 id="DatiBaseDocumentiType">DatiBaseDocumentiType</h2>
+  <h2 id="DatiBaseContrattoType">DatiBaseContrattoType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Place of Performance delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codNUTS (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#CodNUTSEnum">CodNUTSEnum</a></td>
+  </tr>
+</table>
+  <h2 id="DatiBaseDocumentiOptionalType">DatiBaseDocumentiOptionalType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -467,7 +579,7 @@ Articolo 31 decreto legislativo  208/2011</td>
   
 
   <tr>
-    <td>url (<span class="smalltype">obbligatorio</span>)</td>
+    <td>url (<span class="smalltype">opzionale</span>)</td>
     <td>Indirizzo dei documenti di gara - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-15 - Documents Lot Identifier del TED</td>
     <td>url</td>
   </tr>
@@ -478,47 +590,7 @@ Articolo 31 decreto legislativo  208/2011</td>
     <td>array di <a href="#LingueEnum">LingueEnum</a></td>
   </tr>
 </table>
-  <h2 id="DatiBaseDurataType">DatiBaseDurataType</h2>
-  
-    <details open>
-      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Dato in comune con il Business Group Duration delle eforms</p>
-    </details>
-  
-  
-    <table class="reference">
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Descrizione</th>
-        <th scope="col">Tipo</th>
-      </tr>
-  
-
-  <tr>
-    <td>dataInizio (<span class="smalltype">opzionale</span>)</td>
-    <td>La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-536 - Duration Start Date del TED</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>durata (<span class="smalltype">opzionale</span>)</td>
-    <td>Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-36 - Duration Period del TED</td>
-    <td>string</td>
-  </tr>
-
-  <tr>
-    <td>dataFine (<span class="smalltype">opzionale</span>)</td>
-    <td>La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>altraDurata (<span class="smalltype">opzionale</span>)</td>
-    <td></td>
-    <td><a href="#AltraDurataEnum">AltraDurataEnum</a></td>
-  </tr>
-</table>
-  <h2 id="DatiBaseLottoPLType">DatiBaseLottoPLType</h2>
+  <h2 id="DatiBaseLottoADType">DatiBaseLottoADType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -552,11 +624,33 @@ Articolo 31 decreto legislativo  208/2011</td>
     <td><a href="#MultilinguaType">MultilinguaType</a></td>
   </tr>
 </table>
+  <h2 id="EspdRequestType">EspdRequestType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request) (<span class="smalltype">opzionale</span>)</td>
+    <td>Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)</td>
+    <td>string</td>
+  </tr>
+</table>
   <h2 id="SettoreEnum">SettoreEnum</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Settore attività della SA - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/settore.json">settore.json</a></p>
+      <p>Settore attività della SA - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/tipologiche/settore.json">settore.json</a></p>
     </details>
   
   
@@ -658,7 +752,7 @@ Articolo 31 decreto legislativo  208/2011</td>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Il tipo di classificazione che descrive l'appalto (ad es. CPV) - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoClassificazione.json">tipoClassificazione.json</a></p>
+      <p>Il tipo di classificazione che descrive l'appalto (ad es. CPV) - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/tipologiche/tipoClassificazione.json">tipoClassificazione.json</a></p>
     </details>
   
   
@@ -686,7 +780,35 @@ Articolo 31 decreto legislativo  208/2011</td>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Classificazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/CPV.json">CPV.json</a></p>
+      <p>Classificazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/tipologiche/CPV.json">CPV.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CodNUTSEnum">CodNUTSEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Il luogo di esecuzione secondo la classificazione comune delle unità territoriali per la statistica (NUTS). Va indicato il codice di livello NUTS 3 - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-5071 - Place Performance Country Subdivision del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/tipologiche/codNUTS.json">codNUTS.json</a></p>
     </details>
   
   
@@ -714,35 +836,7 @@ Articolo 31 decreto legislativo  208/2011</td>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Lingue in cui i documenti di gara sono ufficialmente disponibili - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-708 - Documents Official Language del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/lingue.json">lingue.json</a></p>
-    </details>
-  
-  
-    <table class="reference">
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Descrizione</th>
-        <th scope="col">Tipo</th>
-      </tr>
-  
-
-  <tr>
-    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
-    <td></td>
-    <td>string</td>
-  </tr>
-
-  <tr>
-    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
-    <td></td>
-    <td>string</td>
-  </tr>
-</table>
-  <h2 id="AltraDurataEnum">AltraDurataEnum</h2>
-  
-    <details open>
-      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>La durata è ignota, illimitata, ecc. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/durata.json">durata.json</a></p>
+      <p>Lingue in cui i documenti di gara sono ufficialmente disponibili - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-708 - Documents Official Language del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/tipologiche/lingue.json">lingue.json</a></p>
     </details>
   
   
@@ -770,7 +864,7 @@ Articolo 31 decreto legislativo  208/2011</td>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Oggetto del contratto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-23 - Main Nature del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/oggettoContratto.json">oggettoContratto.json</a></p>
+      <p>Oggetto del contratto - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-23 - Main Nature del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/tipologiche/oggettoContratto.json">oggettoContratto.json</a></p>
     </details>
   
   
@@ -798,7 +892,7 @@ Articolo 31 decreto legislativo  208/2011</td>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniSvolte.json">funzioniSvolte.json</a></p>
+      <p>Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione-test/npa/main/docs/modello-dati/tipologiche/funzioniSvolte.json">funzioniSvolte.json</a></p>
     </details>
   
   
@@ -823,6 +917,63 @@ Articolo 31 decreto legislativo  208/2011</td>
   </tr>
 </table>
     <div class="message">
+        <div class="message-divider rule"></div>
+        <p>Lista delle regole applicate alla scheda.</p>
+        <div class="message-divider rule"></div>
+    </div>
+    
+  <h2 id="Regole">Regole</h2>
+  
+  
+    <table class="rule">
+      <tr>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>  
+        <th scope="col">Test</th>  
+      </tr>
+  
+
+  <tr>
+    <td>ERR100</td>
+    <td> Importo totale non consentito per l'Affidamento diretto < 5k €. Articolo 49 c. 6 e 50 decreto legislativo 36/2023.</td>
+    <td>some aggiudicazione in aggiudicazioni 
+satisfies aggiudicazione.importoAggiudicazione &gt;= 5000 </td>
+  </tr>
+
+  <tr>
+    <td>REG52</td>
+    <td> Non è stato inserito l’importo dell’aggiudicatario</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!=&quot;10&quot; or partecipante.ruoloOE.codice!=&quot;12&quot;) and (partecipante.importo &lt;= 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG78</td>
+    <td> Indicare almeno un partecipante</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies count(aggiudicazione.partecipanti)=0</td>
+  </tr>
+
+  <tr>
+    <td>REG100</td>
+    <td> Negli affidamenti diretti è consentito inserire un solo idPartecipante</td>
+    <td>some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))&gt;1</td>
+  </tr>
+
+  <tr>
+    <td>REG112</td>
+    <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
+    <td>count(aggiudicazioni) &lt;= 0</td>
+  </tr>
+
+  <tr>
+    <td>REG101</td>
+    <td> indicare almeno uno dei campi di cui si richiede la modifica</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies count(aggiudicazione.cup)&gt;1 and (every c in aggiudicazione.cup satisfies (c = null or c = &quot;&quot;))</td>
+  </tr>
+</table>
+    <div class="message">
         <div class="message-divider fluxcards"></div>
         <p>Relazioni con altre schede e Flussi ammissibili.</p>
         <div class="message-divider fluxcards"></div>
@@ -841,12 +992,12 @@ Articolo 31 decreto legislativo  208/2011</td>
 
       <tr>
         <td>Nessuna</td>
-        <td>STATO FINALE</td>
-        <td>73</td>
+        <td><a href="./modello-dati-schede-ANN.html">ANN</a>, <a href="./modello-dati-schede-CM1.html">CM1</a>, <a href="./modello-dati-schede-CO3.html">CO3</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S4.html">S4</a></td>
+        <td>60</td>
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:31:51
+    Generato il 04/07/2025 alle ore 12:29:08
   </footer>
   </body>
   </html>

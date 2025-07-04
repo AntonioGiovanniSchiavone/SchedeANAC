@@ -902,6 +902,13 @@ satisfies lotto.datiBase.oggettoContratto.codice = &quot;works&quot; and lotto.s
   </tr>
 
   <tr>
+    <td>REG5_1</td>
+    <td> il campo docFaP è obbligatorio in caso venga valorizzato il campo strumentiElettroniciSpecifici</td>
+    <td>some lotto in lotti
+satisfies is defined(lotto.strumentiElettroniciSpecifici) and is defined (lotto.docFAP) = false</td>
+  </tr>
+
+  <tr>
     <td>REG6_1</td>
     <td> Condizioni Negoziata: se il valore del tipo di procedura è "Negoziata senza previa indizione di gara" allora il campo condizioniNegoziata deve essere valorizzato.</td>
     <td>appalto.datiBaseProcedura.tipoProcedura.codice = &quot;neg-wo-call&quot;some lotto in lotti
@@ -1184,7 +1191,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table>
   <footer>
-    Generato il 06/06/2025 alle ore 16:58:59
+    Generato il 04/07/2025 alle ore 12:29:36
   </footer>
   </body>
   </html>
