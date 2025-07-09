@@ -1724,13 +1724,13 @@ Articolo 50 comma 9 decreto legislativo 36/2023</td>
   <tr>
     <td>REG7</td>
     <td> E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</td>
-    <td>appalto.motivoUrgenza.codice = &quot;2&quot; and (appalto.linkDocumenti = null or appalto.linkDocumenti =&quot;&quot;)</td>
+    <td>appalto.motivoUrgenza.codice = "2" and (appalto.linkDocumenti = null or appalto.linkDocumenti ="")</td>
   </tr>
 
   <tr>
     <td>REG8</td>
     <td> Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile: deve essere una url valida e quindi iniziare con http o https.</td>
-    <td>appalto.linkDocumenti != null and appalto.linkDocumenti != &quot;&quot; and starts with(appalto.linkDocumenti,&quot;http:&quot;) = false and starts with(appalto.linkDocumenti,&quot;https:&quot;) = false</td>
+    <td>appalto.linkDocumenti != null and appalto.linkDocumenti != "" and starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</td>
   </tr>
 
   <tr>
@@ -1749,48 +1749,48 @@ Articolo 50 comma 9 decreto legislativo 36/2023</td>
     <td>REG33</td>
     <td> Giustificazione: se come accessibilità si indica "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente" occorre indicare anche il campo con la giustificazione.</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = &quot;n-inc-just&quot; and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione =&quot;&quot;)</td>
+satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione ="")</td>
   </tr>
 
   <tr>
     <td>REG34_1</td>
     <td> Importo Lavori: se l'oggetto del contratto è "works" deve essere indicato un importo maggiore di 0 nel quadro economico compilato</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.datiBase.oggettoContratto.codice = &quot;works&quot; and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori &lt;= 0) and (aggiudicazione.quadroEconomicoConcessioni.impLavori = null or aggiudicazione.quadroEconomicoConcessioni.impLavori &lt;= 0)</td>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and (aggiudicazione.quadroEconomicoStandard.impLavori = null or aggiudicazione.quadroEconomicoStandard.impLavori <= 0) and (aggiudicazione.quadroEconomicoConcessioni.impLavori = null or aggiudicazione.quadroEconomicoConcessioni.impLavori <= 0)</td>
   </tr>
 
   <tr>
     <td>REG35_1</td>
     <td> Importo Servizi: se l'oggetto del contratto è "services" deve essere indicato un importo maggiore di 0 nel quadro economico compilato.</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.datiBase.oggettoContratto.codice = &quot;services&quot; and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0) and (aggiudicazione.quadroEconomicoConcessioni.impServizi = null or aggiudicazione.quadroEconomicoConcessioni.impServizi = 0)</td>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "services" and (aggiudicazione.quadroEconomicoStandard.impServizi = null or aggiudicazione.quadroEconomicoStandard.impServizi = 0) and (aggiudicazione.quadroEconomicoConcessioni.impServizi = null or aggiudicazione.quadroEconomicoConcessioni.impServizi = 0)</td>
   </tr>
 
   <tr>
     <td>REG36_1</td>
     <td> Importo Forniture: se l'oggetto del contratto è "supplies" deve essere indicato un importo maggiore di 0 nel quadro economico compilato.</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.datiBase.oggettoContratto.codice = &quot;supplies&quot; and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0) and (aggiudicazione.quadroEconomicoConcessioni.impForniture = null or aggiudicazione.quadroEconomicoConcessioni.impForniture = 0)</td>
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "supplies" and (aggiudicazione.quadroEconomicoStandard.impForniture = null or aggiudicazione.quadroEconomicoStandard.impForniture = 0) and (aggiudicazione.quadroEconomicoConcessioni.impForniture = null or aggiudicazione.quadroEconomicoConcessioni.impForniture = 0)</td>
   </tr>
 
   <tr>
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!=&quot;10&quot; or partecipante.ruoloOE.codice!=&quot;12&quot;) and (partecipante.importo &lt;= 0)</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!="10" or partecipante.ruoloOE.codice!="12") and (partecipante.importo <= 0)</td>
   </tr>
 
   <tr>
     <td>REG53</td>
     <td> In caso di ditta mandante l’importo non è previsto</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice=&quot;10&quot; or partecipante.ruoloOE.codice=&quot;12&quot;) and (partecipante.importo &gt; 0)</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice="10" or partecipante.ruoloOE.codice="12") and (partecipante.importo > 0)</td>
   </tr>
 
   <tr>
     <td>REG68</td>
     <td> il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non è Negoziata senza previa indizione di gara</td>
-    <td>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != &quot;neg-wo-call&quot; and appalto.datiBaseProcedura.tipoProcedura.codice != &quot;&quot; ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&gt;0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice != &quot;&quot;))</td>
+    <td>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)>0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice != ""))</td>
   </tr>
 
   <tr>
@@ -1803,13 +1803,13 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
   <tr>
     <td>REG100</td>
     <td> Negli affidamenti diretti è consentito inserire un solo idPartecipante, se non è un accordo quadro</td>
-    <td>(is defined(appalto.datiBaseStrumentiProcedura)=false or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false or appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = &quot;none&quot;)(some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))&gt;1)</td>
+    <td>(is defined(appalto.datiBaseStrumentiProcedura)=false or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false or appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none")(some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))>1)</td>
   </tr>
 
   <tr>
     <td>REG112</td>
     <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
-    <td>count(aggiudicazioni) &lt;= 0</td>
+    <td>count(aggiudicazioni) <= 0</td>
   </tr>
 </table>
     <div class="message">
@@ -1836,7 +1836,7 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:28:54
+    Generato il 09/07/2025 alle ore 12:22:17
   </footer>
   </body>
   </html>

@@ -512,19 +512,19 @@ footer {
   <tr>
     <td>REG128</td>
     <td> indicare almeno un soggetto.</td>
-    <td>count(partecipantiAVR) &lt;= 0</td>
+    <td>count(partecipantiAVR) <= 0</td>
   </tr>
 
   <tr>
     <td>REG3</td>
     <td> i codici fiscali nella lista delle stazioni appaltanti devono essere diversi.</td>
-    <td>count(stazioniAppaltanti.codiceFiscale) &gt; count(distinct values(stazioniAppaltanti.codiceFiscale))</td>
+    <td>count(stazioniAppaltanti.codiceFiscale) > count(distinct values(stazioniAppaltanti.codiceFiscale))</td>
   </tr>
 
   <tr>
     <td>REG128</td>
     <td> indicare almeno una stazione appaltante.</td>
-    <td>count(stazioniAppaltanti) &lt;= 0
+    <td>count(stazioniAppaltanti) <= 0
 </td>
   </tr>
 
@@ -532,20 +532,20 @@ footer {
     <td>REG2</td>
     <td> indicare il codice fiscale del soggetto.</td>
     <td>some partecipante in partecipantiAVR
-satisfies partecipante.codiceFiscale =&quot;&quot; </td>
+satisfies partecipante.codiceFiscale ="" </td>
   </tr>
 
   <tr>
     <td>REG129</td>
     <td> indicare la denominazione del soggetto.</td>
     <td>some partecipante in partecipantiAVR
-satisfies partecipante.denominazione =&quot;&quot; </td>
+satisfies partecipante.denominazione ="" </td>
   </tr>
 
   <tr>
     <td>REG130</td>
     <td> i codici fiscali nella lista dei soggetti devono essere diversi.</td>
-    <td>count(partecipantiAVR.codiceFiscale) &gt; count(distinct values(partecipantiAVR.codiceFiscale))</td>
+    <td>count(partecipantiAVR.codiceFiscale) > count(distinct values(partecipantiAVR.codiceFiscale))</td>
   </tr>
 
   <tr>
@@ -578,7 +578,7 @@ satisfies partecipante.denominazione =&quot;&quot; </td>
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:29:12
+    Generato il 09/07/2025 alle ore 12:22:33
   </footer>
   </body>
   </html>

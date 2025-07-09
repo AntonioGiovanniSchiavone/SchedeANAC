@@ -1236,8 +1236,8 @@ Articolo 50 comma 5 decreto legislativo 36/2023</td>
     <td>REG105</td>
     <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != &quot;&quot; and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, &quot;Z&quot;)) &lt;= date and time(string(today()) + &quot;T&quot; + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 </table>
     <div class="message">
@@ -1264,7 +1264,7 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:32:11
+    Generato il 09/07/2025 alle ore 12:25:23
   </footer>
   </body>
   </html>

@@ -846,25 +846,25 @@ footer {
   <tr>
     <td>REG114</td>
     <td> Indicare l'aggiudicatario.</td>
-    <td>count(aggiudicazioni) &lt;= 0</td>
+    <td>count(aggiudicazioni) <= 0</td>
   </tr>
 
   <tr>
     <td>REG114_1</td>
     <td> Deve essere indicato un solo aggiudicatario.</td>
-    <td>count(aggiudicazioni) &gt; 1</td>
+    <td>count(aggiudicazioni) > 1</td>
   </tr>
 
   <tr>
     <td>REG115</td>
     <td> Indicare una sola categoria di tipo prevalente</td>
-    <td>some aggiudicazione in aggiudicazioni satisfies (count(aggiudicazione.categoriaOC[item.tipo = &quot;PREVALENTE&quot;])=0 or count(aggiudicazione.categoriaOC[item.tipo = &quot;PREVALENTE&quot;])&gt;1)</td>
+    <td>some aggiudicazione in aggiudicazioni satisfies (count(aggiudicazione.categoriaOC[item.tipo = "PREVALENTE"])=0 or count(aggiudicazione.categoriaOC[item.tipo = "PREVALENTE"])>1)</td>
   </tr>
 
   <tr>
     <td>REG116</td>
     <td> Indicare una sola cpv di tipo prevalente</td>
-    <td>some aggiudicazione in aggiudicazioni satisfies (count(aggiudicazione.cpvOC[item.tipo = &quot;PREVALENTE&quot;])=0 or count(aggiudicazione.cpvOC[item.tipo = &quot;PREVALENTE&quot;])&gt;1)</td>
+    <td>some aggiudicazione in aggiudicazioni satisfies (count(aggiudicazione.cpvOC[item.tipo = "PREVALENTE"])=0 or count(aggiudicazione.cpvOC[item.tipo = "PREVALENTE"])>1)</td>
   </tr>
 
   <tr>
@@ -878,14 +878,14 @@ satisfies aggiudicazione.afferenteInvestimentiPNRR = true and (is defined(aggiud
     <td>REG124</td>
     <td> Indicare almeno uno tra codice istat e codice nuts.</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.codIstat = &quot;&quot; and aggiudicazione.datiBaseContratto.codNUTS.codice = &quot;&quot;</td>
+satisfies aggiudicazione.codIstat = "" and aggiudicazione.datiBaseContratto.codNUTS.codice = ""</td>
   </tr>
 
   <tr>
     <td>REG125</td>
     <td> Indicare solo uno tra codice istat e codice nuts.</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.codIstat != &quot;&quot; and aggiudicazione.datiBaseContratto.codNUTS.codice != &quot;&quot;</td>
+satisfies aggiudicazione.codIstat != "" and aggiudicazione.datiBaseContratto.codNUTS.codice != ""</td>
   </tr>
 </table>
     <div class="message">
@@ -912,7 +912,7 @@ satisfies aggiudicazione.codIstat != &quot;&quot; and aggiudicazione.datiBaseCon
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:29:10
+    Generato il 09/07/2025 alle ore 12:22:32
   </footer>
   </body>
   </html>

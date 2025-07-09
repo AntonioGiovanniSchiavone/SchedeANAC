@@ -210,7 +210,7 @@ footer {
 
   <tr>
     <td>Descrizione</td>
-    <td>Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell&amp;#39;AQ</td>
+    <td>Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ</td>
   </tr>
 
   <tr>
@@ -1651,20 +1651,20 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
   <tr>
     <td>REG3</td>
     <td> i codici fiscali nella lista delle stazioni appaltanti devono essere diversi</td>
-    <td>count(stazioniAppaltanti.codiceFiscale) &gt; count(distinct values(stazioniAppaltanti.codiceFiscale))</td>
+    <td>count(stazioniAppaltanti.codiceFiscale) > count(distinct values(stazioniAppaltanti.codiceFiscale))</td>
   </tr>
 
   <tr>
     <td>REG8_1</td>
     <td> L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</td>
-    <td>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != &quot;&quot; and starts with(lotto.datiBaseDocumenti.url,&quot;http:&quot;) = false and starts with(lotto.datiBaseDocumenti.url,&quot;https:&quot;) = false</td>
+    <td>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != "" and starts with(lotto.datiBaseDocumenti.url,"http:") = false and starts with(lotto.datiBaseDocumenti.url,"https:") = false</td>
   </tr>
 
   <tr>
     <td>REG18</td>
     <td> E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
 ’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</td>
-    <td>( (is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and ((appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = &quot;none&quot;) or (appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = &quot;&quot;))) or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</td>
+    <td>( (is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and ((appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or (appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = ""))) or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</td>
   </tr>
 
   <tr>
@@ -1680,14 +1680,14 @@ satisfies is defined(stazioneAppaltante.funzioniSvolte) and stazioneAppaltante.c
 - lotto.acquisizionecup=’N’ e oggettoContratto="works" e lotto.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
 E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</td>
     <td>some lotto in lotti
-satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice=&quot;works&quot; and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != &quot;12&quot;)</td>
+satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != "12")</td>
   </tr>
 
   <tr>
     <td>REG20_1</td>
     <td> Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</td>
-    <td>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != &quot;&quot; and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != &quot;none&quot;)(some lotto in lotti
-satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) &gt; 0)</td>
+    <td>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "" and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")(some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) > 0)</td>
   </tr>
 
   <tr>
@@ -1709,7 +1709,7 @@ satisfies lotto.afferenteInvestimentiPNRR and lotto.paritaDiGenereGenerazionale 
     <td> Previsione di una quota
 inferiore con riferimento all’occupazione femminile o giovanile: se è stato indicato il valore 'SI_QUOTA_INFERIORE' nel campo quota30PerCento allora il valore della Previsione di una quota inferiore con riferimento all’occupazione giovanile e il valore della Previsione di una quota inferiore con riferimento all’occupazione femminile non possono essere entrambi 0%.</td>
     <td>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento =&quot;SI_QUOTA_INFERIORE&quot; and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= 0 and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile=0</td>
+satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI_QUOTA_INFERIORE" and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile= 0 and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile=0</td>
   </tr>
 
   <tr>
@@ -1717,14 +1717,14 @@ satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGene
     <td> Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: almeno una quota, tra occupazione femminile e
 occupazione giovanile, deve essere inferiore al 30%</td>
     <td>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile &gt;= 30 and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile &gt;= 30</td>
+satisfies lotto.paritaDiGenereGenerazionale != null and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupFemminile >= 30 and lotto.paritaDiGenereGenerazionale.quotaInferioreOccupGiovanile >= 30</td>
   </tr>
 
   <tr>
     <td>REG27</td>
     <td> Tutela delle pari opportunità generazionali e di genere nonché per l'inclusione delle persone con disabilità: se il campo quota30PerCento contiene il valore 'SI_QUOTA_INFERIORE' o 'NO', deve essere indicato il motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile</td>
     <td>some lotto in lotti
-satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGenerazionale.quota30PerCento =&quot;SI_QUOTA_INFERIORE&quot; or lotto.paritaDiGenereGenerazionale.quota30PerCento =&quot;NO&quot;) and lotto.paritaDiGenereGenerazionale.motivoDeroga = null</td>
+satisfies lotto.paritaDiGenereGenerazionale != null and (lotto.paritaDiGenereGenerazionale.quota30PerCento ="SI_QUOTA_INFERIORE" or lotto.paritaDiGenereGenerazionale.quota30PerCento ="NO") and lotto.paritaDiGenereGenerazionale.motivoDeroga = null</td>
   </tr>
 
   <tr>
@@ -1745,50 +1745,50 @@ satisfies list contains(lotto.datiBaseCPV.cpvSecondarie.codice, lotto.datiBaseCP
     <td>REG66</td>
     <td> CPV Secondarie: l'elenco delle cpv secondarie non deve contenere valori replicati.</td>
     <td>some lotto in lotti
-satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) &gt; count(distinct values(lotto.datiBaseCPV.cpvSecondarie.codice))</td>
+satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) > count(distinct values(lotto.datiBaseCPV.cpvSecondarie.codice))</td>
   </tr>
 
   <tr>
     <td>REG97</td>
     <td> Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
     <td>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != &quot;&quot;) and
-(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != &quot;&quot;)</td>
+satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</td>
   </tr>
 
   <tr>
     <td>REG98</td>
     <td> L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0.</td>
-    <td>appalto.datiBase.importo = null or appalto.datiBase.importo &lt;= 0</td>
+    <td>appalto.datiBase.importo = null or appalto.datiBase.importo <= 0</td>
   </tr>
 
   <tr>
     <td>REG99</td>
     <td> L'importo indicato nell'oggetto lotto.datiBase.importo deve essere > 0.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</td>
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
   </tr>
 
   <tr>
     <td>REG105</td>
     <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != &quot;&quot; and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, &quot;Z&quot;)) &lt;= date and time(string(today()) + &quot;T&quot; + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 
   <tr>
     <td>REG106</td>
     <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != &quot;&quot; and
- date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, &quot;Z&quot;)) &lt;= date and time(string(today()) + &quot;T&quot; + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 
   <tr>
     <td>REG110</td>
     <td> La somma degli importi indicati nei lotti deve essere compresa tra l'80% e il 100% dell'importo indicato nell'appalto. In presenza di eForm verificare gli importi inseriti nei campi EstimatedOverallContractAmount (BT-27).</td>
-    <td>(sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) &lt; (appalto.datiBase.importo * 0.8)) or (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) &gt; appalto.datiBase.importo)</td>
+    <td>(sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) < (appalto.datiBase.importo * 0.8)) or (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) > appalto.datiBase.importo)</td>
   </tr>
 </table>
     <div class="message">
@@ -1815,7 +1815,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:30:48
+    Generato il 09/07/2025 alle ore 12:24:03
   </footer>
   </body>
   </html>

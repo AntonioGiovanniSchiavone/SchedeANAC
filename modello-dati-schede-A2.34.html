@@ -928,27 +928,27 @@ footer {
   <tr>
     <td>REG7</td>
     <td> E’ stata selezionata la voce ‘Somma urgenza e protezione civile’ di cui all’art. 140 co. 10 D. Lgs. 36/2023. E’ necessario valorizzare il ‘link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile’ con la URL della sezione ‘Bandi e Contratti’ dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</td>
-    <td>appalto.motivoUrgenza.codice = &quot;2&quot; and (appalto.linkDocumenti = null or appalto.linkDocumenti =&quot;&quot;)</td>
+    <td>appalto.motivoUrgenza.codice = "2" and (appalto.linkDocumenti = null or appalto.linkDocumenti ="")</td>
   </tr>
 
   <tr>
     <td>REG8</td>
     <td> Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile: deve essere una url valida e quindi iniziare con http o https.</td>
-    <td>appalto.linkDocumenti != null and appalto.linkDocumenti != &quot;&quot; and starts with(appalto.linkDocumenti,&quot;http:&quot;) = false and starts with(appalto.linkDocumenti,&quot;https:&quot;) = false</td>
+    <td>appalto.linkDocumenti != null and appalto.linkDocumenti != "" and starts with(appalto.linkDocumenti,"http:") = false and starts with(appalto.linkDocumenti,"https:") = false</td>
   </tr>
 
   <tr>
     <td>REG33</td>
     <td> Giustificazione: se come accessibilità si indica "Non sono compresi criteri di accessibilità per le persone con disabilità con la giustificazione seguente" occorre indicare anche il campo con la giustificazione.</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = &quot;n-inc-just&quot; and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione =&quot;&quot;)</td>
+satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-just" and (aggiudicazione.datiBaseAccessibilita.giustificazione = null or aggiudicazione.datiBaseAccessibilita.giustificazione ="")</td>
   </tr>
 
   <tr>
     <td>REG47</td>
     <td> Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOfferteAmmesse)</td>
+satisfies (count(aggiudicazione.offertePresentate) > aggiudicazione.numeroOfferteAmmesse)</td>
   </tr>
 
   <tr>
@@ -956,7 +956,7 @@ satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOff
     <td> Il valore del campo “offertaEconomica” non è coerente</td>
     <td>some aggiudicazione in aggiudicazioni
 satisfies (some offerta in aggiudicazione.offertePresentate 
-satisfies offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100) </td>
+satisfies offerta.offertaEconomica < 0 or offerta.offertaEconomica > 100) </td>
   </tr>
 
   <tr>
@@ -969,19 +969,19 @@ satisfies offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100) 
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</td>
+satisfies count(aggiudicazione.offertePresentate)>1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo <= 0))</td>
   </tr>
 
   <tr>
     <td>REG68</td>
     <td> il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non è Negoziata senza previa indizione di gara</td>
-    <td>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != &quot;neg-wo-call&quot; and appalto.datiBaseProcedura.tipoProcedura.codice != &quot;&quot; ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&gt;0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice != &quot;&quot;))</td>
+    <td>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != "neg-wo-call" and appalto.datiBaseProcedura.tipoProcedura.codice != "" ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)>0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice != ""))</td>
   </tr>
 
   <tr>
     <td>REG112</td>
     <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
-    <td>count(aggiudicazioni) &lt;= 0</td>
+    <td>count(aggiudicazioni) <= 0</td>
   </tr>
 </table>
     <div class="message">
@@ -1008,7 +1008,7 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in agg
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:28:10
+    Generato il 09/07/2025 alle ore 12:21:37
   </footer>
   </body>
   </html>

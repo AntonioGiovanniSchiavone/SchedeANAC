@@ -185,7 +185,7 @@ footer {
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Appalti settori ordinari sottosoglia; procedure ordinarie (solo per: 1mln &amp;lt;= L&amp;lt; soglia)</td>
+    <td>Appalti settori ordinari sottosoglia; procedure ordinarie (solo per: 1mln <= L< soglia)</td>
   </tr>
 
   <tr>
@@ -1242,8 +1242,8 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
     <td>REG97</td>
     <td> Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
     <td>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != &quot;&quot;) and
-(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != &quot;&quot;)</td>
+satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</td>
   </tr>
 
   <tr>
@@ -1263,16 +1263,16 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</td>
     <td>REG105</td>
     <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != &quot;&quot; and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, &quot;Z&quot;)) &lt;= date and time(string(today()) + &quot;T&quot; + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 
   <tr>
     <td>REG106</td>
     <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != &quot;&quot; and
- date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, &quot;Z&quot;)) &lt;= date and time(string(today()) + &quot;T&quot; + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 </table>
     <div class="message">
@@ -1299,7 +1299,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:32:08
+    Generato il 09/07/2025 alle ore 12:25:20
   </footer>
   </body>
   </html>

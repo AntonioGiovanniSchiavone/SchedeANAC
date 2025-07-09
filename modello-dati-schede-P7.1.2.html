@@ -195,7 +195,7 @@ footer {
 
   <tr>
     <td>Evento</td>
-    <td>Avvio dell&amp;amp;#39;indagine di mercato</td>
+    <td>Avvio dell'indagine di mercato</td>
   </tr>
 
   <tr>
@@ -210,7 +210,7 @@ footer {
 
   <tr>
     <td>Descrizione</td>
-    <td>Procedura negoziata senza bando pari o sopra soglia senza successiva pubblicazione sul TED dell&amp;#39;avviso di aggiudicazione</td>
+    <td>Procedura negoziata senza bando pari o sopra soglia senza successiva pubblicazione sul TED dell'avviso di aggiudicazione</td>
   </tr>
 
   <tr>
@@ -2241,14 +2241,14 @@ Articolo 128 decreto legislativo 36/2023</td>
   <tr>
     <td>REG4_1</td>
     <td> Tipologica motivazioneCig: la motivazione è richiesta solo se la categoria merceologica è diversa dal valore "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015". Se la categoria merceologica è "Lavori oppure beni e servizi non elencati nell'art. 1 dPCM 24 dicembre 2015" allora Motivazione Richiesta Cig è null.</td>
-    <td>(is defined(appalto.motivazioneCig) = false or ((appalto.motivazioneCig.codice = &quot;&quot;)) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != &quot;999&quot;))</td>
+    <td>(is defined(appalto.motivazioneCig) = false or ((appalto.motivazioneCig.codice = "")) and (some categoriaMerceologica in appalto.categorieMerceologiche satisfies categoriaMerceologica.codice != "999"))</td>
   </tr>
 
   <tr>
     <td>REG5</td>
     <td> Uso di metodi e degli strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche: obbligatorio se l'oggetto del contratto è uguale a “works” e la somma di tutti i campi del quadro economico standard tranne somme a disposizione è maggiore di 1.000.000.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBase.oggettoContratto.codice = &quot;works&quot; and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) &gt; 1000000</td>
+satisfies lotto.datiBase.oggettoContratto.codice = "works" and lotto.strumentiElettroniciSpecifici=null and (lotto.quadroEconomicoStandard.impLavori + lotto.quadroEconomicoStandard.impServizi + lotto.quadroEconomicoStandard.impForniture + lotto.quadroEconomicoStandard.impTotaleSicurezza + lotto.quadroEconomicoStandard.ulterioriSommeNoRibasso + lotto.quadroEconomicoStandard.impProgettazione + lotto.quadroEconomicoStandard.sommeOpzioniRinnovi + lotto.quadroEconomicoStandard.sommeRipetizioni) > 1000000</td>
   </tr>
 
   <tr>
@@ -2261,27 +2261,27 @@ satisfies is defined(lotto.strumentiElettroniciSpecifici) and is defined (lotto.
   <tr>
     <td>REG8_1</td>
     <td> L'indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</td>
-    <td>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != &quot;&quot; and starts with(lotto.datiBaseDocumenti.url,&quot;http:&quot;) = false and starts with(lotto.datiBaseDocumenti.url,&quot;https:&quot;) = false</td>
+    <td>some lotto in lotti satisfies lotto.datiBaseDocumenti.url != null and lotto.datiBaseDocumenti.url != "" and starts with(lotto.datiBaseDocumenti.url,"http:") = false and starts with(lotto.datiBaseDocumenti.url,"https:") = false</td>
   </tr>
 
   <tr>
     <td>REG14</td>
     <td> Motivo Collegamento: Se l'appalto prevede ripetizioni, il motivo collegamento CIG deve essere 'No, nessuna ipotesi di collegamento' </td>
     <td>some lotto in lotti
-satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.motivoCollegamento.codice != &quot;10&quot;</td>
+satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.motivoCollegamento.codice != "10"</td>
   </tr>
 
   <tr>
     <td>REG15</td>
     <td> Cig collegato: è obbligatorio se Motivo collegamento CIG e' valorizzato</td>
-    <td>some lotto in lotti satisfies (lotto.ipotesiCollegamento.motivoCollegamento.codice != &quot;10&quot; and (lotto.ipotesiCollegamento.cigCollegato = null or count(lotto.ipotesiCollegamento.cigCollegato) = 0 or lotto.ipotesiCollegamento.cigCollegato[1]= &quot;&quot;))</td>
+    <td>some lotto in lotti satisfies (lotto.ipotesiCollegamento.motivoCollegamento.codice != "10" and (lotto.ipotesiCollegamento.cigCollegato = null or count(lotto.ipotesiCollegamento.cigCollegato) = 0 or lotto.ipotesiCollegamento.cigCollegato[1]= ""))</td>
   </tr>
 
   <tr>
     <td>REG18</td>
     <td> E’ obbligatorio valorizzare a SI il campo ‘L'appalto è finalizzato alla realizzazione di progetti d'investimento pubblico per i quali è prevista l'acquisizione del codice CUP ai sensi dell'art. 11 L. 3/2003 e ss.mm.?
 ’ se l’appalto o concessione è afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC e l'appalto non è di tipo accordo quadro/convenzione</td>
-    <td>( (is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and ((appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = &quot;none&quot;) or (appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = &quot;&quot;))) or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</td>
+    <td>( (is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and ((appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = "none") or (appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = ""))) or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)(some lotto in lotti satisfies lotto.afferenteInvestimentiPNRR = true and (lotto.acquisizioneCup = null or lotto.acquisizioneCup=false))</td>
   </tr>
 
   <tr>
@@ -2297,55 +2297,55 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
 - lotto.acquisizionecup=’N’ e oggettoContratto="works" e lotto.tipologialavoro è assegnata la ‘Manutenzione Ordinaria’ (codice 12).
 E' quindi obbligatorio se il campo acquisizioneCup è valorizzato a no e se l'oggetto del contratto è Lavori e se la tipologia di lavoro è diversa da Manutenzione ordinaria</td>
     <td>some lotto in lotti
-satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice=&quot;works&quot; and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != &quot;12&quot;)</td>
+satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice="works" and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != "12")</td>
   </tr>
 
   <tr>
     <td>REG20_1</td>
     <td> Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR è SI e l'appalto è di tipo Accordo Quadro/convenzione</td>
-    <td>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != &quot;&quot; and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != &quot;none&quot;)(some lotto in lotti
-satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) &gt; 0)</td>
+    <td>(is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "" and appalto.datiBaseStrumentiProcedura.accordoQuadro.codice != "none")(some lotto in lotti
+satisfies lotto.afferenteInvestimentiPNRR = true and is defined(lotto.cupLotto) and count(lotto.cupLotto) > 0)</td>
   </tr>
 
   <tr>
     <td>REG98</td>
     <td> L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0.</td>
-    <td>appalto.datiBase.importo = null or appalto.datiBase.importo &lt;= 0</td>
+    <td>appalto.datiBase.importo = null or appalto.datiBase.importo <= 0</td>
   </tr>
 
   <tr>
     <td>REG99</td>
     <td> L'importo indicato nell'oggetto lotto.datiBase.importo deve essere > 0.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</td>
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
   </tr>
 
   <tr>
     <td>REG106</td>
     <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != &quot;&quot; and
- date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, &quot;Z&quot;)) &lt;= date and time(string(today()) + &quot;T&quot; + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 
   <tr>
     <td>REG110</td>
     <td> La somma degli importi indicati nei lotti deve essere compresa tra l'80% e il 100% dell'importo indicato nell'appalto. In presenza di eForm verificare gli importi inseriti nei campi EstimatedOverallContractAmount (BT-27).</td>
-    <td>(sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) &lt; (appalto.datiBase.importo * 0.8)) or (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) &gt; appalto.datiBase.importo)</td>
+    <td>(sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) < (appalto.datiBase.importo * 0.8)) or (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) > appalto.datiBase.importo)</td>
   </tr>
 
   <tr>
     <td>REG118</td>
     <td> Non è possibile inserire il codice 1 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 215000 €.</td>
     <td>some lotto in lotti
-satisfies ((lotto.datiBase.oggettoContratto.codice = &quot;works&quot; or lotto.datiBase.importo &gt; 215000) and lotto.derogaQualificazione.codice = &quot;1&quot;)</td>
+satisfies ((lotto.datiBase.oggettoContratto.codice = "works" or lotto.datiBase.importo > 215000) and lotto.derogaQualificazione.codice = "1")</td>
   </tr>
 
   <tr>
     <td>REG119</td>
     <td> Non è possibile inserire il codice 2 nel campo derogaQualificazione se l'oggetto principale del contratto è lavori o l'importo è superiore a 431000 €.</td>
     <td>some lotto in lotti
-satisfies ((lotto.datiBase.oggettoContratto.codice = &quot;works&quot; or lotto.datiBase.importo &gt; 431000) and lotto.derogaQualificazione.codice = &quot;2&quot;)
+satisfies ((lotto.datiBase.oggettoContratto.codice = "works" or lotto.datiBase.importo > 431000) and lotto.derogaQualificazione.codice = "2")
 </td>
   </tr>
 
@@ -2353,21 +2353,21 @@ satisfies ((lotto.datiBase.oggettoContratto.codice = &quot;works&quot; or lotto.
     <td>REG120</td>
     <td> Non è possibile inserire il codice 3 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da lavori o l'importo è superiore a 1 milione di euro.</td>
     <td>some lotto in lotti
-satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;works&quot; or lotto.datiBase.importo &gt; 1000000) and lotto.derogaQualificazione.codice = &quot;3&quot;)</td>
+satisfies ((lotto.datiBase.oggettoContratto.codice != "works" or lotto.datiBase.importo > 1000000) and lotto.derogaQualificazione.codice = "3")</td>
   </tr>
 
   <tr>
     <td>REG121</td>
     <td> Non è possibile inserire il codice 4 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 750000 €.</td>
     <td>some lotto in lotti
-satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lotto.datiBase.importo &gt; 750000) and lotto.derogaQualificazione.codice = &quot;4&quot;)</td>
+satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo > 750000) and lotto.derogaQualificazione.codice = "4")</td>
   </tr>
 
   <tr>
     <td>REG122</td>
     <td> Non è possibile inserire il codice 5 nel campo derogaQualificazione se l'oggetto principale del contratto è diverso da servizi o l'importo è superiore a 1 milione di euro.</td>
     <td>some lotto in lotti
-satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lotto.datiBase.importo &gt; 1000000) and lotto.derogaQualificazione.codice = &quot;5&quot;)</td>
+satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo > 1000000) and lotto.derogaQualificazione.codice = "5")</td>
   </tr>
 </table>
     <div class="message">
@@ -2394,7 +2394,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:31:40
+    Generato il 09/07/2025 alle ore 12:24:51
   </footer>
   </body>
   </html>

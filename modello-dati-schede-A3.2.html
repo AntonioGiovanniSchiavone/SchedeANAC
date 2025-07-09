@@ -210,7 +210,7 @@ footer {
 
   <tr>
     <td>Descrizione</td>
-    <td>Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell&amp;#39;AQ</td>
+    <td>Contratti esclusi in Concessione o Contratti esclusi in Concessione con la tecnica dell'AQ</td>
   </tr>
 
   <tr>
@@ -777,7 +777,7 @@ footer {
     <td>REG47</td>
     <td> Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOfferteAmmesse)</td>
+satisfies (count(aggiudicazione.offertePresentate) > aggiudicazione.numeroOfferteAmmesse)</td>
   </tr>
 
   <tr>
@@ -785,7 +785,7 @@ satisfies (count(aggiudicazione.offertePresentate) &gt; aggiudicazione.numeroOff
     <td> Il valore del campo “offertaEconomica” non è coerente</td>
     <td>some aggiudicazione in aggiudicazioni
 satisfies (some offerta in aggiudicazione.offertePresentate 
-satisfies offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100) </td>
+satisfies offerta.offertaEconomica < 0 or offerta.offertaEconomica > 100) </td>
   </tr>
 
   <tr>
@@ -798,13 +798,13 @@ satisfies offerta.offertaEconomica &lt; 0 or offerta.offertaEconomica &gt; 100) 
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo &lt;= 0))</td>
+satisfies count(aggiudicazione.offertePresentate)>1 and (every offerta in aggiudicazione.offertePresentate satisfies (offerta.importo = null or offerta.importo <= 0))</td>
   </tr>
 
   <tr>
     <td>REG112</td>
     <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
-    <td>count(aggiudicazioni) &lt;= 0</td>
+    <td>count(aggiudicazioni) <= 0</td>
   </tr>
 </table>
     <div class="message">
@@ -831,7 +831,7 @@ satisfies count(aggiudicazione.offertePresentate)&gt;1 and (every offerta in agg
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:28:16
+    Generato il 09/07/2025 alle ore 12:21:43
   </footer>
   </body>
   </html>

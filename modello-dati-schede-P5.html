@@ -700,27 +700,27 @@ footer {
   <tr>
     <td>REG98</td>
     <td> L'importo indicato nell'oggetto appalto.datiBase.importo deve essere > 0.</td>
-    <td>appalto.datiBase.importo = null or appalto.datiBase.importo &lt;= 0</td>
+    <td>appalto.datiBase.importo = null or appalto.datiBase.importo <= 0</td>
   </tr>
 
   <tr>
     <td>REG99</td>
     <td> L'importo indicato nell'oggetto lotto.datiBase.importo deve essere > 0.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBase.importo = null or lotto.datiBase.importo &lt;= 0</td>
+satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
   </tr>
 
   <tr>
     <td>REG110</td>
     <td> La somma degli importi indicati nei lotti deve essere compresa tra l'80% e il 100% dell'importo indicato nell'appalto. In presenza di eForm verificare gli importi inseriti nei campi EstimatedOverallContractAmount (BT-27).</td>
-    <td>(sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) &lt; (appalto.datiBase.importo * 0.8)) or (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) &gt; appalto.datiBase.importo)</td>
+    <td>(sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) < (appalto.datiBase.importo * 0.8)) or (sum(for i in 1..count(lotti) return lotti[i].datiBase.importo) > appalto.datiBase.importo)</td>
   </tr>
 
   <tr>
     <td>REG101</td>
     <td> indicare almeno uno dei campi di cui si richiede la modifica</td>
     <td>some lotto in lotti
-satisfies count(lotto.cup)&gt;1 and (every c in lotto.cup satisfies (c = null or c = &quot;&quot;))</td>
+satisfies count(lotto.cup)>1 and (every c in lotto.cup satisfies (c = null or c = ""))</td>
   </tr>
 </table>
     <div class="message">
@@ -747,7 +747,7 @@ satisfies count(lotto.cup)&gt;1 and (every c in lotto.cup satisfies (c = null or
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:31:25
+    Generato il 09/07/2025 alle ore 12:24:35
   </footer>
   </body>
   </html>

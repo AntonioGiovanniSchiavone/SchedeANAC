@@ -185,7 +185,7 @@ footer {
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Appalti &amp;lt; soglia europea</td>
+    <td>Appalti < soglia europea</td>
   </tr>
 
   <tr>
@@ -195,7 +195,7 @@ footer {
 
   <tr>
     <td>Evento</td>
-    <td>Affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce &amp;amp;lt; soglia europea</td>
+    <td>Affidamento diretto di beni infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce < soglia europea</td>
   </tr>
 
   <tr>
@@ -937,14 +937,14 @@ footer {
     <td>ERR100</td>
     <td> Importo totale non consentito per l'Affidamento diretto < 5k €. Articolo 49 c. 6 e 50 decreto legislativo 36/2023.</td>
     <td>some aggiudicazione in aggiudicazioni 
-satisfies aggiudicazione.importoAggiudicazione &gt;= 5000 </td>
+satisfies aggiudicazione.importoAggiudicazione >= 5000 </td>
   </tr>
 
   <tr>
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!=&quot;10&quot; or partecipante.ruoloOE.codice!=&quot;12&quot;) and (partecipante.importo &lt;= 0)</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!="10" or partecipante.ruoloOE.codice!="12") and (partecipante.importo <= 0)</td>
   </tr>
 
   <tr>
@@ -957,20 +957,20 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
   <tr>
     <td>REG100</td>
     <td> Negli affidamenti diretti è consentito inserire un solo idPartecipante</td>
-    <td>some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))&gt;1</td>
+    <td>some aggiudicazione in aggiudicazioni satisfies count(distinct values(aggiudicazione.partecipanti.idPartecipante))>1</td>
   </tr>
 
   <tr>
     <td>REG112</td>
     <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
-    <td>count(aggiudicazioni) &lt;= 0</td>
+    <td>count(aggiudicazioni) <= 0</td>
   </tr>
 
   <tr>
     <td>REG101</td>
     <td> indicare almeno uno dei campi di cui si richiede la modifica</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.cup)&gt;1 and (every c in aggiudicazione.cup satisfies (c = null or c = &quot;&quot;))</td>
+satisfies count(aggiudicazione.cup)>1 and (every c in aggiudicazione.cup satisfies (c = null or c = ""))</td>
   </tr>
 </table>
     <div class="message">
@@ -997,7 +997,7 @@ satisfies count(aggiudicazione.cup)&gt;1 and (every c in aggiudicazione.cup sati
       </tr>
     </table>
   <footer>
-    Generato il 04/07/2025 alle ore 12:29:08
+    Generato il 09/07/2025 alle ore 12:22:30
   </footer>
   </body>
   </html>
