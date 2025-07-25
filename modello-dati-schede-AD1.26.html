@@ -1342,14 +1342,14 @@ satisfies aggiudicazione.datiBase.oggettoContratto.codice = "supplies" and (aggi
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice!="10" or partecipante.ruoloOE.codice!="12") and (partecipante.importo <= 0)</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruolo.codice!="10" and partecipante.ruolo.codice!="12") and (partecipante.importo <= 0)</td>
   </tr>
 
   <tr>
     <td>REG53</td>
     <td> In caso di ditta mandante l’importo non è previsto</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruoloOE.codice="10" or partecipante.ruoloOE.codice="12") and (partecipante.importo > 0)</td>
+satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipante.ruolo.codice="10" or partecipante.ruolo.codice="12") and (partecipante.importo > 0)</td>
   </tr>
 
   <tr>
@@ -1437,7 +1437,7 @@ satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != "services" or (so
       </tr>
     </table>
   <footer>
-    Generato il 09/07/2025 alle ore 12:22:03
+    Generato il 25/07/2025 alle ore 11:48:22
   </footer>
   </body>
   </html>

@@ -4,7 +4,7 @@
   <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modello Dati - Scheda PL1_3 - Scheda di programmazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform3.</title>
+    <title>Modello Dati - Scheda CBI - Scheda di conclusione relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce.</title>
     <style>
       /* css/styles.css */
 
@@ -155,7 +155,7 @@ footer {
     </style>
   </head>
   <body>
-    <h1>Modello Dati - Scheda PL1_3 - Scheda di programmazione per appalti settore difesa e sicurezza pari /sopra soglia con invio al TED dell'eform3.</h1>
+    <h1>Modello Dati - Scheda CBI - Scheda di conclusione relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce.</h1>
   
     <div class="message">
         <div class="message-divider info"></div>
@@ -175,32 +175,32 @@ footer {
 
   <tr>
     <td>Area Funzionale</td>
-    <td>A_1</td>
+    <td>A_5</td>
   </tr>
 
   <tr>
     <td>Famiglia funzionalità</td>
-    <td>PL1</td>
+    <td>BI</td>
   </tr>
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Appalti settore difesa e sicurezza pari /sopra soglia</td>
+    <td>Non Definito/Non Rilevante</td>
   </tr>
 
   <tr>
     <td>Fase</td>
-    <td>Pianificazione</td>
+    <td>Esecuzione</td>
   </tr>
 
   <tr>
     <td>Evento</td>
-    <td>Preinformazione</td>
+    <td>Conclusione acquisizione beni infungibili.</td>
   </tr>
 
   <tr>
     <td>Scheda</td>
-    <td>PL1_3</td>
+    <td>CBI</td>
   </tr>
 
   <tr>
@@ -210,24 +210,22 @@ footer {
 
   <tr>
     <td>Descrizione</td>
-    <td>Avviso di pubblicazione di un avviso di preinformazione relativo al profilo di committente — direttiva per il settore della difesa</td>
+    <td>Conclusione procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce.</td>
   </tr>
 
   <tr>
     <td>Normativa</td>
-    <td>Articolo 30, paragrafo 1, terzo comma, della direttiva 2009/81/CE
-Articolo 21 decreto legislativo 208/2011
-Articolo 81 comma 1 decreto legislativo 36/2023</td>
+    <td>Articolo 76 comma 2, lettera b) del decreto legislativo n. 36/2023</td>
   </tr>
 
   <tr>
     <td>Pubblicazione TED?</td>
-    <td>SI</td>
+    <td>NO</td>
   </tr>
 
   <tr>
     <td>eForm</td>
-    <td>3</td>
+    <td>nonPrevista</td>
   </tr>
 
   <tr>
@@ -242,12 +240,12 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
 
   <tr>
     <td>Pubblicazione Nazionale</td>
-    <td>SI</td>
+    <td>NO</td>
   </tr>
 
   <tr>
     <td>Scheda Preinformazione</td>
-    <td>SI</td>
+    <td>NO</td>
   </tr>
 
   <tr>
@@ -266,7 +264,7 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaPL1_3Type">SchedaPL1_3Type</h2>
+  <h2 id="SchedaCBIType">SchedaCBIType</h2>
   
   
     <table class="main">
@@ -280,137 +278,82 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
   <tr>
     <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#AnacFormBaseType">AnacFormBaseType</a></td>
+    <td><a href="#AnacFormCBIType">AnacFormCBIType</a></td>
+  </tr>
+</table>
+  <h2 id="AnacFormCBIType">AnacFormCBIType</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>cig (<span class="smalltype">obbligatorio</span>)</td>
+    <td>codice identificativo lotto</td>
+    <td>string</td>
   </tr>
 
   <tr>
-    <td>eform (<span class="smalltype">obbligatorio</span>)</td>
+    <td>conclusione (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#EformType">EformType</a></td>
+    <td><a href="#ConclusioneType">ConclusioneType</a></td>
+  </tr>
+</table>
+  <h2 id="ConclusioneType">ConclusioneType</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>dataInizio (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Data di inizio</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>dataUltimazione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Data di ultimazione</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>importo (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Importo delle somme liquidate</td>
+    <td>number</td>
   </tr>
 </table>
     <div class="message">
-        <div class="message-divider reference"></div>
-        <p>Lista delle reference della scheda.</p>
-        <div class="message-divider reference"></div>
+        <div class="message-divider rule"></div>
+        <p>Lista delle regole applicate alla scheda.</p>
+        <div class="message-divider rule"></div>
     </div>
     
-  <h2 id="AnacFormBaseType">AnacFormBaseType</h2>
-  
-    <details open>
-      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Contiene i dati necessari per la pubblicazione nazionale di un bando di gara soprasoglia e sottosoglia con pubblicazione europea</p>
-    </details>
+  <h2 id="Regole">Regole</h2>
   
   
-    <table class="reference">
+    <table class="rule">
       <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Descrizione</th>
-        <th scope="col">Tipo</th>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>  
+        <th scope="col">Test</th>  
       </tr>
   
 
   <tr>
-    <td>stazioniAppaltanti (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Dati relativi alle stazioni appaltanti</td>
-    <td>array di <a href="#StazioneAppaltanteType">StazioneAppaltanteType</a></td>
-  </tr>
-</table>
-  <h2 id="EformType">EformType</h2>
-  
-    <details open>
-      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Eform codificato Base64 nel formato XML definito da TED</p>
-    </details>
-  
-  
-    <table class="reference">
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Descrizione</th>
-        <th scope="col">Tipo</th>
-      </tr>
-  
-
-  <tr>
-    <td>Eform codificato Base64 nel formato XML definito da TED (<span class="smalltype">opzionale</span>)</td>
-    <td>Eform codificato Base64 nel formato XML definito da TED</td>
-    <td>string</td>
-  </tr>
-</table>
-  <h2 id="StazioneAppaltanteType">StazioneAppaltanteType</h2>
-  
-    <details open>
-      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Stazione Appaltante e ruoli ricoperti nell'appalto</p>
-    </details>
-  
-  
-    <table class="reference">
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Descrizione</th>
-        <th scope="col">Tipo</th>
-      </tr>
-  
-
-  <tr>
-    <td>codiceFiscale (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Codice fiscale della S.A.</td>
-    <td>string</td>
-  </tr>
-
-  <tr>
-    <td>codiceAusa (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Codice Ausa della S.A.</td>
-    <td>string</td>
-  </tr>
-
-  <tr>
-    <td>codiceCentroCosto (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Codice del centro di costo</td>
-    <td>string</td>
-  </tr>
-
-  <tr>
-    <td>funzioniSvolte (<span class="smalltype">opzionale</span>)</td>
-    <td></td>
-    <td>array di <a href="#FunzioniDelegateEnum">FunzioniDelegateEnum</a></td>
-  </tr>
-
-  <tr>
-    <td>saTitolare (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Stazione appaltante titolare</td>
-    <td>boolean</td>
-  </tr>
-</table>
-  <h2 id="FunzioniDelegateEnum">FunzioniDelegateEnum</h2>
-  
-    <details open>
-      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Ruolo svolto dalla S.A. nell'appalto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/funzioniSvolte.json">funzioniSvolte.json</a></p>
-    </details>
-  
-  
-    <table class="reference">
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Descrizione</th>
-        <th scope="col">Tipo</th>
-      </tr>
-  
-
-  <tr>
-    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
-    <td></td>
-    <td>string</td>
-  </tr>
-
-  <tr>
-    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
-    <td></td>
-    <td>string</td>
+    <td>REG0</td>
+    <td> Dati non presenti</td>
+    <td>conclusione = null or conclusione=""</td>
   </tr>
 </table>
     <div class="message">
@@ -431,13 +374,13 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
   
 
       <tr>
-        <td>Nessuna</td>
+        <td><a href="./modello-dati-schede-ABI.html">ABI</a></td>
         <td>STATO FINALE</td>
-        <td>Nessuno</td>
+        <td>60</td>
       </tr>
     </table>
   <footer>
-    Generato il 25/07/2025 alle ore 11:50:37
+    Generato il 25/07/2025 alle ore 11:48:45
   </footer>
   </body>
   </html>

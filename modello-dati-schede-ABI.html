@@ -4,7 +4,7 @@
   <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modello Dati - Scheda AD5 - Scheda relativa gli appalti di importo inferiore a 5K, senza invio al TED.</title>
+    <title>Modello Dati - Scheda ABI - Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.</title>
     <style>
       /* css/styles.css */
 
@@ -155,7 +155,7 @@ footer {
     </style>
   </head>
   <body>
-    <h1>Modello Dati - Scheda AD5 - Scheda relativa gli appalti di importo inferiore a 5K, senza invio al TED.</h1>
+    <h1>Modello Dati - Scheda ABI - Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.</h1>
   
     <div class="message">
         <div class="message-divider info"></div>
@@ -180,12 +180,12 @@ footer {
 
   <tr>
     <td>Famiglia funzionalità</td>
-    <td>AD5</td>
+    <td>BI</td>
   </tr>
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Appalti < 5k</td>
+    <td>Acquisizione beni infungibili, senza invio al TED.</td>
   </tr>
 
   <tr>
@@ -195,12 +195,12 @@ footer {
 
   <tr>
     <td>Evento</td>
-    <td>Affidamento diretto < 5k</td>
+    <td>Acquisizione beni infungibili</td>
   </tr>
 
   <tr>
     <td>Scheda</td>
-    <td>AD5</td>
+    <td>ABI</td>
   </tr>
 
   <tr>
@@ -210,12 +210,12 @@ footer {
 
   <tr>
     <td>Descrizione</td>
-    <td>Affidamento diretto < 5k €</td>
+    <td>Procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.</td>
   </tr>
 
   <tr>
     <td>Normativa</td>
-    <td>Articolo 49 c. 6 e 50 decreto legislativo 36/2023</td>
+    <td>Articolo 76 comma 2, lettera b) del decreto legislativo n. 36/2023</td>
   </tr>
 
   <tr>
@@ -264,7 +264,7 @@ footer {
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaAD5Type">SchedaAD5Type</h2>
+  <h2 id="SchedaABIType">SchedaABIType</h2>
   
   
     <table class="main">
@@ -278,7 +278,7 @@ footer {
   <tr>
     <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#AnacFormAD5Type">AnacFormAD5Type</a></td>
+    <td><a href="#AnacFormABIType">AnacFormABIType</a></td>
   </tr>
 
   <tr>
@@ -287,7 +287,7 @@ footer {
     <td><a href="#EspdRequestType">EspdRequestType</a></td>
   </tr>
 </table>
-  <h2 id="AnacFormAD5Type">AnacFormAD5Type</h2>
+  <h2 id="AnacFormABIType">AnacFormABIType</h2>
   
   
     <table class="main">
@@ -307,16 +307,16 @@ footer {
   <tr>
     <td>appalto (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#AppaltoAD5Type">AppaltoAD5Type</a></td>
+    <td><a href="#AppaltoABIType">AppaltoABIType</a></td>
   </tr>
 
   <tr>
     <td>aggiudicazioni (<span class="smalltype">obbligatorio</span>)</td>
     <td>Dati relativi alle aggiudicazioni</td>
-    <td>array di <a href="#AggiudicazioneAD5Type">AggiudicazioneAD5Type</a></td>
+    <td>array di <a href="#AggiudicazioneABIType">AggiudicazioneABIType</a></td>
   </tr>
 </table>
-  <h2 id="AppaltoAD5Type">AppaltoAD5Type</h2>
+  <h2 id="AppaltoABIType">AppaltoABIType</h2>
   
   
     <table class="main">
@@ -334,12 +334,6 @@ footer {
   </tr>
 
   <tr>
-    <td>idSchedaAvr (<span class="smalltype">opzionale</span>)</td>
-    <td>identificativo restituito dal servizio all’invio della scheda AVR.</td>
-    <td>string</td>
-  </tr>
-
-  <tr>
     <td>settore (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
     <td><a href="#SettoreEnum">SettoreEnum</a></td>
@@ -351,7 +345,7 @@ footer {
     <td><a href="#DatiBaseAppaltoADType">DatiBaseAppaltoADType</a></td>
   </tr>
 </table>
-  <h2 id="AggiudicazioneAD5Type">AggiudicazioneAD5Type</h2>
+  <h2 id="AggiudicazioneABIType">AggiudicazioneABIType</h2>
   
   
     <table class="main">
@@ -384,6 +378,12 @@ footer {
     <td>codIstat (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
     <td><a href="#CodIstatEnum">CodIstatEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>condizioniNegoziata (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>array di <a href="#CondizioniNegoziataEnum">CondizioniNegoziataEnum</a></td>
   </tr>
 
   <tr>
@@ -461,6 +461,34 @@ footer {
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Codice ISTAT - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/codIstat.json">codIstat.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="CondizioniNegoziataEnum">CondizioniNegoziataEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Condizioni che giustificano il ricorso alla procedura negoziata senza previa pubblicazione di un bando oppure senza previa indizione di una gara - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/condizioniNegoziata.json">condizioniNegoziata.json</a></p>
     </details>
   
   
@@ -940,13 +968,6 @@ footer {
   
 
   <tr>
-    <td>ERR100</td>
-    <td> Importo totale non consentito per l'Affidamento diretto < 5k €. Articolo 49 c. 6 e 50 decreto legislativo 36/2023.</td>
-    <td>some aggiudicazione in aggiudicazioni 
-satisfies aggiudicazione.importoAggiudicazione >= 5000 </td>
-  </tr>
-
-  <tr>
     <td>REG52</td>
     <td> Non è stato inserito l’importo dell’aggiudicatario</td>
     <td>some aggiudicazione in aggiudicazioni 
@@ -997,13 +1018,13 @@ satisfies count(aggiudicazione.cup)>1 and (every c in aggiudicazione.cup satisfi
   
 
       <tr>
-        <td><a href="./modello-dati-schede-AVR.html">AVR</a></td>
-        <td><a href="./modello-dati-schede-ANN.html">ANN</a>, <a href="./modello-dati-schede-CM2.html">CM2</a>, <a href="./modello-dati-schede-CO2.html">CO2</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S4.html">S4</a></td>
-        <td>50, 300</td>
+        <td>Nessuna</td>
+        <td><a href="./modello-dati-schede-ANN.html">ANN</a>, <a href="./modello-dati-schede-CBI.html">CBI</a>, <a href="./modello-dati-schede-CM1.html">CM1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S4.html">S4</a></td>
+        <td>60</td>
       </tr>
     </table>
   <footer>
-    Generato il 25/07/2025 alle ore 11:48:42
+    Generato il 25/07/2025 alle ore 11:48:18
   </footer>
   </body>
   </html>
