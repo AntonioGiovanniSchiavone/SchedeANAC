@@ -295,7 +295,7 @@ footer {
   <tr>
     <td>idContratto (<span class="smalltype">obbligatorio</span>)</td>
     <td>identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.</td>
-    <td>string</td>
+    <td>uuid</td>
   </tr>
 
   <tr>
@@ -336,37 +336,37 @@ footer {
   <tr>
     <td>impAnticipazione (<span class="smalltype">opzionale</span>)</td>
     <td>Eventuale anticipazione</td>
-    <td>number</td>
+    <td>double</td>
   </tr>
 
   <tr>
     <td>dataCertificatoAnticipazione (<span class="smalltype">opzionale</span>)</td>
     <td>Data del certificato di pagamento relativo all'anticipazione</td>
-    <td>string</td>
+    <td>date-time</td>
   </tr>
 
   <tr>
     <td>dataAvanzamento (<span class="smalltype">obbligatorio</span>)</td>
     <td>Data Stato di avanzamento</td>
-    <td>string</td>
+    <td>date-time</td>
   </tr>
 
   <tr>
     <td>impSal (<span class="smalltype">obbligatorio</span>)</td>
     <td>Importo stato avanzamento progressivo (cumulato)</td>
-    <td>number</td>
+    <td>double</td>
   </tr>
 
   <tr>
     <td>dataCertificatoMandatoPagamento (<span class="smalltype">opzionale</span>)</td>
     <td>Data di emissione del certificato/mandato di pagamento. Per lavori, indicare la data del certificato. Per servizi e forniture, indicare la data del mandato</td>
-    <td>string</td>
+    <td>date-time</td>
   </tr>
 
   <tr>
     <td>impCertificatoMandatoPagamento (<span class="smalltype">opzionale</span>)</td>
     <td>Importo del certificato/mandato di pagamento. Per lavori, indicare l’importo del certificato. Per servizi e forniture, indicare l’importo del mandato</td>
-    <td>number</td>
+    <td>double</td>
   </tr>
 
   <tr>
@@ -378,13 +378,13 @@ footer {
   <tr>
     <td>numGiorniScostamento (<span class="smalltype">opzionale</span>)</td>
     <td>Indicare lo scostamento registrato in numero di giorni</td>
-    <td>number</td>
+    <td>integer</td>
   </tr>
 
   <tr>
     <td>numGiorniProroga (<span class="smalltype">opzionale</span>)</td>
     <td>Indicare il numero di giorni di proroga concessi (non conseguenti a modifiche contrattuali)</td>
-    <td>number</td>
+    <td>integer</td>
   </tr>
 </table>
     <div class="message">
@@ -534,7 +534,7 @@ footer {
       </tr>
     </table>
   <footer>
-    Generato il 14/08/2025 alle ore 11:49:52
+    Generato il 15/09/2025 alle ore 12:38:22
   </footer>
   </body>
   </html>

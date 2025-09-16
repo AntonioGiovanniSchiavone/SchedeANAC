@@ -336,7 +336,7 @@ footer {
   <tr>
     <td>idSchedaAvr (<span class="smalltype">opzionale</span>)</td>
     <td>identificativo restituito dal servizio all’invio della scheda AVR.</td>
-    <td>string</td>
+    <td>uuid</td>
   </tr>
 
   <tr>
@@ -973,10 +973,10 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
   </tr>
 
   <tr>
-    <td>REG101</td>
-    <td> indicare almeno uno dei campi di cui si richiede la modifica</td>
+    <td>REG127</td>
+    <td> indicare almeno un Cup</td>
     <td>some aggiudicazione in aggiudicazioni
-satisfies count(aggiudicazione.cup)>1 and (every c in aggiudicazione.cup satisfies (c = null or c = ""))</td>
+satisfies count(aggiudicazione.cup)>0 and (every c in aggiudicazione.cup satisfies (c = null or c = ""))</td>
   </tr>
 </table>
     <div class="message">
@@ -1003,7 +1003,7 @@ satisfies count(aggiudicazione.cup)>1 and (every c in aggiudicazione.cup satisfi
       </tr>
     </table>
   <footer>
-    Generato il 14/08/2025 alle ore 11:47:53
+    Generato il 15/09/2025 alle ore 12:36:09
   </footer>
   </body>
   </html>
