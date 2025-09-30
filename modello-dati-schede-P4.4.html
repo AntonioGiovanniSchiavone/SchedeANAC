@@ -2017,13 +2017,6 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) > count(distinct values(
   </tr>
 
   <tr>
-    <td>REG95</td>
-    <td> Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte è obbligatorio.</td>
-    <td>appalto.datiBaseProcedura.tipoProcedura.codice = "open" or appalto.datiBaseProcedura.tipoProcedura.codice = "oth-single"some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte="")</td>
-  </tr>
-
-  <tr>
     <td>REG96</td>
     <td> E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
     <td>some lotto in lotti
@@ -2134,7 +2127,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
       </tr>
     </table>
   <footer>
-    Generato il 15/09/2025 alle ore 12:37:35
+    Generato il 30/09/2025 alle ore 16:37:49
   </footer>
   </body>
   </html>
