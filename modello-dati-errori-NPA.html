@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+    <html lang="it">
+        <head>
+           <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Modello Dati - Elenco errori (IT)</title>
+            <style>
+/* css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Stile delle tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+td {
+    overflow-wrap: break-word; /* Forza il testo a spezzarsi su più righe */
+    word-wrap: break-word; /* Compatibilità aggiuntiva */
+    hyphens: auto; /* Aggiunge trattini per la spezzatura, se supportato */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Larghezza delle colonne */
+th:nth-child(1), td:nth-child(1) {
+    width: 25%; /* Larghezza della prima colonna */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Larghezza della seconda colonna */
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 25%; /* Larghezza della terza colonna */
+}
+
+
+table.reference th{
+    background-color: #28a745; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.info th{
+    background-color: #343a40; /* Colore di sfondo nero per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.fluxcards th{
+    background-color: #6f42c1 ; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+table.rule th{
+    background-color: #641c34; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Colore di sfondo alternato per le righe */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Colore di sfondo quando si passa sopra una riga */
+}
+
+footer {
+    margin-top: 2rem; /* Spazio sopra il footer usando rem */
+    font-size: small;
+    text-align: center;
+    color: #777;
+}
+
+.smalltype {
+    font-size: small;
+}
+
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 40px 0;
+}
+
+/* Sezioni di messaggi */
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+}
+
+.message-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto;
+}
+
+
+.message-divider.reference {
+    background-color: #28a745;
+}
+
+.message-divider.info {
+    background-color: #343a40;
+}
+
+.message-divider.fluxcards{
+    background-color: #6f42c1 ;
+}
+
+
+
+.message-divider.rule {
+    background-color: #641c34;
+}
+
+
+</style>
+    </head>
+<body>
+    <h1>Modello Dati - Elenco errori (IT)</h1>
+  
+    <div class="message">
+        <div class="message-divider info"></div>
+        <p>Elenco errori NPA.</p>
+        <div class="message-divider info"></div>
+    </div>
+    
+  <h2 id="Elenco errori">Elenco errori</h2>
+<table class="info">
+  <thead>
+    <tr>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>
+    </tr>
+    </thead>
+  <tbody>
+    <tr><td>AUT01</td><td>l&apos;utente non &egrave; presente tra le stazioni appaltanti</td></tr>
+    <tr><td>AUT02</td><td>appalto non trovato per l&apos;id passato in input</td></tr>
+    <tr><td>AUT03</td><td>lotto non trovato per il cig passato in input</td></tr>
+    <tr><td>AUT04</td><td>popolare alternativamente un parametro tra idAppalto e CIG</td></tr>
+    <tr><td>AUT05</td><td>uuid in input non formattato correttamente</td></tr>
+    <tr><td>AUT06</td><td>CIG non presente nell&apos;Appalto</td></tr>
+    <tr><td>AUT07</td><td>tipo ruolo indicato non valido</td></tr>
+    <tr><td>AUT08</td><td>date in input non coerenti</td></tr>
+    <tr><td>AUT09</td><td>data in input non formattata correttamente</td></tr>
+    <tr><td>AUT10</td><td>nessun soggetto attivo presente</td></tr>
+    <tr><td>AUT11</td><td>Filtro non formattato correttamente</td></tr>
+    <tr><td>AUT12</td><td>Filtro non valido</td></tr>
+    <tr><td>AUT13</td><td>Trascodifica Fallita. Tipologica non presente</td></tr>
+    <tr><td>AUT14</td><td>Trascodifica Fallita. Codice non presente</td></tr>
+    <tr><td>ERR1</td><td>utente non autorizzato alla chiamata del servizio</td></tr>
+    <tr><td>ERR10</td><td>ESPD obbligatorio</td></tr>
+    <tr><td>ERR100</td><td>Importo totale non consentito per l&apos;Affidamento diretto &lt; 5k &euro;. Articolo 49 c. 6 e 50 decreto legislativo 36/2023.</td></tr>
+    <tr><td>ERR101</td><td>Il codice scheda in ingresso non &egrave; coerente con la scheda che si desidera rettificare.</td></tr>
+    <tr><td>ERR102</td><td>La scheda non &egrave; rettificabile secondo le regole definite dall&apos;orchestratore.</td></tr>
+    <tr><td>ERR103</td><td>Il numero delle stazioni appaltanti deve restare invariato rispetto alla scheda che si desidera rettificare.</td></tr>
+    <tr><td>ERR104</td><td>Le stazioni appaltanti devono restare invariate rispetto alla scheda che si desidera rettificare.</td></tr>
+    <tr><td>ERR105</td><td>Il numero dei lotti deve restare invariato rispetto alla scheda che si desidera rettificare.</td></tr>
+    <tr><td>ERR106</td><td>Tutti i lotIdentifier devono coincidere con quelli della scheda che si desidera rettificare.</td></tr>
+    <tr><td>ERR107</td><td>Tutti i cig devono coincidere con quelli della scheda che si desidera rettificare.</td></tr>
+    <tr><td>ERR108</td><td>idContratto deve coincidere con quello della scheda che si desidera rettificare.</td></tr>
+    <tr><td>ERR109</td><td>operazione non consentita: per l&apos;appalto &egrave; in corso una richiesta di rettifica.</td></tr>
+    <tr><td>ERR11</td><td>tipo di eForm non coerente per la scheda</td></tr>
+    <tr><td>ERR110</td><td>stazione appaltante non qualificata</td></tr>
+    <tr><td>ERR111</td><td>errore durante la comunicazione con il servizio di qualificazione delle stazioni appaltanti.</td></tr>
+    <tr><td>ERR112</td><td>importo del lotto e/o oggetto principale del contratto non valorizzati.</td></tr>
+    <tr><td>ERR113</td><td>espd obbligatorio nelle schede AD3 per importi superiori o pari a 40000 euro.</td></tr>
+    <tr><td>ERR114</td><td>Non si possono inserire pi&ugrave; partecipanti con lo stesso codice fiscale.</td></tr>
+    <tr><td>ERR115</td><td>In questa fase dello SDA &egrave; possibile inserire solo operazioni di Inserimento e Conferma.</td></tr>
+    <tr><td>ERR116</td><td>Questo elenco dei partecipanti non &egrave; pi&ugrave; attivo, quindi non &egrave; pi&ugrave; possibile aggiornare o richiamare l&apos;elenco.</td></tr>
+    <tr><td>ERR117</td><td>Per un partecipante con stato In valutazione &egrave; possibile inserire solo operazioni di conferma, modifica e cancellazione.</td></tr>
+    <tr><td>ERR118</td><td>Per un partecipante con stato Iscritto &egrave; possibile inserire solo operazioni di rivalutazione, modifica e cancellazione.</td></tr>
+    <tr><td>ERR119</td><td>Per un partecipante con stato Cancellato &egrave; possibile inserire solo operazioni di inserimento e conferma.</td></tr>
+    <tr><td>ERR119_1</td><td>Per un nuovo partecipante &egrave; possibile inserire solo operazioni di inserimento e conferma.</td></tr>
+    <tr><td>ERR12</td><td>versione sdk eForm errata</td></tr>
+    <tr><td>ERR120</td><td>Nessuna operazione inserita.</td></tr>
+    <tr><td>ERR121</td><td>lotIdentifier non trovato.</td></tr>
+    <tr><td>ERR122</td><td>Elenco partecipanti SDA trovato non attivo</td></tr>
+    <tr><td>ERR123</td><td>idSDA non trovato</td></tr>
+    <tr><td>ERR124</td><td>codiceFiscaleSA non presente nella lista delle stazioni appaltanti della scheda di indizione</td></tr>
+    <tr><td>ERR125</td><td>L&apos;oggetto indicato in appalto.datiBase.oggetto deve essere valorizzato. In presenza di eForm verificare l&apos;oggetto inserito nel campo Description (BT-24).</td></tr>
+    <tr><td>ERR126</td><td>L&apos;oggetto indicato in lotti.datiBase.oggetto deve essere valorizzato. In presenza di eForm verificare l&apos;oggetto inserito nel campo Description (BT-24).</td></tr>
+    <tr><td>ERR126_1</td><td>L&apos;oggetto indicato in aggiudicazioni.datiBase.oggetto deve essere valorizzato. In presenza di eForm verificare l&apos;oggetto inserito nel campo Description (BT-24).</td></tr>
+    <tr><td>ERR127</td><td>CIG duplicati in elenco soggetti</td></tr>
+    <tr><td>ERR128</td><td>Errore generico durante la comunicazione con l&apos;anagrafe Persona Giuridica</td></tr>
+    <tr><td>ERR129</td><td>Il Codice Fiscale del partecipante non &egrave; censito in anagrafe Persona Giuridica</td></tr>
+    <tr><td>ERR13</td><td>versione ESPD errata</td></tr>
+    <tr><td>ERR130</td><td>Scheda Afferente Investimenti PNRR senza CUP presenti in REGIS</td></tr>
+    <tr><td>ERR131</td><td>CUP presenti in REGIS ma non afferenti a Investimenti PNRR</td></tr>
+    <tr><td>ERR132</td><td>Errore durante la chiamata al servizio di verifica del CUP</td></tr>
+    <tr><td>ERR133</td><td>Errore durante la chiamata al servizio di verifica del CUP in Regis</td></tr>
+    <tr><td>ERR134</td><td>L&apos;idPianificazione indicato nel body non &egrave; coerente con il Piano che si sta tentando di creare.</td></tr>
+    <tr><td>ERR135</td><td>Il Piano indicato nel body non &egrave; stato pubblicato.</td></tr>
+    <tr><td>ERR136</td><td>Il Piano indicato nel body non &egrave; stato confermato.</td></tr>
+    <tr><td>ERR137</td><td>idSchedaAvr non trovato.</td></tr>
+    <tr><td>ERR138</td><td>idSchedaAvr non coerente.</td></tr>
+    <tr><td>ERR139</td><td>Partecipanti non coerenti con precedente invio AVR.</td></tr>
+    <tr><td>ERR14</td><td>lotIdentifier duplicato nell&apos;elenco dei lotti</td></tr>
+    <tr><td>ERR140</td><td>&Egrave; stato inserito lo stesso eForm dell&apos;avviso che si desidera rettificare, si prega di verificare</td></tr>
+    <tr><td>ERR141</td><td>&Egrave; stato inserito nell&apos;eform lo stesso NoticeId dell&apos;avviso che si desidera rettificare, si prega di verificare</td></tr>
+    <tr><td>ERR142</td><td>Errore durante la comunicazione con FVPQ.</td></tr>
+    <tr><td>ERR143</td><td>Non &egrave; ammesso il Rollback per questa tipologia di scheda</td></tr>
+    <tr><td>ERR144</td><td>Per questo appalto &egrave; stato gi&agrave; effettuato un Rollback</td></tr>
+    <tr><td>ERR145</td><td>Operazione non consentita: &egrave; in corso una richiesta di rollback scheda.</td></tr>
+    <tr><td>ERR146</td><td>&Egrave; stato inserito il campo comunicazioneRibassoAggiudicazione per un lotto non aggiudicato.</td></tr>
+    <tr><td>ERR147</td><td>Non &egrave; possibile comunicare il campo ribassoAggiudicazione per il lotto indicato.</td></tr>
+    <tr><td>ERR148</td><td>Per questa scheda &egrave; stata gi&agrave; effettuata operazione di rollback.</td></tr>
+    <tr><td>ERR149</td><td>&Egrave; necessario popolare il campo idContratto o cig nel body della scheda.</td></tr>
+    <tr><td>ERR15</td><td>lotIdentifier non coerenti tra eForm ed anacForm</td></tr>
+    <tr><td>ERR150</td><td>La scheda non pu&ograve; essere rollbackata.</td></tr>
+    <tr><td>ERR16</td><td>operazione non consentita per lo stato dell&apos;appalto</td></tr>
+    <tr><td>ERR17</td><td>operazione non consentita: &egrave; in corso una richiesta di verifica appalto</td></tr>
+    <tr><td>ERR18</td><td>operazione non consentita: &egrave; in corso una richiesta di conferma appalto</td></tr>
+    <tr><td>ERR19</td><td>idAppalto non trovato</td></tr>
+    <tr><td>ERR2</td><td>scheda non ammessa in questa fase dell&apos;appalto</td></tr>
+    <tr><td>ERR20</td><td>idScheda non trovato</td></tr>
+    <tr><td>ERR21</td><td>idPianificazione non trovato</td></tr>
+    <tr><td>ERR22</td><td>idAvviso non trovato</td></tr>
+    <tr><td>ERR23</td><td>cig non trovato</td></tr>
+    <tr><td>ERR24</td><td>codice fiscale non trovato</td></tr>
+    <tr><td>ERR25</td><td>lotIdentifier non trovato</td></tr>
+    <tr><td>ERR26</td><td>idAppalto obbligatorio</td></tr>
+    <tr><td>ERR27</td><td>idPianificazione obbligatorio</td></tr>
+    <tr><td>ERR28</td><td>idAvviso obbligatorio</td></tr>
+    <tr><td>ERR29</td><td>idScheda obbligatorio</td></tr>
+    <tr><td>ERR3</td><td>codice scheda errato</td></tr>
+    <tr><td>ERR30</td><td>codice scheda obbligatorio</td></tr>
+    <tr><td>ERR31</td><td>versione scheda obbligatorio</td></tr>
+    <tr><td>ERR32</td><td>idTipologica obbligatorio</td></tr>
+    <tr><td>ERR33</td><td>codice tipologica obbligatorio</td></tr>
+    <tr><td>ERR34</td><td>verificare i criteri di ricerca</td></tr>
+    <tr><td>ERR35</td><td>restringere i risultati di ricerca</td></tr>
+    <tr><td>ERR36</td><td>il body della scheda non &egrave; valorizzato</td></tr>
+    <tr><td>ERR37</td><td>codiceAppalto obbligatorio</td></tr>
+    <tr><td>ERR38</td><td>codiceAppalto gi&agrave; presente</td></tr>
+    <tr><td>ERR39</td><td>idContratto non trovato</td></tr>
+    <tr><td>ERR4</td><td>errore nella conversione della scheda secondo il json schema definito</td></tr>
+    <tr><td>ERR40</td><td>errore generico durante l&apos;estrazione dei dati della scheda</td></tr>
+    <tr><td>ERR41</td><td>errore generico durante la validazione dei dati della scheda</td></tr>
+    <tr><td>ERR42</td><td>errore durante la validazione dei dati della scheda: scheda non trovata</td></tr>
+    <tr><td>ERR43</td><td>errore durante la validazione dei dati della scheda: tabella DMN non trovata</td></tr>
+    <tr><td>ERR44</td><td>chiamata al servizio non ammessa: &egrave; in corso una richiesta di pubblicazione per l&apos;avviso</td></tr>
+    <tr><td>ERR45</td><td>avviso non ammesso in questa fase dell&apos;appalto</td></tr>
+    <tr><td>ERR46</td><td>errore durante la validazione dell&apos;eForm</td></tr>
+    <tr><td>ERR47</td><td>errore generico durante la pubblicazione dell&apos;avviso</td></tr>
+    <tr><td>ERR48</td><td>operazione non consentita per la tipologia di avviso nazionale</td></tr>
+    <tr><td>ERR49</td><td>mancata coerenza tra idAppalto e idAvviso</td></tr>
+    <tr><td>ERR5</td><td>anacForm non &egrave; in un formato json valido</td></tr>
+    <tr><td>ERR50</td><td>operazione non consentita per lo stato dell&apos;avviso</td></tr>
+    <tr><td>ERR51</td><td>operazione non consentita per lo stato dell&apos;avviso sul TED</td></tr>
+    <tr><td>ERR52</td><td>errore generico durante il controllo dello stato avviso sul TED</td></tr>
+    <tr><td>ERR53</td><td>operazione non consentita per lo stato dell&apos;avviso sulla PVL</td></tr>
+    <tr><td>ERR54</td><td>errore generico durante il controllo dello stato sulla PVL</td></tr>
+    <tr><td>ERR55</td><td>cig duplicato nell&apos;elenco dei lotti</td></tr>
+    <tr><td>ERR56</td><td>cig non coerenti nell&apos;elenco dei lotti</td></tr>
+    <tr><td>ERR57</td><td>mancata coerenza tra idAppalto e idScheda</td></tr>
+    <tr><td>ERR58</td><td>operazione non consentita per lo stato della scheda</td></tr>
+    <tr><td>ERR59</td><td>operazione non consentita: &egrave; in corso una richiesta di verifica scheda</td></tr>
+    <tr><td>ERR6</td><td>eForm non &egrave; in un formato xml base64 valido</td></tr>
+    <tr><td>ERR60</td><td>operazione non consentita: &egrave; in corso una richiesta di conferma scheda</td></tr>
+    <tr><td>ERR61</td><td>cig duplicato nell&apos;elenco</td></tr>
+    <tr><td>ERR62</td><td>cig non coerenti nell&apos;elenco</td></tr>
+    <tr><td>ERR63</td><td>tipologica non valida</td></tr>
+    <tr><td>ERR64</td><td>errore TED</td></tr>
+    <tr><td>ERR65</td><td>errore nell&apos;estrazione dei lotti dall&apos;eForm</td></tr>
+    <tr><td>ERR66</td><td>mancata coerenza tra idAppalto e cig</td></tr>
+    <tr><td>ERR67</td><td>errore generico durante la comunicazione con l&apos;anagrafe AUSA</td></tr>
+    <tr><td>ERR68</td><td>l&apos;anagrafica SA presente nella lista delle stazioni appaltanti non &egrave; coerente con l&apos;anagrafe AUSA</td></tr>
+    <tr><td>ERR69</td><td>il centro di costo SA presente nella lista delle stazioni appaltanti non &egrave; coerente con l&apos;anagrafe AUSA</td></tr>
+    <tr><td>ERR7</td><td>ESPD non &egrave; in un formato xml base64 valido</td></tr>
+    <tr><td>ERR70</td><td>la lista delle stazioni appaltanti nella scheda &egrave; vuota</td></tr>
+    <tr><td>ERR71</td><td>operazione non consentita: la notice-id dell&apos;eForm non coincide con quella inviata in precedenza</td></tr>
+    <tr><td>ERR72</td><td>operazione non consentita: la version-id dell&apos;eForm coincide con quella inviata in precedenza</td></tr>
+    <tr><td>ERR73</td><td>operazione non consentita: il codiceAppalto indicato nella scheda non coincide con quello inviato in precedenza</td></tr>
+    <tr><td>ERR74</td><td>codice fiscale duplicato nell&apos;elenco partecipanti</td></tr>
+    <tr><td>ERR75</td><td>il codice fiscale non &egrave; autorizzato come soggetto delegato per le stazioni appaltanti presenti nella scheda</td></tr>
+    <tr><td>ERR76</td><td>non &egrave; possibile associare un soggetto delegato in quanto non &egrave; presente la lista delle stazioni appaltanti nella scheda</td></tr>
+    <tr><td>ERR77</td><td>il partecipante non &egrave; valido per il lotto</td></tr>
+    <tr><td>ERR78</td><td>il partecipante non &egrave; un soggetto aggiudicatario per il lotto</td></tr>
+    <tr><td>ERR79</td><td>contratto gi&agrave; presente per il partecipante e lotto</td></tr>
+    <tr><td>ERR8</td><td>eForm obbligatorio</td></tr>
+    <tr><td>ERR80</td><td>esiste gi&agrave; un soggetto delegato in corso di validit&agrave; per il ruolo indicato</td></tr>
+    <tr><td>ERR81</td><td>la scheda indicata nel body non &egrave; stata trovata</td></tr>
+    <tr><td>ERR82</td><td>la scheda indicata nel body &egrave; una scheda iniziale</td></tr>
+    <tr><td>ERR83</td><td>mancata coerenza tra idAppalto e la scheda indicata nel body</td></tr>
+    <tr><td>ERR84</td><td>la scheda indicata nel body non ha un contratto associato</td></tr>
+    <tr><td>ERR85</td><td>il contratto associato alla scheda indicata nel body non &egrave; coerente con l&apos;idAppalto</td></tr>
+    <tr><td>ERR86</td><td>codiceAusa non presente nella lista delle stazioni appaltanti della scheda di indizione</td></tr>
+    <tr><td>ERR87</td><td>idPartecipante duplicato per lo stesso lotto</td></tr>
+    <tr><td>ERR88</td><td>il codice della scheda indicata nel body non &egrave; valida secondo le regole di correlazione definite dall&apos;orchestratore</td></tr>
+    <tr><td>ERR89</td><td>operazione non consentita: &egrave; in corso una richiesta di verifica piano</td></tr>
+    <tr><td>ERR9</td><td>anacForm obbligatorio</td></tr>
+    <tr><td>ERR90</td><td>operazione non consentita: &egrave; in corso una richiesta di conferma piano</td></tr>
+    <tr><td>ERR91</td><td>scheda non ammessa in questa fase del piano</td></tr>
+    <tr><td>ERR92</td><td>criteri di ricerca non ammessi: popolare in modo alternativo idAppalto e idPianificazione</td></tr>
+    <tr><td>ERR93</td><td>mancata coerenza tra idPianificazione e idAvviso</td></tr>
+    <tr><td>ERR94</td><td>errore generico durante la comunicazione con PVL</td></tr>
+    <tr><td>ERR95</td><td>la notice deve avere come lingua principale ITA (campo eForm: &lt;cbc:NoticeLanguageCode&gt;)</td></tr>
+    <tr><td>ERR96</td><td>importo differente per lo stesso idPartecipante</td></tr>
+    <tr><td>ERR97</td><td>errore durante la validazione del CUP</td></tr>
+    <tr><td>ERR98</td><td>errore durante la validazione del CIG negli accordi quadro</td></tr>
+    <tr><td>ERR99</td><td>popolare in modo alternativo idContratto o cig nel body della scheda</td></tr>
+    <tr><td>ERR9999</td><td>errore generico</td></tr>
+    <tr><td>FVA01</td><td>Criteri di ricerca non ammessi, popolare in modo alternativo codiceAppalto, idAppalto, CIG</td></tr>
+    <tr><td>FVA02</td><td>Criteri di ricerca non ammessi, popolare in modo alternativo datiAggiuntivi con gli altri campi</td></tr>
+    <tr><td>FVA03</td><td>L&apos;utente non &egrave; autorizzato ad accedere al FVA richiesto</td></tr>
+    <tr><td>FVA04</td><td>Operazione non permessa. FVA non attivo</td></tr>
+    <tr><td>FVA05</td><td>Operazione non permessa. Fascicolo trovato non &eacute; di Appalto</td></tr>
+    <tr><td>FVA06</td><td>Dati trovati incongruenti. Fascicoli trovati &gt;1</td></tr>
+    <tr><td>FVC01</td><td>Stato Richiesta Documento non presente</td></tr>
+    <tr><td>FVC02</td><td>Richiesta Documento non presente</td></tr>
+    <tr><td>FVC03</td><td>L&apos;utente non &egrave; autorizzato ad accedere al FVA richiesto</td></tr>
+    <tr><td>FVC04</td><td>Richiesta accesso non trovata</td></tr>
+    <tr><td>FVC05</td><td>Richiesta Respinta. Una richiesta per lo stesso CF e tipo documento gi&agrave; presente</td></tr>
+    <tr><td>FVQ01</td><td>Contratto Fascicolo Chiuso</td></tr>
+    <tr><td>FVQOE01</td><td>Criteri di ricerca non ammessi, popolare in modo alternativo chiaveAccesso o codicePrtocolloIstruttoria e codiceFiscaleOE</td></tr>
+    <tr><td>FVX01</td><td>Documento non presente</td></tr>
+    <tr><td>FVX02</td><td>Fascicolo non presente</td></tr>
+    <tr><td>FVX03</td><td>Documenti non presenti</td></tr>
+    <tr><td>FVX04</td><td>Fascicoli non presenti</td></tr>
+    <tr><td>FVX05</td><td>Filtro non formattato correttamente</td></tr>
+    <tr><td>FVX06</td><td>Filtro non valido</td></tr>
+    <tr><td>FVX07</td><td>Filtro Stato non formattato correttamente</td></tr>
+    <tr><td>FVX08</td><td>Filtro Stato non valido</td></tr>
+    <tr><td>FVX09</td><td>Filtro Tipo non formattato correttamente</td></tr>
+    <tr><td>FVX10</td><td>Filtro Tipo non valido</td></tr>
+    <tr><td>FVX11</td><td>Le date inserite non sono coerenti</td></tr>
+    <tr><td>FVX12</td><td>Trascodifica Fallita. Tipologica non presente</td></tr>
+    <tr><td>FVX13</td><td>Trascodifica Fallita. Codice non presente</td></tr>
+    <tr><td>FVX14</td><td>Errore Servizio esterno. Ricerca Estensioni Documenti - Non Disponibile</td></tr>
+    <tr><td>FVX15</td><td>Errore Servizio esterno. Ricerca Documenti - Non Disponibile</td></tr>
+    <tr><td>FVX16</td><td>Errore Servizio esterno. Ricerca Estensioni Fascicoli - Non Disponibile</td></tr>
+    <tr><td>FVX17</td><td>Errore Servizio esterno. Ricerca Fascicoli - Non Disponibile</td></tr>
+    <tr><td>FVX18</td><td>Errore Servizio esterno. Inizializza Fascicoli - Non Disponibile</td></tr>
+    <tr><td>FVX19</td><td>Errore Servizio esterno. Inserisci Documento - Non Disponibile</td></tr>
+    <tr><td>FVX20</td><td>Errore Servizio esterno. Recupera Fascicolo - Non Disponibile</td></tr>
+    <tr><td>FVX21</td><td>Errore Servizio esterno. Recupera Documento - Non Disponibile</td></tr>
+    <tr><td>FVX22</td><td>Errore Servizio esterno. Crea Documento - Non Disponibile</td></tr>
+    <tr><td>FVX23</td><td>Errore Servizio esterno. Chiudi Fascicolo - Non Disponibile</td></tr>
+    <tr><td>FVX24</td><td>Errore Conversione Json</td></tr>
+    <tr><td>FVX25</td><td>Fascicolo mal formattato</td></tr>
+    <tr><td>FVX26</td><td>Estensione Dati mal formattato</td></tr>
+    <tr><td>FVX27</td><td>Stazioni Appaltanti mal formattato</td></tr>
+    <tr><td>FVX28</td><td>Stazioni Appaltanti non presenti</td></tr>
+    <tr><td>FVX29</td><td>Criteri di ricerca non ammessi, popolare in modo alternativo datiAggiuntivi con gli altri campi</td></tr>
+    <tr><td>FVX30</td><td>Errore Servizio esterno. Rimuovi Documento - Non Disponibile</td></tr>
+    <tr><td>FVX31</td><td>Errore Servizio esterno. Configurazione Servizio - Non Disponibile</td></tr>
+    <tr><td>FVX32</td><td>Errore Servizio esterno. Controllo Autorizzazione Servizio - Non Disponibile</td></tr>
+    <tr><td>FVX33</td><td>Errore Servizio esterno. Persona Giuridica Servizio - Non Disponibile</td></tr>
+    <tr><td>FVX34</td><td>Anagrafica non presente</td></tr>
+    <tr><td>FVX36</td><td>Errore Servizio esterno. Servizio User Detail- Non Disponibile</td></tr>
+    <tr><td>FVX37</td><td>Errore Servizio esterno. Servizio Anagrafica SA - Non Disponibile</td></tr>
+    <tr><td>FVX38</td><td>Anagrafica Stazione Appaltante mal formattato</td></tr>
+    <tr><td>FVX39</td><td>Anagrafica Stazione Appaltante non presente</td></tr>
+    <tr><td>FVX40</td><td>Errore Servizio esterno. Inserisci Documento FVC - Non Disponibile</td></tr>
+    <tr><td>FVX41</td><td>Id documento non in formato UUID</td></tr>
+    <tr><td>FVX42</td><td>Id fascicolo non in formato UUID</td></tr>
+    <tr><td>FVX43</td><td>Chiave Accesso non in formato UUID</td></tr>
+    <tr><td>FVX44</td><td>Errore Servizio esterno. Persona Fisica Servizio - Non Disponibile</td></tr>
+    <tr><td>FVX45</td><td>Errore Servizio esterno. Richiedi Documento Servizio - Non Disponibile</td></tr>
+    <tr><td>FVX46</td><td>Dati non validi</td></tr>
+    <tr><td>FVX47</td><td>Codice Fiscale Impresa non valido</td></tr>
+    <tr><td>FVX48</td><td>Codice Fiscale Professionista non valido</td></tr>
+    <tr><td>FVX49</td><td>Codice Fiscale Persona Fisica non valido</td></tr>
+    <tr><td>FVX50</td><td>Codice Fiscale Persona Non Fisica non valido</td></tr>
+    <tr><td>FVX51</td><td>Configurazione tipo documento non presente</td></tr>
+    <tr><td>FVX52</td><td>Servizio esterno ricerca soggetti non disponibile</td></tr>
+    <tr><td>FVX53</td><td>Errore servizo esterno. Ricerca Notifiche - Non disponibile</td></tr>
+    <tr><td>FVX54</td><td>Errore servizo esterno. Aggiorna Notifica - Non disponibile</td></tr>
+    <tr><td>FVX55</td><td>Dati inseriti non validi</td></tr>
+    <tr><td>FVX56</td><td>Tipo documento non valido</td></tr>
+    <tr><td>FVX57</td><td>Dati richiesta non presenti</td></tr>
+    <tr><td>FVX58</td><td>File Caricato Risulta Vuoto</td></tr>
+    <tr><td>FVX59</td><td>Fascicolo duplicato</td></tr>
+    <tr><td>FVX60</td><td>Errore Servizio esterno. Inizializza Sotto Fascicoli - Non Disponibile</td></tr>
+    <tr><td>FVX61</td><td>Errore Servizio esterno. Richiedi Documento - Non Disponibile</td></tr>
+    <tr><td>FVX62</td><td>Errore Servizio esterno. Inizializza Fascicoli FVQOE - Non Disponibile</td></tr>
+    <tr><td>FVX63</td><td>Errore Servizio esterno. Ricerca Richieste Documento - Non Disponibile</td></tr>
+    <tr><td>FVX64</td><td>Dati Richiesta non validi</td></tr>
+    <tr><td>FVX65</td><td>Codice Dati Richiesta non supportati</td></tr>
+    <tr><td>FVX66</td><td>Codice Tipo Documento non supportati</td></tr>
+    <tr><td>FVX67</td><td>Errore Servizio esterno. Aggiorna Autorizzazione - Non Disponibile</td></tr>
+    <tr><td>REG0</td><td>Dati non presenti</td></tr>
+    <tr><td>REG1</td><td>La categoria merceologica indicata nei lotti non e&apos; compresa tra quelle indicate nell&apos;appalto</td></tr>
+    <tr><td>REG10</td><td>Il campo servizioPubblicoLocale &egrave; obbligatorio</td></tr>
+    <tr><td>REG100</td><td>Negli affidamenti diretti &egrave; consentito inserire un solo idPartecipante, se non &egrave; un accordo quadro.</td></tr>
+    <tr><td>REG101</td><td>Indicare almeno uno dei campi di cui si richiede la modifica.</td></tr>
+    <tr><td>REG102</td><td>Indicare il nuovo importo</td></tr>
+    <tr><td>REG103</td><td>L&apos;importo totale dei lotti non pu&ograve; superare i 5K</td></tr>
+    <tr><td>REG104</td><td>L&apos;importo totale dei lotti non pu&ograve; essere inferiore ai 5K</td></tr>
+    <tr><td>REG105</td><td>La data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non pu&ograve; essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-131).</td></tr>
+    <tr><td>REG106</td><td>La data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non pu&ograve; essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-1311, BT-630).</td></tr>
+    <tr><td>REG107</td><td>Indicare la data alla quale ha inizio il sistema dinamico di acquisizione. In presenza di eForm verificare il campo Duration Start Date (BT-536).</td></tr>
+    <tr><td>REG108</td><td>E&apos; obbligatorio inserire almeno uno dei tre campi tra dataFine, durata e altraDurata. In presenza di eForm verificare i campi Duration End Date (BT-537), Duration Period (BT-36) e Duration Other (BT-538).</td></tr>
+    <tr><td>REG109</td><td>Inserire solo uno tra i campi dataFine, durata e altraDurata. In presenza di eForm verificare i campi Duration End Date (BT-537), Duration Period (BT-36) e Duration Other (BT-538).</td></tr>
+    <tr><td>REG11</td><td>Non &egrave; stato indicato il CUI</td></tr>
+    <tr><td>REG110</td><td>La somma degli importi indicati nei lotti deve essere compresa tra l&apos;80% e il 100% dell&apos;importo indicato nell&apos;appalto. In presenza di eForm verificare gli importi inseriti nei campi EstimatedOverallContractAmount (BT-27).</td></tr>
+    <tr><td>REG111</td><td>Indicare il tipo di sistema dinamico di acquisizione. In presenza di eForm verificare il campo Dynamic Purchasing System (BT-766).</td></tr>
+    <tr><td>REG112</td><td>Inserire almeno un elemento nella lista delle aggiudicazioni.</td></tr>
+    <tr><td>REG113</td><td>Se il campo condizioniNegoziata.codice=46(SDA) allora il campo idSDA rilasciato da ISDA1 e ISDA2 deve essere obbligatoriamente valorizzato.</td></tr>
+    <tr><td>REG114</td><td>Indicare l&apos;aggiudicatario.</td></tr>
+    <tr><td>REG114_1</td><td>Deve essere indicato un solo aggiudicatario.</td></tr>
+    <tr><td>REG115</td><td>Indicare una sola categoria di tipo prevalente.</td></tr>
+    <tr><td>REG116</td><td>Indicare una sola cpv di tipo prevalente.</td></tr>
+    <tr><td>REG117</td><td>Il campo importo cauzione deve essere &gt;= 0.</td></tr>
+    <tr><td>REG118</td><td>Non &egrave; possibile inserire il codice 1 nel campo derogaQualificazione se l&apos;oggetto principale del contratto &egrave; lavori o l&apos;importo &egrave; superiore a 215000 &euro;.</td></tr>
+    <tr><td>REG119</td><td>Non &egrave; possibile inserire il codice 2 nel campo derogaQualificazione se l&apos;oggetto principale del contratto &egrave; lavori o l&apos;importo &egrave; superiore a 431000 &euro;.</td></tr>
+    <tr><td>REG120</td><td>Non &egrave; possibile inserire il codice 3 nel campo derogaQualificazione se l&apos;oggetto principale del contratto &egrave; diverso da lavori o l&apos;importo &egrave; superiore a 1 milione di euro.</td></tr>
+    <tr><td>REG121</td><td>Non &egrave; possibile inserire il codice 4 nel campo derogaQualificazione se l&apos;oggetto principale del contratto &egrave; diverso da servizi o l&apos;importo &egrave; superiore a 750000 &euro;.</td></tr>
+    <tr><td>REG122</td><td>Non &egrave; possibile inserire il codice 5 nel campo derogaQualificazione se l&apos;oggetto principale del contratto &egrave; diverso da servizi o l&apos;importo &egrave; superiore a 1 milione di euro.</td></tr>
+    <tr><td>REG123</td><td>E&rsquo; obbligatorio indicare i cup associati al lotto se l&rsquo;appalto o concessione &egrave; afferente agli investimenti pubblici finanziati con le risorse previste dal PNRR e/o PNC.</td></tr>
+    <tr><td>REG124</td><td>Indicare almeno uno tra codice istat e codice nuts.</td></tr>
+    <tr><td>REG125</td><td>Indicare solo uno tra codice istat e codice nuts.</td></tr>
+    <tr><td>REG126</td><td>L&apos;importo indicato deve essere maggiore di zero.</td></tr>
+    <tr><td>REG127</td><td>Indicare almeno un Cup.</td></tr>
+    <tr><td>REG128</td><td>Inserire almeno un elemento nella lista.</td></tr>
+    <tr><td>REG129</td><td>Attenzione, non &egrave; stata indicata la denominazione del soggetto.</td></tr>
+    <tr><td>REG13</td><td>Non &egrave; stato valorizzato il campo opzioniRinnovi</td></tr>
+    <tr><td>REG130</td><td>I codici fiscali indicati nella lista dei soggetti devono essere diversi.</td></tr>
+    <tr><td>REG131</td><td>L&apos;importo di aggiudicazione non pu&ograve; superare i 221K</td></tr>
+    <tr><td>REG14</td><td>Se l&apos;appalto prevede ripetizioni, il motivo collegamento CIG deve essere :No, nessuna ipotesi di collegamento</td></tr>
+    <tr><td>REG15</td><td>il campo cigCollegato &egrave; obbligatorio se il motivo di collegamento CIG e&apos; valorizzato</td></tr>
+    <tr><td>REG16</td><td>il campo cigCollegato deve prevedere ripetizioni</td></tr>
+    <tr><td>REG18</td><td>E&rsquo; obbligatorio valorizzare a SI il campo acquisizioneCup se il campo afferenteInvestimentiPNRR &egrave; valorizzato a SI e l&apos;appalto non &egrave; di tipo Accordo Quadro/convenzione</td></tr>
+    <tr><td>REG19</td><td>E&rsquo; obbligatorio inserire almeno un codice CUP se il campo acquisizioneCup &egrave; valorizzato a SI</td></tr>
+    <tr><td>REG2</td><td>Attenzione, non &egrave; stato indicato il codice fiscale del soggetto</td></tr>
+    <tr><td>REG20</td><td>Il campo cupLotto &egrave; obbligatorio se il campo acquisizioneCup &egrave; valorizzato a no e se l&apos;oggetto del contratto &egrave; Lavori e se la tipologia di lavoro &egrave; diversa da Manutenzione ordinaria</td></tr>
+    <tr><td>REG20_1</td><td>Il campo cupLotto non deve essere inserito se il campo afferenteInvestimentiPNRR &egrave; SI e l&apos;appalto &egrave; di tipo Accordo Quadro/convenzione</td></tr>
+    <tr><td>REG21</td><td>La sezione paritaDiGenereGenerazionale &egrave; obbligatoria se il campo afferenteInvestimentiPNRR &egrave; valorizzato a SI</td></tr>
+    <tr><td>REG22</td><td>il campo quota30PerCento della sezione paritaDiGenereGenerazionale &egrave; obbligatorio se il campo afferenteInvestimentiPNRR &egrave; valorizzato a SI</td></tr>
+    <tr><td>REG23</td><td>E&apos; stato indicato il campo quota30PerCento della sezione paritaDiGenereGenerazionale ma non &egrave; stato indicato il valore della Previsione di una quota inferiore con riferimento all&apos;occupazione femminile o giovanile</td></tr>
+    <tr><td>REG24</td><td>Almeno una quota, tra occupazione femminile e occupazione giovanile, deve essere inferiore al 30%</td></tr>
+    <tr><td>REG27</td><td>Indicare il motivo della deroga alla previsione dell&rsquo;obbligo di indicare una quota pari almeno al 30 per cento con riferimento all&rsquo;occupazione femminile/giovanile</td></tr>
+    <tr><td>REG28</td><td>il campo misurePremiali della sezione paritaDiGenereGenerazionale &egrave; obbligatorio se il campo afferenteInvestimentiPNRR &egrave; valorizzato a SI</td></tr>
+    <tr><td>REG29</td><td>il campo modalitaAcquisizione &egrave; obbligatorio se l&apos;oggetto del contratto &egrave; Servizi o Forniture</td></tr>
+    <tr><td>REG3</td><td>I codici fiscali indicati nella lista delle stazioni appaltanti devono essere diversi</td></tr>
+    <tr><td>REG30</td><td>il campo prestazioniComprese &egrave; obbligatorio se l&apos;oggetto del contratto &egrave; Lavori</td></tr>
+    <tr><td>REG31</td><td>Le sezioni del quadro economico standard e quadro economico concessioni devono essere mutuamente esclusive</td></tr>
+    <tr><td>REG31_1</td><td>Almeno una delle due sezioni quadro economico standard e quadro economico concessioni deve essere compilata</td></tr>
+    <tr><td>REG32</td><td>Il valore indicato nel campo accessibilita non &egrave; coerente con quanto indicato nel campo afferenteInvestimentiPNRR, valorizzato a SI</td></tr>
+    <tr><td>REG33</td><td>Il valore indicato nel campo accessibilita prevede che venga indicata la giustificazione</td></tr>
+    <tr><td>REG34</td><td>Non &egrave; stato indicato il valore dell&rsquo;importo componente lavori</td></tr>
+    <tr><td>REG34_1</td><td>Importo Lavori: se l&apos;oggetto del contratto &egrave; works deve essere indicato un importo maggiore di 0 nel quadro economico compilato</td></tr>
+    <tr><td>REG35</td><td>Non &egrave; stato indicato il valore dell&rsquo;importo componente servizi</td></tr>
+    <tr><td>REG35_1</td><td>Importo Servizi: se l&apos;oggetto del contratto &egrave; services deve essere indicato un importo maggiore di 0 nel quadro economico compilato.</td></tr>
+    <tr><td>REG36</td><td>Non &egrave; stato indicato il valore dell&rsquo;importo componente forniture</td></tr>
+    <tr><td>REG36_1</td><td>Importo Forniture: se l&apos;oggetto del contratto &egrave; supplies deve essere indicato un importo maggiore di 0 nel quadro economico compilato</td></tr>
+    <tr><td>REG37</td><td>Non &egrave; stato indicato il valore relativo alle somme per opzioni e rinnovi</td></tr>
+    <tr><td>REG38</td><td>Non &egrave; stato indicato il valore relativo alle somme per ripetizione servizi,forniture,lavori analoghi e consegne complementari</td></tr>
+    <tr><td>REG39</td><td>Indicare l&apos;importo stimato del servizio di progettazione successiva</td></tr>
+    <tr><td>REG4_1</td><td>Non e&apos; stato indicato il campo Motivazione richiesta CIG</td></tr>
+    <tr><td>REG4_2</td><td>La motivazione richiesta CIG non deve essere inserita per la categoria &quot;Lavori oppure beni e servizi non elencati nell&apos;art. 1 dPCM 24 dicembre 2015</td></tr>
+    <tr><td>REG40</td><td>Assenza CIG dell&rsquo;affidamento di incarico esterno di progettazione</td></tr>
+    <tr><td>REG41</td><td>Indicare la data dell&rsquo;affidamento di incarico esterno di progettazione</td></tr>
+    <tr><td>REG42</td><td>Indicare la data di consegna del progetto</td></tr>
+    <tr><td>REG43</td><td>Indicare il tipo di progettazione</td></tr>
+    <tr><td>REG47</td><td>Il numero di offerte presentate non deve essere superiore al numero di offerte ammesse</td></tr>
+    <tr><td>REG5</td><td>Il campo strumentiElettroniciSpecifici &egrave; obbligatorio se l&apos;oggetto del contratto &egrave; uguale a &ldquo;works&rdquo; e la somma di tutti i campi del quadro economico, oppure l&apos;importo del lotto, &egrave; maggiore di 1.000.000</td></tr>
+    <tr><td>REG5_1</td><td>Il campo docFaP &egrave; obbligatorio in caso venga valorizzato il campo strumentiElettroniciSpecifici</td></tr>
+    <tr><td>REG50</td><td>Il valore del campo offertaEconomica non &egrave; coerente</td></tr>
+    <tr><td>REG51</td><td>Richiesto almeno un valore tra offertaEconomica e offertaInAumento</td></tr>
+    <tr><td>REG52</td><td>Non &egrave; stato inserito l&rsquo;importo dell&rsquo;aggiudicatario</td></tr>
+    <tr><td>REG53</td><td>In caso di ditta mandante l&rsquo;importo non &egrave; previsto</td></tr>
+    <tr><td>REG54</td><td>Selezionare un motivo di revisione prezzi</td></tr>
+    <tr><td>REG55</td><td>In caso di proroga tecnica Indicare il CIG della nuova procedura avviata ovvero indicare le motivazioni della proroga nel campo Cause della modifica contrattuale</td></tr>
+    <tr><td>REG56</td><td>CIG della nuova procedura avviata: campo non previsto</td></tr>
+    <tr><td>REG57</td><td>Data approvazione antecedente la data di inizio progettazione esecutiva</td></tr>
+    <tr><td>REG58</td><td>Indicare la data del verbale di prima consegna lavori</td></tr>
+    <tr><td>REG59</td><td>Indicare la data di avvio della prima fase dell&apos;esecuzione del contratto</td></tr>
+    <tr><td>REG6_1</td><td>Il campo condizioniNegoziata non pu&ograve; essere null</td></tr>
+    <tr><td>REG6_2</td><td>Campo condizioniNegoziata non previsto</td></tr>
+    <tr><td>REG60</td><td>Indicare la data del verbale di consegna definitiva</td></tr>
+    <tr><td>REG61</td><td>Il campo urlDocumentazione &egrave; obbligatorio se si seleziona come motivo di modifica la voce &apos;mod-cir&apos;, &apos;Necessit&agrave; di modifiche dovute a circostante non prevedibili da un committente diligente&apos;.</td></tr>
+    <tr><td>REG62</td><td>In caso di Altre cause impreviste ed imprevedibili indicare una motivazione nel campo Cause della modifica contrattuale</td></tr>
+    <tr><td>REG63</td><td>Non &egrave; stato valorizzato il numero di giorni di proroga concessi,tempo aggiuntivo rispetto ai termini contrattuali</td></tr>
+    <tr><td>REG64</td><td>Non &egrave; stata valorizzata la data del certificato di pagamento relativo all&apos;anticipazione</td></tr>
+    <tr><td>REG65</td><td>Cpv gi&agrave; inserita come cpv prevalente</td></tr>
+    <tr><td>REG66</td><td>Cpv gia&apos; inserita come cpv secondaria</td></tr>
+    <tr><td>REG67</td><td>il campo giustificazione procedura accelerata &egrave; obbligatorio se la procedura &egrave; accelerata.</td></tr>
+    <tr><td>REG68</td><td>il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non &egrave; Negoziata senza previa indizione di gara</td></tr>
+    <tr><td>REG68_1</td><td>il campo giustificazione aggiudicazione diretta &egrave; obbligatorio se il tipo di procedura &egrave; Negoziata senza previa indizione di gara</td></tr>
+    <tr><td>REG69</td><td>Non &egrave; stato indicato il valore dell&rsquo;importo componente lavori nel quadro economico delle concessioni</td></tr>
+    <tr><td>REG7</td><td>E&rsquo; stata selezionata la voce Somma urgenza e protezione civile di cui all&rsquo;art. 140 co. 10 D. Lgs. 36/2023. E&rsquo; necessario valorizzare il campo linkDocumenti con la URL della sezione Bandi e Contratti dove sono pubblicati i documenti previsti dal regolamento di vigilanza ANAC</td></tr>
+    <tr><td>REG70</td><td>Non &egrave; stato indicato il valore dell&rsquo;importo componente servizi nel quadro economico delle concessioni</td></tr>
+    <tr><td>REG71</td><td>Non &egrave; stato indicato il valore dell&rsquo;importo componente forniture nel quadro economico delle concessioni</td></tr>
+    <tr><td>REG72</td><td>Campo data del certificato di pagamento relativo all&apos;anticipazione non previsto</td></tr>
+    <tr><td>REG73</td><td>Valorizzare almeno uno dei due campi: Data di autorizzazione del subappalto, Motivo del mancato subappalto</td></tr>
+    <tr><td>REG74</td><td>Non &egrave; stato valorizzato il campo oneri derivanti</td></tr>
+    <tr><td>REG75</td><td>Il campo motivi di risoluzione &egrave; obbligatorio in caso di interruzione anticipata per risoluzione contrattuale</td></tr>
+    <tr><td>REG76</td><td>Il campo oneri economici derivanti dalla risoluzione-recesso &egrave; obbligatorio in caso di: interruzione anticipata per risoluzione contrattuale, recesso della stazione appaltante, recesso dell&apos;appaltatore</td></tr>
+    <tr><td>REG77</td><td>La data di scadenza del contratto deve essere superiore alla data di stipula.</td></tr>
+    <tr><td>REG78</td><td>Indicare almeno un partecipante.</td></tr>
+    <tr><td>REG79</td><td>L&apos;importo &egrave; obbligatorio se &egrave; valorizzato il campo oneri economici derivanti dalla risoluzione-recesso</td></tr>
+    <tr><td>REG8</td><td>I campi contenente una url devono iniziare per http oppure per https. In presenza di eForm verificare anche la validit&agrave; del link ai documenti di gara (BT-15).</td></tr>
+    <tr><td>REG80</td><td>Risoluzione/rescissione senza oneri, dunque non va indicato l&apos;importo. Verificare.</td></tr>
+    <tr><td>REG81</td><td>Non &egrave; stata indicata la data di ultimazione</td></tr>
+    <tr><td>REG82</td><td>Numero totale degli infortuni incoerente rispetto al numero degli infortuni mortali e con postumi permanenti</td></tr>
+    <tr><td>REG83</td><td>Il campo incamerata polizza &egrave; obbligatorio in caso di interruzione anticipata</td></tr>
+    <tr><td>REG84</td><td>il campo di cui postumi permanenti deve essere maggiore o uguale a 0</td></tr>
+    <tr><td>REG85</td><td>il campo di cui mortali deve essere maggiore o uguale a 0</td></tr>
+    <tr><td>REG86</td><td>Certificato di regolare esecuzione non previsto in caso di collaudo tecnico/amministrativo</td></tr>
+    <tr><td>REG87</td><td>Specificare data del certificato di regolare esecuzione o le modalit&agrave; del collaudo tecnico amministrativo</td></tr>
+    <tr><td>REG88</td><td>Non &egrave; stata indicata la data di nomina del collaudatore, Commissione</td></tr>
+    <tr><td>REG89</td><td>Non &egrave; stata indicata la data di inizio delle operazioni di collaudo</td></tr>
+    <tr><td>REG9</td><td>Il campo &lsquo;Esclusione o regime speciale&rsquo; non &egrave; richiesto</td></tr>
+    <tr><td>REG90</td><td>Data inizio operazioni di collaudo antecedente la data  di nomina della commissione di collaudo/collaudatore</td></tr>
+    <tr><td>REG91</td><td>Non &egrave; stata indicata la data di redazione del certificato di collaudo</td></tr>
+    <tr><td>REG92</td><td>Data redazione certificato antecedente la data di inizio operazioni di collaudo</td></tr>
+    <tr><td>REG93</td><td>Data delibera di ammissibilit&agrave; antecedente la data di redazione del certificato di collaudo</td></tr>
+    <tr><td>REG94</td><td>Oneri complessivi derivanti &egrave; obbligatorio se il numero totale riserve &egrave; maggiore di zero.</td></tr>
+    <tr><td>REG95</td><td>Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte &egrave; obbligatorio. In presenza di eForm verificare il campo EndDate (BT-131).</td></tr>
+    <tr><td>REG96</td><td>E&apos; obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).</td></tr>
+    <tr><td>REG97</td><td>Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).</td></tr>
+    <tr><td>REG98</td><td>L&apos;importo indicato nell&apos;oggetto appalto.datiBase.importo deve essere &gt; 0. In presenza di eForm verificare l&apos;importo inserito nel campo EstimatedOverallContractAmount (BT-27).</td></tr>
+    <tr><td>REG99</td><td>L&apos;importo indicato nell&apos;oggetto lotti.datiBase.importo deve essere &gt; 0. In presenza di eForm verificare l&apos;importo inserito nel campo EstimatedOverallContractAmount (BT-27).</td></tr>
+    <tr><td>SCH01</td><td>Soggetto Non Presente Nelle Schede Inviate</td></tr>
+    <tr><td>SEC01</td><td>Utente non presente nel sistema</td></tr>
+    <tr><td>SEC02</td><td>Ruolo indicato non presente nel sistema</td></tr>
+    <tr><td>SEC03</td><td>Errore conversione Json</td></tr>
+    <tr><td>SEC04</td><td>Livello autorizzativo insufficiente</td></tr>
+    <tr><td>SEC05</td><td>Utente non autorizzato</td></tr>
+    <tr><td>SEC06</td><td>Codice profilo utente non univoco</td></tr>
+    <tr><td>SEC07</td><td>Errore configurazione utente</td></tr>
+    <tr><td>SEC08</td><td>Configurazione non presente nel sistema</td></tr>
+    <tr><td>SEC09</td><td>Ruolo insufficiente per l&apos;operazione</td></tr>
+    <tr><td>SEC10</td><td>Appalto non presente nel sistema</td></tr>
+    <tr><td>SEC11</td><td>LOA non formattato correttamente</td></tr>
+    <tr><td>SEC12</td><td>Profili non censiti</td></tr>
+    <tr><td>SEC13</td><td>Dettagli profilo non corretti</td></tr>
+    <tr><td>SEC14</td><td>Token non valido</td></tr>
+    <tr><td>SEC15</td><td>Soggetto Rappresentato non presente</td></tr>
+    <tr><td>SEC16</td><td>Stazione appaltante non abilitata</td></tr>
+    <tr><td>TED_ARCHIVED</td><td>errore durante la pubblicazione dell&apos;avviso su TED: stato restituito ARCHIVED</td></tr>
+    <tr><td>TED_DELETED</td><td>errore durante la pubblicazione dell&apos;avviso su TED: stato restituito DELETED</td></tr>
+    <tr><td>TED_NOT_PUBLISHED</td><td>errore durante la pubblicazione dell&apos;avviso su TED: stato restituito NOT_PUBLISHED</td></tr>
+    <tr><td>TED_VALIDATION_FAILED</td><td>errore durante la pubblicazione dell&apos;avviso su TED: stato restituito VALIDATION_FAILED</td></tr>
+  </tbody>
+</table>
+    </body>
+</html>
