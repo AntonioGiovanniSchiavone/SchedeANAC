@@ -89,6 +89,11 @@ table.rule th{
     color: #fff; /* Colore del testo bianco per l'intestazione */
 }
 
+table.recursive th{
+    background-color: #FF0000; /* Colore di sfondo verde scuro per l'intestazione */
+    color: #fff; /* Colore del testo bianco per l'intestazione */
+}
+
 tr:nth-child(even) {
     background-color: #f9f9f9; /* Colore di sfondo alternato per le righe */
 }
@@ -145,7 +150,9 @@ footer {
     background-color: #6f42c1 ;
 }
 
-
+.message-divider.recursive{
+    background-color: #ff0000 ;
+}
 
 .message-divider.rule {
     background-color: #641c34;
@@ -729,8 +736,20 @@ footer {
         <td>90</td>
       </tr>
     </table>
+    <div class="message">
+        <div class="message-divider recursive"></div>
+        <p>Analisi Ricorsione.</p>
+        <div class="message-divider recursive"></div>
+    </div>
+    
+    <table class="recursive">
+      <tr>
+        <th scope="col">Scheda Ricorsiva</th>          
+      </tr>  
+</table>
+
   <footer>
-    Generato il 10/11/2025 alle ore 16:11:45
+    Generato il 01/12/2025 alle ore 09:13:05
   </footer>
   </body>
   </html>
