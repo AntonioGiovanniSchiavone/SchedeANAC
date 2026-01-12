@@ -442,7 +442,7 @@ footer {
     <tr><td>REG102</td><td>Indicare il nuovo importo</td></tr>
     <tr><td>REG103</td><td>L&apos;importo totale dei lotti non pu&ograve; superare i 5K</td></tr>
     <tr><td>REG104</td><td>L&apos;importo totale dei lotti non pu&ograve; essere inferiore ai 5K</td></tr>
-    <tr><td>REG105</td><td>La data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non pu&ograve; essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-131).</td></tr>
+    <tr><td>REG105</td><td>La data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non pu&ograve; essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-131).</td></tr>
     <tr><td>REG106</td><td>La data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneInvito non pu&ograve; essere antecedente o uguale ad oggi. In presenza di eForm verificare il campo EndDate (BT-1311, BT-630).</td></tr>
     <tr><td>REG107</td><td>Indicare la data alla quale ha inizio il sistema dinamico di acquisizione. In presenza di eForm verificare il campo Duration Start Date (BT-536).</td></tr>
     <tr><td>REG108</td><td>E&apos; obbligatorio inserire almeno uno dei tre campi tra dataFine, durata e altraDurata. In presenza di eForm verificare i campi Duration End Date (BT-537), Duration Period (BT-36) e Duration Other (BT-538).</td></tr>
@@ -472,7 +472,21 @@ footer {
     <tr><td>REG13</td><td>Non &egrave; stato valorizzato il campo opzioniRinnovi</td></tr>
     <tr><td>REG130</td><td>I codici fiscali indicati nella lista dei soggetti devono essere diversi.</td></tr>
     <tr><td>REG131</td><td>L&apos;importo di aggiudicazione non pu&ograve; superare i 221K</td></tr>
+    <tr><td>REG132</td><td>La scheda pu&ograve; essere utilizzata solo per procedure con oggetto del contratto servizi o forniture.</td></tr>
+    <tr><td>REG133</td><td>Definire solo uno dei campi tra durata e altraDurata.</td></tr>
+    <tr><td>REG134</td><td>Il campo durata non pu&ograve; essere vuoto.</td></tr>
+    <tr><td>REG135</td><td>Definire almeno uno dei campi tra durata e altraDurata.</td></tr>
+    <tr><td>REG136</td><td>Valore della tipologica TipoProcedura non ammesso.</td></tr>
+    <tr><td>REG137</td><td>Indicare almeno un invitato.</td></tr>
+    <tr><td>REG138</td><td>I campi di tipo testo non possono essere vuoti.</td></tr>
+    <tr><td>REG139</td><td>Definire almeno un conferente subappalto.</td></tr>
     <tr><td>REG14</td><td>Se l&apos;appalto prevede ripetizioni, il motivo collegamento CIG deve essere :No, nessuna ipotesi di collegamento</td></tr>
+    <tr><td>REG140</td><td>Definire un solo conferente subappalto.</td></tr>
+    <tr><td>REG141</td><td>In caso di subappalto a cascata deve essere indicato l&apos;idSubappalto.</td></tr>
+    <tr><td>REG142</td><td>Indicare almeno un soggetto.</td></tr>
+    <tr><td>REG143</td><td>Indicare almeno un soggetto.</td></tr>
+    <tr><td>REG144</td><td>Per appalti di lavori l&apos;importo non pu&ograve; superare i 150000 euro.</td></tr>
+    <tr><td>REG145</td><td>Per appalti di servizi e forniture l&apos;importo non pu&ograve; superare i 140000 euro.</td></tr>
     <tr><td>REG15</td><td>il campo cigCollegato &egrave; obbligatorio se il motivo di collegamento CIG e&apos; valorizzato</td></tr>
     <tr><td>REG16</td><td>il campo cigCollegato deve prevedere ripetizioni</td></tr>
     <tr><td>REG18</td><td>E&rsquo; obbligatorio valorizzare a SI il campo acquisizioneCup se il campo afferenteInvestimentiPNRR &egrave; valorizzato a SI e l&apos;appalto non &egrave; di tipo Accordo Quadro/convenzione</td></tr>
@@ -547,7 +561,7 @@ footer {
     <tr><td>REG79</td><td>L&apos;importo &egrave; obbligatorio se &egrave; valorizzato il campo oneri economici derivanti dalla risoluzione-recesso</td></tr>
     <tr><td>REG8</td><td>I campi contenente una url devono iniziare per http oppure per https. In presenza di eForm verificare anche la validit&agrave; del link ai documenti di gara (BT-15).</td></tr>
     <tr><td>REG80</td><td>Risoluzione/rescissione senza oneri, dunque non va indicato l&apos;importo. Verificare.</td></tr>
-    <tr><td>REG81</td><td>Non &egrave; stata indicata la data di ultimazione</td></tr>
+    <tr><td>REG81</td><td>E&apos; necessario indicare la data di ultimazione o la data di interruzione anticipata.</td></tr>
     <tr><td>REG82</td><td>Numero totale degli infortuni incoerente rispetto al numero degli infortuni mortali e con postumi permanenti</td></tr>
     <tr><td>REG83</td><td>Il campo incamerata polizza &egrave; obbligatorio in caso di interruzione anticipata</td></tr>
     <tr><td>REG84</td><td>il campo di cui postumi permanenti deve essere maggiore o uguale a 0</td></tr>
@@ -562,9 +576,9 @@ footer {
     <tr><td>REG92</td><td>Data redazione certificato antecedente la data di inizio operazioni di collaudo</td></tr>
     <tr><td>REG93</td><td>Data delibera di ammissibilit&agrave; antecedente la data di redazione del certificato di collaudo</td></tr>
     <tr><td>REG94</td><td>Oneri complessivi derivanti &egrave; obbligatorio se il numero totale riserve &egrave; maggiore di zero.</td></tr>
-    <tr><td>REG95</td><td>Per il tipo di procedura aperta o altra procedura a fase unica il campo oraScadenzaPresentazioneOfferte &egrave; obbligatorio. In presenza di eForm verificare il campo EndDate (BT-131).</td></tr>
-    <tr><td>REG96</td><td>E&apos; obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).</td></tr>
-    <tr><td>REG97</td><td>Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).</td></tr>
+    <tr><td>REG95</td><td>Per il tipo di procedura aperta o altra procedura a fase unica il campo scadenzaPresentazioneOfferte &egrave; obbligatorio. In presenza di eForm verificare il campo EndDate (BT-131).</td></tr>
+    <tr><td>REG96</td><td>E&apos; obbligatorio inserire almeno uno dei due campi tra scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).</td></tr>
+    <tr><td>REG97</td><td>Inserire solo uno tra i campi scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito. In presenza di eForm verificare i campi EndDate (BT-131, BT-1311, BT-630).</td></tr>
     <tr><td>REG98</td><td>L&apos;importo indicato nell&apos;oggetto appalto.datiBase.importo deve essere &gt; 0. In presenza di eForm verificare l&apos;importo inserito nel campo EstimatedOverallContractAmount (BT-27).</td></tr>
     <tr><td>REG99</td><td>L&apos;importo indicato nell&apos;oggetto lotti.datiBase.importo deve essere &gt; 0. In presenza di eForm verificare l&apos;importo inserito nel campo EstimatedOverallContractAmount (BT-27).</td></tr>
     <tr><td>SCH01</td><td>Soggetto Non Presente Nelle Schede Inviate</td></tr>
@@ -592,7 +606,7 @@ footer {
 </table>
     
   <footer>
-    Generato il 01/12/2025 alle ore 09:09:34
+    Generato il 12/01/2026 alle ore 15:19:44
   </footer>
   </body>
   </html>

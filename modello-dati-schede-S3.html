@@ -786,6 +786,20 @@ satisfies prestazione.tipoSoggetto.codice="2" and (prestazione.dataConsegna = nu
     <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
 satisfies prestazione.tipoSoggetto.codice="1" and (prestazione.tipoProgettazione = null or prestazione.tipoProgettazione = "" or prestazione.tipoProgettazione.codice = null or prestazione.tipoProgettazione.codice = ""))</td>
   </tr>
+
+  <tr>
+    <td>REG143</td>
+    <td> Tipo progettazione e tipo soggetto non coerenti</td>
+    <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
+satisfies is defined(prestazione.progettazioneInternaEsterna) and prestazione.progettazioneInternaEsterna="INTERNA" and is defined(prestazione.tipoSoggetto) and prestazione.tipoSoggetto.codice !="1"</td>
+  </tr>
+
+  <tr>
+    <td>REG143</td>
+    <td> Tipo progettazione e tipo soggetto non coerenti</td>
+    <td>some elenco in elencoIncarichi satisfies (some prestazione in elenco.prestazioni
+satisfies is defined(prestazione.progettazioneInternaEsterna) and prestazione.progettazioneInternaEsterna="ESTERNA" and is defined(prestazione.tipoSoggetto) and prestazione.tipoSoggetto.codice ="1"</td>
+  </tr>
 </table>
     <div class="message">
         <div class="message-divider fluxcards"></div>
@@ -823,7 +837,7 @@ satisfies prestazione.tipoSoggetto.codice="1" and (prestazione.tipoProgettazione
 </table>
 
   <footer>
-    Generato il 01/12/2025 alle ore 09:13:02
+    Generato il 12/01/2026 alle ore 15:23:17
   </footer>
   </body>
   </html>

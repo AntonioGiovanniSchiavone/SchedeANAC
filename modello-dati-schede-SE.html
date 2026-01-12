@@ -4,7 +4,7 @@
   <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modello Dati - Scheda I1 - Scheda di inizio prestazione</title>
+    <title>Modello Dati - Scheda SE - Elenco richieste di adesione elenco fornitori</title>
     <style>
       /* css/styles.css */
 
@@ -176,7 +176,7 @@ footer {
 
 
   <body>
-    <h1>Modello Dati - Scheda I1 - Scheda di inizio prestazione</h1>
+    <h1>Modello Dati - Scheda SE - Elenco richieste di adesione elenco fornitori</h1>
   
     <div class="message">
         <div class="message-divider info"></div>
@@ -196,32 +196,32 @@ footer {
 
   <tr>
     <td>Area Funzionale</td>
-    <td>A_5</td>
+    <td>A_4</td>
   </tr>
 
   <tr>
     <td>Famiglia funzionalità</td>
-    <td>I</td>
+    <td>SE</td>
   </tr>
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Non Definito/Non Rilevante</td>
+    <td>Settori ordinari; settore difesa e sicurezza - regime ordinario e alleggerito</td>
   </tr>
 
   <tr>
     <td>Fase</td>
-    <td>Esecuzione</td>
+    <td>Aggiudicazione</td>
   </tr>
 
   <tr>
     <td>Evento</td>
-    <td>Inizio esecuzione</td>
+    <td>Elenco richieste di adesione all'elenco fornitori</td>
   </tr>
 
   <tr>
     <td>Scheda</td>
-    <td>I1</td>
+    <td>SE</td>
   </tr>
 
   <tr>
@@ -231,12 +231,12 @@ footer {
 
   <tr>
     <td>Descrizione</td>
-    <td>Avvio dell'esecuzione</td>
+    <td>Elenco richieste di adesione all'elenco fornitori</td>
   </tr>
 
   <tr>
     <td>Normativa</td>
-    <td>N/A</td>
+    <td>Non Definito/Non Rilevante</td>
   </tr>
 
   <tr>
@@ -285,7 +285,7 @@ footer {
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaI1Type">SchedaI1Type</h2>
+  <h2 id="SchedaSEType">SchedaSEType</h2>
   
   
     <table class="main">
@@ -299,10 +299,10 @@ footer {
   <tr>
     <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#AnacFormI1Type">AnacFormI1Type</a></td>
+    <td>object: { idElenco (<span class="smalltype">obbligatorio</span>): string di <a href="#"></a> }</td>
   </tr>
 </table>
-  <h2 id="AnacFormI1Type">AnacFormI1Type</h2>
+  <h2 id="PartecipanteSEType">PartecipanteSEType</h2>
   
   
     <table class="main">
@@ -314,21 +314,130 @@ footer {
   
 
   <tr>
-    <td>idContratto (<span class="smalltype">obbligatorio</span>)</td>
-    <td>identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.</td>
+    <td>partecipante (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#PartecipanteType">PartecipanteType</a></td>
+  </tr>
+
+  <tr>
+    <td>operazione (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#OperazioneElencoEnum">OperazioneElencoEnum</a></td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider reference"></div>
+        <p>Lista delle reference della scheda.</p>
+        <div class="message-divider reference"></div>
+    </div>
+    
+  <h2 id="OperazioneElencoEnum">OperazioneElencoEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Operazione Elenco - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/operazioneElenco.json">operazioneElenco.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="PartecipanteType">PartecipanteType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dati del partecipante</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice fiscale del soggetto interessato</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>denominazione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Denominazione del soggetto interessato</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>ruoloOE (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#RuoloOEEnum">RuoloOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>tipoOE (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#TipoOEEnum">TipoOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>idPartecipante (<span class="smalltype">obbligatorio</span>)</td>
+    <td>id partecipante</td>
     <td>uuid</td>
   </tr>
 
   <tr>
-    <td>datiInizio (<span class="smalltype">obbligatorio</span>)</td>
+    <td>paeseOperatoreEconomico (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Paese Operatore Economico</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>paeseOperatoreEconomicoMl (<span class="smalltype">opzionale</span>)</td>
     <td></td>
-    <td><a href="#DatiInizioType">DatiInizioType</a></td>
+    <td><a href="#MultilinguaType">MultilinguaType</a></td>
+  </tr>
+
+  <tr>
+    <td>avvalimento (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Flag avvalimento</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>tipologiaAvvalimento (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#TipologiaAvvalimentoEnum">TipologiaAvvalimentoEnum</a></td>
   </tr>
 </table>
-  <h2 id="DatiInizioType">DatiInizioType</h2>
+  <h2 id="RuoloOEEnum">RuoloOEEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Ruolo del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ruoloOE.json">ruoloOE.json</a></p>
+    </details>
   
   
-    <table class="main">
+    <table class="reference">
       <tr>
         <th scope="col">Nome</th>
         <th scope="col">Descrizione</th>
@@ -337,112 +446,99 @@ footer {
   
 
   <tr>
-    <td>dataDisposizioneInizio (<span class="smalltype">opzionale</span>)</td>
-    <td>Data disposizione dell’inizio della prog. Esecutiva</td>
-    <td>date-time</td>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 
   <tr>
-    <td>dataApprovazione (<span class="smalltype">opzionale</span>)</td>
-    <td>Data approvazione del  progetto Esecutivo</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>consegnaFrazionata (<span class="smalltype">opzionale</span>)</td>
-    <td>Consegna frazionata</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>avvioPerFasi (<span class="smalltype">opzionale</span>)</td>
-    <td>L'avvio dell'esecuzione del contratto e' per fasi</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>dataVerbalePrimaConsegna (<span class="smalltype">opzionale</span>)</td>
-    <td>Data verbale prima consegna lavori</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataAvvioPrimaFase (<span class="smalltype">opzionale</span>)</td>
-    <td>Data di avvio della prima fase dell'esecuzione del contratto</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataVerbaleConsegnaDefinitiva (<span class="smalltype">opzionale</span>)</td>
-    <td>Data verbale consegna definitiva</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>consegnaSottoRiserva (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Consegna sotto riserva di legge?</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>dataEffettivoInizio (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Data di effettivo inizio lavori/servizi/forniture (consegna completa/avvio di tutte le prestazioni del contratto)</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataFinePrevista (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Data fine prevista per dare ultimazione ai lavori/servizi/forniture</td>
-    <td>date-time</td>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 </table>
-    <div class="message">
-        <div class="message-divider rule"></div>
-        <p>Lista delle regole applicate alla scheda.</p>
-        <div class="message-divider rule"></div>
-    </div>
-    
-  <h2 id="Regole">Regole</h2>
+  <h2 id="TipoOEEnum">TipoOEEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipo soggetto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOE.json">tipoOE.json</a></p>
+    </details>
   
   
-    <table class="rule">
+    <table class="reference">
       <tr>
-        <th scope="col">Codice</th>
-        <th scope="col">Descrizione</th>  
-        <th scope="col">Test</th>  
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
       </tr>
   
 
   <tr>
-    <td>REG57</td>
-    <td> Data approvazione del progetto Esecutivo: se digitata deve essere superiore alla data di disposizione dell’inizio della prog. Esecutiva</td>
-    <td>datiInizio.dataApprovazione != null and datiInizio.dataApprovazione != "" and datiInizio.dataDisposizioneInizio != null and datiInizio.dataDisposizioneInizio != "" and datiInizio.dataApprovazione < datiInizio.dataDisposizioneInizio</td>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 
   <tr>
-    <td>REG58</td>
-    <td> Data verbale prima consegna lavori: obbligatoria in caso di consegna frazionata.</td>
-    <td>datiInizio.consegnaFrazionata != null and datiInizio.consegnaFrazionata and (datiInizio.dataVerbalePrimaConsegna = null or datiInizio.dataVerbalePrimaConsegna = "")</td>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="MultilinguaType">MultilinguaType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto utilizzato per la comunicazione dei dati in multilingua</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>de (<span class="smalltype">opzionale</span>)</td>
+    <td>Deutsch</td>
+    <td>string</td>
   </tr>
 
   <tr>
-    <td>REG59</td>
-    <td> Data di avvio della prima fase dell'esecuzione del contratto: obbligatoria in caso di avvio per fasi.
+    <td>en (<span class="smalltype">opzionale</span>)</td>
+    <td>English</td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="TipologiaAvvalimentoEnum">TipologiaAvvalimentoEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipologia di avvalimento - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipologiaAvvalimento.json">tipologiaAvvalimento.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
 
-
-
-</td>
-    <td>datiInizio.avvioPerFasi != null and datiInizio.avvioPerFasi and (datiInizio.dataAvvioPrimaFase = null or datiInizio.dataAvvioPrimaFase = "")</td>
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 
   <tr>
-    <td>REG60</td>
-    <td> Data verbale consegna definitiva: obbligatoria quando non c'è consegna frazionata.
-
-
-
-</td>
-    <td>datiInizio.consegnaFrazionata != null and datiInizio.consegnaFrazionata = false and (datiInizio.dataVerbaleConsegnaDefinitiva = null or datiInizio.dataVerbaleConsegnaDefinitiva = "")</td>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 </table>
     <div class="message">
@@ -463,13 +559,25 @@ footer {
   
 
       <tr>
-        <td><a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-SC1.html">SC1</a></td>
-        <td><a href="./modello-dati-schede-AC1.html">AC1</a>, <a href="./modello-dati-schede-CL1.html">CL1</a>, <a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-ES1.html">ES1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-IR1.html">IR1</a>, <a href="./modello-dati-schede-M1.html">M1</a>, <a href="./modello-dati-schede-M1.40.html">M1_40</a>, <a href="./modello-dati-schede-M2.html">M2</a>, <a href="./modello-dati-schede-M2.40.html">M2_40</a>, <a href="./modello-dati-schede-RSU1.html">RSU1</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SA1.html">SA1</a>, <a href="./modello-dati-schede-SO1.html">SO1</a></td>
-        <td>Tutti</td>
+        <td><a href="./modello-dati-schede-P7.3.html">P7_3</a>, <a href="./modello-dati-schede-SE.html">SE</a></td>
+        <td><a href="./modello-dati-schede-C7.3.html">C7_3</a>, <a href="./modello-dati-schede-SE.html">SE</a></td>
+        <td>77</td>
       </tr>
     </table>
+    <div class="message">
+        <div class="message-divider recursive"></div>
+        <p>Analisi Ricorsione.</p>
+        <div class="message-divider recursive"></div>
+    </div>
+    
+    <table class="recursive">
+      <tr>
+        <th scope="col">Scheda Ricorsiva</th>          
+      </tr>  
+</table>
+
   <footer>
-    Generato il 12/01/2026 alle ore 15:20:56
+    Generato il 12/01/2026 alle ore 15:23:20
   </footer>
   </body>
   </html>

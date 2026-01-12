@@ -844,6 +844,41 @@ Articolo 31 decreto legislativo  208/2011</td>
   </tr>
 </table>
     <div class="message">
+        <div class="message-divider rule"></div>
+        <p>Lista delle regole applicate alla scheda.</p>
+        <div class="message-divider rule"></div>
+    </div>
+    
+  <h2 id="Regole">Regole</h2>
+  
+  
+    <table class="rule">
+      <tr>
+        <th scope="col">Codice</th>
+        <th scope="col">Descrizione</th>  
+        <th scope="col">Test</th>  
+      </tr>
+  
+
+  <tr>
+    <td>REG133</td>
+    <td> Definire solo uno dei campi tra durata e altraDurata</td>
+    <td>is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata)</td>
+  </tr>
+
+  <tr>
+    <td>REG134</td>
+    <td> Il campo durata non può essere vuoto</td>
+    <td>is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = ""</td>
+  </tr>
+
+  <tr>
+    <td>REG135</td>
+    <td> Definire almeno uno dei campi tra durata e altraDurata</td>
+    <td>is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false</td>
+  </tr>
+</table>
+    <div class="message">
         <div class="message-divider fluxcards"></div>
         <p>Relazioni con altre schede e Flussi ammissibili.</p>
         <div class="message-divider fluxcards"></div>
@@ -862,12 +897,12 @@ Articolo 31 decreto legislativo  208/2011</td>
 
       <tr>
         <td>Nessuna</td>
-        <td>STATO FINALE</td>
+        <td><a href="./modello-dati-schede-C7.3.html">C7_3</a>, <a href="./modello-dati-schede-SE.html">SE</a></td>
         <td>73</td>
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:12:40
+    Generato il 12/01/2026 alle ore 15:22:51
   </footer>
   </body>
   </html>

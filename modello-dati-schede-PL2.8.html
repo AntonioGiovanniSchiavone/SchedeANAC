@@ -821,7 +821,7 @@ Articolo 50 comma 5 decreto legislativo 36/2023</td>
   
 
   <tr>
-    <td>oraScadenzaPresentazioneOfferte (<span class="smalltype">obbligatorio</span>)</td>
+    <td>scadenzaPresentazioneOfferte (<span class="smalltype">obbligatorio</span>)</td>
     <td>Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED</td>
     <td>date-time</td>
   </tr>
@@ -1255,10 +1255,16 @@ Articolo 50 comma 5 decreto legislativo 36/2023</td>
 
   <tr>
     <td>REG105</td>
-    <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
+    <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+  </tr>
+
+  <tr>
+    <td>REG136</td>
+    <td> Valore della tipologica TipoProcedura non ammesso</td>
+    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["neg-w-call","open","oth-mult","oth-single"], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
   </tr>
 </table>
     <div class="message">
@@ -1285,7 +1291,7 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:12:55
+    Generato il 12/01/2026 alle ore 15:23:10
   </footer>
   </body>
   </html>

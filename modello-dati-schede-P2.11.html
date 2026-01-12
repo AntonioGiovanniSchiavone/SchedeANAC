@@ -474,6 +474,12 @@ Articolo 50 comma 5 decreto legislativo 36/2023</td>
     <td></td>
     <td><a href="#DatiBaseDocumentiType">DatiBaseDocumentiType</a></td>
   </tr>
+
+  <tr>
+    <td>datiBaseDurata (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseDurataType">DatiBaseDurataType</a></td>
+  </tr>
 </table>
   <h2 id="AppaltoP2_11Type">AppaltoP2_11Type</h2>
   
@@ -829,6 +835,46 @@ Articolo 50 comma 5 decreto legislativo 36/2023</td>
     <td>lingue (<span class="smalltype">opzionale</span>)</td>
     <td></td>
     <td>array di <a href="#LingueEnum">LingueEnum</a></td>
+  </tr>
+</table>
+  <h2 id="DatiBaseDurataType">DatiBaseDurataType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Duration delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>dataInizio (<span class="smalltype">opzionale</span>)</td>
+    <td>La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-536 - Duration Start Date del TED</td>
+    <td>date-time</td>
+  </tr>
+
+  <tr>
+    <td>durata (<span class="smalltype">opzionale</span>)</td>
+    <td>Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-36 - Duration Period del TED</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>dataFine (<span class="smalltype">opzionale</span>)</td>
+    <td>La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED</td>
+    <td>date-time</td>
+  </tr>
+
+  <tr>
+    <td>altraDurata (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#AltraDurataEnum">AltraDurataEnum</a></td>
   </tr>
 </table>
   <h2 id="DatiBaseLottoType">DatiBaseLottoType</h2>
@@ -1503,6 +1549,34 @@ Articolo 50 comma 5 decreto legislativo 36/2023</td>
     <td>string</td>
   </tr>
 </table>
+  <h2 id="AltraDurataEnum">AltraDurataEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>La durata è ignota, illimitata, ecc. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/durata.json">durata.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
   <h2 id="OggettoContrattoEnum">OggettoContrattoEnum</h2>
   
     <details open>
@@ -1980,6 +2054,30 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
     <td>some lotto in lotti
 satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo > 1000000) and lotto.derogaQualificazione.codice = "5")</td>
   </tr>
+
+  <tr>
+    <td>REG133</td>
+    <td> Definire solo uno dei campi tra durata e altraDurata</td>
+    <td>is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata)</td>
+  </tr>
+
+  <tr>
+    <td>REG134</td>
+    <td> Il campo durata non può essere vuoto</td>
+    <td>is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = ""</td>
+  </tr>
+
+  <tr>
+    <td>REG135</td>
+    <td> Definire almeno uno dei campi tra durata e altraDurata</td>
+    <td>is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false</td>
+  </tr>
+
+  <tr>
+    <td>REG136</td>
+    <td> Valore della tipologica TipoProcedura non ammesso</td>
+    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["comp-dial","innovation","neg-w-call","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
+  </tr>
 </table>
     <div class="message">
         <div class="message-divider fluxcards"></div>
@@ -2005,7 +2103,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:11:20
+    Generato il 12/01/2026 alle ore 15:21:30
   </footer>
   </body>
   </html>

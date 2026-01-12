@@ -395,7 +395,7 @@ Articolo 50 comma 9 decreto legislativo 36/2023</td>
   <tr>
     <td>datiBaseProcedura (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#DatiBaseProceduraADType">DatiBaseProceduraADType</a></td>
+    <td><a href="#DatiBaseProceduraAD2Type">DatiBaseProceduraAD2Type</a></td>
   </tr>
 
   <tr>
@@ -839,7 +839,7 @@ Articolo 50 comma 9 decreto legislativo 36/2023</td>
     <td><a href="#MultilinguaType">MultilinguaType</a></td>
   </tr>
 </table>
-  <h2 id="DatiBaseProceduraADType">DatiBaseProceduraADType</h2>
+  <h2 id="DatiBaseProceduraAD2Type">DatiBaseProceduraAD2Type</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -864,7 +864,7 @@ Articolo 50 comma 9 decreto legislativo 36/2023</td>
   <tr>
     <td>giustificazioniAggiudicazioneDiretta (<span class="smalltype">opzionale</span>)</td>
     <td></td>
-    <td>array di <a href="#GiustificazioneAggiudicazioneDirettaEnum">GiustificazioneAggiudicazioneDirettaEnum</a></td>
+    <td>array di <a href="#GiustificazioneAggiudicazioneDirettaType">GiustificazioneAggiudicazioneDirettaType</a></td>
   </tr>
 </table>
   <h2 id="DatiBaseStrumentiProceduraAccordoQuadroSistemaDinamicoType">DatiBaseStrumentiProceduraAccordoQuadroSistemaDinamicoType</h2>
@@ -1497,12 +1497,7 @@ Articolo 50 comma 9 decreto legislativo 36/2023</td>
     <td>string</td>
   </tr>
 </table>
-  <h2 id="GiustificazioneAggiudicazioneDirettaEnum">GiustificazioneAggiudicazioneDirettaEnum</h2>
-  
-    <details open>
-      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Giustificazione del ricorso a una procedura che consente di aggiudicare appalti direttamente, vale a dire che non impone la pubblicazione di un avviso di indizione di gara nella Gazzetta ufficiale dell'Unione europea - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-136 - Direct Award Justification Code del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazioniAggiudicazioneDiretta.json">giustificazioniAggiudicazioneDiretta.json</a></p>
-    </details>
+  <h2 id="GiustificazioneAggiudicazioneDirettaType">GiustificazioneAggiudicazioneDirettaType</h2>
   
   
     <table class="reference">
@@ -1514,15 +1509,15 @@ Articolo 50 comma 9 decreto legislativo 36/2023</td>
   
 
   <tr>
-    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td>giustificazioneAggiudicazioneDiretta (<span class="smalltype">opzionale</span>)</td>
     <td></td>
-    <td>string</td>
+    <td><a href="#GiustificazioneAggiudicazioneDirettaEnum">GiustificazioneAggiudicazioneDirettaEnum</a></td>
   </tr>
 
   <tr>
-    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
-    <td></td>
-    <td>string</td>
+    <td>cigCollegato (<span class="smalltype">opzionale</span>)</td>
+    <td>CIG collegato</td>
+    <td>array di string</td>
   </tr>
 </table>
   <h2 id="AccordoQuadroEnum">AccordoQuadroEnum</h2>
@@ -1827,6 +1822,34 @@ Articolo 50 comma 9 decreto legislativo 36/2023</td>
     <td>string</td>
   </tr>
 </table>
+  <h2 id="GiustificazioneAggiudicazioneDirettaEnum">GiustificazioneAggiudicazioneDirettaEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Giustificazione del ricorso a una procedura che consente di aggiudicare appalti direttamente, vale a dire che non impone la pubblicazione di un avviso di indizione di gara nella Gazzetta ufficiale dell'Unione europea - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-136 - Direct Award Justification Code del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/giustificazioniAggiudicazioneDiretta.json">giustificazioniAggiudicazioneDiretta.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
     <div class="message">
         <div class="message-divider rule"></div>
         <p>Lista delle regole applicate alla scheda.</p>
@@ -2030,6 +2053,12 @@ satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != "services" or (so
     <td>some aggiudicazione in aggiudicazioni
 satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != "services" or (some partecipante in aggiudicazione.partecipanti satisfies partecipante.importo > 1000000)) and aggiudicazione.derogaQualificazione.codice = "5")</td>
   </tr>
+
+  <tr>
+    <td>REG136</td>
+    <td> Valore della tipologica TipoProcedura non ammesso</td>
+    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["neg-wo-call","oth-mult","oth-single"], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
+  </tr>
 </table>
     <div class="message">
         <div class="message-divider fluxcards"></div>
@@ -2055,7 +2084,7 @@ satisfies ((aggiudicazione.datiBase.oggettoContratto.codice != "services" or (so
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:10:25
+    Generato il 12/01/2026 alle ore 15:20:33
   </footer>
   </body>
   </html>

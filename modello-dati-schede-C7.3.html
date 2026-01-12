@@ -4,7 +4,7 @@
   <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modello Dati - Scheda I1 - Scheda di inizio prestazione</title>
+    <title>Modello Dati - Scheda C7_3 - Conclusione Elenco Fornitori.</title>
     <style>
       /* css/styles.css */
 
@@ -176,7 +176,7 @@ footer {
 
 
   <body>
-    <h1>Modello Dati - Scheda I1 - Scheda di inizio prestazione</h1>
+    <h1>Modello Dati - Scheda C7_3 - Conclusione Elenco Fornitori.</h1>
   
     <div class="message">
         <div class="message-divider info"></div>
@@ -201,12 +201,12 @@ footer {
 
   <tr>
     <td>Famiglia funzionalità</td>
-    <td>I</td>
+    <td>C7_3</td>
   </tr>
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Non Definito/Non Rilevante</td>
+    <td>Settori ordinari; settore difesa e sicurezza - regime ordinario e alleggerito</td>
   </tr>
 
   <tr>
@@ -216,12 +216,12 @@ footer {
 
   <tr>
     <td>Evento</td>
-    <td>Inizio esecuzione</td>
+    <td>Chiusura elenco fornitori</td>
   </tr>
 
   <tr>
     <td>Scheda</td>
-    <td>I1</td>
+    <td>C7_3</td>
   </tr>
 
   <tr>
@@ -231,17 +231,17 @@ footer {
 
   <tr>
     <td>Descrizione</td>
-    <td>Avvio dell'esecuzione</td>
+    <td>Chiusura elenco fornitori</td>
   </tr>
 
   <tr>
     <td>Normativa</td>
-    <td>N/A</td>
+    <td>Non Definito/Non Rilevante</td>
   </tr>
 
   <tr>
     <td>Pubblicazione TED?</td>
-    <td>NO</td>
+    <td>SI</td>
   </tr>
 
   <tr>
@@ -261,7 +261,7 @@ footer {
 
   <tr>
     <td>Pubblicazione Nazionale</td>
-    <td>NO</td>
+    <td>SI</td>
   </tr>
 
   <tr>
@@ -285,7 +285,7 @@ footer {
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaI1Type">SchedaI1Type</h2>
+  <h2 id="SchedaC7_3Type">SchedaC7_3Type</h2>
   
   
     <table class="main">
@@ -299,10 +299,10 @@ footer {
   <tr>
     <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#AnacFormI1Type">AnacFormI1Type</a></td>
+    <td><a href="#AnacFormC7_3Type">AnacFormC7_3Type</a></td>
   </tr>
 </table>
-  <h2 id="AnacFormI1Type">AnacFormI1Type</h2>
+  <h2 id="AnacFormC7_3Type">AnacFormC7_3Type</h2>
   
   
     <table class="main">
@@ -314,135 +314,15 @@ footer {
   
 
   <tr>
-    <td>idContratto (<span class="smalltype">obbligatorio</span>)</td>
-    <td>identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.</td>
+    <td>idElenco (<span class="smalltype">obbligatorio</span>)</td>
+    <td>id restituito dal servizio all'invio della scheda di costituzione elenco fornitori</td>
     <td>uuid</td>
   </tr>
 
   <tr>
-    <td>datiInizio (<span class="smalltype">obbligatorio</span>)</td>
-    <td></td>
-    <td><a href="#DatiInizioType">DatiInizioType</a></td>
-  </tr>
-</table>
-  <h2 id="DatiInizioType">DatiInizioType</h2>
-  
-  
-    <table class="main">
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Descrizione</th>
-        <th scope="col">Tipo</th>
-      </tr>
-  
-
-  <tr>
-    <td>dataDisposizioneInizio (<span class="smalltype">opzionale</span>)</td>
-    <td>Data disposizione dell’inizio della prog. Esecutiva</td>
+    <td>dataChiusura (<span class="smalltype">opzionale</span>)</td>
+    <td>data di chiusura dell'elenco</td>
     <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataApprovazione (<span class="smalltype">opzionale</span>)</td>
-    <td>Data approvazione del  progetto Esecutivo</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>consegnaFrazionata (<span class="smalltype">opzionale</span>)</td>
-    <td>Consegna frazionata</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>avvioPerFasi (<span class="smalltype">opzionale</span>)</td>
-    <td>L'avvio dell'esecuzione del contratto e' per fasi</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>dataVerbalePrimaConsegna (<span class="smalltype">opzionale</span>)</td>
-    <td>Data verbale prima consegna lavori</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataAvvioPrimaFase (<span class="smalltype">opzionale</span>)</td>
-    <td>Data di avvio della prima fase dell'esecuzione del contratto</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataVerbaleConsegnaDefinitiva (<span class="smalltype">opzionale</span>)</td>
-    <td>Data verbale consegna definitiva</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>consegnaSottoRiserva (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Consegna sotto riserva di legge?</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>dataEffettivoInizio (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Data di effettivo inizio lavori/servizi/forniture (consegna completa/avvio di tutte le prestazioni del contratto)</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataFinePrevista (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Data fine prevista per dare ultimazione ai lavori/servizi/forniture</td>
-    <td>date-time</td>
-  </tr>
-</table>
-    <div class="message">
-        <div class="message-divider rule"></div>
-        <p>Lista delle regole applicate alla scheda.</p>
-        <div class="message-divider rule"></div>
-    </div>
-    
-  <h2 id="Regole">Regole</h2>
-  
-  
-    <table class="rule">
-      <tr>
-        <th scope="col">Codice</th>
-        <th scope="col">Descrizione</th>  
-        <th scope="col">Test</th>  
-      </tr>
-  
-
-  <tr>
-    <td>REG57</td>
-    <td> Data approvazione del progetto Esecutivo: se digitata deve essere superiore alla data di disposizione dell’inizio della prog. Esecutiva</td>
-    <td>datiInizio.dataApprovazione != null and datiInizio.dataApprovazione != "" and datiInizio.dataDisposizioneInizio != null and datiInizio.dataDisposizioneInizio != "" and datiInizio.dataApprovazione < datiInizio.dataDisposizioneInizio</td>
-  </tr>
-
-  <tr>
-    <td>REG58</td>
-    <td> Data verbale prima consegna lavori: obbligatoria in caso di consegna frazionata.</td>
-    <td>datiInizio.consegnaFrazionata != null and datiInizio.consegnaFrazionata and (datiInizio.dataVerbalePrimaConsegna = null or datiInizio.dataVerbalePrimaConsegna = "")</td>
-  </tr>
-
-  <tr>
-    <td>REG59</td>
-    <td> Data di avvio della prima fase dell'esecuzione del contratto: obbligatoria in caso di avvio per fasi.
-
-
-
-</td>
-    <td>datiInizio.avvioPerFasi != null and datiInizio.avvioPerFasi and (datiInizio.dataAvvioPrimaFase = null or datiInizio.dataAvvioPrimaFase = "")</td>
-  </tr>
-
-  <tr>
-    <td>REG60</td>
-    <td> Data verbale consegna definitiva: obbligatoria quando non c'è consegna frazionata.
-
-
-
-</td>
-    <td>datiInizio.consegnaFrazionata != null and datiInizio.consegnaFrazionata = false and (datiInizio.dataVerbaleConsegnaDefinitiva = null or datiInizio.dataVerbaleConsegnaDefinitiva = "")</td>
   </tr>
 </table>
     <div class="message">
@@ -463,13 +343,13 @@ footer {
   
 
       <tr>
-        <td><a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-SC1.html">SC1</a></td>
-        <td><a href="./modello-dati-schede-AC1.html">AC1</a>, <a href="./modello-dati-schede-CL1.html">CL1</a>, <a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-ES1.html">ES1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-IR1.html">IR1</a>, <a href="./modello-dati-schede-M1.html">M1</a>, <a href="./modello-dati-schede-M1.40.html">M1_40</a>, <a href="./modello-dati-schede-M2.html">M2</a>, <a href="./modello-dati-schede-M2.40.html">M2_40</a>, <a href="./modello-dati-schede-RSU1.html">RSU1</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SA1.html">SA1</a>, <a href="./modello-dati-schede-SO1.html">SO1</a></td>
-        <td>Tutti</td>
+        <td><a href="./modello-dati-schede-P7.3.html">P7_3</a>, <a href="./modello-dati-schede-SE.html">SE</a></td>
+        <td>STATO FINALE</td>
+        <td>77</td>
       </tr>
     </table>
   <footer>
-    Generato il 12/01/2026 alle ore 15:20:56
+    Generato il 12/01/2026 alle ore 15:20:51
   </footer>
   </body>
   </html>

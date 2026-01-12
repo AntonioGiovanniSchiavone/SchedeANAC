@@ -4,7 +4,7 @@
   <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modello Dati - Scheda ABI - Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.</title>
+    <title>Modello Dati - Scheda ABI - Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED. L'utilizzo della scheda è limitato a procedure con oggetto del contratto servizi o forniture.</title>
     <style>
       /* css/styles.css */
 
@@ -176,7 +176,7 @@ footer {
 
 
   <body>
-    <h1>Modello Dati - Scheda ABI - Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED.</h1>
+    <h1>Modello Dati - Scheda ABI - Scheda relativa a procedure negoziate per l'acquisizione di beni e servizi infungibili a imprese estere o acquisizione di beni e servizi in modalità e-commerce, senza invio al TED. L'utilizzo della scheda è limitato a procedure con oggetto del contratto servizi o forniture.</h1>
   
     <div class="message">
         <div class="message-divider info"></div>
@@ -206,7 +206,7 @@ footer {
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Acquisizione beni infungibili, senza invio al TED.</td>
+    <td>Tutti i settori, tutti i regimi</td>
   </tr>
 
   <tr>
@@ -364,6 +364,12 @@ footer {
     <td>datiBase (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
     <td><a href="#DatiBaseAppaltoADType">DatiBaseAppaltoADType</a></td>
+  </tr>
+
+  <tr>
+    <td>idPianificazione (<span class="smalltype">opzionale</span>)</td>
+    <td>identificativo di attività di preinformazione o di verifica preliminare dei requisiti.</td>
+    <td>uuid</td>
   </tr>
 </table>
   <h2 id="AggiudicazioneABIType">AggiudicazioneABIType</h2>
@@ -1027,6 +1033,13 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
     <td>some aggiudicazione in aggiudicazioni
 satisfies count(aggiudicazione.cup)>0 and (every c in aggiudicazione.cup satisfies (c = null or c = ""))</td>
   </tr>
+
+  <tr>
+    <td>REG132</td>
+    <td> La scheda può essere utilizzata solo per procedure con oggetto del contratto servizi o forniture.</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works"</td>
+  </tr>
 </table>
     <div class="message">
         <div class="message-divider fluxcards"></div>
@@ -1052,7 +1065,7 @@ satisfies count(aggiudicazione.cup)>0 and (every c in aggiudicazione.cup satisfi
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:10:13
+    Generato il 12/01/2026 alle ore 15:20:21
   </footer>
   </body>
   </html>

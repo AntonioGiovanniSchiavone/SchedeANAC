@@ -1830,6 +1830,20 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
     <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
     <td>count(aggiudicazioni) <= 0</td>
   </tr>
+
+  <tr>
+    <td>REG144</td>
+    <td> Per appalti di lavori l'importo non può superare i 150000 euro</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.datiBase.oggettoContratto.codice = "works" and aggiudicazione.importoAggiudicazione > 150000</td>
+  </tr>
+
+  <tr>
+    <td>REG145</td>
+    <td> Per appalti di servizi e forniture l'importo non può superare i 140000 euro</td>
+    <td>some aggiudicazione in aggiudicazioni
+satisfies aggiudicazione.datiBase.oggettoContratto.codice != "works" and aggiudicazione.importoAggiudicazione > 140000</td>
+  </tr>
 </table>
     <div class="message">
         <div class="message-divider fluxcards"></div>
@@ -1855,7 +1869,7 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:10:35
+    Generato il 12/01/2026 alle ore 15:20:44
   </footer>
   </body>
   </html>

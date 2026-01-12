@@ -753,6 +753,12 @@ satisfies count(aggiudicazione.offertePresentate)>1 and (every offerta in aggiud
     <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
     <td>count(aggiudicazioni) <= 0</td>
   </tr>
+
+  <tr>
+    <td>REG136</td>
+    <td> Valore della tipologica TipoProcedura non ammesso</td>
+    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["open","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
+  </tr>
 </table>
     <div class="message">
         <div class="message-divider fluxcards"></div>
@@ -778,7 +784,7 @@ satisfies count(aggiudicazione.offertePresentate)>1 and (every offerta in aggiud
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:09:53
+    Generato il 12/01/2026 alle ore 15:20:03
   </footer>
   </body>
   </html>

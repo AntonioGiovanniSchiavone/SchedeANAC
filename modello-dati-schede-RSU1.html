@@ -326,6 +326,12 @@ footer {
   </tr>
 
   <tr>
+    <td>idSubappalto (<span class="smalltype">opzionale</span>)</td>
+    <td>identificativo restituito dal servizio all’invio della scheda di richiesta di subappalto precedente, obbligatorio in caso di subappalto a cascata.</td>
+    <td>uuid</td>
+  </tr>
+
+  <tr>
     <td>subappalto (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
     <td><a href="#SubappaltoType">SubappaltoType</a></td>
@@ -343,27 +349,15 @@ footer {
   
 
   <tr>
-    <td>codiciFiscaliOE (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Codici fiscali operatori economici</td>
-    <td>array di string</td>
+    <td>operatoreEconomicoSubappaltatore (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#OperatoreEconomicoType">OperatoreEconomicoType</a></td>
   </tr>
 
   <tr>
-    <td>impresaEstera (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Impresa estera?</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>codiceFiscaleAggiudicatario (<span class="smalltype">opzionale</span>)</td>
-    <td>Codice fiscale ditta aggiudicatrice nel caso di aggiudicatari multipli</td>
-    <td>string</td>
-  </tr>
-
-  <tr>
-    <td>codiceFiscaleDittaACascata (<span class="smalltype">opzionale</span>)</td>
-    <td>Codice fiscale ditta subappaltatrice</td>
-    <td>string</td>
+    <td>conferenteSubappalto (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#ConferenteSubappaltoType">ConferenteSubappaltoType</a></td>
   </tr>
 
   <tr>
@@ -400,6 +394,93 @@ footer {
     <td>cpv (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
     <td>array di <a href="#CPVEnum">CPVEnum</a></td>
+  </tr>
+</table>
+  <h2 id="ConferenteSubappaltoType">ConferenteSubappaltoType</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idAggiudicatario (<span class="smalltype">opzionale</span>)</td>
+    <td>id partecipante dell'aggiudicatario che conferisce il subappalto</td>
+    <td>uuid</td>
+  </tr>
+
+  <tr>
+    <td>idSubappaltanteACascata (<span class="smalltype">opzionale</span>)</td>
+    <td>idOE conferente subappalto in caso di subappalto a cascata</td>
+    <td>uuid</td>
+  </tr>
+</table>
+  <h2 id="OperatoreEconomicoType">OperatoreEconomicoType</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idOE (<span class="smalltype">obbligatorio</span>)</td>
+    <td>id operatore economico</td>
+    <td>uuid</td>
+  </tr>
+
+  <tr>
+    <td>elencoSoggetti (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>array di <a href="#SoggettoType">SoggettoType</a></td>
+  </tr>
+</table>
+  <h2 id="SoggettoType">SoggettoType</h2>
+  
+  
+    <table class="main">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Codice fiscale</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>denominazione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Denominazione</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>ruoloOE (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#RuoloOEEnum">RuoloOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>tipoOE (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#TipoOEEnum">TipoOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>operatoreEstero (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>boolean</td>
   </tr>
 </table>
     <div class="message">
@@ -514,6 +595,62 @@ footer {
     <td>string</td>
   </tr>
 </table>
+  <h2 id="RuoloOEEnum">RuoloOEEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Ruolo del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ruoloOE.json">ruoloOE.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="TipoOEEnum">TipoOEEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipo soggetto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOE.json">tipoOE.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
     <div class="message">
         <div class="message-divider rule"></div>
         <p>Lista delle regole applicate alla scheda.</p>
@@ -535,6 +672,50 @@ footer {
     <td>REG0</td>
     <td> Dati non presenti</td>
     <td>subappalto = null or subappalto = ""</td>
+  </tr>
+
+  <tr>
+    <td>REG138</td>
+    <td> I campi di tipo testo non possono essere vuoti</td>
+    <td>if (subappalto.operatoreEconomicoSubappaltatore.idOE="")</td>
+  </tr>
+
+  <tr>
+    <td>REG139</td>
+    <td> Definire almeno un conferente subappalto</td>
+    <td>if ((is defined(subappalto.conferenteSubappalto.idAggiudicatario)=false and is defined(subappalto.conferenteSubappalto.idSubappaltanteACascata)=false) or (subappalto.conferenteSubappalto.idAggiudicatario="" and subappalto.conferenteSubappalto.idSubappaltanteACascata=""))</td>
+  </tr>
+
+  <tr>
+    <td>REG140</td>
+    <td> Definire un solo conferente subappalto</td>
+    <td>if ((is defined(subappalto.conferenteSubappalto.idAggiudicatario) and is defined(subappalto.conferenteSubappalto.idSubappaltanteACascata)) and (subappalto.conferenteSubappalto.idAggiudicatario!="" and subappalto.conferenteSubappalto.idSubappaltanteACascata!=""))</td>
+  </tr>
+
+  <tr>
+    <td>REG141</td>
+    <td> In caso di subappalto a cascata deve essere indicato l'idSubappalto</td>
+    <td>if is defined(subappalto.conferenteSubappalto.idSubappaltanteACascata) and subappalto.conferenteSubappalto.idSubappaltanteACascata!=""is defined(idSubappalto) = false or idSubappalto=""</td>
+  </tr>
+
+  <tr>
+    <td>REG142</td>
+    <td> Indicare almeno un soggetto</td>
+    <td>if (count(subappalto.operatoreEconomicoSubappaltatore.elencoSoggetti) = 0)</td>
+  </tr>
+
+  <tr>
+    <td>REG2</td>
+    <td> indicare il codice fiscale del soggetto.</td>
+    <td>some soggetto in subappalto.operatoreEconomicoSubappaltatore.elencoSoggetti
+satisfies (soggetto.codiceFiscale = null or soggetto.codiceFiscale="")</td>
+  </tr>
+
+  <tr>
+    <td>REG129</td>
+    <td> indicare la denominazione del soggetto.</td>
+    <td>some soggetto in subappalto.operatoreEconomicoSubappaltatore.elencoSoggetti
+satisfies (soggetto.denominazione = null or soggetto.denominazione="")</td>
   </tr>
 </table>
     <div class="message">
@@ -573,7 +754,7 @@ footer {
 </table>
 
   <footer>
-    Generato il 01/12/2025 alle ore 09:12:58
+    Generato il 12/01/2026 alle ore 15:23:13
   </footer>
   </body>
   </html>

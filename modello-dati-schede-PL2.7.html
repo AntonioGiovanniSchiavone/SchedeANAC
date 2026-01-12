@@ -408,6 +408,12 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
     <td></td>
     <td><a href="#DatiTerminiInvioType">DatiTerminiInvioType</a></td>
   </tr>
+
+  <tr>
+    <td>datiBaseDurata (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#DatiBaseDurataType">DatiBaseDurataType</a></td>
+  </tr>
 </table>
   <h2 id="AppaltoPL2_7Type">AppaltoPL2_7Type</h2>
   
@@ -662,6 +668,46 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
     <td>array di <a href="#LingueEnum">LingueEnum</a></td>
   </tr>
 </table>
+  <h2 id="DatiBaseDurataType">DatiBaseDurataType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dato in comune con il Business Group Duration delle eforms</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>dataInizio (<span class="smalltype">opzionale</span>)</td>
+    <td>La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-536 - Duration Start Date del TED</td>
+    <td>date-time</td>
+  </tr>
+
+  <tr>
+    <td>durata (<span class="smalltype">opzionale</span>)</td>
+    <td>Il periodo (stimato) che intercorre tra l'inizio e la fine dell'appalto, dell'accordo quadro, del sistema dinamico di acquisizione o del sistema di qualificazione. Sono compresi tutte le opzioni e tutti i rinnovi. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-36 - Duration Period del TED</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>dataFine (<span class="smalltype">opzionale</span>)</td>
+    <td>La data (stimata) alla quale ha fine l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED</td>
+    <td>date-time</td>
+  </tr>
+
+  <tr>
+    <td>altraDurata (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#AltraDurataEnum">AltraDurataEnum</a></td>
+  </tr>
+</table>
   <h2 id="DatiBaseImportoOptionalType">DatiBaseImportoOptionalType</h2>
   
     <details open>
@@ -827,7 +873,7 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
   </tr>
 
   <tr>
-    <td>oraScadenzaPresentazioneOfferte (<span class="smalltype">opzionale</span>)</td>
+    <td>scadenzaPresentazioneOfferte (<span class="smalltype">opzionale</span>)</td>
     <td>Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED</td>
     <td>date-time</td>
   </tr>
@@ -1102,6 +1148,34 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
     <td>string</td>
   </tr>
 </table>
+  <h2 id="AltraDurataEnum">AltraDurataEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>La durata è ignota, illimitata, ecc. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-537 - Duration End Date del TED - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/durata.json">durata.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
   <h2 id="OggettoContrattoEnum">OggettoContrattoEnum</h2>
   
     <details open>
@@ -1261,9 +1335,9 @@ Articolo 81 comma 1 decreto legislativo 36/2023</td>
 
   <tr>
     <td>REG97</td>
-    <td> Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
+    <td> Inserire solo uno tra i campi scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
     <td>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "") and
 (lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</td>
   </tr>
 
@@ -1282,10 +1356,10 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo = 0</td>
 
   <tr>
     <td>REG105</td>
-    <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
+    <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 
   <tr>
@@ -1294,6 +1368,30 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
     <td>some lotto in lotti
 satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
  date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+  </tr>
+
+  <tr>
+    <td>REG133</td>
+    <td> Definire solo uno dei campi tra durata e altraDurata</td>
+    <td>is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata)</td>
+  </tr>
+
+  <tr>
+    <td>REG134</td>
+    <td> Il campo durata non può essere vuoto</td>
+    <td>is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = ""</td>
+  </tr>
+
+  <tr>
+    <td>REG135</td>
+    <td> Definire almeno uno dei campi tra durata e altraDurata</td>
+    <td>is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false</td>
+  </tr>
+
+  <tr>
+    <td>REG136</td>
+    <td> Valore della tipologica TipoProcedura non ammesso</td>
+    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["neg-w-call","open","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
   </tr>
 </table>
     <div class="message">
@@ -1320,7 +1418,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:12:53
+    Generato il 12/01/2026 alle ore 15:23:08
   </footer>
   </body>
   </html>

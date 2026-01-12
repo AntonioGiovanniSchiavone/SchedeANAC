@@ -236,7 +236,8 @@ footer {
 
   <tr>
     <td>Normativa</td>
-    <td>Articolo 10 della direttiva 2014/24/UE e articolo 21 della direttiva 2014/25/UE</td>
+    <td>Articolo 10 della direttiva 2014/24/UE e articolo 21 della direttiva 2014/25/UE
+Delibera Anac n. 584/2023</td>
   </tr>
 
   <tr>
@@ -251,7 +252,7 @@ footer {
 
   <tr>
     <td>Include ESPD?</td>
-    <td>NO</td>
+    <td>SI, NO</td>
   </tr>
 
   <tr>
@@ -300,6 +301,12 @@ footer {
     <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
     <td><a href="#AnacFormP3_1Type">AnacFormP3_1Type</a></td>
+  </tr>
+
+  <tr>
+    <td>espd (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#EspdRequestType">EspdRequestType</a></td>
   </tr>
 </table>
   <h2 id="AnacFormP3_1Type">AnacFormP3_1Type</h2>
@@ -910,9 +917,31 @@ footer {
   </tr>
 
   <tr>
-    <td>oraScadenzaPresentazioneOfferte (<span class="smalltype">opzionale</span>)</td>
+    <td>scadenzaPresentazioneOfferte (<span class="smalltype">opzionale</span>)</td>
     <td>Date e ora di scadenza per la presentazione delle offerte - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-131 - Deadline Receipt Tenders del TED</td>
     <td>date-time</td>
+  </tr>
+</table>
+  <h2 id="EspdRequestType">EspdRequestType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request) (<span class="smalltype">opzionale</span>)</td>
+    <td>Definizione dell'appalto, dei suoi lotti con i criteri di esclusione/inclusioni nel formato definito in ambito europeo (ESPD - Request)</td>
+    <td>string</td>
   </tr>
 </table>
   <h2 id="FinanziamentoType">FinanziamentoType</h2>
@@ -1847,9 +1876,9 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) > count(distinct values(
 
   <tr>
     <td>REG97</td>
-    <td> Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
+    <td> Inserire solo uno tra i campi scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
     <td>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "") and
 (lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</td>
   </tr>
 
@@ -1868,10 +1897,10 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
 
   <tr>
     <td>REG105</td>
-    <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
+    <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 
   <tr>
@@ -1912,7 +1941,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:11:49
+    Generato il 12/01/2026 alle ore 15:22:00
   </footer>
   </body>
   </html>

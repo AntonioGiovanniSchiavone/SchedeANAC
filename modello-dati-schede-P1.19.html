@@ -1051,17 +1051,17 @@ satisfies count(lotto.datiBaseCPV.cpvSecondarie.codice) > count(distinct values(
 
   <tr>
     <td>REG96</td>
-    <td> E' obbligatorio inserire almeno uno dei due campi tra oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
+    <td> E' obbligatorio inserire almeno uno dei due campi tra scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
     <td>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte="") and
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte = null or lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte="") and
 (lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito = null or lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito = "")</td>
   </tr>
 
   <tr>
     <td>REG97</td>
-    <td> Inserire solo uno tra i campi oraScadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
+    <td> Inserire solo uno tra i campi scadenzaPresentazioneOfferte e scadenzaPresentazioneInvito.</td>
     <td>some lotto in lotti
-satisfies (lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "") and
+satisfies (lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "") and
 (lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "")</td>
   </tr>
 
@@ -1080,10 +1080,10 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
 
   <tr>
     <td>REG105</td>
-    <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
+    <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 
   <tr>
@@ -1160,7 +1160,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:11:10
+    Generato il 12/01/2026 alle ore 15:21:18
   </footer>
   </body>
   </html>

@@ -1928,6 +1928,12 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
     <td>some lotto in lotti
 satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBase.importo > 1000000) and lotto.derogaQualificazione.codice = "5")</td>
   </tr>
+
+  <tr>
+    <td>REG136</td>
+    <td> Valore della tipologica TipoProcedura non ammesso</td>
+    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains(["comp-dial","innovation","neg-w-call","oth-mult","oth-single","restricted"], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
+  </tr>
 </table>
     <div class="message">
         <div class="message-divider fluxcards"></div>
@@ -1953,7 +1959,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:11:26
+    Generato il 12/01/2026 alle ore 15:21:34
   </footer>
   </body>
   </html>

@@ -454,10 +454,10 @@ Articolo 164 decreto legislativo 36/2023</td>
 
   <tr>
     <td>REG105</td>
-    <td> la data inserita nel campo datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
+    <td> la data inserita nel campo datiBaseTerminiInvio.scadenzaPresentazioneOfferte non può essere antecedente o uguale ad oggi.</td>
     <td>some lotto in lotti
-satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != "" and
- date and time(substring before(lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
+satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != "" and
+ date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
 </table>
     <div class="message">
@@ -484,7 +484,7 @@ satisfies lotto.datiBaseTerminiInvio.oraScadenzaPresentazioneOfferte != null and
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:12:45
+    Generato il 12/01/2026 alle ore 15:23:00
   </footer>
   </body>
   </html>

@@ -387,7 +387,7 @@ footer {
   <tr>
     <td>datiBaseDurata (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#DatiBaseDurataSDAType">DatiBaseDurataSDAType</a></td>
+    <td><a href="#DatiBaseDurataType">DatiBaseDurataType</a></td>
   </tr>
 </table>
   <h2 id="AppaltoSDAType">AppaltoSDAType</h2>
@@ -549,7 +549,7 @@ footer {
     <td>array di <a href="#LingueEnum">LingueEnum</a></td>
   </tr>
 </table>
-  <h2 id="DatiBaseDurataSDAType">DatiBaseDurataSDAType</h2>
+  <h2 id="DatiBaseDurataType">DatiBaseDurataType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -566,7 +566,7 @@ footer {
   
 
   <tr>
-    <td>dataInizio (<span class="smalltype">obbligatorio</span>)</td>
+    <td>dataInizio (<span class="smalltype">opzionale</span>)</td>
     <td>La data (stimata) alla quale ha inizio l'appalto, l'accordo quadro, il sistema dinamico di acquisizione o il sistema di qualificazione. - nei casi in cui la scheda preveda un eform, corrisponde al campo bt-536 - Duration Start Date del TED</td>
     <td>date-time</td>
   </tr>
@@ -1018,6 +1018,24 @@ footer {
     <td>some lotto in lotti
 satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
   </tr>
+
+  <tr>
+    <td>REG133</td>
+    <td> Definire solo uno dei campi tra durata e altraDurata</td>
+    <td>is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata)</td>
+  </tr>
+
+  <tr>
+    <td>REG134</td>
+    <td> Il campo durata non può essere vuoto</td>
+    <td>is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = ""</td>
+  </tr>
+
+  <tr>
+    <td>REG135</td>
+    <td> Definire almeno uno dei campi tra durata e altraDurata</td>
+    <td>is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false</td>
+  </tr>
 </table>
     <div class="message">
         <div class="message-divider fluxcards"></div>
@@ -1043,7 +1061,7 @@ satisfies lotto.datiBase.importo = null or lotto.datiBase.importo <= 0</td>
       </tr>
     </table>
   <footer>
-    Generato il 01/12/2025 alle ore 09:10:52
+    Generato il 12/01/2026 alle ore 15:20:59
   </footer>
   </body>
   </html>

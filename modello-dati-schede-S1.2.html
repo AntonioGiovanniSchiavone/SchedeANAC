@@ -4,7 +4,7 @@
   <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modello Dati - Scheda I1 - Scheda di inizio prestazione</title>
+    <title>Modello Dati - Scheda S1_2 - Elenco dei soggetti invitati.</title>
     <style>
       /* css/styles.css */
 
@@ -176,7 +176,7 @@ footer {
 
 
   <body>
-    <h1>Modello Dati - Scheda I1 - Scheda di inizio prestazione</h1>
+    <h1>Modello Dati - Scheda S1_2 - Elenco dei soggetti invitati.</h1>
   
     <div class="message">
         <div class="message-divider info"></div>
@@ -196,32 +196,32 @@ footer {
 
   <tr>
     <td>Area Funzionale</td>
-    <td>A_5</td>
+    <td>A_4</td>
   </tr>
 
   <tr>
     <td>Famiglia funzionalità</td>
-    <td>I</td>
+    <td>S1_2</td>
   </tr>
 
   <tr>
     <td>Settore/Regime</td>
-    <td>Non Definito/Non Rilevante</td>
+    <td>Indipendenti dalla soglia - tutti i settori - tutti i regimi</td>
   </tr>
 
   <tr>
     <td>Fase</td>
-    <td>Esecuzione</td>
+    <td>Aggiudicazione</td>
   </tr>
 
   <tr>
     <td>Evento</td>
-    <td>Inizio esecuzione</td>
+    <td>Acquisizione invitati</td>
   </tr>
 
   <tr>
     <td>Scheda</td>
-    <td>I1</td>
+    <td>S1_2</td>
   </tr>
 
   <tr>
@@ -231,7 +231,7 @@ footer {
 
   <tr>
     <td>Descrizione</td>
-    <td>Avvio dell'esecuzione</td>
+    <td>Elenco dei soggetti invitati.</td>
   </tr>
 
   <tr>
@@ -285,7 +285,7 @@ footer {
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaI1Type">SchedaI1Type</h2>
+  <h2 id="SchedaS1_2Type">SchedaS1_2Type</h2>
   
   
     <table class="main">
@@ -299,10 +299,10 @@ footer {
   <tr>
     <td>anacForm (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
-    <td><a href="#AnacFormI1Type">AnacFormI1Type</a></td>
+    <td>object: { elencoSoggetti (<span class="smalltype">obbligatorio</span>): array di <a href="#ElencoSoggettiType">ElencoSoggettiType</a> }</td>
   </tr>
 </table>
-  <h2 id="AnacFormI1Type">AnacFormI1Type</h2>
+  <h2 id="ElencoSoggettiType">ElencoSoggettiType</h2>
   
   
     <table class="main">
@@ -314,21 +314,90 @@ footer {
   
 
   <tr>
-    <td>idContratto (<span class="smalltype">obbligatorio</span>)</td>
-    <td>identificativo del contratto restituito in response alla scheda di Sottoscrizione del contratto.</td>
+    <td>cig (<span class="smalltype">obbligatorio</span>)</td>
+    <td>codice identificativo lotto</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>elencoSoggetti (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Dati relativi ai soggetti invitati</td>
+    <td>array di <a href="#SoggettoType">SoggettoType</a></td>
+  </tr>
+
+  <tr>
+    <td>dataInvito (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Data della lettera di invito</td>
+    <td>date-time</td>
+  </tr>
+
+  <tr>
+    <td>scadenzaPresentazioneOfferta (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Data della scadenza di presentazione dell'offerta</td>
+    <td>date-time</td>
+  </tr>
+</table>
+    <div class="message">
+        <div class="message-divider reference"></div>
+        <p>Lista delle reference della scheda.</p>
+        <div class="message-divider reference"></div>
+    </div>
+    
+  <h2 id="SoggettoType">SoggettoType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Dati del soggetto</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>codiceFiscale (<span class="smalltype">obbligatorio</span>)</td>
+    <td>codice fiscale del soggetto interessato</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>denominazione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>denominazione del soggetto interessato</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>ruoloOE (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#RuoloOEEnum">RuoloOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>tipoOE (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#TipoOEEnum">TipoOEEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>idPartecipante (<span class="smalltype">obbligatorio</span>)</td>
+    <td>id partecipante</td>
     <td>uuid</td>
   </tr>
-
-  <tr>
-    <td>datiInizio (<span class="smalltype">obbligatorio</span>)</td>
-    <td></td>
-    <td><a href="#DatiInizioType">DatiInizioType</a></td>
-  </tr>
 </table>
-  <h2 id="DatiInizioType">DatiInizioType</h2>
+  <h2 id="RuoloOEEnum">RuoloOEEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Ruolo del soggetto incaricato della prestazione - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ruoloOE.json">ruoloOE.json</a></p>
+    </details>
   
   
-    <table class="main">
+    <table class="reference">
       <tr>
         <th scope="col">Nome</th>
         <th scope="col">Descrizione</th>
@@ -337,63 +406,43 @@ footer {
   
 
   <tr>
-    <td>dataDisposizioneInizio (<span class="smalltype">opzionale</span>)</td>
-    <td>Data disposizione dell’inizio della prog. Esecutiva</td>
-    <td>date-time</td>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 
   <tr>
-    <td>dataApprovazione (<span class="smalltype">opzionale</span>)</td>
-    <td>Data approvazione del  progetto Esecutivo</td>
-    <td>date-time</td>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table>
+  <h2 id="TipoOEEnum">TipoOEEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Tipo soggetto - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/tipoOE.json">tipoOE.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 
   <tr>
-    <td>consegnaFrazionata (<span class="smalltype">opzionale</span>)</td>
-    <td>Consegna frazionata</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>avvioPerFasi (<span class="smalltype">opzionale</span>)</td>
-    <td>L'avvio dell'esecuzione del contratto e' per fasi</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>dataVerbalePrimaConsegna (<span class="smalltype">opzionale</span>)</td>
-    <td>Data verbale prima consegna lavori</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataAvvioPrimaFase (<span class="smalltype">opzionale</span>)</td>
-    <td>Data di avvio della prima fase dell'esecuzione del contratto</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataVerbaleConsegnaDefinitiva (<span class="smalltype">opzionale</span>)</td>
-    <td>Data verbale consegna definitiva</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>consegnaSottoRiserva (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Consegna sotto riserva di legge?</td>
-    <td>boolean</td>
-  </tr>
-
-  <tr>
-    <td>dataEffettivoInizio (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Data di effettivo inizio lavori/servizi/forniture (consegna completa/avvio di tutte le prestazioni del contratto)</td>
-    <td>date-time</td>
-  </tr>
-
-  <tr>
-    <td>dataFinePrevista (<span class="smalltype">obbligatorio</span>)</td>
-    <td>Data fine prevista per dare ultimazione ai lavori/servizi/forniture</td>
-    <td>date-time</td>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 </table>
     <div class="message">
@@ -414,35 +463,22 @@ footer {
   
 
   <tr>
-    <td>REG57</td>
-    <td> Data approvazione del progetto Esecutivo: se digitata deve essere superiore alla data di disposizione dell’inizio della prog. Esecutiva</td>
-    <td>datiInizio.dataApprovazione != null and datiInizio.dataApprovazione != "" and datiInizio.dataDisposizioneInizio != null and datiInizio.dataDisposizioneInizio != "" and datiInizio.dataApprovazione < datiInizio.dataDisposizioneInizio</td>
+    <td>REG0</td>
+    <td> Dati non presenti</td>
+    <td>elencoSoggetti = null</td>
   </tr>
 
   <tr>
-    <td>REG58</td>
-    <td> Data verbale prima consegna lavori: obbligatoria in caso di consegna frazionata.</td>
-    <td>datiInizio.consegnaFrazionata != null and datiInizio.consegnaFrazionata and (datiInizio.dataVerbalePrimaConsegna = null or datiInizio.dataVerbalePrimaConsegna = "")</td>
+    <td>REG137</td>
+    <td> Indicare almeno un invitato</td>
+    <td>count(elencoSoggetti)=0</td>
   </tr>
 
   <tr>
-    <td>REG59</td>
-    <td> Data di avvio della prima fase dell'esecuzione del contratto: obbligatoria in caso di avvio per fasi.
-
-
-
-</td>
-    <td>datiInizio.avvioPerFasi != null and datiInizio.avvioPerFasi and (datiInizio.dataAvvioPrimaFase = null or datiInizio.dataAvvioPrimaFase = "")</td>
-  </tr>
-
-  <tr>
-    <td>REG60</td>
-    <td> Data verbale consegna definitiva: obbligatoria quando non c'è consegna frazionata.
-
-
-
-</td>
-    <td>datiInizio.consegnaFrazionata != null and datiInizio.consegnaFrazionata = false and (datiInizio.dataVerbaleConsegnaDefinitiva = null or datiInizio.dataVerbaleConsegnaDefinitiva = "")</td>
+    <td>REG138</td>
+    <td> I campi di tipo testo non possono essere vuoti</td>
+    <td>some soggetto in elencoSoggetti
+satisfies ((soggetto.codiceFiscale = null or soggetto.codiceFiscale="") or (soggetto.denominazione = null or soggetto.denominazione="") or (soggetto.idPartecipante = null or soggetto.idPartecipante="") or (soggetto.dataInvito = null or soggetto.dataInvito ="") or (soggetto.scadenzaPresentazioneOfferta = null or soggetto.scadenzaPresentazioneOfferta=""))</td>
   </tr>
 </table>
     <div class="message">
@@ -463,13 +499,13 @@ footer {
   
 
       <tr>
-        <td><a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-SC1.html">SC1</a></td>
-        <td><a href="./modello-dati-schede-AC1.html">AC1</a>, <a href="./modello-dati-schede-CL1.html">CL1</a>, <a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-ES1.html">ES1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-IR1.html">IR1</a>, <a href="./modello-dati-schede-M1.html">M1</a>, <a href="./modello-dati-schede-M1.40.html">M1_40</a>, <a href="./modello-dati-schede-M2.html">M2</a>, <a href="./modello-dati-schede-M2.40.html">M2_40</a>, <a href="./modello-dati-schede-RSU1.html">RSU1</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SA1.html">SA1</a>, <a href="./modello-dati-schede-SO1.html">SO1</a></td>
-        <td>Tutti</td>
+        <td><a href="./modello-dati-schede-S1.html">S1</a></td>
+        <td><a href="./modello-dati-schede-A1.29.html">A1_29</a>, <a href="./modello-dati-schede-A1.30.html">A1_30</a>, <a href="./modello-dati-schede-A1.31.html">A1_31</a>, <a href="./modello-dati-schede-A1.32.html">A1_32</a>, <a href="./modello-dati-schede-A1.33.html">A1_33</a>, <a href="./modello-dati-schede-A1.34.html">A1_34</a>, <a href="./modello-dati-schede-A1.35.html">A1_35</a>, <a href="./modello-dati-schede-A1.36.html">A1_36</a>, <a href="./modello-dati-schede-A1.37.html">A1_37</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-NAG.html">NAG</a>, <a href="./modello-dati-schede-S2.html">S2</a></td>
+        <td>Tutti tranne 5,50,60</td>
       </tr>
     </table>
   <footer>
-    Generato il 12/01/2026 alle ore 15:20:56
+    Generato il 12/01/2026 alle ore 15:23:14
   </footer>
   </body>
   </html>
