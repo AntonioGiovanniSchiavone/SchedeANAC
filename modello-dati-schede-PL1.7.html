@@ -184,7 +184,7 @@ footer {
         <div class="message-divider info"></div>
     </div>
     
-  <h2 id="Informazioni sulla scheda">Informazioni sulla scheda</h2>
+  <section><h2 id="Informazioni sulla scheda">Informazioni sulla scheda</h2>
   
   
     <table class="info">
@@ -279,14 +279,19 @@ Articolo 81 comma 1 decretolegislativo 36/2023</td>
     <td>Attribuisce CIG?</td>
     <td>NO</td>
   </tr>
-</table>
+
+  <tr>
+    <td>Revocabile?</td>
+    <td>NO</td>
+  </tr>
+</table></section>
     <div class="message">
         <div class="message-divider "></div>
         <p>Elementi della scheda.</p>
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaPL1_7Type">SchedaPL1_7Type</h2>
+  <section><h2 id="SchedaPL1_7Type">SchedaPL1_7Type</h2>
   
   
     <table class="main">
@@ -308,14 +313,14 @@ Articolo 81 comma 1 decretolegislativo 36/2023</td>
     <td></td>
     <td><a href="#EformType">EformType</a></td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider reference"></div>
         <p>Lista delle reference della scheda.</p>
         <div class="message-divider reference"></div>
     </div>
     
-  <h2 id="AnacFormBaseType">AnacFormBaseType</h2>
+  <section><h2 id="AnacFormBaseType">AnacFormBaseType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -336,8 +341,8 @@ Articolo 81 comma 1 decretolegislativo 36/2023</td>
     <td>Dati relativi alle stazioni appaltanti</td>
     <td>array di <a href="#StazioneAppaltanteType">StazioneAppaltanteType</a></td>
   </tr>
-</table>
-  <h2 id="EformType">EformType</h2>
+</table></section>
+  <section><h2 id="EformType">EformType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -358,8 +363,8 @@ Articolo 81 comma 1 decretolegislativo 36/2023</td>
     <td>Eform codificato Base64 nel formato XML definito da TED</td>
     <td>string</td>
   </tr>
-</table>
-  <h2 id="StazioneAppaltanteType">StazioneAppaltanteType</h2>
+</table></section>
+  <section><h2 id="StazioneAppaltanteType">StazioneAppaltanteType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -404,8 +409,8 @@ Articolo 81 comma 1 decretolegislativo 36/2023</td>
     <td>Stazione appaltante titolare</td>
     <td>boolean</td>
   </tr>
-</table>
-  <h2 id="FunzioniDelegateEnum">FunzioniDelegateEnum</h2>
+</table></section>
+  <section><h2 id="FunzioniDelegateEnum">FunzioniDelegateEnum</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -432,14 +437,14 @@ Articolo 81 comma 1 decretolegislativo 36/2023</td>
     <td></td>
     <td>string</td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider rule"></div>
         <p>Lista delle regole applicate alla scheda.</p>
         <div class="message-divider rule"></div>
     </div>
     
-  <h2 id="Regole">Regole</h2>
+  <section><h2 id="Regole">Regole</h2>
   
   
     <table class="rule">
@@ -486,14 +491,14 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneOfferte != null and lo
 satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != "" and
  date and time(substring before(lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito, "Z")) <= date and time(string(today()) + "T" + string(time(now().hour, now().minute, now().second)))</td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider fluxcards"></div>
         <p>Relazioni con altre schede e Flussi ammissibili.</p>
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
+  <section><h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -509,9 +514,9 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
         <td><a href="./modello-dati-schede-AVR.html">AVR</a>, <a href="./modello-dati-schede-P1.16.html">P1_16</a></td>
         <td>Nessuno</td>
       </tr>
-    </table>
+    </table></section>
   <footer>
-    Generato il 12/01/2026 alle ore 15:22:59
+    Generato il 24/02/2026 alle ore 16:29:24
   </footer>
   </body>
   </html>

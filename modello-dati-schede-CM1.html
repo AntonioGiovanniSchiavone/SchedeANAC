@@ -184,7 +184,7 @@ footer {
         <div class="message-divider info"></div>
     </div>
     
-  <h2 id="Informazioni sulla scheda">Informazioni sulla scheda</h2>
+  <section><h2 id="Informazioni sulla scheda">Informazioni sulla scheda</h2>
   
   
     <table class="info">
@@ -278,14 +278,19 @@ footer {
     <td>Attribuisce CIG?</td>
     <td>NO</td>
   </tr>
-</table>
+
+  <tr>
+    <td>Revocabile?</td>
+    <td>NO</td>
+  </tr>
+</table></section>
     <div class="message">
         <div class="message-divider "></div>
         <p>Elementi della scheda.</p>
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaCM1Type">SchedaCM1Type</h2>
+  <section><h2 id="SchedaCM1Type">SchedaCM1Type</h2>
   
   
     <table class="main">
@@ -301,8 +306,8 @@ footer {
     <td></td>
     <td><a href="#AnacFormCM1Type">AnacFormCM1Type</a></td>
   </tr>
-</table>
-  <h2 id="AnacFormCM1Type">AnacFormCM1Type</h2>
+</table></section>
+  <section><h2 id="AnacFormCM1Type">AnacFormCM1Type</h2>
   
   
     <table class="main">
@@ -324,14 +329,14 @@ footer {
     <td></td>
     <td><a href="#ComunicazioneType">ComunicazioneType</a></td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider reference"></div>
         <p>Lista delle reference della scheda.</p>
         <div class="message-divider reference"></div>
     </div>
     
-  <h2 id="ComunicazioneType">ComunicazioneType</h2>
+  <section><h2 id="ComunicazioneType">ComunicazioneType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -364,8 +369,8 @@ footer {
     <td>Cup</td>
     <td>array di string</td>
   </tr>
-</table>
-  <h2 id="MotivoRichiestaModificaEnum">MotivoRichiestaModificaEnum</h2>
+</table></section>
+  <section><h2 id="MotivoRichiestaModificaEnum">MotivoRichiestaModificaEnum</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -392,14 +397,14 @@ footer {
     <td></td>
     <td>string</td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider rule"></div>
         <p>Lista delle regole applicate alla scheda.</p>
         <div class="message-divider rule"></div>
     </div>
     
-  <h2 id="Regole">Regole</h2>
+  <section><h2 id="Regole">Regole</h2>
   
   
     <table class="rule">
@@ -415,14 +420,14 @@ footer {
     <td> indicare almeno uno dei campi di cui si richiede la modifica</td>
     <td>(is defined(comunicazione.importo) = false or comunicazione.importo = null or comunicazione.importo = 0) and (is defined(comunicazione.cup) = false or count(comunicazione.cup)=0 or  (count(comunicazione.cup)>0 and (every c in comunicazione.cup satisfies (c = null or c = ""))))</td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider fluxcards"></div>
         <p>Relazioni con altre schede e Flussi ammissibili.</p>
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
+  <section><h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -434,13 +439,13 @@ footer {
   
 
       <tr>
-        <td><a href="./modello-dati-schede-ABI.html">ABI</a>, <a href="./modello-dati-schede-AD4.html">AD4</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-P3.1.html">P3_1</a>, <a href="./modello-dati-schede-P3.2.html">P3_2</a>, <a href="./modello-dati-schede-P3.3.html">P3_3</a>, <a href="./modello-dati-schede-P5.html">P5</a>, <a href="./modello-dati-schede-P6.1.html">P6_1</a>, <a href="./modello-dati-schede-P6.2.html">P6_2</a>, <a href="./modello-dati-schede-P8.html">P8</a></td>
+        <td><a href="./modello-dati-schede-AD4.html">AD4</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-P3.1.html">P3_1</a>, <a href="./modello-dati-schede-P3.2.html">P3_2</a>, <a href="./modello-dati-schede-P3.3.html">P3_3</a>, <a href="./modello-dati-schede-P5.html">P5</a>, <a href="./modello-dati-schede-P6.1.html">P6_1</a>, <a href="./modello-dati-schede-P6.2.html">P6_2</a>, <a href="./modello-dati-schede-P8.html">P8</a></td>
         <td><a href="./modello-dati-schede-ANN.html">ANN</a>, <a href="./modello-dati-schede-CBI.html">CBI</a>, <a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-NAG.html">NAG</a>, <a href="./modello-dati-schede-S1.html">S1</a>, <a href="./modello-dati-schede-S2.html">S2</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-SC1.html">SC1</a></td>
         <td>5, 31, 32, 33, 40, 60, 61, 62, 800</td>
       </tr>
-    </table>
+    </table></section>
   <footer>
-    Generato il 12/01/2026 alle ore 15:20:52
+    Generato il 24/02/2026 alle ore 16:27:36
   </footer>
   </body>
   </html>

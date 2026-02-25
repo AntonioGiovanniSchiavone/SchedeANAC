@@ -184,7 +184,7 @@ footer {
         <div class="message-divider info"></div>
     </div>
     
-  <h2 id="Informazioni sulla scheda">Informazioni sulla scheda</h2>
+  <section><h2 id="Informazioni sulla scheda">Informazioni sulla scheda</h2>
   
   
     <table class="info">
@@ -279,14 +279,19 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td>Attribuisce CIG?</td>
     <td>NO</td>
   </tr>
-</table>
+
+  <tr>
+    <td>Revocabile?</td>
+    <td>NO</td>
+  </tr>
+</table></section>
     <div class="message">
         <div class="message-divider "></div>
         <p>Elementi della scheda.</p>
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaA1_32Type">SchedaA1_32Type</h2>
+  <section><h2 id="SchedaA1_32Type">SchedaA1_32Type</h2>
   
   
     <table class="main">
@@ -308,8 +313,8 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td></td>
     <td><a href="#EformType">EformType</a></td>
   </tr>
-</table>
-  <h2 id="AnacFormA1_32Type">AnacFormA1_32Type</h2>
+</table></section>
+  <section><h2 id="AnacFormA1_32Type">AnacFormA1_32Type</h2>
   
   
     <table class="main">
@@ -331,14 +336,14 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td>Dati relativi alle aggiudicazioni</td>
     <td>array di <a href="#AggiudicazioneA1_32Type">AggiudicazioneA1_32Type</a></td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider reference"></div>
         <p>Lista delle reference della scheda.</p>
         <div class="message-divider reference"></div>
     </div>
     
-  <h2 id="AggiudicazioneA1_32Type">AggiudicazioneA1_32Type</h2>
+  <section><h2 id="AggiudicazioneA1_32Type">AggiudicazioneA1_32Type</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -365,8 +370,8 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td></td>
     <td>array di <a href="#OfferteType">OfferteType</a></td>
   </tr>
-</table>
-  <h2 id="AppaltoA1_32Type">AppaltoA1_32Type</h2>
+</table></section>
+  <section><h2 id="AppaltoA1_32Type">AppaltoA1_32Type</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -387,8 +392,8 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td></td>
     <td><a href="#ModalitaRiaggiudicazioneAffidamentoEnum">ModalitaRiaggiudicazioneAffidamentoEnum</a></td>
   </tr>
-</table>
-  <h2 id="EformType">EformType</h2>
+</table></section>
+  <section><h2 id="EformType">EformType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -409,8 +414,8 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td>Eform codificato Base64 nel formato XML definito da TED</td>
     <td>string</td>
   </tr>
-</table>
-  <h2 id="OfferteType">OfferteType</h2>
+</table></section>
+  <section><h2 id="OfferteType">OfferteType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -491,8 +496,8 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td>L'offerta è anomala?</td>
     <td>boolean</td>
   </tr>
-</table>
-  <h2 id="ModalitaRiaggiudicazioneAffidamentoEnum">ModalitaRiaggiudicazioneAffidamentoEnum</h2>
+</table></section>
+  <section><h2 id="ModalitaRiaggiudicazioneAffidamentoEnum">ModalitaRiaggiudicazioneAffidamentoEnum</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -519,8 +524,8 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td></td>
     <td>string</td>
   </tr>
-</table>
-  <h2 id="CcnlEnum">CcnlEnum</h2>
+</table></section>
+  <section><h2 id="CcnlEnum">CcnlEnum</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -547,14 +552,14 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td></td>
     <td>string</td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider rule"></div>
         <p>Lista delle regole applicate alla scheda.</p>
         <div class="message-divider rule"></div>
     </div>
     
-  <h2 id="Regole">Regole</h2>
+  <section><h2 id="Regole">Regole</h2>
   
   
     <table class="rule">
@@ -584,14 +589,14 @@ satisfies (count(aggiudicazione.offertePresentate) > aggiudicazione.numeroOffert
     <td> La lista delle aggiudicazioni deve contenere almeno un elemento.</td>
     <td>count(aggiudicazioni) <= 0</td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider fluxcards"></div>
         <p>Relazioni con altre schede e Flussi ammissibili.</p>
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
+  <section><h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -607,9 +612,9 @@ satisfies (count(aggiudicazione.offertePresentate) > aggiudicazione.numeroOffert
         <td><a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SC1.html">SC1</a></td>
         <td>119</td>
       </tr>
-    </table>
+    </table></section>
   <footer>
-    Generato il 12/01/2026 alle ore 15:19:48
+    Generato il 24/02/2026 alle ore 16:26:43
   </footer>
   </body>
   </html>

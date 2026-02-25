@@ -184,7 +184,7 @@ footer {
         <div class="message-divider info"></div>
     </div>
     
-  <h2 id="Informazioni sulla scheda">Informazioni sulla scheda</h2>
+  <section><h2 id="Informazioni sulla scheda">Informazioni sulla scheda</h2>
   
   
     <table class="info">
@@ -282,14 +282,19 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
     <td>Attribuisce CIG?</td>
     <td>NO</td>
   </tr>
-</table>
+
+  <tr>
+    <td>Revocabile?</td>
+    <td>NO</td>
+  </tr>
+</table></section>
     <div class="message">
         <div class="message-divider "></div>
         <p>Elementi della scheda.</p>
         <div class="message-divider "></div>
     </div>
     
-  <h2 id="SchedaM1Type">SchedaM1Type</h2>
+  <section><h2 id="SchedaM1Type">SchedaM1Type</h2>
   
   
     <table class="main">
@@ -311,8 +316,8 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
     <td></td>
     <td><a href="#EformType">EformType</a></td>
   </tr>
-</table>
-  <h2 id="AnacFormM1Type">AnacFormM1Type</h2>
+</table></section>
+  <section><h2 id="AnacFormM1Type">AnacFormM1Type</h2>
   
   
     <table class="main">
@@ -334,14 +339,14 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
     <td></td>
     <td><a href="#ModificaContrattualeType">ModificaContrattualeType</a></td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider reference"></div>
         <p>Lista delle reference della scheda.</p>
         <div class="message-divider reference"></div>
     </div>
     
-  <h2 id="EformType">EformType</h2>
+  <section><h2 id="EformType">EformType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -362,8 +367,8 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
     <td>Eform codificato Base64 nel formato XML definito da TED</td>
     <td>string</td>
   </tr>
-</table>
-  <h2 id="ModificaContrattualeType">ModificaContrattualeType</h2>
+</table></section>
+  <section><h2 id="ModificaContrattualeType">ModificaContrattualeType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -408,8 +413,8 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
     <td></td>
     <td><a href="#QuadroEconomicoModificaContrattualeType">QuadroEconomicoModificaContrattualeType</a></td>
   </tr>
-</table>
-  <h2 id="MotiviRevisionePrezziEnum">MotiviRevisionePrezziEnum</h2>
+</table></section>
+  <section><h2 id="MotiviRevisionePrezziEnum">MotiviRevisionePrezziEnum</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -436,8 +441,8 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
     <td></td>
     <td>string</td>
   </tr>
-</table>
-  <h2 id="QuadroEconomicoModificaContrattualeType">QuadroEconomicoModificaContrattualeType</h2>
+</table></section>
+  <section><h2 id="QuadroEconomicoModificaContrattualeType">QuadroEconomicoModificaContrattualeType</h2>
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
@@ -500,14 +505,14 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
     <td>Numero di giorni di proroga concessi/tempo aggiuntivo rispetto ai termini contrattuali</td>
     <td>integer</td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider rule"></div>
         <p>Lista delle regole applicate alla scheda.</p>
         <div class="message-divider rule"></div>
     </div>
     
-  <h2 id="Regole">Regole</h2>
+  <section><h2 id="Regole">Regole</h2>
   
   
     <table class="rule">
@@ -553,14 +558,14 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
     <td> Non è stato valorizzato il numero di giorni di proroga concessi/tempo aggiuntivo rispetto ai termini contrattuali</td>
     <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = "other" and (modificaContrattuale.quadroEconomicoStandardRideterminato = null or modificaContrattuale.quadroEconomicoStandardRideterminato = "" or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = null or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = 0)</td>
   </tr>
-</table>
+</table></section>
     <div class="message">
         <div class="message-divider fluxcards"></div>
         <p>Relazioni con altre schede e Flussi ammissibili.</p>
         <div class="message-divider fluxcards"></div>
     </div>
     
-  <h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
+  <section><h2 id="Relazioni">Relazioni con altre schede e Flussi ammissibili</h2>
   
   
     <table class="fluxcards">
@@ -574,9 +579,9 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
       <tr>
         <td><a href="./modello-dati-schede-AC1.html">AC1</a>, <a href="./modello-dati-schede-CS1.html">CS1</a>, <a href="./modello-dati-schede-ES1.html">ES1</a>, <a href="./modello-dati-schede-I1.html">I1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-IR1.html">IR1</a>, <a href="./modello-dati-schede-M1.html">M1</a>, <a href="./modello-dati-schede-RI1.html">RI1</a>, <a href="./modello-dati-schede-RSU1.html">RSU1</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SA1.html">SA1</a>, <a href="./modello-dati-schede-SC1.html">SC1</a>, <a href="./modello-dati-schede-SO1.html">SO1</a>, <a href="./modello-dati-schede-SQ1.html">SQ1</a></td>
         <td><a href="./modello-dati-schede-AC1.html">AC1</a>, <a href="./modello-dati-schede-CL1.html">CL1</a>, <a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-CS1.html">CS1</a>, <a href="./modello-dati-schede-ES1.html">ES1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-IR1.html">IR1</a>, <a href="./modello-dati-schede-M1.html">M1</a>, <a href="./modello-dati-schede-RI1.html">RI1</a>, <a href="./modello-dati-schede-RSU1.html">RSU1</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SA1.html">SA1</a>, <a href="./modello-dati-schede-SO1.html">SO1</a></td>
-        <td>110, 111, 112, 113, 116, 117, 120, 121</td>
+        <td>110, 111, 112, 113, 116, 117, 120, 121, 800</td>
       </tr>
-    </table>
+    </table></section>
     <div class="message">
         <div class="message-divider recursive"></div>
         <p>Analisi Ricorsione.</p>
@@ -588,9 +593,10 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
         <th scope="col">Scheda Ricorsiva</th>          
       </tr>  
 </table>
+</section>
 
   <footer>
-    Generato il 12/01/2026 alle ore 15:21:00
+    Generato il 24/02/2026 alle ore 16:27:46
   </footer>
   </body>
   </html>
