@@ -364,6 +364,18 @@ Articolo 46 decreto legislativo 36/2023</td>
     <td></td>
     <td>array di <a href="#OfferteType">OfferteType</a></td>
   </tr>
+
+  <tr>
+    <td>numeroOfferteAmmesse (<span class="smalltype">obbligatorio</span>)</td>
+    <td>numero di offerte ammesse</td>
+    <td>integer</td>
+  </tr>
+
+  <tr>
+    <td>esitoProceduraAnnullata (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#EsitoProceduraAnnullataEnum">EsitoProceduraAnnullataEnum</a></td>
+  </tr>
 </table></section>
   <section><h2 id="EformType">EformType</h2>
   
@@ -469,6 +481,34 @@ Articolo 46 decreto legislativo 36/2023</td>
     <td>boolean</td>
   </tr>
 </table></section>
+  <section><h2 id="EsitoProceduraAnnullataEnum">EsitoProceduraAnnullataEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Esito procedura annullata - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esitoProceduraAnnullata.json">esitoProceduraAnnullata.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table></section>
   <section><h2 id="CcnlEnum">CcnlEnum</h2>
   
     <details open>
@@ -551,7 +591,7 @@ satisfies aggiudicazione.datiBaseAccessibilita.accessibilita.codice = "n-inc-jus
       </tr>
     </table></section>
   <footer>
-    Generato il 27/02/2026 alle ore 14:39:10
+    Generato il 27/02/2026 alle ore 16:28:35
   </footer>
   </body>
   </html>

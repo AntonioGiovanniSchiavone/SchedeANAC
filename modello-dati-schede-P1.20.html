@@ -406,6 +406,18 @@ Articolo 127 comma 1 lettera a) decreto legislativo 36/2023</td>
     <td>E' stato utilizzato un termine ridotto con avviso di preinformazione?</td>
     <td>boolean</td>
   </tr>
+
+  <tr>
+    <td>motivoUrgenza (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#MotivoUrgenzaEnum">MotivoUrgenzaEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>linkDocumenti (<span class="smalltype">opzionale</span>)</td>
+    <td>Link ai documenti relativi all’affidamento diretto in somma urgenza e protezione civile (co 10, art 140 nuovo codice)</td>
+    <td>url</td>
+  </tr>
 </table></section>
   <section><h2 id="EformType">EformType</h2>
   
@@ -526,6 +538,90 @@ Articolo 127 comma 1 lettera a) decreto legislativo 36/2023</td>
     <td></td>
     <td><a href="#MotivoDerogaQlfEnum">MotivoDerogaQlfEnum</a></td>
   </tr>
+
+  <tr>
+    <td>servizioPubblicoLocale (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Flag servizio pubblico locale</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>ripetizioniEConsegneComplementari (<span class="smalltype">obbligatorio</span>)</td>
+    <td>L’appalto prevede ripetizioni di servizi/forniture/lavori analoghi e consegne complementari?</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>lavoroOAcquistoPrevistoInProgrammazione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Il lavoro o l’acquisto di bene o servizio è stato previsto all’interno della programmazione</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>cui (<span class="smalltype">opzionale</span>)</td>
+    <td>CUI programma triennale lavori pubblici o programma biennale forniture e servizi</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>opzioniRinnovi (<span class="smalltype">obbligatorio</span>)</td>
+    <td>L’appalto prevede opzioni/rinnovi?</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>ccnl (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#CcnlEnum">CcnlEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>ipotesiCollegamento (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#IpotesiCollegamentoType">IpotesiCollegamentoType</a></td>
+  </tr>
+
+  <tr>
+    <td>categoria (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#CategoriaEnum">CategoriaEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>categoriaScorporabile (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#CategoriaEnum">CategoriaEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>modalitaAcquisizione (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#ModalitaAcquisizioneEnum">ModalitaAcquisizioneEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>paritaDiGenereGenerazionale (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#ParitaDiGenereGenerazionaleType">ParitaDiGenereGenerazionaleType</a></td>
+  </tr>
+
+  <tr>
+    <td>quadroEconomicoStandard (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#QuadroEconomicoType">QuadroEconomicoType</a></td>
+  </tr>
+
+  <tr>
+    <td>strumentiElettroniciSpecifici (<span class="smalltype">opzionale</span>)</td>
+    <td>Uso e metodi e strumenti elettronici specifici, quali quelli di modellazione per l’edilizia e le infrastrutture, nelle fasi di progettazione, costruzione e gestione delle opere e relative verifiche</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>docFAP (<span class="smalltype">opzionale</span>)</td>
+    <td>è stato realizzato e autorizzato entro i termini lo studio di fattibilità che esenta dall'uso del BIM</td>
+    <td>boolean</td>
+  </tr>
 </table></section>
   <section><h2 id="StazioneAppaltanteType">StazioneAppaltanteType</h2>
   
@@ -634,6 +730,34 @@ Articolo 127 comma 1 lettera a) decreto legislativo 36/2023</td>
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
       <p>Deprecato - Strumenti per lo svolgimento delle procedure - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/strumentiSvolgimentoProcedure.json">strumentiSvolgimentoProcedure.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table></section>
+  <section><h2 id="MotivoUrgenzaEnum">MotivoUrgenzaEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Motivo urgenza - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoUrgenza.json">motivoUrgenza.json</a></p>
     </details>
   
   
@@ -797,6 +921,246 @@ Articolo 127 comma 1 lettera a) decreto legislativo 36/2023</td>
     <td>string</td>
   </tr>
 </table></section>
+  <section><h2 id="CcnlEnum">CcnlEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>CCNL - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/ccnl.json">ccnl.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table></section>
+  <section><h2 id="IpotesiCollegamentoType">IpotesiCollegamentoType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>ipotesi di collegamento</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>cigCollegato (<span class="smalltype">opzionale</span>)</td>
+    <td>CIG collegato</td>
+    <td>array di string</td>
+  </tr>
+
+  <tr>
+    <td>motivoCollegamento (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#MotivoCollegamentoEnum">MotivoCollegamentoEnum</a></td>
+  </tr>
+</table></section>
+  <section><h2 id="CategoriaEnum">CategoriaEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Categoria - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/categoria.json">categoria.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table></section>
+  <section><h2 id="ModalitaAcquisizioneEnum">ModalitaAcquisizioneEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Modalità di acquisizione (per servizi e forniture) - fare riferimento ai valori contenuti nel file  <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/modalitaAcquisizione.json">modalitaAcquisizione.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table></section>
+  <section><h2 id="ParitaDiGenereGenerazionaleType">ParitaDiGenereGenerazionaleType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Previsione nel bando di gara, nell’avviso o nell’invito, dell’obbligo di assicurare, in caso di aggiudicazione del contratto, una quota pari almeno al 30 per cento, delle assunzioni necessarie per l'esecuzione del contratto o per la realizzazione di attività ad esso connesse o strumentali, sia all'occupazione giovanile sia all'occupazione femminile (articolo 47, comma 4, D.L. 77/2021)?</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>derogaAQ (<span class="smalltype">opzionale</span>)</td>
+    <td>Deroga per adesione ad AQ/Convenzione precedente alle linee guida DPO sull’articolo 47 del DL 77/2021 e ss.m.i.?</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>quota30PerCento (<span class="smalltype">opzionale</span>)</td>
+    <td>Previsione nel bando di gara, nell’avviso o nell’invito, dell’obbligo di assicurare, in caso di aggiudicazione del contratto, una quota pari almeno al 30 per cento, delle assunzioni necessarie per l'esecuzione del contratto o per la realizzazione di attività ad esso connesse o strumentali, sia all'occupazione giovanile sia all'occupazione femminile (articolo 47, comma 4, D.L. 77/2021)? Valori ammessi - SI/NO/SI_QUOTA_INFERIORE</td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>quotaInferioreOccupFemminile (<span class="smalltype">opzionale</span>)</td>
+    <td>Previsione di una quota inferiore con riferimento all’occupazione femminile</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>quotaInferioreOccupGiovanile (<span class="smalltype">opzionale</span>)</td>
+    <td>Previsione di una quota inferiore con riferimento all’occupazione giovanile</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>motivoDeroga (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#MotivoDerogaEnum">MotivoDerogaEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>ulterioriMisurePremiali (<span class="smalltype">opzionale</span>)</td>
+    <td>Previsione nel bando di gara, nell’avviso o nell’invito di ulteriori misure premiali che attribuiscono un punteggio aggiuntivo all’offerente o al candidato.</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>misurePremiali (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td>array di <a href="#MisurePremialiEnum">MisurePremialiEnum</a></td>
+  </tr>
+</table></section>
+  <section><h2 id="QuadroEconomicoType">QuadroEconomicoType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta tutti i dati del quadro economico standard</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>impLavori (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente lavori in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impServizi (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente servizi in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impForniture (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente forniture in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impTotaleSicurezza (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo totale per l'attuazione della sicurezza</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>ulterioriSommeNoRibasso (<span class="smalltype">opzionale</span>)</td>
+    <td>Ulteriori somme non soggette a ribasso</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impProgettazione (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo della progettazione in caso di appalto integrato</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeOpzioniRinnovi (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme per opzioni/rinnovi</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeRipetizioni (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeADisposizione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Somme a disposizione - Iva e altre Imposte e tasse</td>
+    <td>double</td>
+  </tr>
+</table></section>
   <section><h2 id="FunzioniDelegateEnum">FunzioniDelegateEnum</h2>
   
     <details open>
@@ -873,6 +1237,90 @@ Articolo 127 comma 1 lettera a) decreto legislativo 36/2023</td>
     <td>Importo (<span class="smalltype">opzionale</span>)</td>
     <td>Importo</td>
     <td>double</td>
+  </tr>
+</table></section>
+  <section><h2 id="MotivoCollegamentoEnum">MotivoCollegamentoEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Motivo di collegamento - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoCollegamento.json">motivoCollegamento.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table></section>
+  <section><h2 id="MotivoDerogaEnum">MotivoDerogaEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Motivo della deroga alla previsione dell’obbligo di indicare una quota pari almeno al 30 per cento con riferimento all’occupazione femminile/giovanile - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoDeroga.json">motivoDeroga.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table></section>
+  <section><h2 id="MisurePremialiEnum">MisurePremialiEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Misure Premiali - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/misurePremiali.json">misurePremiali.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 </table></section>
     <div class="message">
@@ -1233,7 +1681,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != "services" or lotto.datiBa
       </tr>
     </table></section>
   <footer>
-    Generato il 27/02/2026 alle ore 14:40:57
+    Generato il 27/02/2026 alle ore 16:30:33
   </footer>
   </body>
   </html>

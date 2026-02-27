@@ -377,6 +377,24 @@ Articoo 127 comma 3 decreto legislativo 36/2023</td>
     <td></td>
     <td>array di <a href="#OfferteType">OfferteType</a></td>
   </tr>
+
+  <tr>
+    <td>numeroOfferteAmmesse (<span class="smalltype">obbligatorio</span>)</td>
+    <td>numero di offerte ammesse</td>
+    <td>integer</td>
+  </tr>
+
+  <tr>
+    <td>quadroEconomicoStandard (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#QuadroEconomicoType">QuadroEconomicoType</a></td>
+  </tr>
+
+  <tr>
+    <td>esitoProceduraAnnullata (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#EsitoProceduraAnnullataEnum">EsitoProceduraAnnullataEnum</a></td>
+  </tr>
 </table></section>
   <section><h2 id="AppaltoA1_34Type">AppaltoA1_34Type</h2>
   
@@ -410,6 +428,12 @@ Articoo 127 comma 3 decreto legislativo 36/2023</td>
     <td>modalitaRiaggiudicazioneAffidamento (<span class="smalltype">opzionale</span>)</td>
     <td></td>
     <td><a href="#ModalitaRiaggiudicazioneAffidamentoEnum">ModalitaRiaggiudicazioneAffidamentoEnum</a></td>
+  </tr>
+
+  <tr>
+    <td>relazioneUnicaSulleProcedure (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Il sottoscritto dichiara che questa SA ha redatto la Relazione Unica sulle Procedure</td>
+    <td>boolean</td>
   </tr>
 </table></section>
   <section><h2 id="EformType">EformType</h2>
@@ -514,6 +538,104 @@ Articoo 127 comma 3 decreto legislativo 36/2023</td>
     <td>offertaAnomala (<span class="smalltype">obbligatorio</span>)</td>
     <td>L'offerta è anomala?</td>
     <td>boolean</td>
+  </tr>
+</table></section>
+  <section><h2 id="QuadroEconomicoType">QuadroEconomicoType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta tutti i dati del quadro economico standard</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>impLavori (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente lavori in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impServizi (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente servizi in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impForniture (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente forniture in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impTotaleSicurezza (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo totale per l'attuazione della sicurezza</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>ulterioriSommeNoRibasso (<span class="smalltype">opzionale</span>)</td>
+    <td>Ulteriori somme non soggette a ribasso</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impProgettazione (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo della progettazione in caso di appalto integrato</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeOpzioniRinnovi (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme per opzioni/rinnovi</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeRipetizioni (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme per ripetizione servizi/forniture/lavori analoghi e consegne complementari</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeADisposizione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>Somme a disposizione - Iva e altre Imposte e tasse</td>
+    <td>double</td>
+  </tr>
+</table></section>
+  <section><h2 id="EsitoProceduraAnnullataEnum">EsitoProceduraAnnullataEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Esito procedura annullata - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esitoProceduraAnnullata.json">esitoProceduraAnnullata.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
   </tr>
 </table></section>
   <section><h2 id="MotivoUrgenzaEnum">MotivoUrgenzaEnum</h2>
@@ -693,7 +815,7 @@ satisfies offerta.offertaEconomica < 0 or offerta.offertaEconomica > 100) </td>
       </tr>
     </table></section>
   <footer>
-    Generato il 27/02/2026 alle ore 14:39:08
+    Generato il 27/02/2026 alle ore 16:28:33
   </footer>
   </body>
   </html>

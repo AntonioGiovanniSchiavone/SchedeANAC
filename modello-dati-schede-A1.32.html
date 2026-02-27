@@ -370,6 +370,24 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td></td>
     <td>array di <a href="#OfferteType">OfferteType</a></td>
   </tr>
+
+  <tr>
+    <td>numeroOfferteAmmesse (<span class="smalltype">obbligatorio</span>)</td>
+    <td>numero di offerte ammesse</td>
+    <td>integer</td>
+  </tr>
+
+  <tr>
+    <td>quadroEconomicoConcessioni (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td><a href="#QuadroEconomicoConcessioniType">QuadroEconomicoConcessioniType</a></td>
+  </tr>
+
+  <tr>
+    <td>esitoProceduraAnnullata (<span class="smalltype">opzionale</span>)</td>
+    <td></td>
+    <td><a href="#EsitoProceduraAnnullataEnum">EsitoProceduraAnnullataEnum</a></td>
+  </tr>
 </table></section>
   <section><h2 id="AppaltoA1_32Type">AppaltoA1_32Type</h2>
   
@@ -497,6 +515,110 @@ Articolo 182 comma 11 secondo periodo e comma 12 decreto legislativo 36/2023</td
     <td>boolean</td>
   </tr>
 </table></section>
+  <section><h2 id="QuadroEconomicoConcessioniType">QuadroEconomicoConcessioniType</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Oggetto che riporta tutti i dati del quadro economico per le concessioni.</p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>impLavori (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente lavori in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impServizi (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente servizi in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impForniture (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo componente forniture in €</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>finanziamentiCanoniPA (<span class="smalltype">opzionale</span>)</td>
+    <td>Finanziamnenti o canoni della PA</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>entrateUtenza (<span class="smalltype">opzionale</span>)</td>
+    <td>Entrate derivanti dall’utenza</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>introitoAttivo (<span class="smalltype">opzionale</span>)</td>
+    <td>Introito attivo per la PA</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>impTotaleSicurezza (<span class="smalltype">opzionale</span>)</td>
+    <td>Importo totale per l'attuazione della sicurezza</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>ulterioriSommeNoRibasso (<span class="smalltype">opzionale</span>)</td>
+    <td>Ulteriori somme non soggette a ribasso</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeOpzioniRinnovi (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme per opzioni/rinnovi</td>
+    <td>double</td>
+  </tr>
+
+  <tr>
+    <td>sommeADisposizione (<span class="smalltype">opzionale</span>)</td>
+    <td>Somme a disposizione - Iva e altre Imposte e tasse</td>
+    <td>double</td>
+  </tr>
+</table></section>
+  <section><h2 id="EsitoProceduraAnnullataEnum">EsitoProceduraAnnullataEnum</h2>
+  
+    <details open>
+      <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
+      <p>Esito procedura annullata - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/esitoProceduraAnnullata.json">esitoProceduraAnnullata.json</a></p>
+    </details>
+  
+  
+    <table class="reference">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Tipo</th>
+      </tr>
+  
+
+  <tr>
+    <td>idTipologica (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+
+  <tr>
+    <td>codice (<span class="smalltype">obbligatorio</span>)</td>
+    <td></td>
+    <td>string</td>
+  </tr>
+</table></section>
   <section><h2 id="ModalitaRiaggiudicazioneAffidamentoEnum">ModalitaRiaggiudicazioneAffidamentoEnum</h2>
   
     <details open>
@@ -614,7 +736,7 @@ satisfies (count(aggiudicazione.offertePresentate) > aggiudicazione.numeroOffert
       </tr>
     </table></section>
   <footer>
-    Generato il 27/02/2026 alle ore 14:39:06
+    Generato il 27/02/2026 alle ore 16:28:30
   </footer>
   </body>
   </html>
