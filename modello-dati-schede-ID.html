@@ -385,7 +385,7 @@ footer {
   
 
   <tr>
-    <td>motivoCorrezione (<span class="smalltype">obbligatorio</span>)</td>
+    <td>motivoCorrezioneUrl (<span class="smalltype">obbligatorio</span>)</td>
     <td></td>
     <td><a href="#MotivoCorrezioneUrlEnum">MotivoCorrezioneUrlEnum</a></td>
   </tr>
@@ -486,7 +486,7 @@ footer {
   
     <details open>
       <summary><strong>Informazioni aggiuntive sulla tabella</strong></summary>
-      <p>Motivo correzione url - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoCorrezioneUrl.json">motivoCorrezione.json</a></p>
+      <p>Motivo correzione url - fare riferimento ai valori contenuti nel file <a href="https://raw.githubusercontent.com/anticorruzione/npa/main/docs/modello-dati/tipologiche/motivoCorrezioneUrl.json">motivoCorrezioneUrl.json</a></p>
     </details>
   
   
@@ -586,7 +586,7 @@ footer {
   <tr>
     <td>REG101</td>
     <td>indicare almeno uno dei campi di cui si richiede la modifica</td>
-    <td>is defined(comunicazione.comunicazioneCUP) = false and is defined(comunicazione.comunicazioneRibassoAggiudicazione) = false and is defined(comunicazione.docFAP) = false and is defined(comunicazioneUrl) = false</td>
+    <td>is defined(comunicazione.comunicazioneCUP) = false and is defined(comunicazione.comunicazioneRibassoAggiudicazione) = false and is defined(comunicazione.docFAP) = false and is defined(comunicazione.comunicazioneUrl) = false</td>
   </tr>
 
   <tr>
@@ -598,7 +598,7 @@ footer {
   <tr>
     <td>REG8_1</td>
     <td>L&apos;indirizzo dei documenti di gara: deve essere una url valida e quindi iniziare con http o https.</td>
-    <td>comunicazioneUrl.url != null and comunicazioneUrl.url != &quot;&quot; and starts with(comunicazioneUrl.url,&quot;http:&quot;) = false and starts with(comunicazioneUrl.url,&quot;https:&quot;) = false</td>
+    <td>is defined(comunicazione.comunicazioneUrl) and comunicazione.comunicazioneUrl.url != null and comunicazione.comunicazioneUrl.url != &quot;&quot; and starts with(comunicazione.comunicazioneUrl.url,&quot;http:&quot;) = false and starts with(comunicazione.comunicazioneUrl.url,&quot;https:&quot;) = false</td>
   </tr>
 </table></section>
     <div class="message">
@@ -638,7 +638,7 @@ footer {
 </section>
 
   <footer>
-    Generato il 13/03/2026 alle ore 13:57:39
+    Generato il 27/05/2026 alle ore 09:32:36
   </footer>
   </body>
   </html>

@@ -833,7 +833,7 @@ Articolo 50 comma 9 decreto legislativo 36/2023</td>
   </tr>
 
   <tr>
-    <td>giustificazioniAggiudicazioneDiretta (<span class="smalltype">opzionale</span>)</td>
+    <td>giustificazioniAggiudicazioneDirettaAD (<span class="smalltype">opzionale</span>)</td>
     <td></td>
     <td>array di <a href="#GiustificazioneAggiudicazioneDirettaType">GiustificazioneAggiudicazioneDirettaType</a></td>
   </tr>
@@ -1841,7 +1841,7 @@ satisfies some partecipante in aggiudicazione.partecipanti satisfies (partecipan
   <tr>
     <td>REG68</td>
     <td>il campo giustificazione aggiudicazione diretta non va indicato se il tipo di procedura non &egrave; Negoziata senza previa indizione di gara</td>
-    <td>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != &quot;neg-wo-call&quot; and appalto.datiBaseProcedura.tipoProcedura.codice != &quot;&quot; ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta)&gt;0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDiretta satisfies giustificazione.codice != &quot;&quot;))</td>
+    <td>appalto.datiBaseProcedura != null and appalto.datiBaseProcedura.tipoProcedura != null and (appalto.datiBaseProcedura.tipoProcedura.codice != &quot;neg-wo-call&quot; and appalto.datiBaseProcedura.tipoProcedura.codice != &quot;&quot; ) and (appalto.datiBaseProcedura.giustificazioniAggiudicazioneDirettaAD != null and count(appalto.datiBaseProcedura.giustificazioniAggiudicazioneDirettaAD)&gt;0 and (some giustificazione in appalto.datiBaseProcedura.giustificazioniAggiudicazioneDirettaAD satisfies giustificazione.giustificazioneAggiudicazioneDiretta.codice != &quot;&quot;))</td>
   </tr>
 
   <tr>
@@ -1893,7 +1893,7 @@ satisfies count(aggiudicazione.partecipanti)=0</td>
       </tr>
     </table></section>
   <footer>
-    Generato il 13/03/2026 alle ore 13:57:29
+    Generato il 27/05/2026 alle ore 09:32:25
   </footer>
   </body>
   </html>

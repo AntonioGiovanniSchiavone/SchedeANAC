@@ -482,10 +482,32 @@ footer {
   </tr>
 
   <tr>
+    <td>REG137</td>
+    <td>Indicare almeno un invitato</td>
+    <td>some soggetto in elencoSoggetti
+satisfies (soggetto.elencoInvitati = null)</td>
+  </tr>
+
+  <tr>
+    <td>REG137</td>
+    <td>Indicare almeno un invitato</td>
+    <td>some soggetto in elencoSoggetti
+satisfies (count(soggetto.elencoInvitati)=0)</td>
+  </tr>
+
+  <tr>
     <td>REG138</td>
     <td>I campi di tipo testo non possono essere vuoti</td>
     <td>some soggetto in elencoSoggetti
-satisfies ((soggetto.codiceFiscale = null or soggetto.codiceFiscale=&quot;&quot;) or (soggetto.denominazione = null or soggetto.denominazione=&quot;&quot;) or (soggetto.idPartecipante = null or soggetto.idPartecipante=&quot;&quot;) or (soggetto.dataInvito = null or soggetto.dataInvito =&quot;&quot;) or (soggetto.scadenzaPresentazioneOfferte = null or soggetto.scadenzaPresentazioneOfferte=&quot;&quot;))</td>
+satisfies ((soggetto.dataInvito = null or soggetto.dataInvito =&quot;&quot;) or (soggetto.scadenzaPresentazioneOfferte = null or soggetto.scadenzaPresentazioneOfferte=&quot;&quot;))</td>
+  </tr>
+
+  <tr>
+    <td>REG138</td>
+    <td>I campi di tipo testo non possono essere vuoti</td>
+    <td>some soggetto in elencoSoggetti satisfies
+(some invitato in soggetto.elencoInvitati satisfies
+((invitato.codiceFiscale = null or invitato.codiceFiscale=&quot;&quot;) or (invitato.denominazione = null or invitato.denominazione=&quot;&quot;) or (invitato.idPartecipante = null or invitato.idPartecipante=&quot;&quot;)))</td>
   </tr>
 </table></section>
     <div class="message">
@@ -512,7 +534,7 @@ satisfies ((soggetto.codiceFiscale = null or soggetto.codiceFiscale=&quot;&quot;
       </tr>
     </table></section>
   <footer>
-    Generato il 13/03/2026 alle ore 13:58:14
+    Generato il 27/05/2026 alle ore 09:33:26
   </footer>
   </body>
   </html>

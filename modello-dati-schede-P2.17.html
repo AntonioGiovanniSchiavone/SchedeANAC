@@ -1855,8 +1855,8 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
     <td>Cup associati al lotto: il campo non &egrave; obbligatorio se:
 - lotto.acquisizionecup=&rsquo;N&rsquo; e oggettoContratto=&quot;services&quot; o &lsquo;supplies&rsquo;
 - lotto.acquisizionecup=&rsquo;N&rsquo; e oggettoContratto=&quot;works&quot; e lotto.tipologialavoro &egrave; assegnata la &lsquo;Manutenzione Ordinaria&rsquo; (codice 12).
-E&apos; quindi obbligatorio se il campo acquisizioneCup &egrave; valorizzato a no e se l&apos;oggetto del contratto &egrave; Lavori e se la tipologia di lavoro &egrave; diversa da Manutenzione ordinaria</td>
-    <td>some lotto in lotti
+E&apos; quindi obbligatorio se il campo acquisizioneCup &egrave; valorizzato a no e se l&apos;oggetto del contratto &egrave; Lavori e se la tipologia di lavoro &egrave; diversa da Manutenzione ordinaria e l&apos;appalto non &egrave; di tipo accordo quadro/convenzione</td>
+    <td>( (is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and ((appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = &quot;none&quot;) or (appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = &quot;&quot;))) or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)some lotto in lotti
 satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice=&quot;works&quot; and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != &quot;12&quot;)</td>
   </tr>
 
@@ -2111,7 +2111,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table></section>
   <footer>
-    Generato il 13/03/2026 alle ore 13:57:53
+    Generato il 27/05/2026 alle ore 09:32:57
   </footer>
   </body>
   </html>

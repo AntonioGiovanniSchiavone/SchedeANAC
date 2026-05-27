@@ -1380,25 +1380,28 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
   <tr>
     <td>REG133</td>
     <td>Definire solo uno dei campi tra durata e altraDurata</td>
-    <td>is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata)</td>
+    <td>some lotto in lotti
+satisfies (is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata))</td>
   </tr>
 
   <tr>
     <td>REG134</td>
     <td>Il campo durata non pu&ograve; essere vuoto</td>
-    <td>is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = &quot;&quot;</td>
+    <td>some lotto in lotti
+satisfies (is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG135</td>
     <td>Definire almeno uno dei campi tra durata e altraDurata</td>
-    <td>is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false</td>
+    <td>some lotto in lotti
+satisfies (is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false)</td>
   </tr>
 
   <tr>
     <td>REG136</td>
     <td>Valore della tipologica TipoProcedura non ammesso</td>
-    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains([&quot;neg-w-call&quot;,&quot;open&quot;,&quot;oth-mult&quot;,&quot;oth-single&quot;,&quot;restricted&quot;], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
+    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and appalto.datiBaseProcedura.tipoProcedura.codice!= &quot;&quot; and not(list contains([&quot;neg-w-call&quot;,&quot;open&quot;,&quot;oth-mult&quot;,&quot;oth-single&quot;,&quot;restricted&quot;], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
   </tr>
 </table></section>
     <div class="message">
@@ -1425,7 +1428,7 @@ satisfies lotto.datiBaseTerminiInvio.scadenzaPresentazioneInvito != null and lot
       </tr>
     </table></section>
   <footer>
-    Generato il 13/03/2026 alle ore 13:58:11
+    Generato il 27/05/2026 alle ore 09:33:21
   </footer>
   </body>
   </html>

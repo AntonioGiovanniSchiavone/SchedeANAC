@@ -1873,8 +1873,8 @@ satisfies lotto.ripetizioniEConsegneComplementari and lotto.ipotesiCollegamento.
     <td>Cup associati al lotto: il campo non &egrave; obbligatorio se:
 - lotto.acquisizionecup=&rsquo;N&rsquo; e oggettoContratto=&quot;services&quot; o &lsquo;supplies&rsquo;
 - lotto.acquisizionecup=&rsquo;N&rsquo; e oggettoContratto=&quot;works&quot; e lotto.tipologialavoro &egrave; assegnata la &lsquo;Manutenzione Ordinaria&rsquo; (codice 12).
-E&apos; quindi obbligatorio se il campo acquisizioneCup &egrave; valorizzato a no e se l&apos;oggetto del contratto &egrave; Lavori e se la tipologia di lavoro &egrave; diversa da Manutenzione ordinaria</td>
-    <td>some lotto in lotti
+E&apos; quindi obbligatorio se il campo acquisizioneCup &egrave; valorizzato a no e se l&apos;oggetto del contratto &egrave; Lavori e se la tipologia di lavoro &egrave; diversa da Manutenzione ordinaria e l&apos;appalto non &egrave; di tipo accordo quadro/convenzione</td>
+    <td>( (is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=true and ((appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = &quot;none&quot;) or (appalto.datiBaseStrumentiProcedura.accordoQuadro.codice = &quot;&quot;))) or is defined(appalto.datiBaseStrumentiProcedura.accordoQuadro)=false)some lotto in lotti
 satisfies (is defined(lotto.cupLotto)=false or count(lotto.cupLotto) = 0) and lotto.acquisizioneCup=false and lotto.datiBase.oggettoContratto.codice=&quot;works&quot; and (some tipo in lotto.tipologiaLavoro satisfies tipo.codice != &quot;12&quot;)</td>
   </tr>
 
@@ -2065,25 +2065,28 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
   <tr>
     <td>REG133</td>
     <td>Definire solo uno dei campi tra durata e altraDurata</td>
-    <td>is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata)</td>
+    <td>some lotto in lotti
+satisfies (is defined(lotto.datiBaseDurata.durata) and is defined(lotto.datiBaseDurata.altraDurata))</td>
   </tr>
 
   <tr>
     <td>REG134</td>
     <td>Il campo durata non pu&ograve; essere vuoto</td>
-    <td>is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = &quot;&quot;</td>
+    <td>some lotto in lotti
+satisfies (is defined(lotto.datiBaseDurata.durata) and lotto.datiBaseDurata.durata = &quot;&quot;)</td>
   </tr>
 
   <tr>
     <td>REG135</td>
     <td>Definire almeno uno dei campi tra durata e altraDurata</td>
-    <td>is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false</td>
+    <td>some lotto in lotti
+satisfies (is defined(lotto.datiBaseDurata.durata)=false and is defined(lotto.datiBaseDurata.altraDurata)=false)</td>
   </tr>
 
   <tr>
     <td>REG136</td>
     <td>Valore della tipologica TipoProcedura non ammesso</td>
-    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains([&quot;comp-dial&quot;,&quot;innovation&quot;,&quot;neg-w-call&quot;,&quot;oth-mult&quot;,&quot;oth-single&quot;,&quot;restricted&quot;], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
+    <td>is defined(appalto.datiBaseProcedura) and is defined(appalto.datiBaseProcedura.tipoProcedura) and not(list contains([&quot;comp-dial&quot;,&quot;innovation&quot;,&quot;neg-w-call&quot;,&quot;oth-mult&quot;,&quot;restricted&quot;], appalto.datiBaseProcedura.tipoProcedura.codice))</td>
   </tr>
 </table></section>
     <div class="message">
@@ -2110,7 +2113,7 @@ satisfies ((lotto.datiBase.oggettoContratto.codice != &quot;services&quot; or lo
       </tr>
     </table></section>
   <footer>
-    Generato il 13/03/2026 alle ore 13:57:50
+    Generato il 27/05/2026 alle ore 09:32:54
   </footer>
   </body>
   </html>

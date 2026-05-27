@@ -538,27 +538,9 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
   </tr>
 
   <tr>
-    <td>REG56</td>
-    <td>CIG della nuova procedura avviata: campo non previsto</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice != &quot;other&quot; and modificaContrattuale.cigNuovaProcedura != null and modificaContrattuale.cigNuovaProcedura != &quot;&quot;</td>
-  </tr>
-
-  <tr>
-    <td>REG55</td>
-    <td>in caso di proroga tecnica Indicare il CIG della nuova procedura avviata ovvero indicare le motivazioni della proroga nel campo Cause della modifica contrattuale</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;other&quot; and (modificaContrattuale.cigNuovaProcedura = null or modificaContrattuale.cigNuovaProcedura = &quot;&quot;) and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = &quot;&quot;)</td>
-  </tr>
-
-  <tr>
     <td>REG62</td>
     <td>in caso di &lsquo;Altre cause impreviste ed imprevedibili&rsquo; indicare una motivazione nel campo &lsquo;Cause della modifica contrattuale&rsquo;</td>
     <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;mod-cir&quot; and (modificaContrattuale.datiBaseModificaContrattuale.causaModifica = null or modificaContrattuale.datiBaseModificaContrattuale.causaModifica = &quot;&quot;)</td>
-  </tr>
-
-  <tr>
-    <td>REG63</td>
-    <td>Non &egrave; stato valorizzato il numero di giorni di proroga concessi/tempo aggiuntivo rispetto ai termini contrattuali</td>
-    <td>modificaContrattuale.datiBaseModificaContrattuale != null and modificaContrattuale.datiBaseModificaContrattuale.motiviModifica.codice = &quot;other&quot; and (modificaContrattuale.quadroEconomicoStandardRideterminato = null or modificaContrattuale.quadroEconomicoStandardRideterminato = &quot;&quot; or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = null or modificaContrattuale.quadroEconomicoStandardRideterminato.numGiorniProroga = 0)</td>
   </tr>
 </table></section>
     <div class="message">
@@ -580,7 +562,7 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
 
       <tr>
         <td><a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SC1.html">SC1</a>, <a href="./modello-dati-schede-I1.html">I1</a>, <a href="./modello-dati-schede-M1.html">M1</a>, <a href="./modello-dati-schede-SA1.html">SA1</a>, <a href="./modello-dati-schede-RSU1.html">RSU1</a>, <a href="./modello-dati-schede-ES1.html">ES1</a>, <a href="./modello-dati-schede-CS1.html">CS1</a>, <a href="./modello-dati-schede-SO1.html">SO1</a>, <a href="./modello-dati-schede-SQ1.html">SQ1</a>, <a href="./modello-dati-schede-RI1.html">RI1</a>, <a href="./modello-dati-schede-AC1.html">AC1</a>, <a href="./modello-dati-schede-IR1.html">IR1</a>, <a href="./modello-dati-schede-ID.html">ID</a></td>
-        <td><a href="./modello-dati-schede-AC1.html">AC1</a>, <a href="./modello-dati-schede-CL1.html">CL1</a>, <a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-CS1.html">CS1</a>, <a href="./modello-dati-schede-ES1.html">ES1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-IR1.html">IR1</a>, <a href="./modello-dati-schede-M1.html">M1</a>, <a href="./modello-dati-schede-RI1.html">RI1</a>, <a href="./modello-dati-schede-RSU1.html">RSU1</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SA1.html">SA1</a>, <a href="./modello-dati-schede-SO1.html">SO1</a></td>
+        <td><a href="./modello-dati-schede-AC1.html">AC1</a>, <a href="./modello-dati-schede-CL1.html">CL1</a>, <a href="./modello-dati-schede-CO1.html">CO1</a>, <a href="./modello-dati-schede-CS1.html">CS1</a>, <a href="./modello-dati-schede-ES1.html">ES1</a>, <a href="./modello-dati-schede-I1.html">I1</a>, <a href="./modello-dati-schede-ID.html">ID</a>, <a href="./modello-dati-schede-IR1.html">IR1</a>, <a href="./modello-dati-schede-M1.html">M1</a>, <a href="./modello-dati-schede-RI1.html">RI1</a>, <a href="./modello-dati-schede-RSU1.html">RSU1</a>, <a href="./modello-dati-schede-S3.html">S3</a>, <a href="./modello-dati-schede-S4.html">S4</a>, <a href="./modello-dati-schede-SA1.html">SA1</a>, <a href="./modello-dati-schede-SO1.html">SO1</a></td>
         <td>110, 111, 112, 113, 116, 117, 120, 121, 800</td>
       </tr>
     </table></section>
@@ -598,7 +580,7 @@ Articolo 5 comma 11 e comma 12 Allegato II.14</td>
 </section>
 
   <footer>
-    Generato il 13/03/2026 alle ore 13:57:41
+    Generato il 27/05/2026 alle ore 09:32:39
   </footer>
   </body>
   </html>
